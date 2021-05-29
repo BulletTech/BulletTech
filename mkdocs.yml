@@ -17,7 +17,7 @@ copyright: Copyright &copy; 2021 BulletTech
 
 # Configuration
 theme:
-  name: null
+  name: material
   custom_dir: material
 
   # Static files
@@ -75,7 +75,11 @@ plugins:
         sponsorship.md: insiders/index.md
   - minify:
       minify_html: true
-
+  - macros:
+      j2_variable_start_string: '[['
+      j2_variable_end_string: ']]'
+  - git-revision-date-localized
+  
 # Customization
 extra:
   social:
