@@ -132,7 +132,10 @@ nav:
   - Home: index.md
   - Geek Spack: index.md
   - Soft Core: index.md
- 
+  - Blogs: 
+    - Intro: blogs/2021-05-30-Test.md
+    - 2021:
+        - Test: blogs/2021-05-30-Test.md
 
 # Google Analytics
 google_analytics:
