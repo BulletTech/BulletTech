@@ -133,7 +133,7 @@ nav:
   - Geek Spack: index.md
   - Soft Core: index.md
   - Blogs: 
-    - Intro: blogs/2021-05-30-Test.md
+    - Intro: 
     - 2021:
         - Test: blogs/2021-05-30-Test.md
 
