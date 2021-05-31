@@ -37,6 +37,10 @@
       {% endif %}
     {% endif %}
 	
+
+
+{% block disqus %}
+  <!-- Add custom comment system integration here -->
 <script src="https://utteranc.es/client.js"
          repo="BulletTech/BulletTech"
          issue-term="pathname"
@@ -44,4 +48,6 @@
          crossorigin="anonymous"
          async>
  </script>
+{% endblock %}
+
 {% endblock %}
