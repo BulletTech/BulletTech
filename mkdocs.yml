@@ -130,8 +130,8 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Geek Spack: index.md
-  - Soft Core: index.md
+  - Geek Space: blog_intro.md
+  - Soft Core: blog_intro.md
   - Blogs: 
     - Intro: blog_intro.md
     - 2021:
