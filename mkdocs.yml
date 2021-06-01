@@ -3,9 +3,7 @@ site_name: BulletTech
 site_url: https://bullettech.github.io/BulletTech/
 site_author: BulletTech Team
 site_description: >-
-  Create a branded static site from a set of Markdown files to host the
-  documentation of your Open Source or commercial project – customizable,
-  searchable, mobile-friendly, 40+ languages
+  We are a team of a few data scientists working in the financial industry. Here is the place where we share practical analytics skills, working and life experience. Enjoy your time here! 
 
 # Repository
 repo_name: BulletTech/BulletTech
