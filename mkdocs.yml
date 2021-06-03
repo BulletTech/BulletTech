@@ -50,7 +50,7 @@ theme:
     code: Roboto Mono
   favicon: assets/images/BulletTech_Transparent.png
   icon:
-    logo: assets/images/book-open-page-variant-outline.svg
+    logo: assets/images/book-open-page-variant-outline
 
 # Plugins
 plugins:
