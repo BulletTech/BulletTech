@@ -129,8 +129,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Geek Space: blog_intro.md
-  - Soft Core: blog_intro.md
-  - Blogs: 
+  - Soft Core:
     - Intro: blog_intro.md
     - 2021:
         - Test: blogs/2021-05-30-Test.md
