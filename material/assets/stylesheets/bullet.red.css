@@ -4,6 +4,7 @@
  * 英文换行 word-break: break-all;
  */
 #nice {
+  text-align: justify
 }
 /* 段落，下方未标注标签参数均同此处
  * 上边距 margin-top: 5px;
