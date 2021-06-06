@@ -50,7 +50,7 @@ theme:
     code: Roboto Mono
   favicon: assets/images/BulletTech_Transparent.png
   icon:
-    logo: logo
+    logo: material/rocket-launch
 
 # Plugins
 plugins:
@@ -106,6 +106,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+    
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -124,12 +125,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - pymdownx.emoji:
-    emoji_index: !!python/name:materialx.emoji.twemoji
-    emoji_generator: !!python/name:materialx.emoji.to_svg
-    options:
-      custom_icons:
-        - material/overrides/.icons
 
 # Page tree
 nav:
