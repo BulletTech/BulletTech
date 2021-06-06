@@ -4,7 +4,10 @@
 
 我们的团队中有多名消费金融行业的数据分析师、数据科学家。因为热爱数据科学、善于观察生活、总结经验，并且想通过文字将我们的所见所闻分享给更多人，我们聚到了一起，并创办了BulletTech。
 
-![Placeholder](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622967224574-qrcode_for_gh_8d08f34b46c6_1280.jpg){ align=right }
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622967224574-qrcode_for_gh_8d08f34b46c6_1280.jpg" width="300" />
+  <figcaption>BulleTech 微信公众号</figcaption>
+</figure>
 
 我们会烹饪美味又营养的科技内容给大家，主要包含两种佳肴：
 
@@ -15,4 +18,4 @@
 
 如想详细交流，请扫码添加管理员微信。
 
-[](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622966918510-%E5%AE%98%E5%BE%AEblack.jpeg)
+![](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622966918510-%E5%AE%98%E5%BE%AEblack.jpeg)
