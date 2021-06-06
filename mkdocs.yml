@@ -128,10 +128,10 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Geek Space: blog_intro.md
-  - Soft Core:
+  - Main Course: blog_intro.md
+  - Dessert:
     - Intro: blog_intro.md
-    - 2021:
+    - Hardware:
         - Test: blogs/2021-05-30-Test.md
   - About Us: blog_intro.md
 
