@@ -1,3 +1,7 @@
+---
+template: overrides/general_no_comments.html
+---
+
 # 关于我们
 
 大家好，这里是BulletTech！
