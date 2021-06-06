@@ -128,8 +128,8 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Hard Core: blog_intro.md
-  - Soft Core: 
+  - Main Course: blog_intro.md
+  - Dessert: 
     - Intro: Soft_core_blog_intro.md
     - Hardware:
         - M1 Mac mini 半年使用体验: Soft_core_blog/hardware/2021-06-03-Mac-mini.md
