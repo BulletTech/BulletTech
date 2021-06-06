@@ -18,4 +18,7 @@
 
 如想详细交流，请扫码添加管理员微信。
 
-![](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622966918510-%E5%AE%98%E5%BE%AEblack.jpeg)
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622966918510-%E5%AE%98%E5%BE%AEblack.jpeg" width="300" />
+  <figcaption>BulleTech 微信客服</figcaption>
+</figure>
