@@ -29,6 +29,6 @@ template: overrides/general_no_comments.html
 如想详细交流，请扫码添加管理员微信。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622966918510-%E5%AE%98%E5%BE%AEblack.jpeg" width="300" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622966940142-%E5%AE%98%E5%BE%AEwhite.jpeg" width="300" />
   <figcaption>BulleTech 微信客服</figcaption>
 </figure>
