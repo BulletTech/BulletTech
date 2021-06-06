@@ -129,11 +129,12 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Main Course: blog_intro.md
-  - Dessert:
-    - Intro: blog_intro.md
+  - Dessert: 
+    - Intro: Dessert_blog_intro.md
     - Hardware:
-        - Test: blogs/2021-05-30-Test.md
+        - M1 Mac mini 半年使用体验: Dessert_blog/Hardware/2021-06-03-Mac-mini.md
   - About Us: blog_intro.md
+
 
 # Google Analytics
 google_analytics:
