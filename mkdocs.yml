@@ -48,7 +48,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/BulletTech_Transparent.png
+  favicon: assets/images/Bullet-No-text.svg
   icon:
     logo: Bullet_Plain_White
 
