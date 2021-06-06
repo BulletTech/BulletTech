@@ -133,7 +133,7 @@ nav:
     - Intro: Soft_core_blog_intro.md
     - Hardware:
         - M1 Mac mini 半年使用体验: Soft_core_blog/hardware/2021-06-03-Mac-mini.md
-  - About Us: index.md
+  - About Us: blog_intro.md
 
 
 # Google Analytics
