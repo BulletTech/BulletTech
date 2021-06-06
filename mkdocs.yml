@@ -50,7 +50,7 @@ theme:
     code: Roboto Mono
   favicon: assets/images/BulletTech_Transparent.png
   icon:
-    logo: material/rocket-launch
+    logo: Bullet_Plain_White
 
 # Plugins
 plugins:
