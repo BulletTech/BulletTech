@@ -1,8 +1,5 @@
 # 淘宝自动定时下单机器人
 
-!!! info 
-    作者：袁子弹起飞、Void，发布于2021年6月8日，阅读时间：约7分钟。
-
 ## 1 痛点
 
 各大电商网站在一些特定的日子都会开启促销活动，如618、双十一等，有时还得盯着时间抢限量发售的商品，但你的成功率高吗?是否经常会遇到App一直加载，刷新后发现商品被一扫而光了？事实是，很多和你竞争抢购商品的对手比你的手更快更准，因为他们很多都是能精准执行命令的**机器人**。
@@ -12,18 +9,19 @@
 ## 2 准备工作
 
 在建设机器人之前，请确保你准备好了如下工具：
-
 - **一台电脑**：不需要多快多新，能用就行
 - **Chrome浏览器**：机器人将在Chrome上完成自动下单的工作
 - **Python编程环境**：别怕，你不需要会编程，代码已经帮你写好了。但你需要安装一个软件能让它跑起来，所以需要简单配置一下python的编程环境。Windows和Mac用户，请按照相对应的方式配置。
 
-!!! example "配置Python的编程环境"
+!!! example “配置Python的编程环境”
 
     === "Windows 配置Python"
 
-        Coming soon
-
+        Anaconda是一个开源的Python发行版本，集成了Python和众多科学包。
         
+        - 第一步：下载Anaconda Windows版本的[64-Bit Graphical Installer](https://www.anaconda.com/products/individual-b)
+        - 第二步：安装Anaconda
+        - 第三步：打开Anaconda Navigator，点击Launch Notebook或JupyterLab
 
     === "Mac 配置Python"
         
@@ -36,8 +34,10 @@
         
         然后你会看到这样的画面：
         
-        ![](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png)
-          
+        <figure>
+          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
+          <figcaption>Jupyter Lab</figcaption>
+        </figure>
         
         看到右侧的Notebook区域，添加一个Notebook，然后使用下面的代码打造机器人！
         
@@ -60,7 +60,7 @@
 ```
 上面的代码返回了/opt/anaconda3/bin/python，接下来就要用到这个地址。
 
-### 3.1 下载一个小配件
+### 3.1 下载一个小配件: 
 - 查看自己Chrome浏览器的版本(进入`关于Chrome`即可看到软件版本)
 - 前往[ChromeDriver的官方下载地址](https://chromedriver.storage.googleapis.com/index.html)下载对应版本的chrome driver后，放在此```/opt/anaconda3/bin``` 文件夹里
 
@@ -79,9 +79,9 @@ now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
 print(now)
 ```
 
-2021-06-08 00:00:00.000000
+2021-06-18 00:00:00.000000
 
-### 3.3 机器人的零件 
+### 3.3 机器人的零件: 
 
 ```python
 def login():
@@ -144,7 +144,7 @@ def buy(times):
 ```
 
 
-### 3.4 启动机器人 
+### 3.4 启动机器人: 
 
 ```python
 browser = webdriver.Chrome()
@@ -152,7 +152,7 @@ login()
 picking()
 ```
 
-### 3.5 定时下单
+### 3.5 定时下单: 
 
 ```python
 order_time = input("请输入抢购时间，格式如(2021-06-08 19:30:00.000000):")
@@ -164,7 +164,7 @@ order_time = input("请输入抢购时间，格式如(2021-06-08 19:30:00.000000
 buy(order_time)
 ```
 
-## 4 最终效果
+## 4 最终效果: 
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
