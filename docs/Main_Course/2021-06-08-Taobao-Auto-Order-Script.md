@@ -13,6 +13,30 @@
 - **Chrome浏览器**：机器人将在Chrome上完成自动下单的工作
 - **Python编程环境**：别怕，你不需要会编程，代码已经帮你写好了。但你需要安装一个软件能让它跑起来，所以需要简单配置一下python的编程环境。Windows和Mac用户，请按照相对应的方式配置。
 
+!!! example “配置Python的编程环境”
+
+    === "Windows 配置Python"
+
+        _Example_:
+
+        
+
+    === "Mac 配置Python"
+        
+        下列步骤适用于Intel Mac和M1 Mac。
+        
+        - 第一步：打开终端（command + space 激活Spotlight，输出Terminal）
+        - 第二步：输入`pip3 install jupyter`
+        - 第三步：输入`pip3 install jupyter-lab`
+        - 第四步：输入`jupyter lab`
+        
+        然后你会看到这样的画面：
+        
+        <figure>
+          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
+          <figcaption>Jupyter Lab</figcaption>
+        </figure>
+        
 
 
 ## 3 代码
