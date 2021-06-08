@@ -22,6 +22,15 @@
         - 第一步：下载Anaconda Windows版本的[64-Bit Graphical Installer](https://www.anaconda.com/products/individual-b)
         - 第二步：安装Anaconda
         - 第三步：打开Anaconda Navigator，点击Launch Notebook或JupyterLab
+        
+        然后你会看到这样的画面：
+        
+        <figure>
+          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
+          <figcaption>Jupyter Lab</figcaption>
+        </figure>
+        
+        看到右侧的Notebook区域，添加一个Notebook，然后使用下面的代码打造机器人！
 
     === "Mac 配置Python"
         
