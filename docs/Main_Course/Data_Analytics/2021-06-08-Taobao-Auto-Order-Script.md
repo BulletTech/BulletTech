@@ -57,7 +57,7 @@
 ```
 上面的代码返回了/opt/anaconda3/bin/python，接下来就要用到这个地址。
 
-### 3.1 下载一个小配件: 
+### 3.1 下载一个小配件
 - 查看自己Chrome浏览器的版本(进入`关于Chrome`即可看到软件版本)
 - 前往[ChromeDriver的官方下载地址](https://chromedriver.storage.googleapis.com/index.html)下载对应版本的chrome driver后，放在此```/opt/anaconda3/bin``` 文件夹里
 
@@ -78,7 +78,7 @@ print(now)
 
 2021-06-18 00:00:00.000000
 
-### 3.3 机器人的零件: 
+### 3.3 机器人的零件 
 
 ```python
 def login():
@@ -141,7 +141,7 @@ def buy(times):
 ```
 
 
-### 3.4 启动机器人: 
+### 3.4 启动机器人 
 
 ```python
 browser = webdriver.Chrome()
@@ -149,7 +149,7 @@ login()
 picking()
 ```
 
-### 3.5 定时下单: 
+### 3.5 定时下单
 
 ```python
 order_time = input("请输入抢购时间，格式如(2021-06-08 19:30:00.000000):")
@@ -161,7 +161,7 @@ order_time = input("请输入抢购时间，格式如(2021-06-08 19:30:00.000000
 buy(order_time)
 ```
 
-## 4 最终效果: 
+## 4 最终效果
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
