@@ -1,18 +1,29 @@
-# 下载一些需要的包
+# 淘宝自动定时下单机器人
+
+## 1 痛点
+
+各大电商网站在一些特定的日子都会开启促销活动，如618、双十一等，有时还得盯着时间抢限量发售的商品，但你的成功率高吗?是否经常会遇到App一直加载，刷新后发现商品被一扫而光了？事实是，很多和你竞争抢购商品的对手比你的手更快更准，因为他们很多都是能精准执行命令的`机器人`。
+
+气不气？没关系这篇文章将手把手教你零基础建设一个自己的机器人，帮你在设定好的时间自动下单，再也不用为抢不到心爱的宝贝烦恼了！
+
+## 2 准备工作
+
+在建设机器人之前，请确保你准备好了如下工具：
+- **一台电脑**：不需要多快多新，能用就行
+- **Chrome浏览器**：机器人将在Chrome上完成自动下单的工作
+- **Python编程环境**：别怕，你不需要会编程，代码已经帮你写好了。但你需要安装一个软件能让它跑起来，所以需要简单配置一下python的编程环境。Windows和Mac用户，请按照相对应的方式配置。
+
+
+
+## 3 代码
+
+### 下载一些需要的包
 
 
 ```python
 # Selenium 常用于网页的自动化测试，在此我们借助它自动化淘宝下单的过程
 !pip install selenium
 ```
-
-    Collecting selenium
-      Using cached selenium-3.141.0-py2.py3-none-any.whl (904 kB)
-    Requirement already satisfied: urllib3 in /opt/anaconda3/lib/python3.8/site-packages (from selenium) (1.25.11)
-    Installing collected packages: selenium
-    Successfully installed selenium-3.141.0
-
-
 
 ```python
 !which python
@@ -21,7 +32,7 @@
     /opt/anaconda3/bin/python
 
 
-# 前提: 
+### 前提: 
 - 查看自己Chrome浏览器的版本(进入`关于Chrome`即可看到软件版本)
 - 前往[ChromeDriver的官方下载地址](https://chromedriver.storage.googleapis.com/index.html)下载对应版本的chrome driver后，放在此```/opt/anaconda3/bin``` 文件夹里
 
