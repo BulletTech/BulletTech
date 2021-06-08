@@ -129,7 +129,9 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Main Course: Main_course_blog_intro.md
+  - Main Course: 
+    - Intro: Main_course_blog_intro.md
+    - Data Analytics: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
   - Dessert: 
     - Intro: Dessert_blog_intro.md
     - Hardware:
