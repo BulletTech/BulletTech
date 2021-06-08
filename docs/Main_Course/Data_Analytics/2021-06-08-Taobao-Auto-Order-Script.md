@@ -39,7 +39,7 @@
         
         下列步骤适用于Intel Mac和M1 Mac。
         
-        - 第一步：打开终端（command + space 激活Spotlight，输出Terminal）
+        - 第一步：打开终端（command + space 激活Spotlight，输入Terminal）
         
         <figure>
           <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623155498233-image.png" width="500" />
