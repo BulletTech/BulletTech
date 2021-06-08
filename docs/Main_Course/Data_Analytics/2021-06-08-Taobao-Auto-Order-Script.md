@@ -13,11 +13,11 @@
 - **Chrome浏览器**：机器人将在Chrome上完成自动下单的工作
 - **Python编程环境**：别怕，你不需要会编程，代码已经帮你写好了。但你需要安装一个软件能让它跑起来，所以需要简单配置一下python的编程环境。Windows和Mac用户，请按照相对应的方式配置。
 
-!!! example “配置Python的编程环境”
+!!! example "配置Python的编程环境"
 
     === "Windows 配置Python"
 
-        _Example_:
+        Coming soon
 
         
 
@@ -32,7 +32,7 @@
         
         然后你会看到这样的画面：
         
-        ![]("https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png")
+        ![](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png)
           
         
         看到右侧的Notebook区域，添加一个Notebook，然后使用下面的代码打造机器人！
