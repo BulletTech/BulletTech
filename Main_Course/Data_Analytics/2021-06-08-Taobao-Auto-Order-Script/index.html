@@ -6,7 +6,7 @@
 <span class=kn>import</span> <span class=nn>time</span>
 </code></pre></div> <p>小技巧：这个时间可以用来快速设定抢购时间</p> <div class=highlight><pre><span></span><code><span class=n>now</span> <span class=o>=</span> <span class=n>datetime</span><span class=o>.</span><span class=n>datetime</span><span class=o>.</span><span class=n>now</span><span class=p>()</span><span class=o>.</span><span class=n>strftime</span><span class=p>(</span><span class=s1>&#39;%Y-%m-</span><span class=si>%d</span><span class=s1> %H:%M:%S.</span><span class=si>%f</span><span class=s1>&#39;</span><span class=p>)</span>
 <span class=nb>print</span><span class=p>(</span><span class=n>now</span><span class=p>)</span>
-</code></pre></div> <p>2021-06-18 00:00:00.000000</p> <h3 id=33>3.3 机器人的零件<a class=headerlink href=#33 title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code><span class=k>def</span> <span class=nf>login</span><span class=p>():</span>
+</code></pre></div> <p>2021-06-08 00:00:00.000000</p> <h3 id=33>3.3 机器人的零件<a class=headerlink href=#33 title="Permanent link">&para;</a></h3> <div class=highlight><pre><span></span><code><span class=k>def</span> <span class=nf>login</span><span class=p>():</span>
     <span class=c1># 打开淘宝首页，通过扫码登录</span>
     <span class=n>browser</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s2>&quot;https://www.taobao.com&quot;</span><span class=p>)</span>
     <span class=k>if</span> <span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_link_text</span><span class=p>(</span><span class=s2>&quot;亲，请登录&quot;</span><span class=p>):</span>
