@@ -29,7 +29,7 @@
         然后你会看到这样的画面：
         
         <figure>
-          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
+          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="500" />
           <figcaption>Jupyter Lab</figcaption>
         </figure>
         
@@ -40,6 +40,13 @@
         下列步骤适用于Intel Mac和M1 Mac。
         
         - 第一步：打开终端（command + space 激活Spotlight，输出Terminal）
+        
+        <figure>
+          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623155498233-image.png" width="500" />
+          <figcaption>终端Terminal</figcaption>
+        </figure>
+        
+        
         - 第二步：输入`pip3 install jupyter`
         - 第三步：输入`pip3 install jupyter-lab`
         - 第四步：输入`jupyter lab`
@@ -47,7 +54,7 @@
         然后你会看到这样的画面：
         
         <figure>
-          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
+          <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="500" />
           <figcaption>Jupyter Lab</figcaption>
         </figure>
         
