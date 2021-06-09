@@ -192,7 +192,5 @@ buy(order_time)
 
 ## 4 最终效果
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="450" />
-  <figcaption>自动抢单</figcaption>
-</figure>
+<iframe width=450 src="https://mp.weixin.qq.com/cgi-bin/appmsg?begin=0&count=10&action=list_video&type=15&token=436477428&lang=zh_CN" frameborder=0 allowfullscreen></iframe>
+
