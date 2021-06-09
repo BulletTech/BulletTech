@@ -2,10 +2,10 @@
 template: overrides/blogs.html
 ---
 
-# 淘宝自动定时下单机器人
+# 两分钟打造淘宝抢单机器人
 
 !!! info 
-    作者：袁子弹起飞、Void，发布于2021年6月8日，阅读时间：约6分钟
+    作者：袁子弹起飞、Void，发布于2021年6月8日，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/du-t9DyeC2INQsXg1m1xOQ)
 
 ## 1 痛点
 
@@ -192,5 +192,5 @@ buy(order_time)
 
 ## 4 最终效果
 
-<iframe width=450 src="https://mp.weixin.qq.com/cgi-bin/appmsg?begin=0&count=10&action=list_video&type=15&token=436477428&lang=zh_CN" frameborder=0 allowfullscreen></iframe>
+请移步微信公众号文章，有精心制作的小视频~
 
