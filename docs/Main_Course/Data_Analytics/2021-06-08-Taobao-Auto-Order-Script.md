@@ -72,7 +72,7 @@ template: overrides/blogs.html
 !!! tip
     以下代码请在你刚才创建的Notebook中运行。
 
-### 3.1 下载一些需要的包
+### 3.1 下载需要的程序包
 
 ```python
 # Selenium 常用于网页的自动化测试，在此我们借助它自动化淘宝下单的过程
