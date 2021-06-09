@@ -24,6 +24,8 @@ template: overrides/blogs.html
 !!! example "配置Python的编程环境"
 
     === "Windows 配置Python"
+        
+        下列步骤适用于Windows系统。
 
         Anaconda是一个开源的Python发行版本，集成了Python和众多科学包。
         
