@@ -86,7 +86,7 @@ template: overrides/blogs.html
 ```
 上面的代码返回了/opt/anaconda3/bin/python，接下来就要用到这个地址。
 
-### 3.1 下载一个小配件
+### 3.2 下载一个小配件
 - 查看自己Chrome浏览器的版本(进入`关于Chrome`即可看到软件版本)
 - 前往[ChromeDriver的官方下载地址](https://chromedriver.storage.googleapis.com/index.html)下载对应版本的chrome driver后，放在此```/opt/anaconda3/bin``` 文件夹里
 
