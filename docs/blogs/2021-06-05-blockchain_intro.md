@@ -230,7 +230,6 @@ class BlockChain():
 # 创建区块链，同时生成创始区块
 blockchain = BlockChain(4)
 
-# 这里需要用公钥给payer,payee赋值，用payer的密钥给交易"签名"，但因为没有介绍暂不使用
 transaction1 = Transaction(payer='Paparazzi', payee='Elephant', amount='666')
 
 transaction2 = Transaction(payer='Elephant', payee='Sylar', amount='100')
