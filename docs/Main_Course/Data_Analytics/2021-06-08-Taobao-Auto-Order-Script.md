@@ -192,5 +192,5 @@ buy(order_time)
 
 ## 4 最终效果
 
-请移步微信公众号文章，有精心制作的小视频~
+请移步微信公众号文章，查看精心制作的小视频：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/du-t9DyeC2INQsXg1m1xOQ)
 
