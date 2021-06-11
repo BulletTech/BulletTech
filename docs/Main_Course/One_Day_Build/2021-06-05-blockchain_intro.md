@@ -1,7 +1,12 @@
-
+---
+template: overrides/blogs.html
+---
 
 # 用最通俗的方式聊聊区块链和比特币
 
+!!! info 
+    作者：Jeremy，发布于2021年6月11日，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/QozrNOwElr5h6LDh9VGffg)
+    
 近期因为虚拟货币价格大起大落，和其相关的话题，例如比特币，区块链等等又一次吸引了大家的注意。例如从谷歌趋势（google trends）里得到的数据来看，"比特币"的全球搜索热度从2020年底起和它的价格一样"一飞冲天"，"区块链"相关的搜索量也随之飙升。
 
 ![比特币趋势](https://user-images.githubusercontent.com/54601170/121392960-71604c80-c982-11eb-8015-f547e6e9262c.PNG)
