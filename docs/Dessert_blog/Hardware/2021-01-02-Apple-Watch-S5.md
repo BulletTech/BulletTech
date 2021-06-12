@@ -60,7 +60,7 @@ Apple Watch 从发布以来外观变化几乎可以忽略不计，其一开始�
 Apple和第三方应用供应商提供了很多的种类的表盘以供选择，在每个表盘的设置界面里，用户都可以根据需要添加各种功能的快捷方式。个人习惯根据应用场景选择表盘，比如可以分别设置上班时间，运动健身，周末休闲等场景下佩戴的表盘，可以通过在**手表主屏幕界面左右滑动**快速切换。
 
 <figure>
-  <img src="https://user-images.githubusercontent.com/26101303/121771829-6f75d380-cba4-11eb-8090-ae989bc48e42.PNG" width="600" />
+  <img src="https://user-images.githubusercontent.com/26101303/121771829-6f75d380-cba4-11eb-8090-ae989bc48e42.PNG" width="300" />
   <figcaption>Apple Watch表盘</figcaption>
 </figure>
 
@@ -69,7 +69,7 @@ Apple和第三方应用供应商提供了很多的种类的表盘以供选择，
 这是Apple Watch最初主打的功能之一，在完成与iPhone的配对后，Apple Watch会主动显示iPhone应用的通知，在通知下方通常还有若干快捷方式进行回应。如接收到同事发来的会议邀请时，你可以很快地在手表上点击确认参加/拒绝参加，目前较为成熟的办公应用（如Office）和即时通讯应用（如微信）都适配了快捷回复功能。
 
 <figure>
-  <img src="https://user-images.githubusercontent.com/26101303/121771845-86b4c100-cba4-11eb-8875-bd92af4c306b.png" width="600" />
+  <img src="https://user-images.githubusercontent.com/26101303/121771845-86b4c100-cba4-11eb-8875-bd92af4c306b.png" width="300" />
   <figcaption>应用快捷回复</figcaption>
 </figure>
 
@@ -77,7 +77,7 @@ Apple和第三方应用供应商提供了很多的种类的表盘以供选择，
 但是由于屏幕较小，在Apple Watch上的打字体验是很糟糕的，如果特殊情况下需要使用Apple Watch输入较长信息，建议使用语音回复。
 
 <figure>
-  <img src="https://user-images.githubusercontent.com/26101303/121771874-a9df7080-cba4-11eb-921f-f4e152f36182.PNG" width="600" />
+  <img src="https://user-images.githubusercontent.com/26101303/121771874-a9df7080-cba4-11eb-921f-f4e152f36182.PNG" width="300" />
   <figcaption>手写输入</figcaption>
 </figure>
 
