@@ -3,7 +3,7 @@ site_name: BulletTech
 site_url: https://bullettech.github.io/BulletTech/
 site_author: BulletTech Team
 site_description: >-
-  We are a team of a few data scientists working in the financial industry. Here is the place where we share practical analytics skills, working and life experience. Enjoy your time here! 
+  We are a team of a few data scientists working in the financial industry. Here is the place where we share practical analytics skills, working and life experience. Enjoy your time here!
 
 # Repository
 repo_name: BulletTech/BulletTech
@@ -78,7 +78,7 @@ plugins:
       j2_variable_start_string: '[['
       j2_variable_end_string: ']]'
   - git-revision-date-localized
-  
+
 # Customization
 extra:
   social:
@@ -107,7 +107,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-    
+
   - pymdownx.highlight
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -130,21 +130,21 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Main Course: 
+  - Main Course:
     - Intro: Main_course_blog_intro.md
-    - Data Analytics: 
+    - Data Analytics:
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
     - One Day Build:
         - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
-  - Dessert: 
+  - Dessert:
     - Intro: Dessert_blog_intro.md
     - Hardware:
-        - M1 Mac mini 使用半年体验 - Mac的新未来: Dessert_blog/Hardware/2021-06-03-Mac-mini.md
-        - Apple Watch S5 使用一年感受 - 不后悔！: Dessert_blog/Hardware/2021-01-02-Apple-Watch-S5.md
-        - 初识2020款12.9英寸iPad Pro - 未来可期: Dessert_blog/Hardware/2020-04-05-iPad-Pro.md
-        - 换种姿势，在家办公 - 罗技MX Keys + M720主观评测: Dessert_blog/Hardware/2020-03-14-MX-Keys.md
+        - M1 Mac mini 使用半年体验 - Mac的新未来: Dessert/Hardware/2021-06-03-Mac-mini.md
+        - Apple Watch S5 使用一年感受 - 不后悔！: Dessert/Hardware/2021-01-02-Apple-Watch-S5.md
+        - 初识2020款12.9英寸iPad Pro - 未来可期: Dessert/Hardware/2020-04-05-iPad-Pro.md
+        - 换种姿势，在家办公 - 罗技MX Keys + M720主观评测: Dessert/Hardware/2020-03-14-MX-Keys.md
     - Apps:
-        - 个人笔记应用 - Notion: Dessert_blog/Apps/2021-06-06-Notion.md     
+        - 个人笔记应用 - Notion: Dessert_blog/Apps/2021-06-06-Notion.md
   - About Us: About_us.md
 
 
