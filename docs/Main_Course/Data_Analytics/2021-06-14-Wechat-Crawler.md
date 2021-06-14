@@ -66,8 +66,11 @@ Charles常用的工具有工具栏下面扫帚状按钮(清除当前session的�
   <figcaption>访问数据</figcaption>
 </figure>
 
-我们点开目标小程序：久事体育场馆(https://user.jusssportsvenue.com)的文件夹，探索一下Charles为我们抓取了什么数据。  
+我们点开目标小程序：久事体育场馆(https://user.jusssportsvenue.com) 的文件夹，探索一下Charles为我们抓取了什么数据。  
 我们点击api - common - advertising?type=1。可以看到右侧显示了这个请求的Overview。我们继续点击右上侧的Contents，可以看到底下已经呈现了这个请求返回的内容。  
-对应于小程序的正是首页的广告内容“小小体育家”
+对应于小程序的正是首页的广告内容“小小体育家”。Charles成功为我们获取了微信小程序的内容。下一步，我们将模拟整个订网球场的流程，观察这些请求以及返回的内容，以便我们之后用程序实现整个订场的流程。  
+我们先关闭打开的微信小程序并点击Charles的扫帚状按钮，清除当前session的数据。我们重新打开微信小程序，点击**网球**，选择我们的目标场地：**东方体育中心**。我们选择想订的时间，例如，周二13点的三号场，点击确认提交。  
+为了避免Charles获取其他冗余数据，我们点击摄像头状按钮停止抓取数据。我们重新点开久事体育场馆(https://user.jusssportsvenue.com) 的文件夹。
+
 
 
