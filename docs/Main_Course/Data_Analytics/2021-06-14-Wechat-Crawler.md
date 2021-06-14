@@ -56,6 +56,13 @@ Help -> SSL Proxying -> Install Charles Root Certificate
   <figcaption>查看证书结果</figcaption>
 </figure>
 
+接着点击Proxy->SSL Proxy Settings。在SSL Proxying中勾选Enable SSL Proxying并点击Add，添加Host和Port都为 * (代表监听所有IP地址的所有端口)。
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623654447252-vx12.png" width="600" />
+  <figcaption>查看证书结果</figcaption>
+</figure>
+
 至此，Charles就可以抓取pc端网络访问的所有数据了。  
 
 Charles常用的工具有工具栏下面扫帚状按钮(清除当前session的数据)和摄像头状按钮(开始以及停止抓取数据)。  
