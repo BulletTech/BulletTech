@@ -66,4 +66,8 @@ Charles常用的工具有工具栏下面扫帚状按钮(清除当前session的�
   <figcaption>访问数据</figcaption>
 </figure>
 
-我们点开目标小程序(https://user.jusssportsvenue.com)  
+我们点开目标小程序：久事体育场馆(https://user.jusssportsvenue.com)的文件夹，探索一下Charles为我们抓取了什么数据。  
+我们点击api - common - advertising?type=1。可以看到右侧显示了这个请求的Overview。我们继续点击右上侧的Contents，可以看到底下已经呈现了这个请求返回的内容。  
+对应于小程序的正是首页的广告内容“小小体育家”
+
+
