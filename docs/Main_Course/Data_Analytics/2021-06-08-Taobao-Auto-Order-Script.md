@@ -145,12 +145,13 @@ def picking():
 #等待抢购时间，定时秒杀，这里我们定义一个buy函数
 def buy(times):
     print(times)
-    while True:
+    order_placed_status = False
+    while order_placed_status != True:
         now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
         # 对比时间，时间到的话就点击结算
-        if now > times:
+        if now >= times:
             # 点击结算按钮
-            while True:
+            while order_placed_status != True:
                 try:
                     if browser.find_element_by_link_text("结 算"):
                         browser.find_element_by_link_text("结 算").click()
@@ -159,11 +160,13 @@ def buy(times):
                 except:
                     pass
             # 点击提交订单按钮
-            while True:
+            while order_placed_status != True:
                 try:
                     if browser.find_element_by_link_text('提交订单'):
                         browser.find_element_by_link_text('提交订单').click()
                         print(f"抢购成功，请尽快付款")
+                        order_placed_status = True
+                        break
                 except:
                     print(f"再次尝试提交订单")
             time.sleep(0.01)
