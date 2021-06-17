@@ -34,12 +34,13 @@
 </code></pre></div> <div class=highlight><pre><span></span><code><span class=c1>#等待抢购时间，定时秒杀，这里我们定义一个buy函数</span>
 <span class=k>def</span> <span class=nf>buy</span><span class=p>(</span><span class=n>times</span><span class=p>):</span>
     <span class=nb>print</span><span class=p>(</span><span class=n>times</span><span class=p>)</span>
-    <span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+    <span class=n>order_placed_status</span> <span class=o>=</span> <span class=kc>False</span>
+    <span class=k>while</span> <span class=n>order_placed_status</span> <span class=o>!=</span> <span class=kc>True</span><span class=p>:</span>
         <span class=n>now</span> <span class=o>=</span> <span class=n>datetime</span><span class=o>.</span><span class=n>datetime</span><span class=o>.</span><span class=n>now</span><span class=p>()</span><span class=o>.</span><span class=n>strftime</span><span class=p>(</span><span class=s1>&#39;%Y-%m-</span><span class=si>%d</span><span class=s1> %H:%M:%S.</span><span class=si>%f</span><span class=s1>&#39;</span><span class=p>)</span>
         <span class=c1># 对比时间，时间到的话就点击结算</span>
-        <span class=k>if</span> <span class=n>now</span> <span class=o>&gt;</span> <span class=n>times</span><span class=p>:</span>
+        <span class=k>if</span> <span class=n>now</span> <span class=o>&gt;=</span> <span class=n>times</span><span class=p>:</span>
             <span class=c1># 点击结算按钮</span>
-            <span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+            <span class=k>while</span> <span class=n>order_placed_status</span> <span class=o>!=</span> <span class=kc>True</span><span class=p>:</span>
                 <span class=k>try</span><span class=p>:</span>
                     <span class=k>if</span> <span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_link_text</span><span class=p>(</span><span class=s2>&quot;结 算&quot;</span><span class=p>):</span>
                         <span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_link_text</span><span class=p>(</span><span class=s2>&quot;结 算&quot;</span><span class=p>)</span><span class=o>.</span><span class=n>click</span><span class=p>()</span>
@@ -48,11 +49,13 @@
                 <span class=k>except</span><span class=p>:</span>
                     <span class=k>pass</span>
             <span class=c1># 点击提交订单按钮</span>
-            <span class=k>while</span> <span class=kc>True</span><span class=p>:</span>
+            <span class=k>while</span> <span class=n>order_placed_status</span> <span class=o>!=</span> <span class=kc>True</span><span class=p>:</span>
                 <span class=k>try</span><span class=p>:</span>
                     <span class=k>if</span> <span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_link_text</span><span class=p>(</span><span class=s1>&#39;提交订单&#39;</span><span class=p>):</span>
                         <span class=n>browser</span><span class=o>.</span><span class=n>find_element_by_link_text</span><span class=p>(</span><span class=s1>&#39;提交订单&#39;</span><span class=p>)</span><span class=o>.</span><span class=n>click</span><span class=p>()</span>
                         <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&quot;抢购成功，请尽快付款&quot;</span><span class=p>)</span>
+                        <span class=n>order_placed_status</span> <span class=o>=</span> <span class=kc>True</span>
+                        <span class=k>break</span>
                 <span class=k>except</span><span class=p>:</span>
                     <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&quot;再次尝试提交订单&quot;</span><span class=p>)</span>
             <span class=n>time</span><span class=o>.</span><span class=n>sleep</span><span class=p>(</span><span class=mf>0.01</span><span class=p>)</span>
