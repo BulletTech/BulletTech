@@ -10,6 +10,28 @@ repo_name: BulletTech/BulletTech
 repo_url: https://github.com/BulletTech/BulletTech
 edit_uri: ""
 
+# Page tree
+nav:
+  - Home: index.md
+  - Main Course:
+    - Intro: Main_course_blog_intro.md
+    - Data Analytics:
+        - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
+        - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
+    - One Day Build:
+        - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
+  - Dessert:
+    - Intro: Dessert_blog_intro.md
+    - Hardware:
+        - M1 Mac mini 使用半年体验 - Mac的新未来: Dessert/Hardware/2021-06-03-Mac-mini.md
+        - Apple Watch S5 使用一年感受 - 不后悔！: Dessert/Hardware/2021-01-02-Apple-Watch-S5.md
+        - 初识2020款12.9英寸iPad Pro - 未来可期: Dessert/Hardware/2020-04-05-iPad-Pro.md
+        - 换种姿势，在家办公 - 罗技MX Keys + M720主观评测: Dessert/Hardware/2020-03-14-MX-Keys.md
+    - Apps:
+        - 个人笔记应用 - Notion: Dessert/Apps/2021-06-06-Notion.md
+        - 装机必备之实用电脑软件: Dessert/Apps/2021-06-15-Hotapps.md
+  - About Us: About_us.md
+
 # Copyright
 copyright: Copyright &copy; 2021 BulletTech
 
@@ -127,26 +149,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-# Page tree
-nav:
-  - Home: index.md
-  - Main Course:
-    - Intro: Main_course_blog_intro.md
-    - Data Analytics:
-        - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
-    - One Day Build:
-        - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
-  - Dessert:
-    - Intro: Dessert_blog_intro.md
-    - Hardware:
-        - M1 Mac mini 使用半年体验 - Mac的新未来: Dessert/Hardware/2021-06-03-Mac-mini.md
-        - Apple Watch S5 使用一年感受 - 不后悔！: Dessert/Hardware/2021-01-02-Apple-Watch-S5.md
-        - 初识2020款12.9英寸iPad Pro - 未来可期: Dessert/Hardware/2020-04-05-iPad-Pro.md
-        - 换种姿势，在家办公 - 罗技MX Keys + M720主观评测: Dessert/Hardware/2020-03-14-MX-Keys.md
-    - Apps:
-        - 个人笔记应用 - Notion: Dessert/Apps/2021-06-06-Notion.md
-        - 装机必备之实用电脑软件: Dessert/Apps/2021-06-15-Hotapps.md
-  - About Us: About_us.md
+
 
 
 # Google Analytics
