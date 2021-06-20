@@ -11,7 +11,7 @@ Big brother是我们公司的网球王子，他总是使用某微信小程序预
 
 别慌，我们有黑科技。这篇文章将教你使用Python实时监控场地情况，让你在订网球场也内卷的时代占尽先机。
 
-# 1 软件配置
+## 1 软件配置
 
 Charles是著名的抓包工具，可以抓取移动端与pc端网络访问的所有数据。我们将使用它抓取我们与小程序交互的所有信息。我们可以去官网下载适用于自己系统的[Charles安装包](https://www.charlesproxy.com/download/)
 
@@ -70,7 +70,7 @@ Help -> SSL Proxying -> Install Charles Root Certificate
 
 Charles常用的工具有工具栏下面扫帚状按钮(清除当前session的数据)和摄像头状按钮(开始以及停止抓取数据)。  
 
-# 2 探索数据 
+## 2 探索数据 
 
 我们在pc端登录微信，打开我们想爬取的小程序，可以看到Charles已经为我们抓取了所有的访问数据。 
 
@@ -116,7 +116,7 @@ Charles成功为我们获取了微信小程序的内容。下一步，我们将�
 
 以及和下单有关的u文件夹。u文件夹由block、order两个子文件夹以及info组成。info存储了用户的信息，从右侧Contents可以看到自己的用户名、手机号码等等。block初始化了这笔订单，并没有太多别的信息。order文件夹下包括cancel文件夹以及下订单的各种请求。其中createkBlock这个post请求对应于我们在小程序上所做的**确认订单**。blockPay代表了**立即支付**的操作。 
 
-# 3 Python脚本
+## 3 Python脚本
 
 下面我们将尝试使用Python，自动化的帮我们获取场地信息。我们按照[两分钟打造淘宝抢单机器人](https://mp.weixin.qq.com/s/du-t9DyeC2INQsXg1m1xOQ)文章所述，打开notebook。  
 
