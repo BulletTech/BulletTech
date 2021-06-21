@@ -130,7 +130,7 @@ import re
 import json
 ```
 
-第二步，我们观察到Charles中，block -> ground文件夹下的请求返回了场地的信息。
+第二步，我们在Charles中观察到，block -> ground文件夹下的请求返回了场地的信息。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-20/1624149638885-vx13.png" width="600" />
