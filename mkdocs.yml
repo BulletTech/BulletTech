@@ -30,7 +30,9 @@ nav:
     - Apps:
         - 个人笔记应用 - Notion: Dessert/Apps/2021-06-06-Notion.md
         - 装机必备之实用电脑软件: Dessert/Apps/2021-06-15-Hotapps.md
-  - About Us: About_us.md
+  - About Us:
+        - About BulletTech: About_us.md
+        - Our Stories: Our_story.md
 
 # Copyright
 copyright: Copyright &copy; 2021 BulletTech
