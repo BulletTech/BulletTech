@@ -42,6 +42,11 @@ template: overrides/general_no_comments.html
 
 ## Void的故事
 
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624452012172-1.png" width="200" />
+  <figcaption>Void</figcaption>
+</figure>
+
 本科读的物理，修了金融的双学位，研究生依旧是经济大类。有着奇奇怪怪的复合背景，但似乎和写代码没有太大的关系。  
 只是由于大四的时候做了一份量化投资私募的实习，从此便简单的相信自己一定会成为一个“优秀”的Quant。去过大大小小的私募、券商、基金实习，依旧是一个不会投资的小韭菜。只是觉得写代码很有意思，很有成就感，自己写的也不是太差，于是在最后一个暑期“艰难”转行。  
 
