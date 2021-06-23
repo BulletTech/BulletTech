@@ -32,7 +32,7 @@ template: overrides/general_no_comments.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624451292168-WeChat+Image_20210623202218.png" width="200" />
-  <figcaption>## Jeremy</figcaption>
+  <figcaption>Jeremy</figcaption>
 </figure>
 
 小的时候很爱玩，尤其对两件事情比较着迷，哪两件事呢?电脑游戏和围棋。喜欢电脑游戏大概是大部分男生的共通点吧，不多说了，而我大概就是又菜又爱玩的水平，WAR3没赢过中等难度电脑。
