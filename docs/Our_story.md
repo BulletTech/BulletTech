@@ -48,7 +48,7 @@ template: overrides/general_no_comments.html
 ## Void的故事
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624452012172-1.png" width="200" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624456739504-11.jpg" width="200" />
   <figcaption>Void</figcaption>
 </figure>
 
