@@ -11,7 +11,7 @@ template: overrides/general_no_comments.html
 我们的团队中有多名消费金融行业的数据分析师、数据科学家。因为热爱数据科学、善于观察生活、总结经验，并且想通过文字将我们的所见所闻分享给更多人，我们聚到了一起，并创办了BulletTech。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="300" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
   <figcaption>BulleTech 微信公众号</figcaption>
 </figure>
 
