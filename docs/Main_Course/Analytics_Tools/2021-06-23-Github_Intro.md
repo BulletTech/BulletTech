@@ -55,6 +55,13 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 
 建议设置合并请求的模板，将更新的信息填写清楚会节省很多沟通的时间，日后回看时也有迹可循。可以在我们的[仓库](https://github.com/BulletTech/BulletTech/tree/main/.github)中找到对应的模板，并根据自己的需求更新模板。
 
-### 2.3 
+### 2.3 建立博客
+
+Github提供了免费的服务器承载简单的博客，BulletTech自己的博客就搭建在了GitHub上。简单来说，你只需要开启Github Pages功能，博客就自动生成了，GitHub提供了很多的模板供选择，同时你可以自己从头编写，此处不再展开，如有兴趣，请前往我们的[仓库](https://bullettech.github.io/BulletTech/)查看源码进行学习。
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624539190066-Blog.jpeg" width="300" />
+  <figcaption>BulletTech博客</figcaption>
+</figure>
 
 ## Github怎么用
