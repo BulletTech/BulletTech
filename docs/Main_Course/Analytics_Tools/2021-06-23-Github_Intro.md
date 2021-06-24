@@ -71,15 +71,16 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624540363015-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" width="300" />
   <img src="https://user-images.githubusercontent.com/84658804/123267740-ecebfd00-d52f-11eb-85d9-b2f90583bf4c.png" width="300" />
-  <figcaption>新建仓库</figcaption>
+  <figcaption>新建仓库，使用GitHub Desktop</figcaption>
 </figure>
 
 ### 3.2 GitHub Desktop基本功能
 
-基本操作如下图所示。
+基本操作如下图所示。请注意，有时候同步（Pull)仓库时会发生冲突，原因大多是本地的更新没有同步到分支上，而其他人已经更新的分支，这时，在同步前需要将你的更新搁置（Stash）或者放弃（Discard），这两个操作可以在顶部Branch菜单里找到。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624541913161-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.png" width="600" />
-  <figcaption>新建仓库</figcaption>
+  <figcaption>GitHub Desktop基本操作</figcaption>
 </figure>
 
+综上所述，掌握了这些基本知识和技能后，你能够很顺利地使用GitHub进行文件管理、协同合作、创建自己的博客，到目前为止，一行代码都不要写。当然，使用代码也可以很方便地操作Github，下次我们将
