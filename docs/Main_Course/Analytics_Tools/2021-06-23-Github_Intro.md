@@ -4,6 +4,9 @@ template: overrides/blogs.html
 
 # 一行代码都不写，教你使用Github
 
+!!! info 
+    作者：袁子弹起飞，发布于2021年6月24日，阅读时间：约7分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+
 ## 1 Github是什么
 
 在很多人的印象中，GitHub主要是程序员写代码会使用到的工具。事实上，GitHub最主要的特性是版本管理和协同工作，这意味着不仅是程序员，非技术人士也可以使用它更高效地完成很多工作。因此，这篇文章将教大家零基础使用GitHub，帮助大家认识这个强大的效率工具。首先请熟悉GitHub使用过程中的常见术语：
@@ -84,3 +87,8 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 </figure>
 
 综上所述，掌握了这些基本知识和技能后，你能够很顺利地使用GitHub进行文件管理、协同合作、创建自己的博客，到目前为止，一行代码都不要写。当然，使用代码也可以很方便地操作Github，下次我们将使用命令操作Github，敬请期待！
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="600" />
+  <figcaption>BulletTech微信公众号</figcaption>
+</figure>
