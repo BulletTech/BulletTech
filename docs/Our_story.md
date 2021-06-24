@@ -73,7 +73,7 @@ template: overrides/general_no_comments.html
 ## 袁子弹的故事
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624447659803-Gif_transparent.gif" width="200" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624456142113-%E8%A2%81%E5%AD%90%E5%BC%B9gif%20-%20keynote.gif" width="200" />
   <figcaption>袁子弹</figcaption>
 </figure>
 
