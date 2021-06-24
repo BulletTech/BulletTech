@@ -89,6 +89,6 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 综上所述，掌握了这些基本知识和技能后，你能够很顺利地使用GitHub进行文件管理、协同合作、创建自己的博客，到目前为止，一行代码都不要写。当然，使用代码也可以很方便地操作Github，下次我们将使用命令操作Github，敬请期待！
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="300" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
   <figcaption>BulletTech微信公众号</figcaption>
 </figure>
