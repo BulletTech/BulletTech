@@ -53,4 +53,8 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
   <figcaption>合并请求</figcaption>
 </figure>
 
+建议设置合并请求的模板，将更新的信息填写清楚会节省很多沟通的时间，日后回看时也有迹可循。可以在我们的[仓库](https://github.com/BulletTech/BulletTech/tree/main/.github)中找到对应的模板，并根据自己的需求更新模板。
+
+### 2.3 
+
 ## Github怎么用
