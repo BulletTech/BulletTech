@@ -57,11 +57,25 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 
 ### 2.3 建立博客
 
-Github提供了免费的服务器承载简单的博客，BulletTech自己的博客就搭建在了GitHub上。简单来说，你只需要开启Github Pages功能，博客就自动生成了，GitHub提供了很多的模板供选择，同时你可以自己从头编写，此处不再展开，如有兴趣，请前往我们的[仓库](https://bullettech.github.io/BulletTech/)查看源码进行学习。
+Github提供了免费的服务器承载简单的博客，BulletTech自己的博客就搭建在了GitHub上。简单来说，你只需要在仓库的设置选项中开启Github Pages功能，博客就自动生成了，GitHub提供了很多的模板供选择，同时你可以自己从头编写，此处不再展开，如有兴趣，请前往我们的[仓库](https://bullettech.github.io/BulletTech/)查看源码进行学习。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624539190066-Blog.jpeg" width="300" />
   <figcaption>BulletTech博客</figcaption>
 </figure>
 
-## Github怎么用
+## 3 Github怎么用
+
+### 3.1 创建仓库
+
+注册完GitHub后，在你的主页里，点击最显眼的绿色按钮（New）即可新建仓库了。点击进入仓库后，点击绿色按钮（Code）即可将使用GitHub Desktop软件打开，并把文件下载到你的电脑上，接下来你就可以愉快地开展项目了！
+
+<figure>
+  <img src="https://user-images.githubusercontent.com/84658804/123267740-ecebfd00-d52f-11eb-85d9-b2f90583bf4c.png" width="300" />
+  <img src="https://user-images.githubusercontent.com/84658804/123267740-ecebfd00-d52f-11eb-85d9-b2f90583bf4c.png" width="300" />
+  <figcaption>新建仓库</figcaption>
+</figure>
+
+### 3.2 GitHub Desktop基本功能
+
+
