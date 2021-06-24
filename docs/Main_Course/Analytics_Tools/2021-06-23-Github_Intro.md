@@ -34,8 +34,6 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 
 具体来说，版本管理的功能可以帮助保存文件的修改历史，以便在需要回溯时能很方便地检查和回滚。
 
-
-
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624441521157-Github%20%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.png" width="600" />
   <figcaption>Github Desktop 查看历史版本</figcaption>
@@ -78,4 +76,10 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 
 ### 3.2 GitHub Desktop基本功能
 
+基本操作如下图所示。
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624541913161-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.png" width="600" />
+  <figcaption>新建仓库</figcaption>
+</figure>
 
