@@ -14,7 +14,7 @@ template: overrides/blogs.html
 - 仓库（Repository）：可以看作是存代码和文件一个文件夹，当你作为仓库管理者时，可以设置访问权限
 - 远程仓库（Remote Repository）：可以看作仓库的副本，通常在此完成修改，日后用于补充到仓库主干上
 - 主干（master或main）：当前项目所在的状态
-- 分支（Branch）：可以看作主干的副本，可暂时存储修改的状态，常用于
+- 分支（Branch）：可以看作主干的副本，可暂时存储修改的状态，常用于针对主干做更新
 - 提交更新（Push）：将修改提交到仓库中
 - 获取更新（Pull）：将仓库上的更新同步到现在的工作状态
 - 合并请求（Pull request）：用于将分支上的修改合并到主干上
@@ -27,7 +27,7 @@ template: overrides/blogs.html
 </figure>
 
 
-接下来的介绍中，都会使用GitHub的桌面客户端（在GitHub的官方网站可免费下载），借助这个app，可以使用GitHub绝大多数的核心功能。
+接下来，将主要会使用GitHub的桌面客户端（在GitHub的官方网站可免费下载）进行功能介绍，借助这个app，可以使用GitHub绝大多数的核心功能。
 
 ## 2 Github能做什么
 
@@ -39,7 +39,7 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624441521157-Github%20%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.png" width="600" />
-  <figcaption>Github Desktop 查看历史版本</figcaption>
+  <figcaption>Github Desktop查看历史版本</figcaption>
 </figure>
 
 
@@ -47,7 +47,7 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 
 ### 2.2 协作
 
-同时，这些更改是由BulletTech的团队成员共同完成的，当多人协作时，建议在不同的分支上工作，当完成更新后，可以通过合并请求（⌘ + R）将你的分支上的更新合并到主干上。此时，软件会自动引导你跳转到网页端创建请求，团队的成员就可以审核更改，如果符合要求，更新就可以被合并到主干上。
+这些更改是由BulletTech的团队成员共同完成的，当多人协作时，建议在不同的分支上工作，当完成更新后，可以通过合并请求（⌘ + R）将你的分支上的更新合并到主干上。此时，软件会自动引导你跳转到网页端创建请求，团队的成员就可以审核更改，如果符合要求，更新就可以被合并到主干上。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624441553655-Github%E5%90%88%E5%B9%B6%E8%AF%B7%E6%B1%82.png" width="600" />
@@ -58,7 +58,7 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 
 ### 2.3 建立博客
 
-Github提供了免费的服务器承载简单的博客，BulletTech自己的博客就搭建在了GitHub上。简单来说，你只需要在仓库的设置选项中开启Github Pages功能，博客就自动生成了，GitHub提供了很多的模板供选择，同时你可以自己从头编写，此处不再展开，如有兴趣，请前往我们的[仓库](https://bullettech.github.io/BulletTech/)查看源码进行学习。
+Github提供了免费的服务器承载简单的博客，BulletTech自己的博客就搭建在了GitHub上。你只需要在仓库的设置选项中开启Github Pages功能，博客就自动生成了，GitHub提供了很多的模板供选择，同时你可以自己从头编写，此处不再展开，如有兴趣，请前往我们的[仓库](https://bullettech.github.io/BulletTech/)查看源码进行学习。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624539190066-Blog.jpeg" width="300" />
@@ -69,7 +69,7 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 
 ### 3.1 创建仓库
 
-注册完GitHub后，在你的主页里，点击最显眼的绿色按钮（New）即可新建仓库了。点击进入仓库后，点击绿色按钮（Code）即可将使用GitHub Desktop软件打开，并把文件下载到你的电脑上，接下来你就可以愉快地开展项目了！
+注册完GitHub后，在你的主页里，点击最显眼的绿色按钮（New）即可新建仓库了。点击进入仓库后，点击绿色按钮（Code）即可将使用GitHub Desktop软件打开，并把文件下载到你的电脑上，接下来你就可以正式开展项目了！
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624540363015-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" width="300" />
@@ -79,7 +79,7 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 
 ### 3.2 GitHub Desktop基本功能
 
-基本操作如下图所示。请注意，有时候同步（Pull)仓库时会发生冲突，原因大多是本地的更新没有同步到分支上，而其他人已经更新的分支，这时，在同步前需要将你的更新搁置（Stash）或者放弃（Discard），这两个操作可以在顶部Branch菜单里找到。
+基本操作如下图所示。请注意，有时同步（Pull)仓库时会发生冲突，原因大多是本地的更新没有同步到分支上，而其他人已经更新的分支，这时，在同步前需要将你的更新搁置（Stash）或者放弃（Discard），这两个操作可以在顶部Branch菜单里找到。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624541913161-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.png" width="600" />
