@@ -71,7 +71,7 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 注册完GitHub后，在你的主页里，点击最显眼的绿色按钮（New）即可新建仓库了。点击进入仓库后，点击绿色按钮（Code）即可将使用GitHub Desktop软件打开，并把文件下载到你的电脑上，接下来你就可以愉快地开展项目了！
 
 <figure>
-  <img src="https://user-images.githubusercontent.com/84658804/123267740-ecebfd00-d52f-11eb-85d9-b2f90583bf4c.png" width="300" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624540363015-%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png" width="300" />
   <img src="https://user-images.githubusercontent.com/84658804/123267740-ecebfd00-d52f-11eb-85d9-b2f90583bf4c.png" width="300" />
   <figcaption>新建仓库</figcaption>
 </figure>
