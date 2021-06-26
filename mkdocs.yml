@@ -18,7 +18,7 @@ nav:
     - Data Analytics:
         - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
-        - 双重差分小介: Main_Course/Analytics_Tools/2021-06-24-DID.md
+        - 双重差分小介: Main_Course/Data_Analytics/2021-06-24-DID.md
     - One Day Build:
         - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
     - Analytics Tools:
