@@ -130,4 +130,4 @@ dmypy.json
 
 
 # macOS file system file
-*/.DS_Store
+**/.DS_Store
