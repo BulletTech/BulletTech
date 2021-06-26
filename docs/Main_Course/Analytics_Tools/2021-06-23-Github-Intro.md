@@ -86,7 +86,7 @@ Github提供了免费的服务器承载简单的博客，BulletTech自己的博�
 基本操作如下图所示。请注意，有时同步（Pull)仓库时会发生冲突，原因大多是本地的更新没有同步到分支上，而其他人已经更新的分支，这时，在同步前需要将你的更新搁置（Stash）或者放弃（Discard），这两个操作可以在顶部Branch菜单里找到。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624541913161-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.png" width="600" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-26/1624676128227-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C.png" width="600" />
   <figcaption>GitHub Desktop基本操作</figcaption>
 </figure>
 
