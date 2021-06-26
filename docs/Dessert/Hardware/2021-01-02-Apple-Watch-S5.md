@@ -4,9 +4,9 @@ template: overrides/blogs.html
 
 # Apple Watch S5 使用一年感受 - 不后悔！
 
-!!! info 
+!!! info
     作者：袁子弹起飞，发布于2021年6月3日，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247483756&idx=1&sn=156c43f0f31a273d9ceeabdfd1f44379&chksm=eb90f218dce77b0ea3a2ed3cd9f336f1ecc6fc2ac07298f959e49f8ade0b190d1bece966554f&token=428299100&lang=zh_CN#rd)
-    
+
 
 写这篇文章纠结了一年，坦白说，本人买Apple Watch的时候就犹豫了很久，因为这不是一件必需的电子产品，从2015年4月发布，在很长一段时间里，它都被大众认为是一款华而不实的产品，包括自己在内，对它一直都怀疑态度。然而在2019年10月Apple Watch S5发布时，常亮屏幕功能的加入让更能让普通用户接受了，所以本人抱着试一试的心态购入了第一只Apple Watch。
 
@@ -56,7 +56,7 @@ Apple Watch 从发布以来外观变化几乎可以忽略不计，其一开始�
 </figure>
 
 ### 2.2 定制表盘
-  
+
 Apple和第三方应用供应商提供了很多的种类的表盘以供选择，在每个表盘的设置界面里，用户都可以根据需要添加各种功能的快捷方式。个人习惯根据应用场景选择表盘，比如可以分别设置上班时间，运动健身，周末休闲等场景下佩戴的表盘，可以通过在**手表主屏幕界面左右滑动**快速切换。
 
 <figure>
@@ -135,3 +135,7 @@ Apple Watch的[理论续航时间](https://www.apple.com.cn/watch/compare/)在17
 作为特殊的产品类型，个人推荐购买Apple Watch配套的Apple Care保险服务，它能在2年内担保4次意外损坏，并且当电池容量低于80%时免费进修维修，由于Apple Watch集成度高，所以维修基本都是更换新机，因此Apple Care的性价比相比于iPhone等其他产品更高。
 
 总体而言，一年使用下来，Apple Watch对本人使用Apple产品的方式带来了许多变化，也带来了许多新的体验，相比于大受欢迎的iPhone，iPad，Mac和AirPods，这是一款不那么令人熟悉的产品，但你难以否认，它的确在一步一步变得更好，相信也会有越来越多的人接受这款与你最贴近的智能设备。
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
+</figure>
