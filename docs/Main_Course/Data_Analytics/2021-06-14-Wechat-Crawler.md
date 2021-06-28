@@ -270,4 +270,6 @@ while id:
 
 我们只需要运行这段代码，如果有空的场地，Python将自动的给我们的邮箱发送邮件。我们只需要及时下单预定场地即可。
 
-
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
+</figure>
