@@ -16,11 +16,11 @@ nav:
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
+        - A/B测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
         - 双重差分小介: Main_Course/Data_Analytics/2021-06-24-DID.md
         - 一行代码都不写，教你使用Github: Main_Course/Analytics_Tools/2021-06-23-Github-Intro.md
         - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
-        - A/测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
     - One Day Build:
         - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
   - Dessert:
@@ -31,8 +31,8 @@ nav:
         - 初识2020款12.9英寸iPad Pro - 未来可期: Dessert/Hardware/2020-04-05-iPad-Pro.md
         - 换种姿势，在家办公 - 罗技MX Keys + M720主观评测: Dessert/Hardware/2020-03-14-MX-Keys.md
     - Apps:
-        - 个人笔记应用 - Notion: Dessert/Apps/2021-06-06-Notion.md
         - 装机必备之实用电脑软件: Dessert/Apps/2021-06-15-Hotapps.md
+        - 个人笔记应用 - Notion: Dessert/Apps/2021-06-06-Notion.md
   - About Us:
         - 关于BulletTech: About_us.md
         - 我们的故事: Our_story.md
