@@ -33,3 +33,4 @@ template: overrides/blogs.html
 
 ### 2.1 创建不包含任何格式的markdown文本
 
+各个平台格式不尽相同，所以最简单的办法是
