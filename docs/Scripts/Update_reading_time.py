@@ -27,8 +27,8 @@ for post in Post_list:
 
     markdown = re.sub(r"发布于\d+-\d+-\d+，阅读时间", "发布于{}，阅读时间".format(date), markdown)
 
-    chinese_word = re.findall(r'[\u4E00-\u9FFF]',markdown)
-    markdown = re.sub(r"阅读时间：约\d+分钟", "阅读时间：约{}分钟".format(int(len(chinese_word)/200)), markdown)
+    chinese_words = re.findall(r'[\u4E00-\u9FFF]',markdown)
+    markdown = re.sub(r"阅读时间：约\d+分钟", "阅读时间：约{}分钟".format(int(len(chinese_words)/200)), markdown)
 
     with open(post, 'w') as new_file:
         new_file.write(markdown)
