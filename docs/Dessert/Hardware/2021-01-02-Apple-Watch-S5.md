@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Apple Watch S5 使用一年感受 - 不后悔！
 
 !!! info
-    作者：袁子弹起飞，发布于2021年6月3日，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247483756&idx=1&sn=156c43f0f31a273d9ceeabdfd1f44379&chksm=eb90f218dce77b0ea3a2ed3cd9f336f1ecc6fc2ac07298f959e49f8ade0b190d1bece966554f&token=428299100&lang=zh_CN#rd)
+    作者：袁子弹起飞，发布于2021-01-02，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247483756&idx=1&sn=156c43f0f31a273d9ceeabdfd1f44379&chksm=eb90f218dce77b0ea3a2ed3cd9f336f1ecc6fc2ac07298f959e49f8ade0b190d1bece966554f&token=428299100&lang=zh_CN#rd)
 
 
 写这篇文章纠结了一年，坦白说，本人买Apple Watch的时候就犹豫了很久，因为这不是一件必需的电子产品，从2015年4月发布，在很长一段时间里，它都被大众认为是一款华而不实的产品，包括自己在内，对它一直都怀疑态度。然而在2019年10月Apple Watch S5发布时，常亮屏幕功能的加入让更能让普通用户接受了，所以本人抱着试一试的心态购入了第一只Apple Watch。

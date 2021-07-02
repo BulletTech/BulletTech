@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 两分钟打造淘宝抢单机器人
 
 !!! info 
-    作者：袁子弹起飞、Void，发布于2021年6月8日，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/du-t9DyeC2INQsXg1m1xOQ)
+    作者：袁子弹起飞、Void，发布于2021-06-08，阅读时间：约4分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/du-t9DyeC2INQsXg1m1xOQ)
 
 ## 1 痛点
 
