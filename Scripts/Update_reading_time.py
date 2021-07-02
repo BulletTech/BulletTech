@@ -17,6 +17,14 @@ for folder in Folder_list:
                 Post_list.append(os.path.join(root, name))
 
 
+qr_pic_path = """https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png"""
+    
+ending_pic = """
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
+</figure>
+"""
+                
 # Update the reading time
 for post in Post_list:
     f = open(post, 'r')
@@ -29,6 +37,9 @@ for post in Post_list:
 
     chinese_words = re.findall(r'[\u4E00-\u9FFF]',markdown)
     markdown = re.sub(r"阅读时间：约\d+分钟", "阅读时间：约{}分钟".format(int(len(chinese_words)/200)), markdown)
+    
+    if qr_pic_path not in markdown:
+        markdown += ending_pic
 
     with open(post, 'w') as new_file:
         new_file.write(markdown)
