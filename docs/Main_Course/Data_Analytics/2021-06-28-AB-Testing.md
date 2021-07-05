@@ -9,6 +9,7 @@ template: overrides/blogs.html
 ## 前言：
 A/B测试是在增长黑客，精细运营理论中常用的数据驱动产品优化的方法。很多同学或多或少了解过A/B测试背后的理论和统计方法，但是没有机会参加实际项目，积累实践经验。我在学习过程中也遇到过类似的困扰，今天想向大家推荐一个可以很好补充项目经验上的空缺，在遇到A/B测试相关问题时可以更从容应对的实战项目：优达学城(Udacity)上的A/B testing by Google（Udacity是一个线上课程平台，有很多高质量的计算机，人工智能，商业分析相关课程）。
 
+课程链接：
 https://www.udacity.com/course/ab-testing--ud257
 
 ![A/B Testing 课程内容](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-26/1624681931031-image.png)
