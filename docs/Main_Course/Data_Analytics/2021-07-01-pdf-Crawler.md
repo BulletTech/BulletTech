@@ -68,7 +68,7 @@ file恰好也存在上一页面控件为a的id中。需要注意的是，这边�
 http://icid.iachina.cn/ICID/files/piluxinxi/pdf/8f993c5a-1c1c-4f91-a8a5-7fad85a14616.PDF
 ```
 
-我们如同拆开套娃一般，成功拿到了最终的pdf。下面就是使用Python把它下载下来了。只需要写几个简单的循环，点击运行程序，再打开Dota2，一把dota的时间，Python已经帮我们下载了近1个G的pdf文件。
+我们如同拆开套娃一般，成功拿到了最终的pdf。下面就是使用Python把它下载下来了。只需要写几个简单的循环，点击运行程序，再打开Dota2，一把dota的时间，Python已经帮我们下载完成了近1个G的pdf文件。
 
 最终code整理如下：
 
