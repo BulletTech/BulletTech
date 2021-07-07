@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 爬取并下载url不变的pdf文件
 
 !!! info 
-    作者：Void，发布于2021年6月29日，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/3JlO0eO95SBqhHH4EHPypw)
+    作者：Void，发布于2021年7月7日，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/cmSw_rvSm2gYbenI02NQ7Q)
 
 ## 1 引言
 
