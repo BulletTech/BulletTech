@@ -9,11 +9,11 @@ template: overrides/blogs.html
 
 ## 1 引言
 
-为了更好的卖保险(导师要求)，需要下载[保险业协会官网](http://icid.iachina.cn/?columnid_url=201510010005#)-信息披露中保险公司披露的pdf文件。保险公司很多，每家又有不少年度披露的pdf。同时，神奇的是，无论怎么点击页面，网页的url都没有发生变化。为了拒绝当人肉爬虫，我们再次尝试使用Python帮助我们高效、自动的下载这些pdf文件。  
+为了更好的卖保险(导师要求)，需要下载[保险业协会官网](http://icid.iachina.cn/?columnid_url=201510010005#)-信息披露中保险公司披露的pdf文件。保险公司很多，每家又有不少年度披露的pdf。同时，神奇的是，无论怎么点击页面，网页的url都没有发生变化。为了拒绝当人肉爬虫，我们再次尝试使用Python帮助我们高效、自动地下载这些pdf文件。  
 
 ## 2 具体步骤
 
-我们打开保险业协会网站，点击不同的科目，如保险公司年度信息披露，我们发现页面的url并没有发生变化。这时，请不要怀疑自己的眼睛或是砸烂电脑，我们应该合理的怀疑页面采取了某些异步请求(Ajax)的方式。  
+我们打开保险业协会网站，点击不同的科目，如保险公司年度信息披露，我们发现页面的url并没有发生变化。这时，请不要怀疑自己的眼睛或是砸烂电脑，我们应该合理地怀疑页面采取了某些异步请求(Ajax)的方式。  
 此时，我们需要找到发送真实请求的页面。我们打开开发者工具，在Network中勾选ALL，清空后重新点击我们要选取的科目，如关联交易合并披露。神奇的事情出现了，红框中标示出来了一个新的url，那么这个url是不是我们真正要找的OnePiece呢？
 
 ```html
@@ -25,7 +25,7 @@ http://icid.iachina.cn/ICID/front/leafColComType.do?columnid=2016072012158397
   <figcaption>Real url</figcaption>
 </figure>
         
-我们进入此url。完蛋，这只是一个和上一页面神似但是长的更丑的网址。
+我们进入此url。完蛋，这只是一个和上一页面神似但是长得更丑的网址。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-1/1625140619323-2.jpg" width="500" />
@@ -53,7 +53,7 @@ http://icid.iachina.cn/ICID/front/leafColComType.do?columnid=2016072012158397
   <figcaption>Example</figcaption>
 </figure>
 
-其中每一个pdf就是我们最终想得到的结果了，我们点击一个公告，同样查看它的XHR
+其中每一个pdf就是我们最终想得到的结果了，我们点击一个公告，同样查看它的XHR。
 
 ```html
 http://icid.iachina.cn/front/infoDetail.do?informationno=2020012109398975
