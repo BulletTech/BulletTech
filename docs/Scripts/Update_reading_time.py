@@ -33,6 +33,7 @@ for post in Post_list:
     match = re.search(r'\d{4}-\d{2}-\d{2}', post.split('/')[-1])
     date = datetime.strptime(match.group(), '%Y-%m-%d').date()
 
+    markdown = re.sub(r"发布于\d+年\d+月\d+日，阅读时间", "发布于{}，阅读时间".format(date), markdown)
     markdown = re.sub(r"发布于\d+-\d+-\d+，阅读时间", "发布于{}，阅读时间".format(date), markdown)
 
     chinese_words = re.findall(r'[\u4E00-\u9FFF]',markdown)
