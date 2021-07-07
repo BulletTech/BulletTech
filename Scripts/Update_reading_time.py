@@ -43,3 +43,4 @@ for post in Post_list:
 
     with open(post, 'w') as new_file:
         new_file.write(markdown)
+    print('{} is updated.'.format(post))
