@@ -5,7 +5,7 @@ from datetime import datetime
 
 
 # Post list
-Folder_list = ['../Dessert','../Main_Course']
+Folder_list = ['docs/Dessert','docs/Main_Course']
 
 Post_list = []
 
