@@ -24,6 +24,7 @@ nav:
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
     - One Day Build:
         - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
+        - 利用显卡实现咖啡自由: Main_Course/One_Day_Build/2021-06-21-Mining.md
   - Dessert:
     - Intro: Dessert_blog_intro.md
     - Hardware:
