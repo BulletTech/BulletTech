@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 如何以最快的速度写出一篇优美的文章
 
 !!! info
-    作者：袁子弹起飞，发布于2021-07-02，阅读时间：约4分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：袁子弹起飞，发布于2021-07-02，阅读时间：约4分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484231&idx=1&sn=27085e9af4a05db567d7004aa97cd78b&chksm=eb90f033dce77925a389375a1e39b7c83a85d55e9c4df1a857650ce5c8096293881047f2ef07&token=97683576&lang=zh_CN#rd)
 
 ## 1 前言
 
