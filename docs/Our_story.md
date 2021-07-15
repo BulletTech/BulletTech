@@ -31,7 +31,7 @@ template: overrides/general_no_comments.html
 ## Jeremy的故事
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624451292168-WeChat+Image_20210623202218.png" width="200" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-24/1624545171503-Picture1.png" width="200" />
   <figcaption>Jeremy</figcaption>
 </figure>
 
