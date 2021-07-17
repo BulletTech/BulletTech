@@ -143,32 +143,37 @@ def picking():
 
 ```python
 #等待抢购时间，定时秒杀，这里我们定义一个buy函数
-def buy(times):
-    print(times)
+def buy(order_time, browser):
+    print(order_time)
+ 
     order_placed_status = False
     while order_placed_status != True:
         now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
         # 对比时间，时间到的话就点击结算
-        if now >= times:
+        if now >= order_time:
+            browser.refresh()
+            picking(browser)
             # 点击结算按钮
-            while order_placed_status != True:
+
+            while True:
+                clear_element = WebDriverWait(browser, 10).until(
+                            EC.element_to_be_clickable((By.LINK_TEXT, "结 算"))
+                        )
                 try:
-                    if browser.find_element_by_link_text("结 算"):
+                    if browser.find_element_by_link_text("结 算").is_enabled():
                         browser.find_element_by_link_text("结 算").click()
+                        clear_element.click()
                         print(f"结算成功，准备提交订单")
                         break
                 except:
                     pass
+            
+            order_element = WebDriverWait(browser, 20).until(
+                            EC.element_to_be_clickable((By.LINK_TEXT, "提交订单")))
             # 点击提交订单按钮
-            while order_placed_status != True:
-                try:
-                    if browser.find_element_by_link_text('提交订单'):
-                        browser.find_element_by_link_text('提交订单').click()
-                        print(f"抢购成功，请尽快付款")
-                        order_placed_status = True
-                        break
-                except:
-                    print(f"再次尝试提交订单")
+            order_element.click()
+            order_placed_status = True
+            
             time.sleep(0.01)
 ```
 
@@ -190,7 +195,7 @@ order_time = input("请输入抢购时间，格式如(2021-06-08 19:30:00.000000
 请输入抢购时间，格式如(2021-06-08 19:30:00.000000): 2021-06-08 19:55:00.000000
 
 ```python
-buy(order_time)
+buy(order_time, browser)
 ```
 
 ## 4 最终效果
