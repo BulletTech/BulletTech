@@ -3,11 +3,11 @@
 </code></pre></div> <h2 id=2-git>2 设置Git仓库<a class=headerlink href=#2-git title="Permanent link">&para;</a></h2> <p>创建一个空白的新仓库：</p> <div class=highlight><pre><span></span><code>git init
 </code></pre></div> <p>克隆一个仓库到现在所在的文件夹：</p> <div class=highlight><pre><span></span><code>git clone &lt;repo URL&gt;
 </code></pre></div> <p>显示远程仓库的列表：</p> <div class=highlight><pre><span></span><code>git remote -v
-</code></pre></div> <p>删除一个远程仓库：</p> <div class=highlight><pre><span></span><code>git remote rm <span class=o>(</span>远程仓库名字<span class=o>)</span>
+</code></pre></div> <p>删除一个远程仓库：</p> <div class=highlight><pre><span></span><code>git remote rm &lt;远程仓库名字&gt;
 </code></pre></div> <p>将服务器上最新的修改拉回本地，但不与现在的工作文档合并：</p> <div class=highlight><pre><span></span><code>git fetch
 </code></pre></div> <p>将服务器上最新的修改拉回本地，并直接与工作文档合并：</p> <div class=highlight><pre><span></span><code>git pull
-</code></pre></div> <h2 id=3>3 管理文件变更<a class=headerlink href=#3 title="Permanent link">&para;</a></h2> <p>将所有变更加入缓冲区：</p> <div class=highlight><pre><span></span><code>git add <span class=o>(</span>文件名<span class=o>)</span>
-</code></pre></div> <p>移除一个文件并且不在保存它的修改历史：</p> <div class=highlight><pre><span></span><code>git rm <span class=o>(</span>文件名<span class=o>)</span>
+</code></pre></div> <h2 id=3>3 管理文件变更<a class=headerlink href=#3 title="Permanent link">&para;</a></h2> <p>将所有变更加入缓冲区：</p> <div class=highlight><pre><span></span><code>git add &lt;文件名&gt;
+</code></pre></div> <p>移除一个文件并且不在保存它的修改历史：</p> <div class=highlight><pre><span></span><code>git rm &lt;文件名&gt;
 </code></pre></div> <p>回复一个删除的文件并将它准备用于提交更新：</p> <div class=highlight><pre><span></span><code>git checkout &lt;删除的文件名&gt;
 </code></pre></div> <p>展示修改文件的状态：</p> <div class=highlight><pre><span></span><code>git status
 </code></pre></div> <p>有些文件因为对项目无用，如一些缓存和日志文件，是被版本管理忽略的，通过这个命令可查看被忽略的文件列表：</p> <div class=highlight><pre><span></span><code>git ls-files –other –ignored –exclude-standard
