@@ -7,10 +7,10 @@ template: overrides/blogs.html
 !!! info
     作者：袁子弹起飞，发布于2021-07-15，阅读时间：约5分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
-在[一行代码都不写，教你使用GitHub](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484191&idx=1&sn=73a2aae2e46b2a836729c636b937f2ef&chksm=eb90f06bdce7797d71dee815e283559f05d0db8dcab9c6430c856a8da05aa79617a9c0eee39f&token=150554771&lang=zh_CN#rd)这篇文章中，我们介绍了如何使用GitHub Desktop对GitHub进行操作，图形化的界面对不太熟悉的朋友非常友好，但有时候，在代码编辑器或者终端中直接运行命令操作Git更方便，所以这篇文章将介绍一些常用的命令，让你的Git水平更上一层楼。
+在[一行代码都不写，教你使用GitHub](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484191&idx=1&sn=73a2aae2e46b2a836729c636b937f2ef&chksm=eb90f06bdce7797d71dee815e283559f05d0db8dcab9c6430c856a8da05aa79617a9c0eee39f&token=150554771&lang=zh_CN#rd)这篇文章中，我们介绍了如何使用GitHub Desktop对GitHub进行操作，图形化的界面对不太熟悉命令的朋友非常友好，但有时候，在代码编辑器或者终端中直接运行命令操作Git更方便，所以这篇文章将介绍一些常用的命令，让你的Git水平更上一层楼。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-17/1626508940064-Git.png" width="500" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-17/1626508940064-Git.png" width="700" />
   <figcaption>在终端中使用Git</figcaption>
 </figure>
 
