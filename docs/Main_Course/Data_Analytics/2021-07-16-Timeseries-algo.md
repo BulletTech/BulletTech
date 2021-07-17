@@ -36,7 +36,7 @@ template: overrides/blogs.html
 ## 5 Matrixprofile算法
 
 那么，如何识别出周期层面的异常区间呢？我们可能会想，我们先确定一个区间，然后看看这个区间和其他同样长度的区间长的是否不同。  
-我们可能需要一个循环，通过窗口滑动进行判断。题目好心的提示我们有这样一个包：matrixprofile。
+题目好心的提示我们有这样一个包：matrixprofile。
 
 matrixprofile算法由加州大学河滨分校的研究者于2016年提出。
 
