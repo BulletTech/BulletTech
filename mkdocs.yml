@@ -15,6 +15,7 @@ nav:
   - Home: index.md
   - Main Course:
     - Intro: Main_course_blog_intro.md
+    - Product Center: http://bullettech.cn/
     - Data Analytics:
         - 爬取并下载url不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
         - A/B测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
