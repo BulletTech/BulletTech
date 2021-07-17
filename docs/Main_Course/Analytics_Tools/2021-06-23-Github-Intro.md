@@ -22,9 +22,8 @@ template: overrides/blogs.html
 
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624441420407-GitHub%20%E5%9B%BE%E4%BE%8B.png" width="600" />
-  <figcaption>GitHub
-常见术语图示</figcaption>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-17/1626489355119-Github%20%E5%9B%BE%E4%BE%8B.png" width="600" />
+  <figcaption>GitHub 常见术语图示</figcaption>
 </figure>
 
 
@@ -39,9 +38,8 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 具体来说，版本管理的功能可以帮助保存文件的修改历史，以便在需要回溯时能很方便地检查和回滚。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624441521157-GitHub%20%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.png" width="600" />
-  <figcaption>GitHub
- Desktop查看历史版本</figcaption>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-17/1626489404945-Github%20%E6%9F%A5%E7%9C%8B%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC.png" width="600" />
+  <figcaption>GitHub Desktop查看历史版本</figcaption>
 </figure>
 
 
@@ -52,7 +50,7 @@ GitHub在版本管理和协同工作方面是绝佳的工具之一。
 这些更改是由BulletTech的团队成员共同完成的，当多人协作时，建议在不同的分支上工作，当完成更新后，可以通过合并请求（⌘/Ctrl + R）将你的分支上的更新合并到主干上。此时，软件会自动引导你跳转到网页端创建请求，团队的成员就可以审核更改，如果符合要求，更新就可以被合并到主干上。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-23/1624441553655-GitHub%E5%90%88%E5%B9%B6%E8%AF%B7%E6%B1%82.png" width="600" />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-17/1626489452783-Github%E5%90%88%E5%B9%B6%E8%AF%B7%E6%B1%82.png" width="600" />
   <figcaption>合并请求</figcaption>
 </figure>
 
