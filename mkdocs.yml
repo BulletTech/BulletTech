@@ -17,7 +17,7 @@ nav:
     - Intro: Main_course_blog_intro.md
     - Product Center: http://bullettech.cn/
     - Data Analytics:
-        - 爬取并下载url不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
+        - 爬取并下载URL不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
         - A/B测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
         - 双重差分小介: Main_Course/Data_Analytics/2021-06-24-DID.md
         - Git常用命令一览: Main_Course/Analytics_Tools/2021-07-15-Git-Commands.md
@@ -123,7 +123,7 @@ extra_javascript:
   - javascripts/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  
+
 # Extensions
 markdown_extensions:
   - admonition
