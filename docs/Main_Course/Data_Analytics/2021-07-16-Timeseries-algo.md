@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 时间序列异常检测
 
 !!! info 
-    作者：Void，发布于2021-07-16，阅读时间：约5分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/3JlO0eO95SBqhHH4EHPypw)
+    作者：Void，发布于2021-07-20，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/XwtXpa1hOKrN6fIC-zpyKw)
 
 ## 1 引言
 
