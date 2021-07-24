@@ -73,7 +73,7 @@ def job_parser(html):
     soup = BeautifulSoup(html, "html.parser")
     # 右键通过打开留言器检查器，在元素tab中查看网页源码，可看到职位名称的类别名字为primary-text-color job-result-title，并且是一个a标签
     job_header = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'})
-    # 查找方法同上
+    # 元素查找方法同上
     job_link = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'}, href=True)
 
     header = [i.contents[0] for i in job_header]
