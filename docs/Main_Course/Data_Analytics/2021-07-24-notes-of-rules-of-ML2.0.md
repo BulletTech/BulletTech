@@ -85,6 +85,20 @@ Rule #24: Measure the delta between models.
 Rule #25: When choosing models, utilitarian performance trumps predictive power.
 ```
 
+选择模型时，实用性指标的好坏比预测能力更重要。比如我们用模型分数的cutoff去拒绝坏的交易时，排序的准确性比预测值本身更为重要。很多时候这两者是一致的。但是我们也可以基于我们实用的具体需求，调整模型，比如给分数更高(排序更前)的样本更大的权重。
+
+```
+Rule #26: Look for patterns in the measured errors, and create new features.
+```
+
+通过case study去构造新的特征。  
+可以构造多个同类的特征，然后让模型去选择有效的特征。
+
+```
+Rule #27: Try to quantify observed undesirable behavior.
+```
+
+
 
 ## 7 小结
 
