@@ -106,15 +106,28 @@ for i in range(2):
 def get_jd(url):
   jd_html = url_request(url)
   soup = BeautifulSoup(jd_html, "html.parser")
-  # 查找方法同上
   jd_desc = soup.find('div', attrs={'class': 'jdp-job-description-card content-card'})
+  # JD格式不一，此处仅做演示
   if jd_desc:
-    desc = [i.text + '\n{}'.format(j.text) for i,j in zip(jd_desc.findAll('p')[:], jd_desc.findAll('ul')[:])]
-    return '\n'.join(i for i in desc)
+    if jd_desc.findAll('ul')[:]:
+      desc = [i.text + '\n{}'.format(j.text) for i,j in zip(jd_desc.findAll('p')[:], jd_desc.findAll('ul')[:])]
+    else:
+      desc = [i.text  for i in jd_desc.findAll('p')[:]]
+
+    return unicodedata.normalize("NFKD", '\n'.join(i for i in desc))
 
 # 对之前存储的内容使用详情抓取函数，将详情保存下来。
 df['JD'] = df['Link'].apply(get_jd)
+
+# 打印结果
+df.tail(2)
 ```
+
+| Title                              | Link                                                                                               | JD                                                                                                                                                                                                                                                                                                                                                                                                              |
+|------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Manager, APAC Portfolio Management | https://jobsearch.paypal-corp.com//en-US/job/manager-apac-portfolio-management/J3N1SM76FQPVMX4VFZG | As the Shanghai Team Manager of PayPal APAC Portfolio Management team in GSR Enterprise Seller Risk Ops, you will manage a team of underwriters, and drive a risk management strategy and framework leveraging your strong business and financial acumen, logical reasoning and communication skills. This role will be covering the markets such as Hong Kong, Taiwan, Korea and Japan, based out of Shanghai. |
+| FBO Accoutant                      | https://jobsearch.paypal-corp.com//en-US/job/fbo-accoutant/J3W8C0677G8FLJQQZDL                     | Responsibilities    Timely and effective reconciliation of all assigned General Ledger accounts, including timely and accurate clearing of reconciling items in accordance with Company Policy.Â    Ensure accurate posting of general ledger...                                                                                                                                                                |
+
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
