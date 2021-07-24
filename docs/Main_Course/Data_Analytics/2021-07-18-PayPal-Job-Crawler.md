@@ -11,7 +11,9 @@ template: overrides/blogs.html
 
 金三银四刚过去没多久，秋招又即将到来，在忙碌又卷的季节，笔者曾经幻想着能一键抓取心仪公司所有的职位，然后根据自己的强项和求职意愿逐个击破，收货一篮子offer。其实，借助Python就能轻易完成这个目标的第一步，这篇文章将以著名金融科技公司PayPal官网为例，展示Python自动批量抓取职位的小技巧，帮你在求职路上快人一步!
 
-注：本文用于学习研究Python编程技巧，如果侵权，将立即删除。
+
+!!! warning
+  注：本文用于学习研究Python编程技巧，如果侵权，将立即删除。
 
 ## 2 准备工作
 
@@ -20,7 +22,7 @@ template: overrides/blogs.html
   <figcaption>PayPal招聘官网</figcaption>
 </figure>
 
-首先，查看PayPal求职官网的结构，所发布的职位以列表的形式展示，点击列表里的职位，就可以跳转到对应的详情页。同时，某些国家和地区的职位比较多，分成了多页显示，则URL会以相应的页面编号来区分，例如`https://jobsearch.paypal-corp.com/en-US/search?facetcitystate=san%20jose,ca&pagenumber=2`。所以可以判断大致需要如下几步即可抓取到每个职位的详情：
+首先，查看PayPal求职官网的结构，所发布的职位以列表的形式展示，点击列表里的职位，就可以跳转到对应的详情页。同时，某些国家和地区的职位比较多，分成了多页显示，则URL会以相应的页面编号来区分，例如`https://jobsearch.paypal-corp.com/en-US/search?facetcitystate=san%20jose,ca&pagenumber=2`。因此判断大致需要如下几步即可抓取到每个职位的详情：
 
 - 定位职位列表，找到每个职位对应的URL
 - 遍历所有页面，重复完成上述操作，存储所有职位URL
