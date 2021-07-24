@@ -98,6 +98,46 @@ Rule #26: Look for patterns in the measured errors, and create new features.
 Rule #27: Try to quantify observed undesirable behavior.
 ```
 
+将观察到的负面现象量化。比如你觉得模型排序准确率不够，那么如何定义排序准确率呢？只有给出明确的量化指标，才能对此进一步优化。
+
+```
+Rule #28: Be aware that identical short-term behavior does not imply identical long-term behavior.
+```
+
+模型测试的效果不等于长期的泛化能力。模型是否真正学到了pattern，还是只是过拟合了样本，这是一个令人头大的问题。
+
+## 4 训练与上线的差异
+
+训练和上线之间往往会存在差异。最好或者说为数不多的办法是做好监控。
+
+```
+Rule #29: The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time.
+```
+
+最好的方法是将真实线上的数据log下来作为训练数据。这可以大大减少两者之间的差异性。
+
+```
+Rule #30: Importance weight sampled data, don’t arbitrarily drop it!
+```
+
+不要随意丢弃采样样本。同时，对采样概率为30%的样本，训练时要给10/3的权重。这种校准对基于预测值的模型很重要，对基于排序的模型影响不大。
+
+```
+Rule #31: Beware that if you join data from a table at training and serving time, the data in the table may change.
+```
+
+上线时，数据可能相较训练时已经发生了变化。特别是一些字典类的特征，比如每个id对应的历史坏样本率等等。此类数据应该会有及时的更新。
+
+```
+Rule #32: Re-use code between your training pipeline and your serving pipeline whenever possible.
+```
+
+尽量复用训练和上线时的代码。这里主要说的是上线会用一些流式数据。工程方面，会有对基于这些数据的特征的支持。有了特征只需要丢到已经训练好的模型中即可。
+
+```
+Rule #33: If you produce a model based on the data until January 5th, test the model on the data from January 6th and after.
+```
+
 
 
 ## 7 小结
