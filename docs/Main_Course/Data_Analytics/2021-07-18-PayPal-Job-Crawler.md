@@ -37,7 +37,7 @@ template: overrides/blogs.html
 
 Python环境的配置请参考之前的文章：[两分钟打造淘宝抢单机器人](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484044&idx=1&sn=ed68ae67ea2f1360053e4ecae0be3ba7&chksm=eb90f1f8dce778eeba987ea0b2f37341999418fd9541c4c7a7b1c256dbada1185e6f4c2aae87&token=261686941&lang=zh_CN#rd)
 
-## 3.1 导入依赖的包
+### 3.1 导入依赖的包
 
 ```Python
 # 解析网页
@@ -54,7 +54,7 @@ import os
 import unicodedata
 ```
 
-## 3.2 访问职位列表
+### 3.2 访问职位列表
 
 ```Python
 # 访问URL，并取回返回结果
@@ -66,14 +66,14 @@ def url_request(url):
     return r.text
 ```
 
-## 3.3 解析职位类别
+### 3.3 解析职位类别
 
 ```Python
 # 找到页面中需要的元素，存储职位列表信息
 def job_parser(html):
     header,desc,link = [[] for i in range(3)]
     soup = BeautifulSoup(html, "html.parser")
-    # 右键通过打开留言器检查器，在元素tab中查看网页源码，可看到职位名称的类别名字为primary-text-color job-result-title，并且是一个a标签
+    # 右键通过打开浏览器检查器，在元素tab中查看网页源码，可看到职位名称的类别名字为primary-text-color job-result-title，并且是一个a标签
     job_header = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'})
     # 元素查找方法同上
     job_link = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'}, href=True)
@@ -85,7 +85,7 @@ def job_parser(html):
     return pd.DataFrame({'Title':header, 'Link':link})
 ```
 
-## 3.4 遍历所有页面
+### 3.4 遍历所有页面
 
 ```Python
 # 创建一个存储结果的dataframe
