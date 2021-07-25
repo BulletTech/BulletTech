@@ -9,9 +9,7 @@ template: overrides/blogs.html
 
 ## 1 引言
 
-第一次听到[《Rules of Machine Learning》](http://martin.zinkevich.org/rules_of_ml/)，就被它的题目吓了一跳。是什么样的神仙敢起这样的题目，在这里指点江山？  
-看到作者和来源后，好吧，原来是谷歌的大神。那我们就来看看这篇雄心勃勃的文章能教会我们什么吧。  
-由于文章较长(有3个阶段，43条rule)，本文是这一系列的上篇(包含第一阶段)。本文仅基于自己有限的经验与知识，在翻译的基础上加了一些自己的理解，欢迎讨论。
+这篇是[《Rules of Machine Learning》](http://martin.zinkevich.org/rules_of_ml/) 读后感的下篇。主要涉及了具体建模的部分，包括特征工程，分析及优化。
 
 ## 2 特征工程
 
@@ -138,7 +136,71 @@ Rule #32: Re-use code between your training pipeline and your serving pipeline w
 Rule #33: If you produce a model based on the data until January 5th, test the model on the data from January 6th and after.
 ```
 
+测试数据要在训练数据之后。
 
+```
+Rule #34: In binary classification for filtering (such as spam detection or determining interesting e-mails), make small short-term sacrifices in performance for very clean data.
+```
+
+如果你已经有选择的给用户展示邮件，那么你的训练数据将是有偏的。比较好的做法是用一个没有任何干扰的control group作为训练集。不需要太大，1%，2%就好。
+
+```
+Rule #35: Beware of the inherent skew in ranking problems.
+```
+
+算法会对线上的数据产生改变，从而影响未来会见到的数据。感觉这一点只能在模型迭代时，重新做分析了。
+
+```
+Rule #36: Avoid feedback loops with positional features
+```
+
+这点是和推荐算法相关。用户的点击与排序位置本身有关(人们倾向于点击第一个item)。如果没有位置特征，会把这类效应算到其他特征中去，导致模型估计不准。
+
+```
+Rule #37: Measure Training/Serving Skew.
+```
+
+评估训练和上线时模型表现的不同。可以做一些gap analysis。常见的可能原因有：使用了时间敏感的特征，过拟合等等。
+
+## 5 增长趋缓，优化模型
+
+建模的初步阶段，新模型的提升是明显的，全方位的。随着逐步优化，模型的提升不再那么显著。同时，不同指标可能出现有好有坏的情况。有趣的，有挑战性的阶段出现了。
+
+```
+Rule #38: Don’t waste time on new features if unaligned objectives have become the issue.
+```
+
+最终目标要明确，清晰。比如要看的是catch rate或是点击率等。
+
+```
+Rule #39: Launch decisions are a proxy for long-term product goals.
+```
+
+模型的目标往往是简单的，策略往往是复杂的。比如拒绝坏交易会减少损失，但是会带来交易量的下降。这些就需要做策略时去权衡。
+
+```
+Rule #40: Keep ensembles simple.
+```
+
+ensemble要简单，如可以做一个等权的相加。
+
+```
+Rule #41: When performance plateaus, look for qualitatively new sources of information to add rather than refining existing signals.
+```
+
+模型表现陷入瓶颈时，加入新的信息源以及新的特征往往是最有效的。同时，合理调整你对模型表现的预期。
+
+```
+Rule #42: Don’t expect diversity, personalization, or relevance to be as correlated with popularity as you think they are.
+```
+
+又是推荐领域的内容，常用的优化目标是代表流行度的点击率等。但是人们往往又会去追求个性化推荐，推荐内容多样等目标。可行的操作是采用后续的处理优化个性化及多样性。或者将他们直接加入优化目标。
+
+```
+Rule #43: Your friends tend to be the same across different products. Your interests tend not to be.
+```
+
+好友关系往往是稳定的。但是不同场景下的个性化特征往往是不同的。这并不是说我们不能在场景B中使用场景A的数据。跨场景的数据往往是有用的。
 
 ## 7 小结
 
