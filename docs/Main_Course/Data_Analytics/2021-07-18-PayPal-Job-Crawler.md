@@ -2,7 +2,7 @@
 template: overrides/blogs.html
 ---
 
-# Python爬虫应用 - 职位抓取
+# Python爬虫应用 - PayPal职位抓取
 
 !!! info
     作者：袁子弹起飞，发布于2021-07-18，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
