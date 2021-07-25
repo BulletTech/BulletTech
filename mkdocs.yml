@@ -111,8 +111,8 @@ plugins:
   - minify:
       minify_html: true
   - macros:
-      j2_variable_start_string: '[['
-      j2_variable_end_string: ']]'
+      j2_variable_start_string: '[%'
+      j2_variable_end_string: '%]'
   - git-revision-date-localized
 
 # Customization
