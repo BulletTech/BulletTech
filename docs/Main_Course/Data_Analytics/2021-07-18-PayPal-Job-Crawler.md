@@ -62,7 +62,7 @@ def url_request(url):
     header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36'}
     r = requests.get(url, headers=header)
-    print("Connection status:", r.status_code, '\n')
+    print('Connection status:', r.status_code, '\n')
     return r.text
 ```
 
@@ -72,14 +72,14 @@ def url_request(url):
 # 找到页面中需要的元素，存储职位列表信息
 def job_parser(html):
     header,desc,link = [[] for i in range(3)]
-    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(html, 'html.parser')
     # 右键通过打开浏览器检查器，在元素tab中查看网页源码，可看到职位名称的类别名字为primary-text-color job-result-title，并且是一个a标签
     job_header = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'})
     # 元素查找方法同上
     job_link = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'}, href=True)
 
     header = [i.contents[0] for i in job_header]
-    link = ["https://jobsearch.paypal-corp.com/"+i['href'] for i in job_link]
+    link = ['https://jobsearch.paypal-corp.com/'+i['href'] for i in job_link]
 
     # 将结果存起来
     return pd.DataFrame({'Title':header, 'Link':link})
@@ -107,7 +107,7 @@ for i in range(2):
 ```Python
 def get_jd(url):
   jd_html = url_request(url)
-  soup = BeautifulSoup(jd_html, "html.parser")
+  soup = BeautifulSoup(jd_html, 'html.parser')
   jd_desc = soup.find('div', attrs={'class': 'jdp-job-description-card content-card'})
   # JD格式不一，此处仅做演示
   if jd_desc:
@@ -116,7 +116,7 @@ def get_jd(url):
     else:
       desc = [i.text  for i in jd_desc.findAll('p')[:]]
 
-    return unicodedata.normalize("NFKD", '\n'.join(i for i in desc))
+    return unicodedata.normalize('NFKD', '\n'.join(i for i in desc))
 
 # 对之前存储的内容使用详情抓取函数，将详情保存下来。
 df['JD'] = df['Link'].apply(get_jd)
