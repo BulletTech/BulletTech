@@ -17,6 +17,7 @@ nav:
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
+        - PayPal 爬虫: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
         - 时间序列异常检测: Main_Course/Data_Analytics/2021-07-16-Timeseries-algo.md
         - 爬取并下载URL不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
         - A/B测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
