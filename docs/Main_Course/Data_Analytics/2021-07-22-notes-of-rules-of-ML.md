@@ -22,7 +22,7 @@ To make great products:
 do machine learning like the great engineer you are, not like the great machine learning expert you aren’t.
 ```
 
-实际工作中，最优先的是工程上的实现，是否清楚的定义了问题，是否有一个解决问题的solid的pipeline。其次才是fancy的算法用来锦上添花。  
+实际工作中，最优先的是工程上的实现，是否清楚地定义了问题，是否有一个解决问题的solid的pipeline。其次才是fancy的算法用来锦上添花。  
 
 ## 3 在使用机器学习以前
 
