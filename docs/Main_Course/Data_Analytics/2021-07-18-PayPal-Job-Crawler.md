@@ -13,7 +13,7 @@ template: overrides/blogs.html
 
 
 !!! warning
-  注：本文用于学习研究Python编程技巧，如果侵权，将立即删除。
+    注：本文用于学习研究Python编程技巧，如果侵权，将立即删除。
 
 ## 2 准备工作
 
