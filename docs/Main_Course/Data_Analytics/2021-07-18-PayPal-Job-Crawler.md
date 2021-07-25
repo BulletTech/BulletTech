@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Python爬虫应用 - PayPal职位抓取
 
 !!! info
-    作者：袁子弹起飞，发布于2021-07-18，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：袁子弹起飞，发布于2021-07-18，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484353&idx=1&sn=fa3c49192bd8ba303b2d796364a6a088&chksm=eb90f0b5dce779a31d0d8eae377ab8d453f65c7b046b5fc973303d6f14a340670601420321af&token=447292391&lang=zh_CN#rd)
 
 ## 1 前言
 
