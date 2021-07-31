@@ -77,7 +77,7 @@ Rule #23: You are not a typical end user.
 Rule #24: Measure the delta between models.
 ```
 
-比较新老模型的表现。通常来说，我们要求新模型的表现会优于老模型。检查表现差异，可以给你一些模型在哪些方面做出改变的insights。
+比较新老模型的表现。通常来说，我们要求新模型的表现会优于老模型。检查表现差异，可以给你一些模型在哪些方面做出了改变的insights。
 
 ```
 Rule #25: When choosing models, utilitarian performance trumps predictive power.
@@ -130,7 +130,7 @@ Rule #31: Beware that if you join data from a table at training and serving time
 Rule #32: Re-use code between your training pipeline and your serving pipeline whenever possible.
 ```
 
-尽量复用训练和上线时的代码。这里主要说的是上线会用一些流式数据。工程方面，会有对基于这些数据的特征的支持。有了特征只需要丢到已经训练好的模型中即可。
+尽量复用训练和上线时的代码。这里主要说的是上线会用一些流式数据。工程方面，会有对流式数据构造特征的支持。有了特征只需要丢到已经训练好的模型中即可。
 
 ```
 Rule #33: If you produce a model based on the data until January 5th, test the model on the data from January 6th and after.
@@ -204,9 +204,7 @@ Rule #43: Your friends tend to be the same across different products. Your inter
 
 ## 7 小结
 
-这15条rule主要聚焦的是具体建模前的步骤，虽然有一丢丢宽泛，但提供了很好的大方向，是建模工作的基石。这些rule相信是前人踩了不少坑，总结出来的经验之谈。值得常看常新。  
-
-下篇将涉及更为具体的建模内容，讨论有关特征工程以及优化模型方面的rule，敬请期待。
+下篇涉及了具体建模步骤的方方面面。这些经验总结不仅具体，也十分有效。感谢谷歌大神无私的分享知识，相信有了这些rules，我们可以少走一些弯路。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
