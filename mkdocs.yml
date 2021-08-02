@@ -17,6 +17,7 @@ nav:
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
+        - 读《Rules of Machine Learning》有感（下）: Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0.md
         - 浅谈Google Analytics: Main_Course/Analytics_Tools/2021-07-31-GA-Intro.md
         - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
         - PayPal职位爬虫: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
