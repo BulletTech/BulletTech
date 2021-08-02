@@ -142,7 +142,7 @@ Rule #33: If you produce a model based on the data until January 5th, test the m
 Rule #34: In binary classification for filtering (such as spam detection or determining interesting e-mails), make small short-term sacrifices in performance for very clean data.
 ```
 
-如果你已经有选择的给用户展示邮件，那么你的训练数据将是有偏的。比较好的做法是用一个没有任何干扰的control group作为训练集。不需要太大，1%，2%就好。
+如果你已经有选择的给用户展示邮件，那么你的训练数据将是有偏的。比较好的做法是用一个没有任何干扰(模型或规则)的control group作为模型的训练集，因为这部分流量是无偏的真实流量。不需要太大，1%，2%就好。
 
 ```
 Rule #35: Beware of the inherent skew in ranking problems.
