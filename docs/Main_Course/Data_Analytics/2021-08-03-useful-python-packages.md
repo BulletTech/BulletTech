@@ -2,209 +2,172 @@
 template: overrides/blogs.html
 ---
 
-# 好用的Python的包
+# 好用的Python包
 
 !!! info 
     作者：Void，发布于2021-08-03，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/XwtXpa1hOKrN6fIC-zpyKw)
 
 ## 1 引言
 
-这篇是[《Rules of Machine Learning》](http://martin.zinkevich.org/rules_of_ml/) 读后感的下篇。主要涉及了具体建模的部分，包括特征工程，分析及优化。
+Python之所以好用，很大程度上是由于它可以方便地调用实现各种功能的包(调包侠本人)。  
+如常用的Pandas，Numpy等可能是数据科学从业者每天需要打交道的对象。不止于此，本文将基于自己的实际使用经验，介绍一些小众而又好用的Python的包，让你在使用Python的过程中如虎添翼。
 
-## 2 特征工程
+## 2 好用的Python包
 
-当阶段一的系统搭建完毕后，阶段二要做的是加入尽可能多的有效特征。此时，模型表现的提升是相对容易的。
+### 2.1 tqdm
 
-```
-Rule #16: Plan to launch and iterate.
-```
+[tqdm](https://github.com/tqdm/tqdm)是一个小巧的、显示循环进度条的工具。不知你是否有这样的体验：你写了一段复杂的循环，满心欢喜地点击运行，然而除了看到程序一直在运行，你永远不知道这个循环要跑多久，你甚至不知道它是否真的在运行，或是kernel已经挂了。  
 
-做好持续迭代的准备。
+有了tqdm，你只需要在循环的迭代器上加上它，你就可以看到进度条、每个循环所花的时间以及预估的总时间等。
 
-```
-Rule #17: Start with directly observed and reported features as opposed to learned features.
-```
-
-从简单、直观的特征出发。所谓learned features可以是别的模型的打分等。加入此类特征会增加依赖性，如某天某个模型retire了，这个特征就用不了了。  
-然而，这里并不是说完全不能使用此类特征。
-
-```
-Rule #18: Explore with features of content that generalize across contexts.
+```Python
+for i in tqdm(range(100)):
+    sleep(0.01)
 ```
 
-使用跨场景的特征。比如客户在A产品上的数据有利于对B产品建模。同时，这也可以处理冷启动问题。
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-4/1628086304637-1.gif" width="500" />
+</figure>
 
-```
-Rule #19: Use very specific features when you can.
-```
+值得一提的是，tqdm也可以作用于DataFrame的apply(groupby)。
 
-如果数据量够大，使用尽可能多的简单特征而不是少数复杂特征。不要害怕使用id类非常稀疏的特征。
-
-```
-Rule #20: Combine and modify existing features to create new features in human-understandable ways.
-```
-
-特征工程要有一定的含义。对连续特征离散化或者类别特征的交叉要有一定的业务含义，不能乱交叉。  
-特征组合可以试试Shap。Shap可以给出特征交互对label的影响，可以指导特征组合。
-
-```
-Rule #21: The number of feature weights you can learn in a linear model is roughly proportional to the amount of data you have.
+```Python
+import numpy as np
+import pandas as pd
+from tqdm.auto import tqdm
+df = pd.DataFrame(np.random.randint(0, 100, (100000, 6)))
+tqdm.pandas(desc="my bar!")
+df.progress_apply(lambda x: x**2)
 ```
 
-特征数量要和样本数量匹配(有统计理论支撑)。  
+### 2.2 dateutil 
 
-- 千级数据对应几十个特征
-- 千万级的数据对应十万级的特征
+在关于时间格式的处理中，我很喜欢使用[dateutil](https://dateutil.readthedocs.io/en/stable/parser.html)这个包中的parse方法。  
+它可以根据不同格式的时间输入很智能的给出标准化的时间输出。
 
-看上去是差两个数量级。
+```Python
+from dateutil.parser import parse
+In: parse('22nd,July,2009')
+Out: datetime.datetime(2009, 7, 22, 0, 0)
 
-```
-Rule #22: Clean up features you are no longer using.
-```
+In: parse('2018-04-20')
+Out: datetime.datetime(2018, 4, 20, 0, 0)
 
-去除无用的特征。如无必要，勿增实体，这也符合奥卡姆剃刀原理。剔除此类特征不仅可以使模型更clean，甚至可以提升模型表现。  
-另外，覆盖率太低的特征不一定不能用。如某特征覆盖率只有1%，但是这1%都是正样本，那么这也是一个非常有效的特征。
-
-## 3 人为分析机器学习系统
-
-```
-Rule #23: You are not a typical end user.
+In: parse('20180420')
+Out: datetime.datetime(2018,4,20,0,0)
 ```
 
-不识庐山真面目，只缘生在此山中。作为模型的开发者，你不是一个真正客观的终端用户。可以让真正的终端用户或者其他同事检查模型表现。
+### 2.3  line_profiler和memory_profiler
+
+[line_profiler](https://github.com/pyutils/line_profiler)和[memory_profiler](https://github.com/pythonprofilers/memory_profiler)分别是用来监控代码运行时间以及内存消耗的分析器。它可以很直观地显示某行或是某个函数执行时间过长或是占用过多的内存，以便我们优化代码。  
+
+它们的使用也比较简单。只需要在要考察的函数外面加上装饰器。
+
+对于memory_profiler：
 
 ```
-Rule #24: Measure the delta between models.
+example.py:
+
+@profile
+def my_func():
+    a = [1] * (10 ** 6)
+    b = [2] * (2 * 10 ** 7)
+    del b
+    return a
+
+if __name__ == '__main__':
+    my_func()
+    
+然后在命令行中运行：  
+python -m memory_profiler example.py
+
+输出结果如下所示：
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+============================================================
+     3   38.816 MiB   38.816 MiB           1   @profile
+     4                                         def my_func():
+     5   46.492 MiB    7.676 MiB           1       a = [1] * (10 ** 6)
+     6  199.117 MiB  152.625 MiB           1       b = [2] * (2 * 10 ** 7)
+     7   46.629 MiB -152.488 MiB           1       del b
+     8   46.629 MiB    0.000 MiB           1       return a
 ```
 
-比较新老模型的表现。通常来说，我们要求新模型的表现会优于老模型。检查表现差异，可以给你一些模型在哪些方面做出了改变的insights。
+对于line_profiler：
 
 ```
-Rule #25: When choosing models, utilitarian performance trumps predictive power.
+@profile
+def slow_function(a, b, c):
+    ...
+    
+然后在命令行中运行：  
+python -m line_profiler script_to_profile.py.lprof
+
+输出结果如下所示：
+Pystone(1.1) time for 50000 passes = 2.48
+This machine benchmarks at 20161.3 pystones/second
+Wrote profile results to pystone.py.lprof
+Timer unit: 1e-06 s
+
+File: pystone.py
+Function: Proc2 at line 149
+Total time: 0.606656 s
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+   149                                           @profile
+   150                                           def Proc2(IntParIO):
+   151     50000        82003      1.6     13.5      IntLoc = IntParIO + 10
+   152     50000        63162      1.3     10.4      while 1:
+   153     50000        69065      1.4     11.4          if Char1Glob == 'A':
+   154     50000        66354      1.3     10.9              IntLoc = IntLoc - 1
+   155     50000        67263      1.3     11.1              IntParIO = IntLoc - IntGlob
+   156     50000        65494      1.3     10.8              EnumLoc = Ident1
+   157     50000        68001      1.4     11.2          if EnumLoc == Ident1:
+   158     50000        63739      1.3     10.5              break
+   159     50000        61575      1.2     10.1      return IntParIO
+```    
+
+### 2.4 plotly
+
+Python画图的包有很多，如matplotlib，seaborn，plotly等等。其中，[Plotly](https://plotly.com/)以可交互性独树一帜。  
+你可以很方便地放大、缩小某一局部或者是选择你感兴趣的某条曲线。它的使用也很简单:
+
+```python
+import plotly.express as px
+df = px.data.gapminder().query("country=='Canada'")
+fig = px.line(df, x="year", y="lifeExp", title='Life expectancy in Canada')
+fig.show()
 ```
 
-选择模型时，实用性指标的好坏比预测能力更重要。比如我们用模型分数的cutoff去拒绝坏的交易时，排序的准确性比预测值本身更为重要。很多时候这两者是一致的。但是我们也可以基于我们实用的具体需求，调整模型，比如给分数更高(排序更前)的样本更大的权重。
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-4/1628086298519-2.png" width="500" />
+</figure>
 
+有了它，你可以更细致的分析数据，往往能得到静态图所观察不到的洞见。
+
+### 2.5 itertools
+
+[itertools](https://docs.python.org/3/library/itertools.html)是一个使用率不高但是在某些时候能“拯救你于水火之中”的包。  
+它主要是提供了各种迭代的操作，如累加、笛卡尔积、连接多个列表等功能。没有它，我们可能需要写一段代码，用上循环等等。而有了它，只需要一句话。
+
+```python
+#累加
+>>> import itertools
+>>> x = itertools.accumulate(range(10))
+>>> print(list(x))
+[0, 1, 3, 6, 10, 15, 21, 28, 36, 45]
+
+#不重复的所有组合
+>>> x = itertools.combinations(range(4), 3)
+>>> print(list(x))
+[(0, 1, 2), (0, 1, 3), (0, 2, 3), (1, 2, 3)]
 ```
-Rule #26: Look for patterns in the measured errors, and create new features.
-```
-
-通过case study去构造新的特征。  
-可以构造多个同类的特征，然后让模型去选择有效的特征。
-
-```
-Rule #27: Try to quantify observed undesirable behavior.
-```
-
-将观察到的负面现象量化。比如你觉得模型排序准确率不够，那么如何定义排序准确率呢？只有给出明确的量化指标，才能对此进一步优化。
-
-```
-Rule #28: Be aware that identical short-term behavior does not imply identical long-term behavior.
-```
-
-模型测试的效果不等于长期的泛化能力。模型是否真正学到了pattern，还是只是过拟合了样本，这是一个令人头大的问题。
-
-## 4 训练与上线的差异
-
-训练和上线之间往往会存在差异。最好或者说为数不多的办法是做好监控。
-
-```
-Rule #29: The best way to make sure that you train like you serve is to save the set of features used at serving time, and then pipe those features to a log to use them at training time.
-```
-
-最好的方法是将真实线上的数据log下来作为训练数据。这可以大大减少两者之间的差异性。
-
-```
-Rule #30: Importance weight sampled data, don’t arbitrarily drop it!
-```
-
-不要随意丢弃采样样本。同时，对采样概率为30%的样本，训练时要给10/3的权重。这种校准对基于预测值的模型很重要，对基于排序的模型影响不大。
-
-```
-Rule #31: Beware that if you join data from a table at training and serving time, the data in the table may change.
-```
-
-上线时，数据可能相较训练时已经发生了变化。特别是一些字典类的特征，比如每个id对应的历史坏样本率等等。此类数据应该会有及时的更新。
-
-```
-Rule #32: Re-use code between your training pipeline and your serving pipeline whenever possible.
-```
-
-尽量复用训练和上线时的代码。这里主要说的是上线会用一些流式数据。工程方面，会有对流式数据构造特征的支持。有了特征只需要丢到已经训练好的模型中即可。
-
-```
-Rule #33: If you produce a model based on the data until January 5th, test the model on the data from January 6th and after.
-```
-
-测试数据要在训练数据之后。
-
-```
-Rule #34: In binary classification for filtering (such as spam detection or determining interesting e-mails), make small short-term sacrifices in performance for very clean data.
-```
-
-如果你已经有选择的给用户展示邮件，那么你的训练数据将是有偏的。比较好的做法是用一个没有任何干扰(模型或规则)的control group作为模型的训练集，因为这部分流量是无偏的真实流量。不需要太大，1%，2%就好。
-
-```
-Rule #35: Beware of the inherent skew in ranking problems.
-```
-
-算法会对线上的数据产生改变，从而影响未来会见到的数据。感觉这一点只能在模型迭代时，重新做分析了。
-
-```
-Rule #36: Avoid feedback loops with positional features
-```
-
-这点是和推荐算法相关。用户的点击与排序位置本身有关(人们倾向于点击第一个item)。如果没有位置特征，会把这类效应算到其他特征中去，导致模型估计不准。
-
-```
-Rule #37: Measure Training/Serving Skew.
-```
-
-评估训练和上线时模型表现的不同。可以做一些gap analysis。常见的可能原因有：使用了时间敏感的特征，过拟合等等。
-
-## 5 增长趋缓，优化模型
-
-建模的初步阶段，新模型的提升是明显的，全方位的。随着逐步优化，模型的提升不再那么显著。同时，不同指标可能出现有好有坏的情况。有趣的，有挑战性的阶段出现了。
-
-```
-Rule #38: Don’t waste time on new features if unaligned objectives have become the issue.
-```
-
-最终目标要明确，清晰。比如要看的是catch rate或是点击率等。
-
-```
-Rule #39: Launch decisions are a proxy for long-term product goals.
-```
-
-模型的目标往往是简单的，策略往往是复杂的。比如拒绝坏交易会减少损失，但是会带来交易量的下降。这些就需要做策略时去权衡。
-
-```
-Rule #40: Keep ensembles simple.
-```
-
-ensemble要简单，如可以做一个等权的相加。
-
-```
-Rule #41: When performance plateaus, look for qualitatively new sources of information to add rather than refining existing signals.
-```
-
-模型表现陷入瓶颈时，加入新的信息源以及新的特征往往是最有效的。同时，合理调整你对模型表现的预期。
-
-```
-Rule #42: Don’t expect diversity, personalization, or relevance to be as correlated with popularity as you think they are.
-```
-
-又是推荐领域的内容，常用的优化目标是代表流行度的点击率等。但是人们往往又会去追求个性化推荐，推荐内容多样等目标。可行的操作是采用后续的处理优化个性化及多样性。或者将他们直接加入优化目标。
-
-```
-Rule #43: Your friends tend to be the same across different products. Your interests tend not to be.
-```
-
-好友关系往往是稳定的。但是不同场景下的个性化特征往往是不同的。这并不是说我们不能在场景B中使用场景A的数据。跨场景的数据往往是有用的。
 
 ## 7 小结
 
-下篇涉及了具体建模步骤的方方面面。这些经验总结不仅具体，也十分有效。感谢谷歌大神无私的分享知识，相信有了这些rules，我们可以少走一些弯路。
+正是由于有这么多好用的包，活跃的社区，Python才如此流行，得到人们喜爱。  
+在使用Python的过程中，希望这些小众而又好用的包能满足你的各种需求，让你的生活轻松一些，美好一些。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
