@@ -65,9 +65,9 @@ Out: datetime.datetime(2018,4,20,0,0)
 
 对于memory_profiler：
 
-```
-example.py:
+创建example.py
 
+```python
 @profile
 def my_func():
     a = [1] * (10 ** 6)
@@ -77,12 +77,17 @@ def my_func():
 
 if __name__ == '__main__':
     my_func()
-    
+```
+
 然后在命令行中运行：  
+
+```
 python -m memory_profiler example.py
+```
 
 输出结果如下所示：
 
+```
 Line #    Mem usage    Increment  Occurrences   Line Contents
 ============================================================
      3   38.816 MiB   38.816 MiB           1   @profile
@@ -95,15 +100,23 @@ Line #    Mem usage    Increment  Occurrences   Line Contents
 
 对于line_profiler：
 
-```
+创建脚本
+
+```python
 @profile
 def slow_function(a, b, c):
     ...
-    
-然后在命令行中运行：  
+```
+
+然后在命令行中运行： 
+
+```
 python -m line_profiler script_to_profile.py.lprof
+```
 
 输出结果如下所示：
+
+```
 Pystone(1.1) time for 50000 passes = 2.48
 This machine benchmarks at 20161.3 pystones/second
 Wrote profile results to pystone.py.lprof
