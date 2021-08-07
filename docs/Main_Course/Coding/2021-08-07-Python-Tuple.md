@@ -80,7 +80,7 @@ print(quotient, remainder)
 
 ### 2.4 元组作为函数返回值
 
-有些函数有多个返回值，将其付给一个变量时，变量类型即是元组.
+有些函数有多个返回值，将其付给一个变量时，变量类型即是元组：
 
 ```Python
 import numpy as np
