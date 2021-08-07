@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/blog_intro/</loc>
+         <lastmod>2021-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Dessert/Apps/2021-06-06-Notion/</loc>
          <lastmod>2021-08-07</lastmod>
          <changefreq>daily</changefreq>
@@ -86,6 +91,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Coding/2021-08-03-useful-python-packages/</loc>
+         <lastmod>2021-08-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script/</loc>
          <lastmod>2021-08-07</lastmod>
          <changefreq>daily</changefreq>
@@ -127,11 +137,6 @@
     </url>
     <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0/</loc>
-         <lastmod>2021-08-07</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-08-03-useful-python-packages/</loc>
          <lastmod>2021-08-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
