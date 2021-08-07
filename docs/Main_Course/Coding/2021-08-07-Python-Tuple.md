@@ -135,7 +135,7 @@ for i in zip(list_a, list_b):
 
 上述内容不仅涵盖了元组的基本操作，同时也结合了实际工作中常搭配使用的其他函数、运算符等。在回顾这些知识时主要参考了两本经典的Python编程书籍：《流畅的Python》和《像计算机科学家一样思考Python》，有兴趣的朋友可以深入阅读！
 
-希望这篇文章对你有帮助，下回将总结Python列表的技巧。
+希望这篇文章对你有帮助，下回将总结Python列表的使用技巧。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
