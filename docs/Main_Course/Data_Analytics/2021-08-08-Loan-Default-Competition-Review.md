@@ -23,17 +23,27 @@ template: overrides/blogs.html
 
 该部分主要为了了解数据类型，各种特征的数据分布和缺失值情况，并了解特征间的相关关系以及特征和目标值之前的相关关系。为接下来对数据进行简单清洗做准备。
 
-![特征箱线图](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434776302-%E7%AE%B1%E7%BA%BF%E5%9B%BE.png)
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434776302-%E7%AE%B1%E7%BA%BF%E5%9B%BE.png" width="700" />
+  <figcaption>特征箱线图</figcaption>
+</figure>
+
 
 整体而言赛题数据相对干净，通过箱线图发现有一些数值特征中存在明显的异常值,决定使用箱型图+3-Sigma进行去除。对于缺失值，选择先构造特征记录缺失特征数量，再用纵向填充的方法尝试处理。此外通过计算Pearson相关系数可以看出有几对相关度很高的变量，例如匿名变n2-n3-n9和ficoRangeLow-ficoRangeHigh等，每对保留一个变量即可。
 
-![特征相关性热图](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434676311-feature_corr.png)
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434676311-feature_corr.png" width="700" />
+  <figcaption>特征相关性热图</figcaption>
+</figure>
 
 ### 3.2 特征工程
 
 经过EDA可以发现特征中有较多离散型变量，如贷款等级，工作职称，贷款目的，邮编等等，这些变量需要通过一定的编码方法进行变换。常见的one-hot encoding对于较低维度的变量（unique values < 100）效果不错，但是如果应用在高维变量上（如邮编，职称等），会产生过于稀疏的矩阵，导致每个类别里可以学习的数据过少。所以对于高维变量，一种比较有效的编码方式是target encoding，即用类别对应的标签的期望来代替原始的类别，这样相当于将高维的离散变量转换成了在0-1之间的数字变量。比较常用的定义方式为：
 
-![](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-7/1628306237775-image.png)
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-7/1628306237775-image.png" width="700" />
+</figure>
+
 
 其中p为全部标签的均值，alpha为系数，用于控制该变量对依赖变量的拟合程度。
 
@@ -74,7 +84,10 @@ data['pubRecOissueDate'] = data['pubRec']/data['issueDate']
 
 ### 3.4 特征重要性
 
-![CatBoost模型特征的SHAP值- Top20](https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434578524-SHAP2png.png)
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434578524-SHAP2png.png" width="700" />
+  <figcaption>CatBoost模型特征的SHAP值- Top20</figcaption>
+</figure>
 
 三个Boosting模型对特征重要性的评估略有区别，比较明显的区别是CatBoost模型中，离散数据的重要性普遍较高。以CatBoost的SHAP值为例，最重要的特征有点出乎意料地是**申请人职称**，此外，**贷款期数，贷款子级，地区邮编，债务收入比**等也有较高的SHAP值。对于数值型特征而言，三个模型的排序基本相似。在特征工程中构造的少数几个变量如**审批时间，有效账户/总账户比**也有幸被选进重要度前20。
 
