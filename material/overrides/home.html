@@ -2,6 +2,28 @@
   This file was automatically generated - do not edit
 -#}
 {% extends "overrides/main.html" %}
+{% block styles %}
+{{ super() }}
+<!-- Favicons -->
+<link href="assets/images/Bullet_No_text.svg" rel="icon">
+<link href="assets/images/Bullet_No_text.svg" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="assets_v2/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets_v2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets_v2/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets_v2/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets_v2/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets_v2/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets_v2/css/style.css" rel="stylesheet">
+{% endblock %}
+
+
 {% block tabs %}
   {{ super() }}
   <!-- <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
@@ -24,27 +46,7 @@
     </div>
   </section> -->
 
-
-
-<!-- Favicons -->
-<link href="assets/images/Bullet_No_text.svg" rel="icon">
-<link href="assets/images/Bullet_No_text.svg" rel="apple-touch-icon">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-<!-- Vendor CSS Files -->
-<link href="assets_v2/vendor/aos/aos.css" rel="stylesheet">
-<link href="assets_v2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets_v2/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="assets_v2/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="assets_v2/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-<link href="assets_v2/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-<!-- Template Main CSS File -->
-<link href="assets_v2/css/style.css" rel="stylesheet">
-
-<!-- =======================================================
+  <!-- =======================================================
 * Template Name: BizLand - v3.3.0
 * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
 * Author: BootstrapMade.com
@@ -60,13 +62,6 @@
     </div>
   </div>
 </section><!-- End Hero -->
-
-
-{% endblock %}
-{% block site_nav %}
-{% endblock %}
-
-{% block content %}
 
 <main id="main">
 
@@ -112,8 +107,6 @@
 
     </div>
   </section><!-- End Featured Services Section -->
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="assets_v2/vendor/aos/aos.js"></script>
@@ -129,6 +122,11 @@
 <script src="assets_v2/js/main.js"></script>
 
 </main>
+
+{% endblock %}
+
+{% block content %} 
+
 {% endblock %}
 
 
