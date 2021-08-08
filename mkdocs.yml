@@ -78,13 +78,13 @@ theme:
   palette:
     - scheme: default
       primary: black
-      accent: indigo
+      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
       primary: black
-      accent: red
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -124,8 +124,15 @@ plugins:
 # Customization
 extra:
   social:
+    - icon: fontawesome/brands/weixin
+      link: https://mp.weixin.qq.com/s/YYZilgFSHrh-nrjF3Z2G7A
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/bullettech
     - icon: fontawesome/brands/github
       link: https://github.com/BulletTech/BulletTech
+    - icon: fontawesome/solid/book
+      link: https://www.toutiao.com/c/user/token/MS4wLjABAAAAsxrzZdUCIQdOMU8albHKSb_ZCFAzIbwqzn9XFfIeoa-rd2rDsl7qOoCyd3wEgW5v/?source=feed
+
 
 extra_javascript:
   - javascripts/config.js
