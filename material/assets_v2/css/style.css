@@ -744,6 +744,7 @@ section {
 }
 
 .featured-services .description {
+  color: #444444;
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
