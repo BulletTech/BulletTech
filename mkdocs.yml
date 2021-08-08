@@ -85,7 +85,7 @@ theme:
         name: Switch to dark mode
     - scheme: slate
       primary: black
-      accent: deep purple
+      accent: amber
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
