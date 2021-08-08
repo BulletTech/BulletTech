@@ -1,96 +1,152 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.87.0">
-    <title>BulletTech</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/jumbotron/">
-
-    
-
-    <!-- Bootstrap core CSS -->
-<link href="{{ 'overrides/assets/dist/css/bootstrap.min.css' | url }}" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-  </head>
-  <body>
-    
-<main>
-  <div class="container py-4">
-    <header class="pb-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-        <svg width="3%" height="3%" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-          <g id="Layer-1" serif:id="Layer 1">
-              <g>
-                  <path d="M599.567,0C525.337,-0.06 445.242,52.376 400.833,96.786L49.92,447.698L79.175,476.953L49.92,506.207L35.316,491.557C27.234,483.474 14.144,483.474 6.062,491.557C-2.021,499.639 -2.021,512.728 6.062,520.811L210.749,725.498C218.832,733.581 231.921,733.581 240.004,725.498C248.086,717.416 248.086,704.373 240.004,696.29L225.353,681.64L254.607,652.386L283.862,681.64L634.774,330.727C699.37,266.132 780.962,126.05 693.236,38.324C665.822,10.909 633.308,0.027 599.567,0ZM596.73,41.858C611.001,41.575 624.761,43.825 637.518,49.393C599.246,55.312 524.62,75.17 445.9,141.853L430.087,126.04C464.11,92.017 534.888,43.089 596.73,41.858ZM393.903,127.342L604.218,337.704L578.451,363.423L368.137,153.109L393.903,127.342ZM108.382,506.207L225.353,623.178L196.145,652.386L79.175,535.461L108.382,506.207Z" style="fill:url(#_Linear1);fill-rule:nonzero;"/>
-                  <path d="M475.261,171.246C565.748,96.07 639.052,91.205 678.786,87.134C716.333,155.315 648.831,258.188 605.517,301.502L475.261,171.246Z" style="fill:url(#_Linear2);fill-rule:nonzero;"/>
-                  <path d="M971.213,379.56C1008.76,447.741 941.251,550.609 897.938,593.922L767.682,463.666C858.169,388.491 931.473,383.625 971.213,379.56Z" style="fill:url(#_Linear3);fill-rule:nonzero;"/>
-                  <path d="M891.97,292.404C817.74,292.344 737.646,344.827 693.236,389.236L342.324,740.149L371.578,769.356L342.324,798.611L327.72,784.007C319.637,775.924 306.548,775.924 298.466,784.007C290.383,792.089 290.383,805.132 298.466,813.215L503.153,1017.95C511.235,1026.03 524.325,1026.03 532.407,1017.95C540.49,1009.87 540.49,996.777 532.407,988.694L517.803,974.09L547.011,944.836L576.266,974.09L927.178,623.178C991.774,558.582 1073.41,418.454 985.687,330.727C958.272,303.313 925.711,292.431 891.97,292.404ZM889.133,334.262C903.406,333.979 917.209,336.226 929.969,341.797C891.685,347.704 817.03,367.626 738.304,434.304L722.491,418.49C756.514,384.467 827.287,335.488 889.133,334.262ZM685.109,419.793L895.424,630.108L869.704,655.827L659.389,445.512L685.109,419.793ZM400.833,798.611L517.803,915.582L488.549,944.836L371.578,827.865L400.833,798.611Z" style="fill:url(#_Linear4);fill-rule:nonzero;"/>
-              </g>
-          </g>
-          <defs>
-              <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(526.359,526.359,-526.359,526.359,283.853,213.778)"><stop offset="0" style="stop-color:rgb(144,45,250);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(190,33,98);stop-opacity:1"/></linearGradient>
-              <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(526.359,526.359,-526.359,526.359,283.853,213.778)"><stop offset="0" style="stop-color:rgb(144,45,250);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(190,33,98);stop-opacity:1"/></linearGradient>
-              <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(526.359,526.359,-526.359,526.359,283.853,213.778)"><stop offset="0" style="stop-color:rgb(144,45,250);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(190,33,98);stop-opacity:1"/></linearGradient>
-              <linearGradient id="_Linear4" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(526.359,526.359,-526.359,526.359,283.853,213.778)"><stop offset="0" style="stop-color:rgb(144,45,250);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(190,33,98);stop-opacity:1"/></linearGradient>
-          </defs>
-      </svg>
-        <span class="fs-4">&nbsp;BulletTech</span>
-      </a>
-    </header>
-
-    <div class="p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-        <h1 class="display-5 fw-bold">BulletTech Blog</h1>
-        <p class="col-md-8 fs-4">We are a team of a few data scientists working in the financial industry. Here is the place where we share practical analytics skills, working and life experience. Enjoy your time here!</p>
-        <a href="{{ page.next_page.url | url }}"><button class="btn btn-primary btn-lg" type="button" >Get Started</button></a>
-      </div>
-    </div>
-
-    <div class="row align-items-md-stretch">
-      <div class="col-md-6">
-        <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2>🚀 Product Center</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% extends "overrides/main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <!-- <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__image">
+          <img src="assets/images/BulletTech_Transparent.png" alt="" width="600" height="600" draggable="false">
+          
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>🤓 About Us</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        <div class="mdx-hero__content">
+          <h1>BulletTech Blog</h1>
+          <p>{{ config.site_description }}</p>
+          <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+            Get Started
+          </a>
+        
         </div>
       </div>
     </div>
+  </section> -->
 
-    <footer class="pt-3 mt-4 text-muted border-top">
-      &copy; 2021 - Present BulletTech
-    </footer>
+
+
+<!-- Favicons -->
+<link href="assets/images/Bullet_No_text.svg" rel="icon">
+<link href="assets/images/Bullet_No_text.svg" rel="apple-touch-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="assets_v2/vendor/aos/aos.css" rel="stylesheet">
+<link href="assets_v2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets_v2/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="assets_v2/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="assets_v2/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="assets_v2/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="assets_v2/css/style.css" rel="stylesheet">
+
+<!-- =======================================================
+* Template Name: BizLand - v3.3.0
+* Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+======================================================== -->
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+  <div class="container" data-aos="zoom-out" data-aos-delay="100">
+    <h1>Welcome to <span>BulletTech</span></h1>
+    <h2>We are a team of a few data scientists working in the financial industry. Here is the place where we share practical analytics skills, working and life experience. Enjoy your time here!</h2>
+    <div class="d-flex">
+      <a href="{{ page.next_page.url | url }}" class="btn-get-started scrollto">Get Started</a>
+    </div>
   </div>
+</section><!-- End Hero -->
+
+
+{% endblock %}
+{% block site_nav %}
+{% endblock %}
+
+{% block content %}
+
+<main id="main">
+
+  <!-- ======= Featured Services Section ======= -->
+  <section id="featured-services" class="featured-services">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bx bx-rocket"></i></div>
+            <h4 class="title"><a href="http://bullettech.cn/">Product Center</a></h4>
+            <p class="description">Analytics-driven solutions, powerful, useful and free!  </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4 class="title"><a href="https://bullettech.github.io/BulletTech/Main_course_blog_intro/">Main Course</a></h4>
+            <p class="description">Blogs about data, tech and artificial intelligence etc. </p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bx bx-cookie"></i></div>
+            <h4 class="title"><a href="https://bullettech.github.io/BulletTech/Dessert_blog_intro/">Dessert</a></h4>
+            <p class="description">Interesting sharing regarding working and life experience of data scientists.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="bx bx-happy"></i></div>
+            <h4 class="title"><a href="https://bullettech.github.io/BulletTech/About_us/">About Us</a></h4>
+            <p class="description">Want to know more about us, check it out!</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Featured Services Section -->
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets_v2/vendor/aos/aos.js"></script>
+<script src="assets_v2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets_v2/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets_v2/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets_v2/vendor/php-email-form/validate.js"></script>
+<script src="assets_v2/vendor/purecounter/purecounter.js"></script>
+<script src="assets_v2/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets_v2/vendor/waypoints/noframework.waypoints.js"></script>
+
+<!-- Template Main JS File -->
+<script src="assets_v2/js/main.js"></script>
+
 </main>
+{% endblock %}
 
 
-    
-  </body>
-</html>
+{% block footer %}
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+
+  <div class="container py-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>BulletTech</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+      Designed by <a class='link_v2' href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+{% endblock %}

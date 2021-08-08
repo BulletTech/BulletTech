@@ -77,14 +77,14 @@ theme:
     - navigation.top
   palette:
     - scheme: default
-      primary: black
-      accent: indigo
+      primary: deep purple
+      accent: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
       primary: black
-      accent: red
+      accent: deep purple
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
