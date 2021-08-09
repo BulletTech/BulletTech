@@ -29,5 +29,5 @@ template: overrides/general_no_comments.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-6/1622966940142-%E5%AE%98%E5%BE%AEwhite.jpeg" width="300" />
-  <figcaption>BulleTech 微信客服</figcaption>
+  <figcaption>BulletTech 微信客服</figcaption>
 </figure>
