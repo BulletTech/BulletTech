@@ -13,7 +13,7 @@ template: overrides/blogs.html
 
 ## 2 数据
 
-赛题数据来源于某信贷平台的贷款记录，总数据量为120W，训练集，测试集A，测试集B数据量各位80W，20W，20W。原数据中包含47列变量信息，其中15列为匿名变量。主要包括的信息有：贷款信息(金额，利率，贷款等级等)，贷款人信息(就业信息，收入信息，债务比，FICO，贷款记录等)，贷款人行为计数特征信息（匿名）。查询完整的字段表可以访问[赛题官网](https://tianchi.aliyun.com/competition/entrance/531830/information)，或点击**阅读原文**查看我们Blog上的文章。
+赛题数据来源于某信贷平台的贷款记录，总数据量为120W，训练集，测试集A，测试集B数据量各位80W，20W，20W。原数据中包含47列变量信息，主要包括：贷款信息(金额，利率，贷款等级等)，贷款人信息(就业信息，收入信息，债务比，FICO，贷款记录等)，贷款人行为计数特征信息（匿名特征）。查询完整的字段表可以访问[赛题官网](https://tianchi.aliyun.com/competition/entrance/531830/information)，或点击**阅读原文**查看我们Blog上的文章。
 
 赛题需要参赛者输出每个测试样本为1（违约）的概率，以AUC为指标评估模型。
 
@@ -21,7 +21,7 @@ template: overrides/blogs.html
 
 ### 3.1 EDA+数据清洗
 
-该部分主要为了了解数据类型，各种特征的数据分布和缺失值情况，并了解特征间的相关关系以及特征和目标值之前的相关关系。为接下来对数据进行简单清洗做准备。
+该部分主要为了了解数据类型，各种特征的数据分布和缺失值情况，并了解特征间的相关关系以及特征和目标值之间的相关关系。为接下来对数据进行简单清洗做准备。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434776302-%E7%AE%B1%E7%BA%BF%E5%9B%BE.png" width="700" />
@@ -29,7 +29,7 @@ template: overrides/blogs.html
 </figure>
 
 
-整体而言赛题数据相对干净，通过箱线图发现有一些数值特征中存在明显的异常值,决定使用箱型图+3-Sigma进行去除。对于缺失值，选择先构造特征记录缺失特征数量，再用纵向填充的方法尝试处理。此外通过计算Pearson相关系数可以看出有几对相关度很高的变量，例如匿名变n2-n3-n9和ficoRangeLow-ficoRangeHigh等，每对保留一个变量即可。
+整体而言赛题数据相对干净，通过箱线图发现有一些数值特征中存在明显的异常值,决定使用箱型图+3-Sigma进行去除。对于缺失值，选择先构造一个记录缺失特征数量的特征(missing_count)，再用纵向填充的方法填充缺失值。此外通过计算Pearson相关系数可以看出有几对相关度很高的变量，例如匿名变n2-n3-n9，保留一个变量即可。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434676311-feature_corr.png" width="700" />
@@ -60,11 +60,11 @@ data['openAccOEarliestCreditLine'] = data['openAcc']/data['earliesCreditLine']
 data['pubRecOissueDate'] = data['pubRec']/data['issueDate']
 ```
 
-最后根据EDA中的相关系数计算，去除了三个和其他变量有高相关性的变量，加上离散特征一共保留了约150个特征。
+最后根据EDA中的相关系数计算，去除了有高相关性的特征n2,n3(匿名变量，随机去除)和只有唯一值的特征，加上离散特征一共保留了约150个特征。
 
 ### 3.3 模型训练
 
-模型训练部分的思路是尝试构造几个表现较强的单模型，再进行模型融合。一共尝试了 XGBoost, Light-GBM, Catboost以及MLP(4 layers) 4种模型，CatBoost 模型本身就可以很好地处理离散特征，并且碰巧它也是使用基于target encoding衍生的方法处理高维离散特征，所以使用CatBoost时省略了对离散特征进行预处理的步骤。此外对MLP模型处理之前，额外尝试了使用自动编码器进行变量交互，但是效果明显不如Boosting模型。
+模型训练部分的思路是尝试构造几个表现较强的单模型，再进行模型融合。一共尝试了 XGBoost, Light-GBM, Catboost以及MLP(4 layers) 4种模型，训练时对模型进行独立的参数优化。CatBoost 模型本身就可以很好地处理离散特征，并且碰巧它也是使用基于target encoding衍生的方法处理高维离散特征，所以使用CatBoost时省略了对离散特征进行预处理的步骤。此外对MLP模型处理之前，额外尝试了使用自动编码器进行变量交互，但是效果明显不如Boosting模型。
 
 为了冲刺竞赛排名，模型融合也比较关键。我选择了表现较强的的三个Boosting模型，用简单加权平均的方法进行Stacking，让AUC成绩由单模型的0.7342提高到最终的0.7397。
 
@@ -80,7 +80,7 @@ data['pubRecOissueDate'] = data['pubRec']/data['issueDate']
 
 * 获取test AUC数据需要上传预测值到天池平台，每天只有一次测试机会，所以只收集了效果最好的CatBoost模型的AUC结果。
 
-从模型对比来看，XGBoost的过拟合现象较为严重，LightGBM 比较均衡，CatBoost泛化能力很好并且表现出众，主要得益于对类别变量的优秀处理能力。MLP模型表现一般，可能是数据规模还没有足够大到让它能够完全发挥挖掘非线性特征的能力。
+从模型对比来看，XGBoost的过拟合现象较为严重，LightGBM 比较均衡，CatBoost泛化能力很好并且表现出众。XGBoost模型中，超参数min_child_weight的值相对其他LightGBM中较小，这可能是模型过拟合的原因。CatBoost的优秀表现主要得益于对类别变量的强大处理能力。MLP模型表现一般，可能是数据规模还没有足够大到让它能够完全发挥挖掘非线性特征的能力。
 
 ### 3.4 特征重要性
 
