@@ -9,13 +9,53 @@ template: overrides/blogs.html
 
 ## 1 背景
 
-去年九月份参加了天池举办的零基础入门金融风控-贷款违约预测比赛，赛题以金融风控中的个人信贷为背景，要求选手根据贷款申请人的数据信息预测其是否有违约的可能，以此判断是否通过此项贷款，是一个典型的分类问题。
+去年九月份参加了天池举办的零基础入门金融风控-贷款违约预测比赛，赛题以金融风控中的个人信贷为背景，要求选手根据贷款申请人的信息预测其是否有违约的可能，以此判断是否通过此项贷款，是一个典型的分类问题。
 
 ## 2 数据
 
-赛题数据来源于某信贷平台的贷款记录，总数据量为120W，训练集，测试集A，测试集B数据量各位80W，20W，20W。原数据中包含47列变量信息，主要包括：贷款信息(金额，利率，贷款等级等)，贷款人信息(就业信息，收入信息，债务比，FICO，贷款记录等)，贷款人行为计数特征信息（匿名特征）。查询完整的字段表可以访问[赛题官网](https://tianchi.aliyun.com/competition/entrance/531830/information)，或点击**阅读原文**查看我们Blog上的文章。
+赛题数据来源于某信贷平台的贷款记录，总数据量为120W，训练集，测试集A，测试集B数据量各位80W，20W，20W。原数据中包含47列变量信息，主要包括：贷款信息(金额，利率，贷款等级等)，贷款人信息(就业信息，收入信息，债务比，FICO(一种信用评分)，贷款记录等)，贷款人行为计数特征信息（匿名特征）。查询完整的字段表可以访问[赛题官网](https://tianchi.aliyun.com/competition/entrance/531830/information)"赛题官网"，或点击**阅读原文**查看我们Blog上的文章。
 
-赛题需要参赛者输出每个测试样本为1（违约）的概率，以AUC为指标评估模型。
+| Field              | Description                                                    |
+|--------------------|----------------------------------------------------------------|
+| id                 | 为贷款清单分配的唯一信用证标识                                 |
+| loanAmnt           | 贷款金额                                                       |
+| term               | 贷款期限（year）                                               |
+| interestRate       | 贷款利率                                                       |
+| installment        | 分期付款金额                                                   |
+| grade              | 贷款等级                                                       |
+| subGrade           | 贷款等级之子级                                                 |
+| employmentTitle    | 就业职称                                                       |
+| employmentLength   | 就业年限（年）                                                 |
+| homeOwnership      | 借款人在登记时提供的房屋所有权状况                             |
+| annualIncome       | 年收入                                                         |
+| verificationStatus | 验证状态                                                       |
+| issueDate          | 贷款发放的月份                                                 |
+| purpose            | 借款人在贷款申请时的贷款用途类别                               |
+| postCode           | 借款人在贷款申请中提供的邮政编码的前3位数字                    |
+| regionCode         | 地区编码                                                       |
+| dti                | 债务收入比                                                     |
+| delinquency_2years | 借款人过去2年信用档案中逾期30天以上的违约事件数                |
+| ficoRangeLow       | 借款人在贷款发放时的fico所属的下限范围                         |
+| ficoRangeHigh      | 借款人在贷款发放时的fico所属的上限范围                         |
+| openAcc            | 借款人信用档案中未结信用额度的数量                             |
+| pubRec             | 贬损公共记录的数量                                             |
+| pubRecBankruptcies | 公开记录清除的数量                                             |
+| revolBal           | 信贷周转余额合计                                               |
+| revolUtil          | 循环额度利用率，或借款人使用的相对于所有可用循环信贷的信贷金额 |
+| totalAcc           | 借款人信用档案中当前的信用额度总数                             |
+| initialListStatus  | 贷款的初始列表状态                                             |
+| applicationType    | 表明贷款是个人申请还是与两个共同借款人的联合申请               |
+| earliesCreditLine  | 借款人最早报告的信用额度开立的月份                             |
+| title              | 借款人提供的贷款名称                                           |
+| policyCode         | 公开可用的策略_代码=1新产品不公开可用的策略_代码=2             |
+| n系列匿名特征      | 匿名特征n0-n14，为一些贷款人行为计数特征的处理                 |
+
+赛题需要参赛者输出每个测试样本为1（违约）的概率，以AUC为指标评估模型，如若模型输出有：
+
+| id    | isDefault |
+| 800001   | 0.7 |
+
+则代表模型预测id为80001的贷款违约概率为70%。
 
 ## 3 思路和方法
 
@@ -29,7 +69,7 @@ template: overrides/blogs.html
 </figure>
 
 
-整体而言赛题数据相对干净，通过箱线图发现有一些数值特征中存在明显的异常值,决定使用箱型图+3-Sigma进行去除。对于缺失值，选择先构造一个记录缺失特征数量的特征(missing_count)，再用纵向填充的方法填充缺失值。此外通过计算Pearson相关系数可以看出有几对相关度很高的变量，例如匿名变n2-n3-n9，保留一个变量即可。
+整体而言赛题数据相对干净，通过箱线图发现有一些数值特征中存在明显的异常值,决定使用箱型图+3-Sigma进行去除。对于缺失值，选择先构造一个新字段记录一个样本中缺失特征/总特征数量的比例(missrate)，再用纵向填充的方法填充缺失值。此外通过计算Pearson相关系数可以看出有几对相关度很高的变量，例如匿名变n2-n3-n9，保留一个变量即可。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-8/1628434676311-feature_corr.png" width="700" />
@@ -51,12 +91,19 @@ template: overrides/blogs.html
 特征交互方面，简单构造了一些可能有实际意义的交互特征，这一部分的业务经验不多，有经验的小伙伴欢迎在评论区分享一下特征构造的思路。
 
 ``` python 
-data['interestRateOLoanAmnt'] = data['interestRate']/data['loanAmnt']
-data['annualIncomeOLoanAmnt'] = data['annualIncome']/data['loanAmnt']
-data['annualIncomeOImploymentLength'] = data['annualIncome']/data['employmentLength']
-data['annualIncomeMImploymentLength'] = data['interestRate']*data['loanAmnt']
+# 利率/贷款总额
+data['interestRateOLoanAmnt'] = data['interestRate']/data['loanAmnt'] 
+# 年收入/贷款总额
+data['annualIncomeOLoanAmnt'] = data['annualIncome']/data['loanAmnt'] 
+# 年收入/就业年限
+data['annualIncomeOImploymentLength'] = data['annualIncome']/data['employmentLength'] 
+# 年收入*就业年限
+data['annualIncomeMImploymentLength'] = data['interestRate']*data['loanAmnt'] 
+# 未结信用额度的数量/当前的信用额度总数 
 data['openAccOTotalAcc'] = data['openAcc']/data['totalAcc']
+# 未结信用额度的数量/最早信用额度开立距今时间
 data['openAccOEarliestCreditLine'] = data['openAcc']/data['earliesCreditLine']
+# 贬损公共记录的数量/贷款发放距今时间
 data['pubRecOissueDate'] = data['pubRec']/data['issueDate']
 ```
 
@@ -66,9 +113,9 @@ data['pubRecOissueDate'] = data['pubRec']/data['issueDate']
 
 模型训练部分的思路是尝试构造几个表现较强的单模型，再进行模型融合。一共尝试了 XGBoost, Light-GBM, Catboost以及MLP(4 layers) 4种模型，训练时对模型进行独立的参数优化。CatBoost 模型本身就可以很好地处理离散特征，并且碰巧它也是使用基于target encoding衍生的方法处理高维离散特征，所以使用CatBoost时省略了对离散特征进行预处理的步骤。此外对MLP模型处理之前，额外尝试了使用自动编码器进行变量交互，但是效果明显不如Boosting模型。
 
-为了冲刺竞赛排名，模型融合也比较关键。我选择了表现较强的的三个Boosting模型，用简单加权平均的方法进行Stacking，让AUC成绩由单模型的0.7342提高到最终的0.7397。
+为了冲刺竞赛排名，模型融合也比较关键。我选择了表现较强的的三个Boosting模型，用简单加权平均(每个模型权重相同)的方法进行ensemble，让AUC成绩由单模型的0.7342提高到最终的0.7397。
 
-4个单模型和融合模型的训练表现如下:
+4个单模型的训练表现如下:
 
 
 |  模型  | Training AUC | Validation AUC | Test AUC * |
@@ -78,7 +125,7 @@ data['pubRecOissueDate'] = data['pubRec']/data['issueDate']
 | CatBoost  | 0.7446 | **0.7434** | 0.7342 |
 | MLP | 0.7263 | 0.7247 | - |
 
-* 获取test AUC数据需要上传预测值到天池平台，每天只有一次测试机会，所以只收集了效果最好的CatBoost模型的AUC结果。
+* 获取test AUC数据需要上传预测值到天池平台，每天只有一次测试机会，所以在前期训练单个模型时，只收集了效果最好的CatBoost模型的AUC结果。
 
 从模型对比来看，XGBoost的过拟合现象较为严重，LightGBM 比较均衡，CatBoost泛化能力很好并且表现出众。XGBoost模型中，超参数min_child_weight的值相对其他LightGBM中较小，这可能是模型过拟合的原因。CatBoost的优秀表现主要得益于对类别变量的强大处理能力。MLP模型表现一般，可能是数据规模还没有足够大到让它能够完全发挥挖掘非线性特征的能力。
 
