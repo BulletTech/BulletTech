@@ -8,10 +8,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
+/* body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
-}
+} */
 
 a {
   color: #fff
@@ -24,10 +24,10 @@ a {
   text-decoration: none;
 }
 
-.md-nav__link {
+/* .md-nav__link {
   color: #444444;
   text-decoration: none;
-}
+} */
 
 .link_v2:hover {
   color: #3284f1;
