@@ -23,21 +23,25 @@ Kaggle作为最有名的数据科学竞赛平台(没有之一)，提供了各种
 - 由于Kaggle竞赛题常会遇到数据量太大的问题，此时我们需要减少数据的内存占用。Kaggle上有一个经典的memory_reduce的函数可以很好地减少数据大小。
 - 对于树模型中的类别变量，在label encoding之后可以把它当作类别或是数字。至于哪种方法好，还是需要看验证结果。
 - 将某个特征拆分成多个特征。如将金额拆分成整数和小数部分。不知道有没有用。
-- 特征组合。类别变量的组合或是数字变量的加减乘除
-- Frequency Encoding(等各种encoding)
-- Group by之后的一些统计量
-- 归一化。一般来说归一化都没有太大的问题(对于神经网络是必须的。有趋势的数据也可以去除趋势。)
+- 特征组合。类别变量的组合或是数字变量的加减乘除。
+- Frequency Encoding(等各种encoding)。
+- Group by之后的一些统计量。
+- 归一化。一般来说归一化都没有太大的问题(对于神经网络是必须的，有趋势的数据也可以去除趋势)。
 - 去除极端值的影响。
 
 在IEEE-CIS Fraud Detection这个竞赛中，Chris也拿了第一名。关于此竞赛的经验分享有：
 
 - 赛题的关键是识别出客户的uid。但是不能直接把uid等id类变量作为特征，因为测试集中有很多新出现的uid。
-- CatBoost模型在树模型中表现较好
+- CatBoost模型在树模型中表现较好。
 - 变量的时间一致性：这里Chris所用的方式是对每一个变量用第一个月的数据去训练一个模型，然后看最后一个月的模型表现。如果表现较差，则说明这个变量可能只在过去起作用，这时应该丢弃这些变量。
 - 低variance的数字变量往往是没有用的。sklearn.feature_selection中有VarianceThreshold来进行特征筛选。 
 
 Chris还参加了一些图像、NLP相关的比赛，由于和自己的主营业务不太相关，这里就不做整理了。
 
+[CPMP](https://www.kaggle.com/cpmpml)也是Discussion的Grandmaster，他有一篇关于避免overfitting的tips的文章。
+
+- 验证集使用的越多就越容易过拟合验证集，例如比赛中的public LB(公榜)以及固定的k fold CV。一个好的方法是使用随机的k fold CV。
+- 他推荐了一篇关于model validation and model selection的[论文](model validation and model selection)。
 
 ## 3 小结
 
