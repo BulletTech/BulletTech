@@ -9,4 +9,4 @@ template: overrides/blogs.html
     
  ## 前言
  
- 在上一篇文章中，我們回顧了Python元組的常用操作，這篇文章，我們繼續聊聊Python裏另一張常用的數據類型，列表（List）
+ 在上一篇文章中，我們回顧了Python元組的常用操作，這篇文章，我們繼續聊聊Python裏另一種常用的數據類型，列表（List）
