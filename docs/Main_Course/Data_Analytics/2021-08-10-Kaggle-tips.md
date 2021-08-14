@@ -40,7 +40,7 @@ Chris还参加了一些图像、NLP相关的比赛，由于和自己的主营业
 
 [CPMP](https://www.kaggle.com/cpmpml)也是Discussion的Grandmaster，他有一篇关于避免overfitting的tips的文章。
 
-- 验证集使用的越多就越容易过拟合验证集，例如比赛中的public LB(公榜)以及固定的k fold CV。一个好的方法是使用随机的k fold CV。
+- 验证集使用的越多就越容易过拟合验证集，例如比赛中的public LB(公榜)以及固定的k-fold CV。一个好的方法是使用随机的k-fold CV。
 - 他推荐了一篇关于model validation and model selection的[论文](https://arxiv.org/abs/1811.12808)。
 
 ## 3 小结
