@@ -17,7 +17,7 @@ template: overrides/blogs.html
 
 ## 2 列表常用操作
 
-### 2.1 遍历列表
+### 2.1 遍历
 
 以列表`people = ['Adam','Nick','Tony']`为例，可以使用for循环进行遍历：
 
@@ -35,7 +35,7 @@ for i in range(len(people)):
 
 ### 2.2 切片
 
-和元组一样，可以通过切片来获取列表的元素：
+和元组一样，可以通过切片来获取列表的元素（Python里下标从0开始计数）：
 
 ```python
 print(people[:2])
