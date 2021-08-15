@@ -101,6 +101,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Coding/2021-08-14-Python-list/</loc>
+         <lastmod>2021-08-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script/</loc>
          <lastmod>2021-08-15</lastmod>
          <changefreq>daily</changefreq>
