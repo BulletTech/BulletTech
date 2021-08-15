@@ -32,6 +32,7 @@ nav:
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
         - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
     - Coding:
+        - Python列表常用操作小技巧: Main_Course/Coding/2021-08-14-Python-list.md
         - Python元组常用操作小技巧: Main_Course/Coding/2021-08-07-Python-Tuple.md
         - 好用的Python包: Main_Course/Coding/2021-08-03-useful-python-packages.md
     - One Day Build:
