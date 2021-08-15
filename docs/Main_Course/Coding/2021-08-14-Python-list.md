@@ -50,7 +50,7 @@ print(people[:2])
 
 a. pop方法可以返回要删除的值，可以使用下标进行删除，或者删除最后一个元素：`a = people.pop(2)`或者`a = people.pop()`，`a`的值都将是`'Tony'`，而原列表将会删除对应的元素。
 
-b. 如果你不需要使用删除的是，del是一个好办法：`del people[0]`，则`people`列表将变为`['Nick','Tony']`。
+b. 如果你不需要使用删除的值，del是一个好办法：`del people[0]`，则`people`列表将变为`['Nick','Tony']`。
 
 c. remove方法将删除列表中第一个所需删除的元素，如进行`test_list.remove(1)`操作后，列表将变为`test_list = [0,1,'a','b']`，注意，remove方法不返回任何值。
 
