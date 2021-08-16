@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Python列表常用操作小技巧
 
 !!! info
-    作者：袁子弹起飞，发布于2021-08-14，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/GmZ1Du4qJRai7D7oXKh75w)
+    作者：袁子弹起飞，发布于2021-08-14，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484437&idx=1&sn=6d58dbd242157e216cb0e573678686d9&chksm=eb90f761dce77e7711ad25f26be3ff212d80db386a74d5902af1247e027e1108c84ec8d0fb7c&token=891223383&lang=zh_CN#rd)
 
  ## 1 前言
 
