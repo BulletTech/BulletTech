@@ -52,7 +52,7 @@
 <span class=n>result</span> <span class=o>=</span> <span class=p>[</span><span class=n>i</span><span class=o>*</span><span class=n>i</span> <span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>test_list</span><span class=p>]</span>
 <span class=nb>print</span><span class=p>(</span><span class=n>result</span><span class=p>)</span>
 </code></pre></div> <p>输出为：</p> <div class=highlight><pre><span></span><code>[1, 4, 16, 25]
-</code></pre></div> <h2 id=3>3 总结<a class=headerlink href=#3 title="Permanent link">&para;</a></h2> <p>上述知识基本概况了列表的常见操作，简单总结一下经验：</p> <ul> <li>大部分列表方法都是修改参数并返回None，一定要注意选择合适的方法，确保变量的安全性。</li> <li>实现同一种操作有很多种办法，有时用错误的方法不会报错，但结果有可能不对，确保理解了个中差异后再选择合适的方法。</li> <li>谨慎使用列表的别名，其实不止列表，其他的数据类型也会有别名的机制。</li> </ul> <p>希望这些知识点对你有帮助，来一道leetcode算法题巩固一下列表知识吧，欢迎在评论区留下你的答案！下次我们将聊聊字典（Dict）。</p> <p>题目：旋转数组</p> <p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。示例：</p> <div class=highlight><pre><span></span><code>输入: nums = [1,2,3,4,5,6,7], k = 3
+</code></pre></div> <h2 id=3>3 总结<a class=headerlink href=#3 title="Permanent link">&para;</a></h2> <p>上述知识基本概括了列表的常见操作，简单总结一下经验：</p> <ul> <li>大部分列表方法都是修改参数并返回None，一定要注意选择合适的方法，确保变量的安全性。</li> <li>实现同一种操作有很多种办法，有时用错误的方法不会报错，但结果有可能不对，确保理解了个中差异后再选择合适的方法。</li> <li>谨慎使用列表的别名，其实不止列表，其他的数据类型也会有别名的机制。</li> </ul> <p>希望这些知识点对你有帮助，来一道leetcode算法题巩固一下列表知识吧，欢迎在评论区留下你的答案！下次我们将聊聊字典（Dict）。</p> <p>题目：旋转数组</p> <p>给定一个数组，将数组中的元素向右移动 k 个位置，其中 k 是非负数。示例：</p> <div class=highlight><pre><span></span><code>输入: nums = [1,2,3,4,5,6,7], k = 3
 输出: [5,6,7,1,2,3,4]
 解释:
 向右旋转 1 步: [7,1,2,3,4,5,6]
