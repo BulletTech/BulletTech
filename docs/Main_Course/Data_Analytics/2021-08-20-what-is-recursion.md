@@ -1,0 +1,99 @@
+利用递归思想处理半结构化数据
+
+1 
+在日常数据分析的工作中，我们收集到的原始数据有时并不是整齐的表格形式，例如在爬取网页或者爬取api里的数据时，结果往往是以xml或者json（类似Python中的字典）格式返回，并且层层嵌套，就像如下这样：
+
+```
+[{
+    'state': 'Florida',
+    'shortname': 'FL',
+    'info': {
+        'governor': 'Rick Scott'
+    },
+    'counties': [
+        {'name': 'Dade', 'population': 12345},
+        {'name': 'Broward', 'population': 40000},
+        {'name': 'Palm Beach', 'population': 60000}
+    ]},
+    {
+    'state': 'Ohio',
+    'shortname': 'OH',
+    'info': {
+        'governor': 'John Kasich'
+    },
+    'counties': [
+        {'name': 'Summit', 'population': 1234},
+        {'name': 'Cuyahoga', 'population': 1337}]
+    }]
+```
+
+这种嵌套形式的数据如果很复杂，确实不适合人类阅读，如果要对数据进行进一步的清洗或者分析，我们要做的第一步是把嵌套"打开"，转化成类似如下形式的表格：
+
+|       name | population |   state | shortname | info.governor |
+|-----------:|-----------:|--------:|----------:|--------------:|
+|       Dade |      12345 | Florida |        FL |    Rick Scott |
+|    Broward |      40000 | Florida |        FL |    Rick Scott |
+| Palm Beach |      60000 | Florida |        FL |    Rick Scott |
+|     Summit |       1234 |    Ohio |        OH |   John Kasich |
+|   Cuyahoga |       1337 |    Ohio |        OH |   John Kasich |
+
+我们希望表格内每一条记录是county-level，和可是怎么转化呢？试试万能的pandas吧：
+
+```Python
+# 尝试直接转化为DataFrame
+df = pd.DataFrame(data)
+print(df)
+```
+
+输出为：
+
+| name   | shortname | info    | counties  | name" |
+|--------|-----------|---------|-----------|-------|
+| Florida | FL | {'governor': 'Rick Scott'}  | [{'name': 'Dade', 'population': 12345}, {'name... | NaN   |
+| NaN     | OH | {'governor': 'John Kasich'} | [{'name': 'Summit', 'population': 1234}, {'nam... | Ohio  |
+
+发现pandas只解析了第一层state-level的记录，而county-level的数据还是以嵌套的形式展现。经过亿点点查找，发现pandas自带一个叫做json_normalize的函数可以实现我们的需求:
+
+```Python
+# 使用json_normalize():
+pd.json_normalize(
+    data, 
+    record_path = 'counties',  # 定义数据粒度
+    meta = ['state', 'shortname',['info', 'governor']] # 定义存入结果表的列名
+    )
+```
+
+输出为：
+
+|       name | population |   state | shortname | info.governor |
+|-----------:|-----------:|--------:|----------:|--------------:|
+|       Dade |      12345 | Florida |        FL |    Rick Scott |
+|    Broward |      40000 | Florida |        FL |    Rick Scott |
+| Palm Beach |      60000 | Florida |        FL |    Rick Scott |
+|     Summit |       1234 |    Ohio |        OH |   John Kasich |
+|   Cuyahoga |       1337 |    Ohio |        OH |   John Kasich |
+
+这和我们预期的结果一样。但是这一过程是如何实现的呢？其实，这是递归思想的在实际应用的范例之一。
+
+2 什么是递归？
+
+想要知道什么是递归？先了解什么是递归。
+
+没错，递归的本质就是"复读"，在计算机编程中，递归就是通过函数调用自身，把问题转化成解决一个过程相似，但是规模较小的问题，直到到达边界条件即小化的问题。以通过递归算法求解斐波那契数列为例:
+
+``` Python
+def Fibonacci(n):
+    def _recurse(n):
+        if n == 0: # 边界条件
+            return 0
+        elif n == 1: # 边界条件
+            return 1
+        else:
+            return _recurse(n-1) + _recurse(n-2) # 调用自身，缩小问题规模
+    return _recurse(n)
+```
+
+想要求第n个斐波那契数f(n)，我们只需要计算f(n-1)和f(n-2)的值，这一步相当于把问题规模缩小。这个问题可以递推到计算f(2)=f(1)+f(0)。又因为f(1)和f(0)的值是我们已知的边界条件，我们便可以推导出f(2)值，由此逐步得出f(n)。
+
+类似地，在解析嵌套的json数据时，我们可以设计一个函数f()解析当前层的字典，当字典中的某个值(value)为另一个字典或者字典列表时，调用同样的函数f(n)，直到满足value中不含字典这一边界条件。同时，我们需要记录解析遍历的键值对，字典的键即为输出表格中的columns，字典的值为表格中的record。
+
