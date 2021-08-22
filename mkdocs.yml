@@ -17,6 +17,7 @@ nav:
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
+        - SQL tips: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
         - Kaggle tips: Main_Course/Data_Analytics/2021-08-10-Kaggle-tips.md
         - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
         - 读《Rules of Machine Learning》有感（下）: Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0.md
