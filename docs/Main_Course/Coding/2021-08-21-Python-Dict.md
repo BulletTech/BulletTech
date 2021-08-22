@@ -60,7 +60,7 @@ True
 
 - 清空字典：`name2code.clear()`，注意`clear()`方法没有返回值
 - 返回键k对应的值，然后移除该键值对：`name2code.pop(k, [default])`
-- 随机返回一个键值，并移除该键值对：`name2code.popitem()`
+- 返回最后添加的键值，并移除该键值对：`name2code.popitem()`
 
 ### 2.3 循环
 
