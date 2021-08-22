@@ -19,7 +19,7 @@ template: overrides/general_no_comments.html
 
 为了实现这些目标、我们建立了如下渠道：
 
-- Github，BulletTech Organization，在此我们创建了自己的博客，分享数据科学的知识&代码以及科技产品的体验
+- GitHub，BulletTech Organization，在此我们创建了自己的博客，分享数据科学的知识&代码以及科技产品的体验
 - Wechat微信公众号，BulletTech，主战场
 - 知乎，BulletTech，内容分发渠道，将同步发表微信公众号里的文章
 - 今日头条，BulletTech，内容分发渠道，将同步发表微信公众号里的文章
