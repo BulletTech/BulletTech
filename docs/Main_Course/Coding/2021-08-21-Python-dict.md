@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Python字典常用操作小技巧
 
 !!! info
-    作者：袁子弹起飞，发布于2021-08-21，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484437&idx=1&sn=6d58dbd242157e216cb0e573678686d9&chksm=eb90f761dce77e7711ad25f26be3ff212d80db386a74d5902af1247e027e1108c84ec8d0fb7c&token=891223383&lang=zh_CN#rd)
+    作者：袁子弹起飞，发布于2021-08-21，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484449&idx=1&sn=227c9fd7dfa3baacbfeb877570450a52&chksm=eb90f755dce77e4305d6b352e8d4d828edc10456edd92e5d77010ba316582ce9fdd8f2e715af&token=874200166&lang=zh_CN#rd)
 
 ## 1 前言
 
@@ -148,7 +148,7 @@ print(code2name)
 - collections.OrderedDict：这个类型在添加键的时候会保持键的顺序，因此键的迭代顺序始终保持一致。但请注意，如果定义完有序字典后没有插入数据的操作，原始的键值对仍然是无序的，和普通字典一样。
 - collections.ChainMap：这个类型可以容纳多个不同的映射对象，在进行键查找操作时，这些对象会被逐个查找，直到找到对应的键为止。常用于管理多个代表不同范围和上下文的字典。
 - collections.Counter：顾名思义，这是一个计数器，键更新时，计数器也随之更新。常用于为可散列表计数或作为多重集合（集合里元素出现多次）。
-- colllections.UserDict：该类主要用于让用户继承，继承这个类会比继承dict要更加方便，主要是因为dict等内置类型的方法通常会忽略用户覆盖的方法，造成意料不到的麻烦，详见[流畅的Python 12章 - 继承的优缺点](https://book.douban.com/subject/27028517/)。
+- colllections.UserDict：该类主要用于让用户继承，继承这个类会比继承dict要更加方便，主要是因为dict等内置类型的方法通常会忽略用户覆盖的方法，造成意料不到的麻烦，详见[《流畅的Python》 12章 - 继承的优缺点](https://book.douban.com/subject/27028517/)。
 
 ## 4 总结
 
