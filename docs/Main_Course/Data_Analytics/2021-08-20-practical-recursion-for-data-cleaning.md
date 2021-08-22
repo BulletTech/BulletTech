@@ -95,5 +95,71 @@ def Fibonacci(n):
 
 想要求第n个斐波那契数f(n)，我们只需要计算f(n-1)和f(n-2)的值，这一步相当于把问题规模缩小。这个问题可以递推到计算f(2)=f(1)+f(0)。又因为f(1)和f(0)的值是我们已知的边界条件，我们便可以推导出f(2)值，由此逐步得出f(n)。
 
-类似地，在解析嵌套的json数据时，我们可以设计一个函数f()解析当前层的字典，当字典中的某个值(value)为另一个字典或者字典列表时，调用同样的函数f(n)，直到满足value中不含字典这一边界条件。同时，我们需要记录解析遍历的键值对，字典的键即为输出表格中的columns，字典的值为表格中的record。
+类似地，在解析嵌套的json数据时，我们可以设计一个函数f()解析当前层的字典，当字典中的某个值(value)为的type为字典或者字典列表时，调用同样的函数f(n)，直到满足value中不含字典这一边界条件。同时，我们需要记录解析遍历的键值对，字典的键即为输出表格中的字段，字典的值为表格中的record。
 
+我们来看下panads源码中_json_normalize()的核心代码：
+
+``` Python
+
+ _meta = [m if isinstance(m, list) else [m] for m in meta] # 需要展现在结果里的字段
+records: List = []
+lengths = []
+# meta_val用于存储fields对应的数值
+meta_vals: DefaultDict = defaultdict(list)
+# 在深层字典里的字段，用上一层的字段名+分隔符+这一层的字段名代替，防止字段重复，如例子中的 ['info', 'governor'] 处理成 info.governor
+meta_keys = [sep.join(val) for val in _meta]
+
+# Disastrously inefficient for now
+def _recursive_extract(data, path, seen_meta, level=0):
+    if isinstance(data, dict):
+        data = [data]
+    
+    if len(path) > 1: #这里对于多个record_path的情况进行递归
+        for obj in data:
+            for val, key in zip(_meta, meta_keys):
+                if level + 1 == len(val):
+                    seen_meta[key] = _pull_field(obj, val[-1])
+
+            _recursive_extract(obj[path[0]], path[1:], seen_meta, level=level + 1)
+    
+    else:
+        # 遍历当前层的data
+        for obj in data:
+            # 取出当前层所有的records (list of dict)
+            recs = _pull_records(obj, path[0])
+            # pandas 中的另一个内置函数，如果records里面有dict,将dict打开。
+            # 例如如果有一条记录是{'a':{'b':1}} 则会变成 {'a.b':1}
+            recs = [
+                nested_to_record(r, sep=sep, max_level=max_level)
+                if isinstance(r, dict)
+                else r
+                for r in recs
+            ]
+
+            # For repeating the metadata later
+            lengths.append(len(recs)) # 记录当前层级records的数量
+            for val, key in zip(_meta, meta_keys):
+                if level + 1 > len(val): # 如果字段在下一层dict，如val为['info', 'governor']，则取seen_meta['info.governer']
+                    meta_val = seen_meta[key]
+                else: # 取出当前层字段对应的value
+                    try:
+                        meta_val = _pull_field(obj, val[level:])
+                    except KeyError as e:
+                        if errors == "ignore":
+                            meta_val = np.nan
+                        else:
+                            raise KeyError(
+                                "Try running with errors='ignore' as key "
+                                f"{e} is not always present"
+                            ) from e
+                meta_vals[key].append(meta_val)
+            records.extend(recs) 
+
+_recursive_extract(data, record_path, {}, level=0)
+```
+
+可以看出源码还是稍微有些难以理解的，此外代码作者也吐槽目前的执行效率很低，但这个函数好在可以通过定义record_path控制解析的深度，防止将过深的半结构化数据完全展开，产生过多的记录。
+
+## 4 总结
+
+虽然数据分析师的日常工作中往往不需要直接接触算法，但掌握一些算法思想往往可以帮助我们更好地理解手边的工具。必要时也可以自己编写代码提高效率。除了刷算法题之外，读读优秀开源项目地源码也是很好的提升方式。如果实在没有时间，那就常来我们的公众号上看看吧！
