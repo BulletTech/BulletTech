@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 天池零基础金融风控比赛小结
 
 !!! info 
-    作者：Jeremy，发布于2021-08-08，阅读时间：约12分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Jeremy，发布于2021-08-08，阅读时间：约12分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/dvHbk5NaKz4a15oke3FXkA)
 
 ## 1 背景
 
