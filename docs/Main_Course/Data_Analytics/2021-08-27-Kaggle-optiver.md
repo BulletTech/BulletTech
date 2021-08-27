@@ -10,7 +10,7 @@ template: overrides/blogs.html
 ## 1 引言
 
 故事的起因是8月26号的时候看到了一篇微信文章，Kaggle Optiver竞赛的前排(top 50)选手竟然公开了自己的方案。  
-本着看热闹以及学习的态度，就让我们一起来看一下具有无私开源精神的前排大神的方案。
+本着看热闹以及学习的态度，就让我们一起来看一下具有无私开源精神的前排大神的方案吧。
 
 ## 2 竞赛介绍
 
@@ -70,8 +70,7 @@ WAP=\frac{\text { BidPrice }_{1} * \text { AskSize }_{1}+\text { AskPrice }_{1} 
 
 #### 4.2.1 订单薄特征
 
-关于订单薄特征(在book_preprocessor函数中)，我们可以看到构造了基于不同档位(买一卖一，买二卖二，买三卖三，买四卖四)WAP计算的已实现波动率，一些盘口的特征，如价差，size等等。  
-并用滑动窗口，构造了以上特征的一些统计量。
+关于订单薄特征(在book_preprocessor函数中)，我们可以看到构造了基于不同档位(买一卖一，买二卖二，买三卖三，买四卖四)WAP计算的已实现波动率，一些盘口的特征，如价差，size等等。并用滑动窗口，构造了以上特征的一些统计量。
 
 ```python
 # data directory
@@ -388,11 +387,25 @@ test = get_time_stock(test)
 ```
 
 ### 4.4 模型训练
+
 关于模型部分，采用了一个LightGBM和一个NN模型ensemble，这一块并没有太多独特的东西，有兴趣的可以看下原代码。
+
+### 4.5 模型融合及提交
+
+```python
+test_nn["row_id"] = test_nn["stock_id"].astype(str) + "-" + test_nn["time_id"].astype(str) 
+test_nn[target_name] = (test_predictions_nn+predictions_lgb)/2
+
+score = round(rmspe(y_true = train_nn[target_name].values, y_pred = train_nn[pred_name].values),5)
+print('RMSPE {}: {} - Folds: {}'.format(model_name, score, scores_folds[model_name]))
+
+display(test_nn[['row_id', target_name]].head(3))
+test_nn[['row_id', target_name]].to_csv('submission.csv',index = False) 
+```
 
 ## 5 小结
 
-可以看到前排大神在特征工程方面做了不少工作，同时工程上的良好实现也是有一个不错结果的必备基础。虽然模型并不fancy，但是结果依旧给力。  
+可以看到前排大神在特征工程方面做了不少工作，同时工程上的良好实现也是有一个不错结果的必备基础。虽然模型并不fancy，但是结果依旧给力，值得我们好好学习。  
 
 
 <figure>
