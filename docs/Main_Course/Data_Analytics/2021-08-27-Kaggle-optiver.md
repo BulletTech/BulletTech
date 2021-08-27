@@ -323,7 +323,13 @@ def get_time_stock(df):
     df = df.merge(df_time_id, how = 'left', left_on = ['time_id'], right_on = ['time_id__time'])
     df.drop(['stock_id__stock', 'time_id__time'], axis = 1, inplace = True)
     return df
-    
+
+```
+
+### 4.3 并行化以及损失函数计算
+
+```python
+
 # Funtion to make preprocessing function in parallel (for each stock id)
 def preprocessor(list_stock_ids, is_train = True):
     
@@ -358,15 +364,36 @@ def rmspe(y_true, y_pred):
 def feval_rmspe(y_pred, lgb_train):
     y_true = lgb_train.get_label()
     return 'RMSPE', rmspe(y_true, y_pred), False
-
-
 ```
 
+```python
+# Read train and test
+train, test = read_train_test()
 
-## 3 小结
+# Get unique stock ids 
+train_stock_ids = train['stock_id'].unique()
+# Preprocess them using Parallel and our single stock id functions
+train_ = preprocessor(train_stock_ids, is_train = True)
+train = train.merge(train_, on = ['row_id'], how = 'left')
 
-这些知识、经验虽然有一些针对比赛的奇淫技巧，但是它们对于日常建模仍然具有一定的指导意义，值得我们去思考、尝试。  
-感谢这些大神们乐于分享的精神，能从Kaggle大社区中汲取知识和营养真是一种幸事。
+# Get unique stock ids 
+test_stock_ids = test['stock_id'].unique()
+# Preprocess them using Parallel and our single stock id functions
+test_ = preprocessor(test_stock_ids, is_train = False)
+test = test.merge(test_, on = ['row_id'], how = 'left')
+
+# Get group stats of time_id and stock_id
+train = get_time_stock(train)
+test = get_time_stock(test)
+```
+
+### 4.4 模型训练
+关于模型部分，采用了一个LightGBM和一个NN模型ensemble，这一块并没有太多独特的东西，有兴趣的可以看下原代码。
+
+## 5 小结
+
+可以看到前排大神在特征工程方面做了不少工作，同时工程上的良好实现也是有一个不错结果的必备基础。虽然模型并不fancy，但是结果依旧给力。  
+
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
