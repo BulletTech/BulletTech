@@ -68,7 +68,7 @@ $$
 W A P=\frac{\text { BidPrice }_{1} * \text { AskSize }_{1}+\text { AskPrice }_{1} * \text { BidSize }_{1}}{\text { BidSize }_{1}+\text { AskSize }_{1}}
 $$ 
 
-这种计算方式适用于有买一卖一等的订单薄数据，同时考虑了价格和size。  
+这种计算方式适用于有买一卖一等的订单薄数据，同时考虑了价格和挂单量。  
 
 #### 4.2.1 订单薄特征
 
@@ -208,7 +208,7 @@ def book_preprocessor(file_path):
 
 #### 4.2.2 交易特征
 
-这部分特征包括实际交易价格的波动率，size等等。
+这部分特征包括实际交易价格，成交量的相关特征，如波动率，最小值，最大值等等。
 
 ```python
 
@@ -327,7 +327,56 @@ def get_time_stock(df):
 
 ```
 
+#### 4.2.3 聚合特征
+
+这一块采用了kmeans聚类的方式，按相似股票聚合，并计算以上特征的平均值作为新的特征。
+
+```python
+from sklearn.cluster import KMeans
+# making agg features
+
+train_p = pd.read_csv('../input/optiver-realized-volatility-prediction/train.csv')
+train_p = train_p.pivot(index='time_id', columns='stock_id', values='target')
+
+corr = train_p.corr()
+
+ids = corr.index
+
+kmeans = KMeans(n_clusters=7, random_state=0).fit(corr.values)
+print(kmeans.labels_)
+
+l = []
+for n in range(7):
+    l.append ( [ (x-1) for x in ( (ids+1)*(kmeans.labels_ == n)) if x > 0] )
+    
+
+mat = []
+matTest = []
+
+n = 0
+for ind in l:
+    print(ind)
+    newDf = train.loc[train['stock_id'].isin(ind) ]
+    newDf = newDf.groupby(['time_id']).agg(np.nanmean)
+    newDf.loc[:,'stock_id'] = str(n)+'c1'
+    mat.append ( newDf )
+    
+    newDf = test.loc[test['stock_id'].isin(ind) ]    
+    newDf = newDf.groupby(['time_id']).agg(np.nanmean)
+    newDf.loc[:,'stock_id'] = str(n)+'c1'
+    matTest.append ( newDf )
+    
+    n+=1
+    
+mat1 = pd.concat(mat).reset_index()
+mat1.drop(columns=['target'],inplace=True)
+
+mat2 = pd.concat(matTest).reset_index()
+```
+
 ### 4.3 并行化以及损失函数计算
+
+并行化是对每只股票做特征计算的并行。
 
 ```python
 
@@ -393,6 +442,8 @@ test = get_time_stock(test)
 关于模型部分，采用了一个LightGBM和一个NN模型ensemble，这一块并没有太多独特的东西，有兴趣的可以看下原代码。
 
 ### 4.5 模型融合及提交
+
+Ensemble这块就是LGBM和NN的简单平均。
 
 ```python
 test_nn["row_id"] = test_nn["stock_id"].astype(str) + "-" + test_nn["time_id"].astype(str) 
