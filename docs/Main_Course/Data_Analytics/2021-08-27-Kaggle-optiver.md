@@ -64,7 +64,7 @@ scores_folds = {}
 
 第二部分是构造了一堆特征。其中，题目说明了股价的计算方式采用WAP(weighted averaged price)的方式:
 
-$$ WAP=\frac{\text { BidPrice }_{1} * \text { AskSize }_{1}+\text { AskPrice }_{1} * \text { BidSize }_{1}}{\text { BidSize }_{1}+\text { AskSize }_{1}} $$  
+$$ WAP=\frac{\text{ BidPrice }_{1} * \text{ AskSize }_{1}+\text{ AskPrice }_{1} * \text{ BidSize }_{1}}{\text{ BidSize }_{1}+\text{ AskSize }_{1}} $$  
 
 这种计算方式适用于有买一卖一等的订单薄数据，同时考虑了价格和size。  
 
