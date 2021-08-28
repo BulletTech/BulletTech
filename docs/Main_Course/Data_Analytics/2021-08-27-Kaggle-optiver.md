@@ -22,7 +22,7 @@ $$ \sigma=\sqrt{\sum_{t} r_{t-1, t}^{2}} $$
 
 其中，r是股票的log收益率，即股价取log做差分。评价指标是RMSPE(root mean square percentage error)：  
 
-\mathrm{RMSPE}=\sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(\left(y_{i}-\hat{y}_{i}\right) / y_{i}\right)^{2}}
+$$ \mathrm{RMSPE}=\sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(\left(y_{i}-\hat{y}_{i}\right) / y_{i}\right)^{2}} $$
 
 ## 4 具体代码
 
@@ -64,7 +64,7 @@ scores_folds = {}
 
 第二部分是构造了一堆特征。其中，题目说明了股价的计算方式采用WAP(weighted averaged price)的方式:
 
-WAP=\frac{\text { BidPrice }_{1} * \text { AskSize }_{1}+\text { AskPrice }_{1} * \text { BidSize }_{1}}{\text { BidSize }_{1}+\text { AskSize }_{1}}  
+$$ WAP=\frac{\text { BidPrice }_{1} * \text { AskSize }_{1}+\text { AskPrice }_{1} * \text { BidSize }_{1}}{\text { BidSize }_{1}+\text { AskSize }_{1}} $$  
 
 这种计算方式适用于有买一卖一等的订单薄数据，同时考虑了价格和size。  
 
