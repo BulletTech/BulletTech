@@ -38,7 +38,7 @@ template: overrides/blogs.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-29/1630206173092-CART_Loss.png"  />
-  <figcaption>CART Loss</figcaption>
+  <figcaption>CART分类损失函数</figcaption>
 </figure>
 
 其中$G~left/right~$分别为左侧和右侧节点的gini系数，而$m~left/right~$分别为左侧和右侧节点的样本数量。CART算法会做贪心搜索（greedy search），从根节点开始分裂，并在层层子节点中搜索能够有效减少gini的特征和阈值，直到分裂的层数到达最大深度（由max_depth参数定义）或已经找不到能够减少gini的节点。直观来说，找到最好的树是一个NP-complete问题，因此算法最终只会找到一个相对好的方案，而非最好的解决方案。
@@ -50,5 +50,45 @@ template: overrides/blogs.html
   <figcaption>熵（Entropy）</figcaption>
 </figure>
 
-其中$P~i,k~$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的熵为$-(1/46)log~2~(1/46)-(45/46)log~2~(45/46)~= 0.151$。在`Scikit-Learn`中使用`DecisionTreeClassifier`类时，可以通过设置`criterion`参数为`entropy`来使用熵作为衡量指标。但通常使用`gini`和`entropy`差别不大。主要的区别在于`gini`计算更快，并且使用`gini`会让树将样本划分得更加集中在特定节点，而使用`entropy`会让样本在树的分布更加均衡。
+其中$P~i,k~$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的熵为$-(1/46)log~2~(1/46)-(45/46)log~2~(45/46)~= 0.151$。在`Scikit-Learn`中使用`DecisionTreeClassifier`类时，可以通过设置`criterion`参数为`entropy`来使用熵作为衡量指标。但通常使用`gini`和`entropy`差别不大。主要的区别在于`gini`计算更快，并且使用`gini`会让树将样本更加集中地划分到节点里，而使用`entropy`会让样本在树的分布更加均衡。
 
+### 2.3 防止过拟合
+
+决策树本身几乎没有假设，同时不太需要数据预处理，如特征缩放，但模型本身是需要加约束防止过拟合。可以通过控制模型参数达到正则化的目的。以`Scikit-Learn (v0.24.2)`中使用`DecisionTreeClassifier`类为例，下列参数常用于实施正则化防止过拟合：
+
+- **max_depth**：树的最大深度，默认值是空，意味着树的生长不受限制。
+- **min_samples_split**：分裂一个节点前所需的最小样本数，默认值为2。
+- **min_samples_leaf**：一个叶子节点最少所需的样本数量，默认值为1。
+- **min_weight_fraction_leaf**：默认值为0。当设置了`class_weight`后，样本权重不同，而该参数则约束叶子节点中权重占总体样本的比例，大意和`min_samples_leaf`类似，不过用比例表示。
+- **max_feature**：分裂节点时考虑的特征数量，默认为考虑所有特征。注意，决策树在找到分裂节点前不会停止，即便是搜索的特征已经超过了max_feature。
+- **max_leaf_nodes**：叶子节点数量的上限，默认值为空。
+- **min_impurity_decrease**：分裂一个节点所需减少的最低不纯净度，默认值为0。
+
+通常，增加min_*参数或者减少max_*参数有助于决策树的正则化。
+
+### 2.4 回归任务
+
+在`Scikit-Learn (v0.24.2)`中可以使用`DecisionTreeRegressor`类在执行回归任务。
+
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-29/1630228541305-iris_reg_tree.png"  />
+  <figcaption>回归树</figcaption>
+</figure>
+
+此时预测值是叶子节点里样本目标值的均值。做回归任务时，CART算法实施的方式和分类基本一致，只不过此时优化的目标是减少与目标值的均方差（Mean Squared Error, MSE）
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-29/1630229474823-CART_regression_loss.png"  />
+  <figcaption>回归树的损失函数</figcaption>
+</figure>
+
+回归树模型参数基本与分类数模型参数一致，可以通过类似的办法防止过拟合、训练稳健的模型。
+
+### 2.5 特征重要性
+
+`Scikit-Learn`的实现中，决策树的`feature_importances_`属性能展示特征的重要性，其依据是
+
+## 3 总结
+
+决策树应对分类和回归问题有很好的表现，但也存在一些限制和弱点，如对于数据的方向性和波动较为敏感，
