@@ -34,7 +34,7 @@ template: overrides/blogs.html
   <figcaption>Gini</figcaption>
 </figure>
 
-其中$P~i,k~$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的gini系数为$1-(0/46)^2^-(1/46)^2^-(45/46)^2^ ~= 0.043$。以最常用的Python机器学习库`Scikit-Learn`中的`DecisionTreeClassifier`类为例，起在实现分类和回归树（Classification and Regression Tree, CART）时，在选择分裂节点的过程中，决策树选择分裂节点和阈值的依据即与gini有关。其优化目标（损失函数）如下所示：
+其中$P~i,k~$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的gini系数为$1-(0/46)^2^-(1/46)^2^-(45/46)^2^ ~= 0.043$。以最常用的Python机器学习库`Scikit-Learn`中的[DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)类为例，起在实现分类和回归树（Classification and Regression Tree, CART）时，在选择分裂节点的过程中，决策树选择分裂节点和阈值的依据即与gini有关。其优化目标（损失函数）如下所示：
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-29/1630206173092-CART_Loss.png"  />
@@ -64,11 +64,11 @@ template: overrides/blogs.html
 - **max_leaf_nodes**：叶子节点数量的上限，默认值为空。
 - **min_impurity_decrease**：分裂一个节点所需减少的最低不纯净度，默认值为0。
 
-通常，增加min_*参数或者减少max_*参数有助于决策树的正则化。
+通常，增加min_参数或者减少max_参数有助于决策树的正则化。
 
 ### 2.4 回归任务
 
-在`Scikit-Learn (v0.24.2)`中可以使用`DecisionTreeRegressor`类在执行回归任务。
+在`Scikit-Learn (v0.24.2)`中可以使用[DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor)类在执行回归任务。
 
 
 <figure>
@@ -83,12 +83,12 @@ template: overrides/blogs.html
   <figcaption>回归树的损失函数</figcaption>
 </figure>
 
-回归树模型参数基本与分类数模型参数一致，可以通过类似的办法防止过拟合、训练稳健的模型。
+回归树模型参数基本与分类数模型参数一致，可以通过类似的办法防止模型过拟合。
 
 ### 2.5 特征重要性
 
-`Scikit-Learn`的实现中，决策树的`feature_importances_`属性能展示特征的重要性，其依据是
+`Scikit-Learn`的实现中，决策树的`feature_importances_`属性能展示特征的重要性，其依据是各特征对于衡量指标的减少量，返回正态化后的值。如果特征中不同值的数量非常多（高数量类别属性，high cardinality features），推荐使用[sklearn.inspection.permutation_importance](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.permutation_importance.html#sklearn.inspection.permutation_importance)。
 
 ## 3 总结
 
-决策树应对分类和回归问题有很好的表现，但也存在一些限制和弱点，如对于数据的方向性和波动较为敏感，
+决策树应对分类和回归问题有很好的表现，但也存在一些限制和弱点，如对于数据的方向性和波动较为敏感，这些问题一棵树难以完美解决，那多种几棵树是否有更好的表现呢？下回我们聊聊随机森林！
