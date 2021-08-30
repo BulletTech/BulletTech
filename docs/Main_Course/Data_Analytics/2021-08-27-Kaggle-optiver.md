@@ -24,11 +24,11 @@ $$ \sigma=\sqrt{\sum_{t} r_{t-1, t}^{2}} $$
 
 $$ \mathrm{RMSPE}=\sqrt{\frac{1}{n} \sum_{i=1}^{n}\left(\left(y_{i}-\hat{y}_{i}\right) / y_{i}\right)^{2}} $$
 
-## 4 具体代码
+## 3 具体代码
 
 下面我们就来看看前排大神的[代码](https://www.kaggle.com/alexioslyon/lgbm-baseline/comments)。  
 
-### 4.1 import packages
+### 3.1 import packages
 
 第一部分照例是导入一堆包。
 
@@ -60,7 +60,7 @@ target_name = 'target'
 scores_folds = {}
 ```
 
-### 4.2 特征工程
+### 3.2 特征工程
 
 第二部分是构造了一堆特征。其中，题目说明了股价的计算方式采用WAP(weighted averaged price)的方式:
 
@@ -70,7 +70,7 @@ $$
 
 这种计算方式适用于有买一卖一等的订单薄数据，同时考虑了价格和挂单量。  
 
-#### 4.2.1 订单薄特征
+#### 3.2.1 订单薄特征
 
 关于订单薄特征(在book_preprocessor函数中)，我们可以看到构造了基于不同档位(买一卖一，买二卖二，买三卖三，买四卖四)WAP计算的已实现波动率，一些盘口的特征，如价差，size等等。并用滑动窗口，构造了以上特征的一些统计量。
 
@@ -206,7 +206,7 @@ def book_preprocessor(file_path):
 
 ```
 
-#### 4.2.2 交易特征
+#### 3.2.2 交易特征
 
 这部分特征包括实际交易价格，成交量的相关特征，如波动率，最小值，最大值等等。
 
@@ -327,7 +327,7 @@ def get_time_stock(df):
 
 ```
 
-#### 4.2.3 聚合特征
+#### 3.2.3 聚合特征
 
 这一块采用了kmeans聚类的方式，按相似股票聚合，并计算以上特征的平均值作为新的特征。
 
@@ -374,7 +374,7 @@ mat1.drop(columns=['target'],inplace=True)
 mat2 = pd.concat(matTest).reset_index()
 ```
 
-### 4.3 并行化以及损失函数计算
+### 3.3 并行化以及损失函数计算
 
 并行化是对每只股票做特征计算的并行。
 
@@ -437,11 +437,11 @@ train = get_time_stock(train)
 test = get_time_stock(test)
 ```
 
-### 4.4 模型训练
+### 3.4 模型训练
 
 关于模型部分，采用了一个LightGBM和一个NN模型ensemble，这一块并没有太多独特的东西，有兴趣的可以看下源代码。
 
-### 4.5 模型融合及提交
+### 3.5 模型融合及提交
 
 Ensemble这块就是LGBM和NN的简单平均。
 
@@ -456,7 +456,7 @@ display(test_nn[['row_id', target_name]].head(3))
 test_nn[['row_id', target_name]].to_csv('submission.csv',index = False) 
 ```
 
-## 5 小结
+## 4 小结
 
 可以看到前排大神在特征工程方面做了不少工作，同时工程上的良好实现也是有一个不错结果的必备基础。虽然模型并不fancy，但是结果依旧给力，值得我们好好学习。  
 
