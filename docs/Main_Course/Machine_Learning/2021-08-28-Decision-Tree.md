@@ -138,12 +138,10 @@ def plot_decision_boundary(model, x):
     M, N = 500, 500
     x0, x1 = np.meshgrid(np.linspace(x[:,0].min(),x[:,0].max(),M),np.linspace(x[:,1].min(),x[:,1].max(),N))
     X_new = np.c_[x0.ravel(), x1.ravel()]
-#   X_new = np.stack((x0.flat, x1.flat), axis=1)
     y_predict = model.predict(X_new)
     z = y_predict.reshape(x0.shape)
     from matplotlib.colors import ListedColormap
     custom_cmap = ListedColormap(['#EF9A9A','#FFF59D','#90CAF9'])
-#   plt.contourf(x0,x1,z,cmap=custom_cmap)#等高线
     plt.pcolormesh(x0, x1, z, cmap=custom_cmap)
 
 # 绘制决策边界
