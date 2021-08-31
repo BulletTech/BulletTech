@@ -79,7 +79,7 @@ template: overrides/blogs.html
 此时预测值是叶子节点里样本目标值的均值。做回归任务时，CART算法实施方式和分类基本一致，只不过此时优化的目标是减少与目标值的均方差（Mean Squared Error, MSE）
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-29/1630229474823-CART_regression_loss.png"  />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-29/1630229474823-CART_regression_loss.png" />
   <figcaption>回归树的损失函数</figcaption>
 </figure>
 
@@ -94,3 +94,65 @@ template: overrides/blogs.html
 ## 3 总结
 
 决策树应对分类和回归问题有很好的表现，但也存在一些限制和弱点，如对于数据的方向性和波动较为敏感，这些问题一棵树难以完美解决，那多种几棵树是否有更好的表现呢？下回我们聊聊随机森林！
+
+示例代码：
+
+```python
+# 依赖包
+from sklearn.datasets import load_iris
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.tree import export_graphviz
+
+import matplotlib.pylab as plt
+import numpy as np
+
+
+# 导入示范数据
+iris = load_iris()
+X = iris.data[:,:2] # 选择花瓣长度和花瓣宽度作为特征
+y = iris.target
+
+# 查看数据分布
+plt.scatter(X[y==0,0], X[y==0,1])
+plt.scatter(X[y==1,0], X[y==1,1])
+plt.scatter(X[y==2,0], X[y==2,1])
+plt.show()
+
+# 建设一颗决策树
+tree_clf = DecisionTreeClassifier(criterion='entropy', max_depth=2)
+tree_clf.fit(X, y)
+
+# 导出决策树图形
+export_graphviz( tree_clf,
+out_file="iris_tree.dot",
+feature_names=iris.feature_names[:2],
+class_names=iris.target_names,
+rounded=True,
+filled=True
+)
+
+# 决策边界绘制函数
+def plot_decision_boundary(model, x):
+    #生成网格点坐标矩阵,得到两个矩阵
+    M, N = 500, 500
+    x0, x1 = np.meshgrid(np.linspace(x[:,0].min(),x[:,0].max(),M),np.linspace(x[:,1].min(),x[:,1].max(),N))
+    X_new = np.c_[x0.ravel(), x1.ravel()]
+#   X_new = np.stack((x0.flat, x1.flat), axis=1)
+    y_predict = model.predict(X_new)
+    z = y_predict.reshape(x0.shape)
+    from matplotlib.colors import ListedColormap
+    custom_cmap = ListedColormap(['#EF9A9A','#FFF59D','#90CAF9'])
+#   plt.contourf(x0,x1,z,cmap=custom_cmap)#等高线
+    plt.pcolormesh(x0, x1, z, cmap=custom_cmap)
+
+# 绘制决策边界
+plot_decision_boundary(tree_clf, X)
+plt.scatter(X[y==0,0], X[y==0,1])
+plt.scatter(X[y==1,0], X[y==1,1])
+plt.scatter(X[y==2,0], X[y==2,1])
+plt.show()
+
+# 查看特征重要性
+print(tree_clf.feature_importances_)
+```
