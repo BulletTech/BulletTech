@@ -34,14 +34,14 @@ template: overrides/blogs.html
   <figcaption>Gini</figcaption>
 </figure>
 
-其中$P~i,k~$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的`gini`为$1-(0/46)^2^-(1/46)^2^-(45/46)^2^ ~= 0.043$。以最常用的Python机器学习库`Scikit-Learn(v0.24.2)`中的[DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)类为例，其在实现分类和回归树（Classification and Regression Tree, CART）时，在选择分裂节点的过程中，决策树选择分裂节点和阈值的依据即与`gini`有关。其优化目标（损失函数）如下所示：
+其中$P{i,k}$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的`gini`为$1-(0/46)^2^-(1/46)^2^-(45/46)^2^ ~= 0.043$。以最常用的Python机器学习库`Scikit-Learn(v0.24.2)`中的[DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier)类为例，其在实现分类和回归树（Classification and Regression Tree, CART）时，在选择分裂节点的过程中，决策树选择分裂节点和阈值的依据即与`gini`有关。其优化目标（损失函数）如下所示：
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-8-29/1630206173092-CART_Loss.png"  />
   <figcaption>CART分类损失函数</figcaption>
 </figure>
 
-其中$G~left/right~$分别为左侧和右侧节点的`gini`，而$m~left/right~$分别为左侧和右侧节点的样本数量。CART算法会做贪心搜索（greedy search），从根节点开始分裂，并在层层子节点中搜索能够有效减少`gini`的特征和阈值，直到分裂的层数到达最大深度（由max_depth参数定义）或已经找不到能够减少`gini`的节点。直观来说，找到最好的树是一个[NP-complete](https://zh.wikipedia.org/wiki/NP%E5%AE%8C%E5%85%A8)问题，因此算法最终只会找到一个相对好的方案，而非最好的解决方案。
+其中$G{left/right}$分别为左侧和右侧节点的`gini`，而$m{left/right}$分别为左侧和右侧节点的样本数量。CART算法会做贪心搜索（greedy search），从根节点开始分裂，并在层层子节点中搜索能够有效减少`gini`的特征和阈值，直到分裂的层数到达最大深度（由max_depth参数定义）或已经找不到能够减少`gini`的节点。直观来说，找到最好的树是一个[NP-complete](https://zh.wikipedia.org/wiki/NP%E5%AE%8C%E5%85%A8)问题，因此算法最终只会找到一个相对好的方案，而非最好的解决方案。
 
 除了`gini`之外，熵（Entropy）也可以用来衡量分裂节点的效果，用以衡量混乱度，在决策树的节点中，当一个节点里的样本都属于同一类时，熵的值为0。其定义如下：
 
@@ -50,7 +50,7 @@ template: overrides/blogs.html
   <figcaption>熵（Entropy）</figcaption>
 </figure>
 
-其中$P~i,k~$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的熵为$-(1/46)log~2~(1/46)-(45/46)log~2~(45/46) ~= 0.151$。在`Scikit-Learn(v0.24.2)`中使用`DecisionTreeClassifier`类时，可以通过设置`criterion`参数为`entropy`来使用熵作为衡量指标。但通常使用`gini`和`entropy`得出的树差别不大。主要的区别在于`gini`计算更快，并且使用`gini`会让树将样本更加集中地划分到节点里，而使用`entropy`会让样本在树的分布更加均衡。
+其中$P{i,k}$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的熵为$-(1/46)log~2~(1/46)-(45/46)log~2~(45/46) ~= 0.151$。在`Scikit-Learn(v0.24.2)`中使用`DecisionTreeClassifier`类时，可以通过设置`criterion`参数为`entropy`来使用熵作为衡量指标。但通常使用`gini`和`entropy`得出的树差别不大。主要的区别在于`gini`计算更快，并且使用`gini`会让树将样本更加集中地划分到节点里，而使用`entropy`会让样本在树的分布更加均衡。
 
 ### 2.3 防止过拟合
 
