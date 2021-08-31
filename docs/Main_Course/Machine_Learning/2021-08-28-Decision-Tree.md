@@ -41,7 +41,7 @@ template: overrides/blogs.html
   <figcaption>CART分类损失函数</figcaption>
 </figure>
 
-其中$G_{left/right}$分别为左侧和右侧节点的`gini`，而$m_{left/right}$分别为左侧和右侧节点的样本数量。CART算法会做贪心搜索（greedy search），从根节点开始分裂，并在层层子节点中搜索能够有效减少`gini`的特征和阈值，直到分裂的层数到达最大深度（由max_depth参数定义）或已经找不到能够减少`gini`的节点。直观来说，找到最好的树是一个[NP-complete](https://zh.wikipedia.org/wiki/NP%E5%AE%8C%E5%85%A8)问题，因此算法最终只会找到一个相对好的方案，而非最好的解决方案。
+其中$G_{left/right}$分别为左侧和右侧节点的`gini`，而$m_{left/right}$分别为左侧和右侧节点的样本数量。CART算法会做贪心搜索（Greedy Search），从根节点开始分裂，并在层层子节点中搜索能够有效减少`gini`的特征和阈值，直到分裂的层数到达最大深度（由max_depth参数定义）或已经找不到能够减少`gini`的节点。直观来说，找到最好的树是一个[NP-complete](https://zh.wikipedia.org/wiki/NP%E5%AE%8C%E5%85%A8)问题，因此算法最终只会找到一个相对好的方案，而非最好的解决方案。
 
 除了`gini`之外，熵（Entropy）也可以用来衡量分裂节点的效果，用以衡量混乱度，在决策树的节点中，当一个节点里的样本都属于同一类时，熵的值为0。其定义如下：
 
