@@ -35,7 +35,7 @@ nav:
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
         - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
     - Machine Learning:
-        - 决策树的重要细节: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
+        - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Coding:
         - Python字典常用操作小技巧: Main_Course/Coding/2021-08-21-Python-dict.md
         - Python列表常用操作小技巧: Main_Course/Coding/2021-08-14-Python-list.md
