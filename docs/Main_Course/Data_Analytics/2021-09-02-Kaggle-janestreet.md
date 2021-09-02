@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 引言
 
-Kaggle上对冲基金赞助的竞赛不少，可能成为了一种新式内卷，也可能是真的想从Kaggler身上得到一些idea。
+Kaggle上对冲基金赞助的竞赛不少，可能成为了一种新式内卷，也可能是真的想从Kaggler身上得到一些idea。  
 这次我们来学习的是刚刚结束的Jane Street赞助的比赛。
 
 ## 2 竞赛介绍
@@ -35,7 +35,7 @@ $$
 
 ## 3 具体代码
 
-同样，我们一起来看一下开源的高分代码
+同样，我们一起来看一下开源的高分代码。
 
 ### 3.1 import packages
 
@@ -60,7 +60,7 @@ train['f_Hybrid']=train[f_Hybrid].mean(axis=1)
 
 ### 3.3 确定label
 
-训练集并没有直接给我们label，即是否action。它提供的是6种不同时间窗口的收益率(return)。代码构造label的方式是判断大于3个收益为正，即执行交易(action=1)
+训练集并没有直接给我们label，即是否action。它提供的是6种不同时间窗口的收益率(return)。代码构造label的方式是判断若有大于3个收益为正，即执行交易(action=1)。
 
 ```python
 
