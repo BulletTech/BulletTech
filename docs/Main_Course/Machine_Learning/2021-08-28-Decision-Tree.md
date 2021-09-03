@@ -50,7 +50,7 @@ template: overrides/blogs.html
   <figcaption>熵（Entropy）</figcaption>
 </figure>
 
-其中$P_{i,k}$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的熵为$-(1/46)log_{2}(1/46)-(45/46)log_{2}(45/46) ~= 0.151$。在`Scikit-Learn(v0.24.2)`中使用`DecisionTreeClassifier`类时，可以通过设置`criterion`参数为`entropy`来使用熵作为衡量指标。但通常使用`gini`和`entropy`得出的树差别不大。主要的区别在于`Gini`计算更快，并且使用`Gini`会让树将样本更加集中地划分到节点里，而使用`entropy`会让样本在树的分布更加均衡。
+其中$P_{i,k}$是在i个节点中k类的样本占总体样本的比例。比如示例中深度为2的右侧节点的熵为$-(1/46)log_{2}(1/46)-(45/46)log_{2}(45/46) ~= 0.151$。在`Scikit-Learn(v0.24.2)`中使用`DecisionTreeClassifier`类时，可以通过设置`criterion`参数为`entropy`来使用熵作为衡量指标。但通常使用`gini`和`Entropy`得出的树差别不大。主要的区别在于`Gini`计算更快，并且使用`Gini`会让树将样本更加集中地划分到节点里，而使用`Entropy`会让样本在树的分布更加均衡。
 
 ### 2.3 防止过拟合
 
@@ -68,7 +68,7 @@ template: overrides/blogs.html
 
 ### 2.4 回归任务
 
-在`Scikit-Learn (v0.24.2)`中可以使用[DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor)类来执行回归任务。
+在`Scikit-Learn(v0.24.2)`中可以使用[DecisionTreeRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor)类来执行回归任务。
 
 
 <figure>
