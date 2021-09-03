@@ -59,7 +59,7 @@ template: overrides/blogs.html
 - **max_depth**：树的最大深度，默认值是空，意味着树的最大深度不受限制。
 - **min_samples_split**：分裂一个节点前所需的最小样本数，默认值为2。
 - **min_samples_leaf**：一个叶子节点最少所需的样本数量，默认值为1。
-- **min_weight_fraction_leaf**：默认值为0。当设置了`class_weight`后，样本权重不同，而该参数则约束叶子节点中权重占总体样本的比例，大意和`min_samples_leaf`类似，但比例表示。
+- **min_weight_fraction_leaf**：默认值为0。当设置了`class_weight`后，样本权重不同，而该参数则约束叶子节点中权重占总体样本的比例，大意和`min_samples_leaf`类似，但用比例表示。
 - **max_feature**：分裂节点时考虑的特征数量，默认为考虑所有特征。注意，决策树在找到一个有效的分裂节点前不会停止搜索，即便是搜索的特征数量已经超过了max_feature设定的值。
 - **max_leaf_nodes**：叶子节点数量的上限，默认值为空。
 - **min_impurity_decrease**：分裂一个节点所需减少的最低不纯净度，默认值为0。
