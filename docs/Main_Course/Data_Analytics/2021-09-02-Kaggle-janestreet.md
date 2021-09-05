@@ -60,11 +60,11 @@ train['f_Hybrid']=train[f_Hybrid].mean(axis=1)
 
 ### 3.3 确定label
 
-训练集并没有直接给我们label，即是否action。它提供的是6种不同时间窗口的收益率(return)。代码构造label的方式是判断若有大于3个收益为正，即执行交易(action=1)。
+训练集并没有直接给我们label，即是否action。它提供的是5种不同时间窗口的收益率(return)。代码构造label的方式是判断若有大于3个收益为正，即执行交易(action=1)。
 
 ```python
 
-resp_cols = ['resp', 'resp_1', 'resp_2', 'resp_3', 'resp', 'resp_4']
+resp_cols = ['resp', 'resp_1', 'resp_2', 'resp_3', 'resp_4']
 y = np.stack([(train[c] > 0).astype('int') for c in resp_cols]).T
 
 train['action'] = (y.mean(axis=1) > 0.5).astype('int')
@@ -74,6 +74,10 @@ train['action'] = (y.mean(axis=1) > 0.5).astype('int')
 
 关于模型部分，方案使用了一个XGBoost模型，并用HyperOpt进行了参数优化。  
 关于cv的使用，它使用了适合于此类时间序列问题的PurgedGroupTimeSeriesSplit，从下图中可以很直观的看到。验证集永远在训练集后面，并且中间隔了一小段时间。
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-9-5/1630827782227-purged_cv.png" width="500" />
+</figure>
 
 ## 4 小结
 
