@@ -48,7 +48,7 @@ train = dtable.fread('/kaggle/input/jane-street-market-prediction/train.csv').to
 
 ### 3.2 特征工程
 
-由于本次提供的特征仍然是一些不知道含义的匿名特征。代码根据每个特征的分布人为的划分为了4种特征：Linear，Noisy，Negative和Hybrid。  
+由于本次提供的特征仍然是一些不知道含义的匿名特征。代码根据每个特征的分布人为地划分为了4种特征：Linear，Noisy，Negative和Hybrid。  
 最后的特征即为所有原始特征，加上每类特征的均值构造的特征。
 
 ```python
