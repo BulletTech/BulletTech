@@ -19,7 +19,9 @@ nav:
     - Data Analytics:
         - Kaggle Jane Street: Main_Course/Data_Analytics/2021-09-02-Kaggle-janestreet.md
         - Kaggle Optiver: Main_Course/Data_Analytics/2021-08-27-Kaggle-optiver.md
+        - SQL tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
         - SQL tips: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
+        - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
         - Kaggle tips: Main_Course/Data_Analytics/2021-08-10-Kaggle-tips.md
         - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
         - 浅谈Google Analytics: Main_Course/Analytics_Tools/2021-07-31-GA-Intro.md
@@ -34,8 +36,6 @@ nav:
         - 一行代码都不写，教你使用GitHub: Main_Course/Analytics_Tools/2021-06-23-Github-Intro.md
         - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
-        - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
-        - SQL tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
     - Machine Learning:
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Coding:
