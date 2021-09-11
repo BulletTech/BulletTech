@@ -24,6 +24,9 @@ ending_pic = """
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
 </figure>
 """
+
+add_abbr = '\n--8<-- "includes/abbreviations.md"'
+
                 
 # Update the reading time
 for post in Post_list:
@@ -41,7 +44,9 @@ for post in Post_list:
     
     if qr_pic_path not in markdown:
         markdown += ending_pic
-
+        
+    if add_abbr not in markdown:
+        markdown += add_abbr
     with open(post, 'w') as new_file:
         new_file.write(markdown)
     print('{} is updated.'.format(post))
