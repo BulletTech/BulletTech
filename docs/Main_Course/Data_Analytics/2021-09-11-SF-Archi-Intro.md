@@ -18,9 +18,9 @@ SnowFLake作为近年来十分火爆的数据仓库应用获得了许多用户�
 
 ## 2 SnowFlake主要特性
 
-- 安全性和数据保护：SnowFlake支持多种验证方式，如Multi-Factor Authentication (MFA), federal authentication，Single Sign-on (SSO)和OAuth.客户端和服务器之间的通信都由[TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security "Transport Layer Security")保护.
+- 安全性和数据保护：SnowFlake支持多种验证方式，如Multi-Factor Authentication (MFA), federal authentication，Single Sign-on (SSO)和OAuth。客户端和服务器之间的通信都由[TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security "Transport Layer Security")保护.
 - 支持标准的SQL和许多扩展SQL的特性，其对绝大多数SQL的数据定义语言（Data Definition Language）和数据操作语言（Data Manipulation Language）都支持，因此做数据分析时基本不用担心找不到对应的操作。
-- SnowFlake支持软件客户端进行连接，同时也为多种编程语言提供了驱动如Python connector, Spark connector, Node.js driver, .NET driver等。
+- SnowFlake支持软件客户端进行连接，同时也为多种编程语言提供了接口如Python connector, Spark connector, Node.js driver, .NET driver等。
 - 便捷的分享功能，用户可以很容易地分享数据和查询语句给其他的用户。
 
 ## 3 SnowFlake架构
@@ -29,7 +29,9 @@ SnowFlake的架构融合了[Shared-Disk](https://en.wikipedia.org/wiki/Shared_di
 
 ### 3.1 Shared-Disk架构示意
 
-常用于传统的数据库中，它拥有一个集群里所有节点都能访问的存储层，集群中的计算节点没有自己的存储，它们都通过访问中样存储层在访问数据并进行处理。
+常用于传统的数据库中，它拥有一个集群里所有节点都能访问的存储层，集群中的计算节点没有自己的存储，它们都通过访问中央存储层来获取数据并进行处理。通过集群控制软件来监控和管理数据的处理，数据的增删改查都在同一份数据上完成，因此所有节点获取的数据都相同。两个及以上的节点同时更新一份数据是绝对禁止的。
+
+这种架构不利于性能的发挥，并且缺乏扩展性。经常需要做数据更新的应用不太适用于这类架构，因为Shared-Disk的锁机制会对其掣肘。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
@@ -39,11 +41,11 @@ SnowFlake的架构融合了[Shared-Disk](https://en.wikipedia.org/wiki/Shared_di
 
 ### 3.2 Shared-Nothing架构示意
 
-顾名思义，Shared-Nothing架构里，集群的节点都有自己单独的计算资源和存储空间，其优势是数据可以分区存储在各个节点中。当需要处理用户请求时，router会将请求分配到合适的节点上进行计算，当有结算发生错误时，处理的进程能被其他的节点接管，保证用户请求能被稳定、正确地处理。这种架构很适合于数据读取量很大的应用，比如数据仓库。
+顾名思义，Shared-Nothing架构里，集群的节点都有自己单独的计算资源和存储空间，其优势是数据可以分区存储在各个节点中。当需要处理用户请求时，路由会将请求分配到合适的节点上进行计算，当有结算发生错误时，处理的进程能被其他的节点接管，保证用户请求能被稳定、正确地处理。这种架构很适合于数据读取量很大的应用，比如数据仓库。
 
 ### 3.3 SnowFlake的选择
 
-SnowFlake采用了3个不同的层来构建应用：`存储层`、`计算层`和`云服务层`，其示意图如下：
+SnowFlake则采用了3个不同的层来构建应用：`存储层`、`计算层`和`云服务层`，其示意图如下：
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
