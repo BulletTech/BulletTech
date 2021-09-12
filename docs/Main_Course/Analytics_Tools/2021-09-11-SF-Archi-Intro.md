@@ -74,7 +74,7 @@ SnowFlake则采用了3个不同的层来构建应用：`存储层`、`计算层`
 
 SnowFlake的三层架构都能够独立地进行扩展，但SnowFlake只对存储层和计算层进行收费，因为服务层在计算节点中进行处理。单独扩展的优势显而易见，需要更多数据即可单独扩展存储层，需要更强的计算性能，则只需要单独扩展计算层。详见SnowFlake的[官方架构导览](https://docs.SnowFlake.com/en/user-guide/intro-key-concepts.html "SnowFlake的架构")。
 
-## 3 总结
+## 4 总结
 
 了解SnowFlake架构之后，相信你能更好地理解为什么如此多的企业选择SnowFlake，其依托于云的架构为很多企业提供了高效、安全、稳定、划算的解决方案。作为数据分析师，亲身体验下来发现SnowFlake也的确比许多传统的数据仓库更好用。
 
