@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-SnowFLake作为近年来十分火爆的数据仓库应用获得了许多用户和投资人的青睐，本人日常工作中也经常使用SnowFLake做分析，所以一时兴起想了解其背后的运行机制，今天和大家聊聊SnowFLake的主要架构和工作原理。
+SnowFLake作为近年来十分火爆的数据仓库应用获得了许多用户和投资人的青睐，本人日常工作中也经常使用SnowFLake做分析，所以对其背后的运行机制做了一些研究，今天和大家聊聊SnowFLake的主要架构和工作原理。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
