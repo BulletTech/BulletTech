@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-SnowFLake作为近年来十分火爆的数据仓库应用获得了许多用户和投资人的青睐，本人日常工作中也经常使用SnowFLake做分析，所以对其背后的运行机制做了一些研究，今天和大家聊聊SnowFLake的主要架构和工作原理。
+SnowFlake作为近年来十分火爆的数据仓库应用获得了许多用户和投资人的青睐，本人日常工作中也经常使用SnowFlake做分析，所以对其背后的运行机制做了一些研究，今天和大家聊聊SnowFlake的主要架构和工作原理。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
@@ -66,7 +66,7 @@ SnowFlake则采用了3个不同的层来构建应用：`存储层`、`计算层`
 - 查询语句提交后，首先会经过云服务层的优化器，然后再传入计算层进行处理
 - 优化查询、过滤数据所需的元数据也存储在这一层
 
-SnowFlake的三层架构都能够独立地进行扩展，但SnowFlake只对存储层和计算层进行收费，因为服务层在计算节点中进行处理。单独扩展的优势显而易见，需要更多数据即可单独扩展存储层，需要更强的计算性能，则单独扩展计算层。详见SnowFlake的[架构导览](https://docs.snowflake.com/en/user-guide/intro-key-concepts.html "SnowFlake的架构")。
+SnowFlake的三层架构都能够独立地进行扩展，但SnowFlake只对存储层和计算层进行收费，因为服务层在计算节点中进行处理。单独扩展的优势显而易见，需要更多数据即可单独扩展存储层，需要更强的计算性能，则单独扩展计算层。详见SnowFlake的[架构导览](https://docs.SnowFlake.com/en/user-guide/intro-key-concepts.html "SnowFlake的架构")。
 
 ## 3 总结
 
