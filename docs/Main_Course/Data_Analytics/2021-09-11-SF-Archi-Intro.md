@@ -18,20 +18,24 @@ SnowFLake作为近年来十分火爆的数据仓库应用获得了许多用户�
 
 ## 2 SnowFlake主要特性
 
-- 安全性和数据保护：SnowFlake支持多种验证方式，如Multi-Factor Authentication (MFA), federal authentication，Single Sign-on (SSO)和OAuth.客户端和服务器之间的通信都由[TLS]()保护.
-- 支持标准的SQL和许多扩展SQL的特性，其对绝大多数SQL的DDL和DML都支持，因此做数据分析时基本不用担心找不到对应的操作。
+- 安全性和数据保护：SnowFlake支持多种验证方式，如Multi-Factor Authentication (MFA), federal authentication，Single Sign-on (SSO)和OAuth.客户端和服务器之间的通信都由[TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security "Transport Layer Security")保护.
+- 支持标准的SQL和许多扩展SQL的特性，其对绝大多数SQL的数据定义语言（Data Definition Language）和数据操作语言（Data Manipulation Language）都支持，因此做数据分析时基本不用担心找不到对应的操作。
 - SnowFlake支持软件客户端进行连接，同时也为多种编程语言提供了驱动如Python connector, Spark connector, Node.js driver, .NET driver等。
 - 便捷的分享功能，用户可以很容易地分享数据和查询语句给其他的用户。
 
 ## 3 SnowFlake架构
 
-SnowFlake的架构融合了[Shared-Disk]()和[Shared-Nothing]()架构以综合两者的优势，下面是这两种架构的示意：
+SnowFlake的架构融合了[Shared-Disk](https://en.wikipedia.org/wiki/Shared_disk_architecture "Shared-Disk Architecture")和[Shared-Nothing](https://en.wikipedia.org/wiki/Shared-nothing_architecture "Shared-nothing Architecture")架构以综合两者的优势，下面是这两种架构的示意：
 
 ### 3.1 Shared-Disk架构示意
 
 常用于传统的数据库中，它拥有一个集群里所有节点都能访问的存储层，集群中的计算节点没有自己的存储，它们都通过访问中样存储层在访问数据并进行处理。
 
-[https://res.cloudinary.com/hevo/image/upload/f_auto,q_auto/f_auto,q_auto/$wpsize_!_cld_full!,w_512,h_296,c_scale/v1591729824/hevo-blog/Snowflake-Architecture-2.png](https://res.cloudinary.com/hevo/image/upload/f_auto,q_auto/f_auto,q_auto/$wpsize_!_cld_full!,w_512,h_296,c_scale/v1591729824/hevo-blog/Snowflake-Architecture-2.png)
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
+  <figcaption>Shared-Disk架构</figcaption>
+</figure>
+
 
 ### 3.2 Shared-Nothing架构示意
 
@@ -41,7 +45,10 @@ SnowFlake的架构融合了[Shared-Disk]()和[Shared-Nothing]()架构以综合�
 
 SnowFlake采用了3个不同的层来构建应用：`存储层`、`计算层`和`云服务层`，其示意图如下：
 
-[https://res.cloudinary.com/hevo/image/upload/f_auto,q_auto/f_auto,q_auto/$wpsize_!_cld_full!,w_1224,h_769,c_scale/v1591729876/hevo-blog/Snowflake-Architecture-3.png](https://res.cloudinary.com/hevo/image/upload/f_auto,q_auto/f_auto,q_auto/$wpsize_!_cld_full!,w_1224,h_769,c_scale/v1591729876/hevo-blog/Snowflake-Architecture-3.png)
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
+  <figcaption>Shared-Nothing架构</figcaption>
+</figure>
 
 `存储层`负责将数据优化、压损并存在多个微小的片区中。数据以行列的格式存储，并且以类似于Shared-Disk的方式进行管理。计算节点通过连接存储层来获取数据进行查询计算，存储层独立于其他资源，并且SnowFlake部署在云上，因此其超大型的分布式存储系统能保证高性能、稳定性、可用性、容量和可扩展性。
 
