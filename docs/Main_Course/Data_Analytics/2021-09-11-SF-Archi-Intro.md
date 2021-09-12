@@ -12,7 +12,7 @@ template: overrides/blogs.html
 SnowFlake作为近年来十分火爆的数据仓库应用获得了许多用户和投资人的青睐，本人日常工作中也经常使用SnowFlake做分析，所以对其背后的运行机制做了一些研究，今天和大家聊聊SnowFlake的主要架构和工作原理。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
+  <img src="https://user-images.githubusercontent.com/26101303/132982228-360bd20b-ed29-4ff6-84d3-c77d74169c9f.png"  />
   <figcaption>SnowFlake股价</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ SnowFlake的架构融合了[Shared-Disk](https://en.wikipedia.org/wiki/Shared_di
 这种架构不利于性能的发挥，并且缺乏扩展性。经常需要做数据更新的应用不太适用于这类架构，因为Shared-Disk的锁机制会对其掣肘。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
+  <img src="https://user-images.githubusercontent.com/26101303/132982226-1ccaf053-bddd-4c1c-933a-f555eebd1e29.png"  />
   <figcaption>Shared-Disk架构</figcaption>
 </figure>
 
@@ -43,13 +43,19 @@ SnowFlake的架构融合了[Shared-Disk](https://en.wikipedia.org/wiki/Shared_di
 
 顾名思义，Shared-Nothing架构里，集群的节点都有自己单独的计算资源和存储空间，其优势是数据可以分区存储在各个节点中。当需要处理用户请求时，路由会将请求分配到合适的节点上进行计算，当有结算发生错误时，处理的进程能被其他的节点接管，保证用户请求能被稳定、正确地处理。这种架构很适合于数据读取量很大的应用，比如数据仓库。
 
-### 3.3 SnowFlake的选择
+
+<figure>
+  <img src="https://user-images.githubusercontent.com/26101303/132982223-b99b67f5-3018-4f47-b03f-ac1f165f76b9.png"  />
+  <figcaption>Shared-Nothing架构</figcaption>
+</figure>
+
+### 3.3 SnowFlake的架构
 
 SnowFlake则采用了3个不同的层来构建应用：`存储层`、`计算层`和`云服务层`，其示意图如下：
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-31/1627739241720-Home.png"  />
-  <figcaption>Shared-Nothing架构</figcaption>
+  <img src="https://user-images.githubusercontent.com/26101303/132982227-9cb5fbcd-cb8b-4c53-8f8d-448abddb2663.png"  />
+  <figcaption>SnowFlake架构</figcaption>
 </figure>
 
 `存储层`负责将数据优化、压损并存在多个微小的片区中。数据以行列的格式存储，并且以类似于Shared-Disk的方式进行管理。计算节点通过连接存储层来获取数据进行查询计算，存储层独立于其他资源，SnowFlake部署在云上，因此其超大型的分布式存储系统能保证高性能、稳定性、可用性、容量和可扩展性。
