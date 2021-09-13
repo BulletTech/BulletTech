@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 神经网络调参技巧
 
 !!! info 
-    作者：Void，发布于2021-09-10，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/LVw3rcDCOk0R3oZ_MEDAEQ)
+    作者：Void，发布于2021-09-10，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484538&idx=1&sn=ae97eac88e44ae8b2f0466cf09e606c0&chksm=eb90f70edce77e1852aaf09ccca473b088b91d870f63c326166f7921d02ae7bb97e614b491ad&scene=178&cur_album_id=2045821482966024195#rd)
 
 ## 1 引言
 
