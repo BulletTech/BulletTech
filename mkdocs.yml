@@ -91,13 +91,15 @@ theme:
     - navigation.tabs
     - navigation.top
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: black
       accent: deep purple
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-    - scheme: slate
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: black
       accent: amber
       toggle:
