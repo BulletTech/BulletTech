@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 利用递归思想处理半结构化数据
 
 !!! info
-    作者：Jermey，发布于2021-08-22，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]
+    作者：Jermey，发布于2021-08-22，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/VGutEZWDWwNswAKoUAVsRg)
 
 ## 1 背景
 
