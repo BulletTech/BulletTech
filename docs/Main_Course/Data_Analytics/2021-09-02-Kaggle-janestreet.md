@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Kaggle Jane Street竞赛
 
 !!! info 
-    作者：Void，发布于2021-09-02，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/LVw3rcDCOk0R3oZ_MEDAEQ)
+    作者：Void，发布于2021-09-02，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/oaT49hLhGiL_ajz1dIlGcQ)
 
 ## 1 引言
 
