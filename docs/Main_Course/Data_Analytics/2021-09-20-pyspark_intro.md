@@ -66,7 +66,7 @@ spark.sql("SELECT count(*) from tableA").show()
 ```
 
 <figure>
-  <img src="https://files.mdnice.com/user/15233/13a02ea1-4a0c-49c4-9188-0b3f4a203e20.png" width="500" />
+  <img src="https://files.mdnice.com/user/15233/13a02ea1-4a0c-49c4-9188-0b3f4a203e20.png" width="100" />
 </figure>
 
 有了它，我们可以通过SQL的join拼接数据(替代Pig join的功能)，也可以执行复杂的SQL逻辑并存储最终的数据(类似Hive SQL)。可以说Spark给我们提供了一个更完善，更易用的框架。
