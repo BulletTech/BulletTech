@@ -56,20 +56,30 @@ Spark DataFrame的基本操作有：
 - 聚合：df.groupby('color').avg()
 - 自定义的函数(UDF)等
 
-我们还可以通过df.toPandas()将Spark DataFrame转换成Python DataFrame以直接使用相关方法。
+我们还可以通过df.toPandas()将Spark DataFrame转换成Python DataFrame以直接使用相关方法。我们也可以将Python DataFrame转换成Spark DataFrame：
+
+```python
+df = pd.DataFrame([["jack",23], ["tony", 34]], columns = ["name", "age"])
+df_values = df.values.tolist()
+df_columns = list(df.columns)
+spark_df = spark.createDataFrame(df_values, df_columns)
+```
 
 由于Spark DataFrame和Spark SQL共享同样的执行引擎。我们可以将Spark DataFrame注册成表格，使用SQL进行逻辑运算。
 
 ```python
 df.createOrReplaceTempView("tableA")
-spark.sql("SELECT count(*) from tableA").show()
+df2 = spark.sql("SELECT count(*) from tableA")
+#存储计算结果
+df2.write.csv('data.csv', header=True)
+df2.show()
 ```
 
 <figure>
   <img src="https://files.mdnice.com/user/15233/13a02ea1-4a0c-49c4-9188-0b3f4a203e20.png" width="100" />
 </figure>
 
-有了它，我们可以通过SQL的join拼接数据(替代Pig join的功能)，也可以执行复杂的SQL逻辑并存储最终的数据(类似Hive SQL)。可以说Spark给我们提供了一个更完善，更易用的框架。
+有了它，我们可以通过SQL的join拼接数据(替代Pig join的功能)，也可以执行复杂的SQL逻辑(类似Hive SQL)并将最终的计算结果存储成不同格式的数据(csv，parquet等)。可以说Spark给我们提供了一个更完善，更易用的框架。
 
 Spark DataFrame还有许多其他的[API](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql.html)，由于工作中并没有太多接触，这里就不多介绍了。需要的时候不妨去官方文档查询即可。
 
