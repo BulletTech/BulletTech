@@ -45,7 +45,7 @@ df.show(1)
 ```
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
+  <img src="https://files.mdnice.com/user/15233/02c04205-9702-4052-8f8f-6713b581755e.png" width="500" />
 </figure>
 
 Spark DataFrame的基本操作有：
@@ -66,7 +66,7 @@ spark.sql("SELECT count(*) from tableA").show()
 ```
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
+  <img src="https://files.mdnice.com/user/15233/13a02ea1-4a0c-49c4-9188-0b3f4a203e20.png" width="500" />
 </figure>
 
 有了它，我们可以通过SQL的join拼接数据(替代Pig join的功能)，也可以执行复杂的SQL逻辑并存储最终的数据(类似Hive SQL)。可以说Spark给我们提供了一个更完善，更易用的框架。
