@@ -196,6 +196,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-09-20-pyspark_intro/</loc>
+         <lastmod>2021-09-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-28-Decision-Tree/</loc>
          <lastmod>2021-09-22</lastmod>
          <changefreq>daily</changefreq>
