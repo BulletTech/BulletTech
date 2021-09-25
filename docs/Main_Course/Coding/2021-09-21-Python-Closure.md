@@ -2,14 +2,14 @@
 template: overrides/blogs.html
 ---
 
-# 理解Python闭包
+# 理解Python闭包
 
 !!! info
     作者：袁子弹起飞，发布于2021-09-21，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
 ## 1 前言
 
-在使用Python的日常工作中，你获取碰到过类似于这样的代码：
+在使用Python的日常工作中，你或许碰到过类似于这样的代码：
 
 ```Python
 def make_counter():
