@@ -15,7 +15,11 @@ template: overrides/blogs.html
 
 这个比赛也是经典的监督学习中的二分类问题，需要我们根据用户的申请信息，征信信息（Bureau）以及用户在该机构的信用历史等信息，预测申请人贷款违约的概率。由于赛题是做贷前预测，所以需要找的特征主要是挖掘客户是否存在欺诈，对于非欺诈用户，他们是否有能力还款、
 
-![](https://files.mdnice.com/user/15233/3a541655-3d6a-457f-a195-5ef56d8046d5.png)
+<figure>
+  <img src="https://files.mdnice.com/user/15233/3a541655-3d6a-457f-a195-5ef56d8046d5.png"  />
+  <figcaption>数据表关系图</figcaption>
+</figure>
+
 
 赛题的数据分布在几张表里，需要我们做适当的表连接操作：
 
