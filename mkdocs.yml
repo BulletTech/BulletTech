@@ -43,6 +43,7 @@ nav:
     - Machine Learning:
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Coding:
+        - Python闭包浅析: Main_Course/Coding/2021-09-21-Python-Closure.md
         - Python字典常用操作小技巧: Main_Course/Coding/2021-08-21-Python-dict.md
         - Python列表常用操作小技巧: Main_Course/Coding/2021-08-14-Python-list.md
         - Python元组常用操作小技巧: Main_Course/Coding/2021-08-07-Python-Tuple.md
