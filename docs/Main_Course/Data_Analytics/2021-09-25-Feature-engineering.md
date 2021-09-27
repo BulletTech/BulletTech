@@ -31,15 +31,15 @@ template: overrides/blogs.html
 
 ## 2.1 特征工程
 
-特征工程的主要思路是尽可能多的构造大量特征，再利用特征筛选指标或是模型减少特征数量。
+特征工程的主要思路是尽可能多地构造大量特征，再利用特征筛选指标或是模型减少特征数量。
 
 自动化的数据工程这一步，有些选手几乎完全依赖自动特征工程，例如构造polynomial features，有些利用开源的数据工程包如Featuretools。
 
-## 2.1.1 近期特征
+### 2.1.1 近期特征
 
 有时数据中的时间信息为时间戳，我们可以手工将其转换成数值信息，如计算最近一次使用信用卡的时间，上一次联系时间，上次逾期时间等。
 
-## 2.1.2 统计特征 
+### 2.1.2 统计特征 
 
 一个申请id会对应拉取其申请人的征信(Bureau Credit)数据和信用卡使用数据，一个申请id在其他表中对应多行记录。对于这部分变量，往往会考虑构造统计性特征，如均值，最大/最小值，合计值，频次等等。
 
@@ -77,7 +77,7 @@ def agg_numeric(df, group_var, df_name):
     return agg 
 ```
 
-## 2.1.3 时序特征
+### 2.1.3 时序特征
 
 在不同的时间窗口计算时序特征往往能帮助识别异常的用户消费行为。常见的时序特征有：
 
@@ -88,7 +88,7 @@ def agg_numeric(df, group_var, df_name):
 
 例如如果一个用户在本月消费金额远高于过去12个月内的月均消费金额，可能说明客户在恶意透支信用额度或者盗刷，用户的风险应提高。
 
-## 2.1.4 特征筛选
+### 2.1.4 特征筛选
 
 根据特征选择的形式，可分为三大类：
 
@@ -98,7 +98,7 @@ def agg_numeric(df, group_var, df_name):
 
 为了保证模型的可解释性，例如PCA对特征做变换的特征降维方法一般不用于风控建模中。多数特征筛选方法是先用filter法移除共线特征，然后利用嵌入法计算特征重要性对进行排序。
 
-在 [Introduction to Feature Selection](https://www.kaggle.com/willkoehrsen/introduction-to-feature-selection) 中，作者最终从1465个变量中筛选342个变量放入lgb模型中，测试集AUC仅从0.783降低到0.782，未经过特征工程的lgb模型baseline为0.735。
+在 [Introduction to Feature Selection](https://www.kaggle.com/willkoehrsen/introduction-to-feature-selection) 中，作者最终从1465个变量中筛选342个变量放入LightGBM模型中，测试集AUC仅从0.783降低到0.782，未经过特征工程的LightGBM模型baseline为0.735。
 
 ## 3.1 小结
 
