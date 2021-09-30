@@ -17,6 +17,7 @@ nav:
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
+        - 金融风控特征工程: Main_Course/Data_Analytics/2021-09-25-Feature-engineering.md
         - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md 
         - 浅谈SnowFlake架构: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
         - Kaggle Jane Street: Main_Course/Data_Analytics/2021-09-02-Kaggle-janestreet.md
