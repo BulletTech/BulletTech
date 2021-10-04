@@ -110,7 +110,7 @@ tf.keras.callbacks.TensorBoard(
 - log_dir：日志输出的路径。
 - histogram_freq：计算激活函数和权重直方图的频率，如果设置为0，则不计算直方图。
 - write_graph：是否在TensorBoard中可视化图像。
-- update_freq：`batch`或`epoch`或整数，将在指定的过程结束后将损失和评价指标写入TensorBoard。如果设置为整数，则意味着在设定数量的样本训练完后将损失和评价指标写入TensorBoard。
+- update_freq：取值为`batch`或`epoch`或整数，将在指定的过程结束后将损失和评价指标写入TensorBoard。如果设置为整数，则意味着在设定数量的样本训练完后将损失和评价指标写入TensorBoard。
 
 ### 2.5 CSVLogger
 
