@@ -36,10 +36,12 @@ model.fit(x, y, callbacks=model_checkpoint_callback)
 
 ```python
 tf.keras.callbacks.EarlyStopping(monitor='val_loss',
-        min_delta=0,                                 patience=0,                                 
-        verbose=0,     
-         mode='auto',                                 baseline=None,                                 
-         restore_best_weights=False)
+        min_delta=0,
+        patience=0,
+        verbose=0,
+        mode='auto',
+        baseline=None,
+        restore_best_weights=False)
 ```
 
 其中各个参数：
