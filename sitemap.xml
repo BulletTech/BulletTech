@@ -211,17 +211,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Deep_Learning/2021-10-02-TF-Callbacks/</loc>
+         <lastmod>2021-10-04</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-28-Decision-Tree/</loc>
          <lastmod>2021-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks/</loc>
-         <lastmod>2021-10-04</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-10-02-TF-Callbacks/</loc>
          <lastmod>2021-10-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
