@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-在tensorflow.keras中，callbacks能在`fit`、`evaluate`和`predict`过程中加入伴随着模型的生命周期运行，目前tensorflow.keras已经构建了许多种callbacks供用户使用，用于防止过拟合、可视化训练过程、纠错、保存模型checkpoints和生成TensorBoard等。这篇文章，我们来了解一下如何使用tensorflow.keras里的各种callbacks，以及如何自定义callbacks。
+在tensorflow.keras中，callbacks能在`fit`、`evaluate`和`predict`过程中加入伴随着模型的生命周期运行，目前tensorflow.keras已经构建了许多种callbacks供用户使用，用于防止过拟合、可视化训练过程、纠错、保存模型checkpoints和生成TensorBoard等。通过这篇文章，我们来了解一下如何使用tensorflow.keras里的各种callbacks，以及如何自定义callbacks。
 
 ## 2 使用callbacks
 
