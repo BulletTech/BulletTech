@@ -121,7 +121,9 @@ tf.keras.callbacks.CSVLogger(
     filename, separator=',', append=False
 )
 ```
+
 其中重要参数：
+
 - append：是否接着现有文件继续写入日志。
 
 ### 2.6 TerminateOnNaN
