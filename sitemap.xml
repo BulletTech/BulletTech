@@ -211,6 +211,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-09-26-feature-selection/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Deep_Learning/2021-10-02-TF-Callbacks/</loc>
          <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
