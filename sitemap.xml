@@ -221,6 +221,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Deep_Learning/2021-10-04-Keras-Custom-Model/</loc>
+         <lastmod>2021-10-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-28-Decision-Tree/</loc>
          <lastmod>2021-10-06</lastmod>
          <changefreq>daily</changefreq>
