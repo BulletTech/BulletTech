@@ -37,7 +37,7 @@ template: overrides/blogs.html
 皮尔斯相关系数只能反映变量间的线性关系。  
 
 <figure>
-  <img src="https://files.mdnice.com/user/15233/4b64aee2-3ce9-48e7-b676-b059681aca41.jpg" width="500" />
+  <img src="https://user-images.githubusercontent.com/47420814/136344241-ef29279b-4f39-4426-b2e2-3723b65f076f.jpg" width="500" />
 </figure>
 
 最大信息系数(maximal information coefficient, MIC)可以衡量变量间高维的相关性。它反映了变量间最大的互信息(mutual information, MI)。从直观上来讲，如果X，Y存在关联，当Y已知时，X的不确定性会变小。这一变化值就是互信息。
@@ -58,7 +58,7 @@ template: overrides/blogs.html
 需要注意的是，不同模型对特征的要求不同。有[实验表明](http://www.feat.engineering/feature-selection-simulation.html)，对于加入无关变量，神经网络的表现会明显变差(loss上升)。因此，在训练神经网络模型前，需要去除无关变量及高相关性变量。
 
 <figure>
-  <img src="https://files.mdnice.com/user/15233/81aa9aa2-07cf-46dd-bae3-d50f1ebe34ee.png" width="500" />
+  <img src="https://user-images.githubusercontent.com/47420814/136344689-526158b9-5737-491d-aeac-0c691c8ba5f5.png" width="500" />
 </figure>
 
 树模型对此较为不敏感。但是在衡量特征重要性时，两个同样有效的变量会由于高相关性而使特征重要性下降(一定程度的下降，并不会下降到0)。  
