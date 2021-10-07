@@ -16,21 +16,13 @@ nav:
   - Product Center: http://bullettech.cn/
   - Main Course:
     - Intro: Main_course_blog_intro.md
-    - Data Analytics:
-        - 特征选择小介: Main_Course/Data_Analytics/2021-09-26-feature-selection.md
-        - 金融风控特征工程: Main_Course/Data_Analytics/2021-09-25-Feature-engineering.md
+    - Data Analytics:   
         - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md 
         - 浅谈SnowFlake架构: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
-        - Kaggle Jane Street: Main_Course/Data_Analytics/2021-09-02-Kaggle-janestreet.md
-        - Kaggle Optiver: Main_Course/Data_Analytics/2021-08-27-Kaggle-optiver.md
         - SQL Tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
         - SQL Tips: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
         - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
-        - Kaggle tips: Main_Course/Data_Analytics/2021-08-10-Kaggle-tips.md
-        - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
         - 浅谈Google Analytics: Main_Course/Analytics_Tools/2021-07-31-GA-Intro.md
-        - 读《Rules of Machine Learning》有感（下）: Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0.md
-        - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
         - PayPal职位爬虫: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
         - 时间序列异常检测: Main_Course/Data_Analytics/2021-07-16-Timeseries-algo.md
         - 爬取并下载URL不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
@@ -45,6 +37,14 @@ nav:
         - Keras各种Callbacks介绍: Main_Course/Deep_Learning/2021-10-02-TF-Callbacks.md
         - 神经网络调参技巧: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
     - Machine Learning:
+        - 特征选择小介: Main_Course/Data_Analytics/2021-09-26-feature-selection.md
+        - 金融风控特征工程: Main_Course/Data_Analytics/2021-09-25-Feature-engineering.md
+        - Kaggle Jane Street: Main_Course/Data_Analytics/2021-09-02-Kaggle-janestreet.md
+        - Kaggle Optiver: Main_Course/Data_Analytics/2021-08-27-Kaggle-optiver.md
+        - Kaggle tips: Main_Course/Data_Analytics/2021-08-10-Kaggle-tips.md
+        - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
+        - 读《Rules of Machine Learning》有感（下）: Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0.md
+        - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Coding:
         - Python闭包浅析: Main_Course/Coding/2021-09-21-Python-Closure.md
