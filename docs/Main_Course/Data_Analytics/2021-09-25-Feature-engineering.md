@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 金融风控特征工程小结
 
 !!! info 
-    作者：Jeremy，发布于2021-09-25，阅读时间：约8分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Jeremy，发布于2021-09-25，阅读时间：约8分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484564&idx=1&sn=e13190de19bb84676db3902527685159&chksm=eb90f7e0dce77ef69155a7f19a4181f04b35c01e1297b2355389667e8b178ff5f7c373bd9479&token=1727747278&lang=zh_CN#rd)
 
 ## 1 前言
 
@@ -16,7 +16,7 @@ template: overrides/blogs.html
 这个比赛也是经典的监督学习中的二分类问题，需要我们根据用户的申请信息，征信信息（Bureau）以及用户在该机构的信用历史等信息，预测申请人贷款违约的概率。由于赛题是做贷前预测，所以需要找的特征主要是挖掘客户是否存在欺诈，对于非欺诈用户，他们是否有能力还款、
 
 <figure>
-  <img src="https://files.mdnice.com/user/15233/0308ba65-7573-4e01-81a2-5342617f0785.png"  />
+  <img src="https://raw.githubusercontent.com/BulletTech2021/Pics/main/3a541655-3d6a-457f-a195-5ef56d8046d5.png"  />
   <figcaption>数据表关系图</figcaption>
 </figure>
 
