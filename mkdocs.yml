@@ -33,7 +33,7 @@ nav:
         - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
     - Deep Learning:
-        - 在Apple Silicon Mac上s安装TensorFlow: Main_Course/Deep_Learning/2021-10-10-TF-on-M1-Mac.md
+        - 在Apple Silicon Macs上安装TensorFlow: Main_Course/Deep_Learning/2021-10-10-TF-on-M1-Mac.md
         - 使用tf.keras自定义模型: Main_Course/Deep_Learning/2021-10-04-Keras-Custom-Model.md
         - Keras各种Callbacks介绍: Main_Course/Deep_Learning/2021-10-02-TF-Callbacks.md
         - 神经网络调参技巧: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
