@@ -28,7 +28,7 @@ model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
 model.fit(x, y, callbacks=model_checkpoint_callback)
 ```
 
-这样在模型训练时，就会将模型checkpoints存储在对应的位置供后续使用。除了ModelCheckpoint，在Tensorflow 2.0中，还有许多其他类型的callbacks供使用，让我们一探究竟。
+这样在模型训练时，就会将模型checkpoints存储在对应的位置供后续使用。除了ModelCheckpoint，在TensorFlow 2.0中，还有许多其他类型的callbacks供使用，让我们一探究竟。
 
 ### 2.1 EarlyStopping
 
