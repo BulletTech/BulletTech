@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 算法中的multi家族
 
 !!! info
-    作者：Void，发布于2021-10-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Void，发布于2021-10-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/t_QkSxjtcFpX9pdx_OcXtA)
 
 ## 1 前言
 
