@@ -159,7 +159,9 @@ REVOKE [ GRANT OPTION FOR ]
 
 ## 4 总结
 
+上述内容概括了在SnowFlake里管理权限的重要内容，必要时，请进一步查阅SnowFlake的[官方文档](https://docs.snowflake.com/en/user-guide/security-access-control-overview.html 'security-access-control-overview')。
 
+希望这次的分享对你有帮助，欢迎在评论区留言讨论！
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
