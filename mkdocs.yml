@@ -17,6 +17,7 @@ nav:
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:   
+        - GitHub也可以很好玩: Main_Course/Analytics_Tools/2021-10-14-play-with-github.md 
         - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md 
         - 浅谈SnowFlake架构: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
         - SQL Tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
