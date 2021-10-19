@@ -47,7 +47,7 @@ nav:
     - Analytics Tool:
         - GitHub也可以很好玩: Main_Course/Analytics_Tools/2021-10-14-play-with-github.md
         - SnowFlake权限概览: Main_Course/Analytics_Tools/2021-10-11-SF-Access-Intro.md
-        - 浅谈SnowFlake架构: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
+        - SnowFlake架构概览: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
         - 浅谈Google Analytics: Main_Course/Analytics_Tools/2021-07-31-GA-Intro.md
         - Git常用命令一览: Main_Course/Analytics_Tools/2021-07-15-Git-Commands.md
         - 一行代码都不写，教你使用GitHub: Main_Course/Analytics_Tools/2021-06-23-Github-Intro.md
