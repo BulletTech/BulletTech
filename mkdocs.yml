@@ -16,21 +16,16 @@ nav:
   - Product Center: http://bullettech.cn/
   - Main Course:
     - Intro: Main_course_blog_intro.md
-    - Data Analytics:   
-        - GitHub也可以很好玩: Main_Course/Analytics_Tools/2021-10-14-play-with-github.md 
+    - Data Analytics:
         - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md 
-        - 浅谈SnowFlake架构: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
         - SQL Tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
         - SQL Tips: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
         - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
-        - 浅谈Google Analytics: Main_Course/Analytics_Tools/2021-07-31-GA-Intro.md
         - PayPal职位爬虫: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
         - 时间序列异常检测: Main_Course/Data_Analytics/2021-07-16-Timeseries-algo.md
         - 爬取并下载URL不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
         - A/B测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
         - 双重差分小介: Main_Course/Data_Analytics/2021-06-24-DID.md
-        - Git常用命令一览: Main_Course/Analytics_Tools/2021-07-15-Git-Commands.md
-        - 一行代码都不写，教你使用GitHub: Main_Course/Analytics_Tools/2021-06-23-Github-Intro.md
         - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
     - Deep Learning:
@@ -49,6 +44,13 @@ nav:
         - 读《Rules of Machine Learning》有感（下）: Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0.md
         - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
+    - Analytics Tool:
+        - GitHub也可以很好玩: Main_Course/Analytics_Tools/2021-10-14-play-with-github.md
+        - SnowFlake权限概览: Main_Course/Analytics_Tools/2021-10-11-SF-Access-Intro.md
+        - 浅谈SnowFlake架构: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
+        - 浅谈Google Analytics: Main_Course/Analytics_Tools/2021-07-31-GA-Intro.md
+        - Git常用命令一览: Main_Course/Analytics_Tools/2021-07-15-Git-Commands.md
+        - 一行代码都不写，教你使用GitHub: Main_Course/Analytics_Tools/2021-06-23-Github-Intro.md
     - Coding:
         - Python闭包浅析: Main_Course/Coding/2021-09-21-Python-Closure.md
         - Python字典常用操作小技巧: Main_Course/Coding/2021-08-21-Python-dict.md
