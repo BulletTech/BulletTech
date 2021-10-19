@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-​在数据库中正确管理对象（如数据库、表等）的权限非常重要，但却又常被人忽视，往往到涉及到权限问题、碰到麻烦时，才会后悔当时没有认真对待权限管理。因此这篇文章将以非常火爆的SnowFlake数据仓库为例，简明扼要地讲解权限管理的问题和最佳实践。建议点赞收藏，日后回顾使用！
+​在数据库中正确管理对象（如数据库、表等）的权限非常重要，但却又常被人忽视，往往涉及到权限问题、碰到麻烦时，才会后悔当时没有认真对待权限管理。因此这篇文章将以非常火爆的SnowFlake数据仓库为例，简明扼要地讲解权限管理的重要概念和最佳实践。建议点赞收藏，日后回顾使用！
 
 ## 2 SnowFlake权限控制框架
 
@@ -159,7 +159,7 @@ REVOKE [ GRANT OPTION FOR ]
 
 ## 4 总结
 
-上述内容概括了在SnowFlake里管理权限的重要内容，必要时，请进一步查阅SnowFlake的[官方文档](https://docs.snowflake.com/en/user-guide/security-access-control-overview.html 'security-access-control-overview')。
+上述内容概括了在SnowFlake里管理权限的重要内容，建议结合实际工作正确创建不同的角色、并分配给角色正确的权限。​必要时，请进一步查阅SnowFlake的[官方文档](https://docs.snowflake.com/en/user-guide/security-access-control-overview.html 'security-access-control-overview')。
 
 希望这次的分享对你有帮助，欢迎在评论区留言讨论！
 
