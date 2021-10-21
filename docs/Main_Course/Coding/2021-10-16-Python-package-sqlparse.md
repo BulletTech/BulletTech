@@ -2,7 +2,7 @@
 template: overrides/blogs.html
 ---
 
-# SnowFlake权限概览
+# SQL代码解析神器-sqlparse
 
 !!! info
     作者：Jeremy，发布于2021-10-20，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
@@ -18,7 +18,7 @@ template: overrides/blogs.html
 
 ### 2.1 介绍
 
-想要改写SQL代码，关键的一步是对SQL进行解析。[sqlparse](https://sqlparse.readthedocs.io/en/latest/intro/)是基于Python的一个无验证解析器，他提供了一个简单的parse()函数来f返回类似语法树的解析结构。我们用_pprint_tree()函数打印下解析后的SQL语句:
+想要改写SQL代码，关键的一步是对SQL进行解析。[sqlparse](https://sqlparse.readthedocs.io/en/latest/intro/)是基于Python的一个无验证解析器，他提供了一个简单的parse()函数来返回类似语法树的解析结构。我们用_pprint_tree()函数打印下解析后的SQL语句:
 
 ``` Python
 import sqlparse 
@@ -55,7 +55,7 @@ sqlparse.parse(query)[0]._pprint_tree()
 
 ### 2.2 类型定义
 
-sqlparse的基础类型是Token,其中ttype和value两个常用属性。此外类似树结构的节点，他可以通过parent属性关联上一层token。它的常用方法主要是对该token属性的访问和判断:
+sqlparse的基础类型是Token，其中ttype和value两个常用属性。此外类似树结构的节点，他可以通过parent属性关联上一层token。它的常用方法主要是对该token属性的访问和判断:
 
 class sqlparse.sql.Token(ttype, value):
 
@@ -69,7 +69,7 @@ class sqlparse.sql.Token(ttype, value):
 
 * within(group_cls): Returns True if this token is within group_cls.
 
-TokenList是Token类型的继承，定义为一群token的集合。通过token.tokens属性来访问。如例子中的'col_2 as b'就被判定为了Identifier类型的TokenLis他。除了继承和部分覆写了Token类型的方法以外，还定义了获取子token位置，名称，匹配搜索子token等方法:
+TokenList是Token类型的继承，定义为一群token的集合。通过token.tokens属性来访问。如例子中的'col_2 as b'就被判定为了Identifier类型的TokenLis他。除了继承和部分覆写了Token类型的方法以外，它还定义了获取子token位置，名称，匹配搜索子token等方法:
 
 class sqlparse.sql.TokenList(tokens=None):
 
@@ -92,7 +92,7 @@ class sqlparse.sql.TokenList(tokens=None):
 
 ### 2.3 词法解析
 
-对于SQL中的DDL/DML等关键词，sqlparse主要通过正则表达式识别，所有的正则表达与token类型的对应关系储存在[keywords.py](https://github.com/andialbrecht/sqlparse/blob/master/sqlparse/keywords.py)里的SQL_REGEX变量中，必要时可以修改正则表达来适应不同的数据仓库语法和函数。
+对于SQL中的DDL(Data Definition Language，数据定义语言)/DML(Data Manipulation Language，数据操纵语言)等关键词，sqlparse主要通过正则表达式识别，所有的正则表达与token类型的对应关系储存在[keywords.py](https://github.com/andialbrecht/sqlparse/blob/master/sqlparse/keywords.py)里的SQL_REGEX变量中，必要时可以修改正则表达来适应不同的数据仓库语法和函数。
 
 ## 3 案例:从查询中提取表名
 
@@ -106,8 +106,7 @@ ALL_JOIN_TYPE = ('LEFT JOIN', 'RIGHT JOIN', 'INNER JOIN', 'FULL JOIN', 'LEFT OUT
 def is_subselect(parsed):
     """
     是否子查询
-    :param parsed:
-    :return:
+    :param parsed: T.Token
     """
     if not parsed.is_group:
         return False
@@ -138,7 +137,7 @@ def extract_from_part(parsed):
 
 def extract_join_part(parsed):
     """
-    提交join之后模块
+    提取join之后模块
     """
     flag = False
     for item in parsed.tokens:
