@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # SQL代码解析神器-sqlparse
 
 !!! info
-    作者：Jeremy，发布于2021-10-20，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Jeremy，发布于2021-10-20，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484692&idx=1&sn=67ccf74a8d6b099ce03eaa43166849d5&chksm=eb90f660dce77f7666727e4889a09b58917cdeae57cbdb353ea5c902b0a053bf30c904cc972b&token=95681447&lang=zh_CN#rd)
 
 ## 1 引言
 
