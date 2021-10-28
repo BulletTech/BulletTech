@@ -88,7 +88,7 @@ template: overrides/general_no_comments.html
 ## Tina的故事
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/Tina_Profile_1026.jpg" width="200" />
+  <img src = "https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/342b16ccaf85140b016d79aee70a386b-sticker.png" width="200" />
   <figcaption>Tina</figcaption>
 </figure>
 
