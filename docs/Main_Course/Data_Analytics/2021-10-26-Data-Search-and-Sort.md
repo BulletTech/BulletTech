@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 浅谈数据的搜索和排序
 
 !!! info
-    作者：Tina，发布于2021-10-28，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Tina，发布于2021-10-28，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/r8WJdmDF4h7xsVRSXnHRKA)
 
 ## 1. 引言
  
