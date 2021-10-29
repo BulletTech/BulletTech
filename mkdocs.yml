@@ -18,7 +18,7 @@ nav:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
         - 浅谈数据的搜索和排序: Main_Course/Data_Analytics/2021-10-26-Data-Search-and-Sort.md
-        - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md 
+        - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md
         - SQL Tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
         - SQL Tips: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
         - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
@@ -71,6 +71,7 @@ nav:
         - 初识2020款12.9英寸iPad Pro - 未来可期: Dessert/Hardware/2020-04-05-iPad-Pro.md
         - 换种姿势，在家办公 - 罗技MX Keys + M720主观评测: Dessert/Hardware/2020-03-14-MX-Keys.md
     - Apps:
+        - iOS Shortcuts捷径: Dessert/Apps/2021-10-29-iOS-Shortcuts.md
         - PicGo图床，功能刚刚好: Dessert/Apps/2021-10-23-PicGo.md
         - Copilot测试版本体验: Dessert/Apps/2021-07-19-Copilot.md
         - Paste - 剪切板工具: Dessert/Apps/2021-07-12-Paste.md
