@@ -157,6 +157,8 @@ plugins:
 # Customization
 extra:
   social:
+    - icon: fontawesome/solid/rocket
+      link: http://bullettech.cn/
     - icon: fontawesome/brands/weixin
       link: https://mp.weixin.qq.com/s/YYZilgFSHrh-nrjF3Z2G7A
     - icon: fontawesome/brands/zhihu
