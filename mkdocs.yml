@@ -165,7 +165,7 @@ extra:
       link: https://github.com/BulletTech/BulletTech
     - icon: fontawesome/solid/book
       link: https://www.toutiao.com/c/user/token/MS4wLjABAAAAsxrzZdUCIQdOMU8albHKSb_ZCFAzIbwqzn9XFfIeoa-rd2rDsl7qOoCyd3wEgW5v/?source=feed
-    - icon: fontawesome/solid/tiktok
+    - icon: fontawesome/brands/tiktok
       link: https://www.douyin.com/user/MS4wLjABAAAAPFvcvoD4PrSqrAvA1ehFu9S3OL-oKdCqH_V54POznMI
 
 extra_javascript:
