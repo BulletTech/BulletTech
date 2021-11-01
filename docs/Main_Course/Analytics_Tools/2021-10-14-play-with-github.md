@@ -4,8 +4,8 @@ template: overrides/blogs.html
 
 # 玩转GitHub
 
-!!! info 
-    作者：Void，发布于2021-10-14，阅读时间：约5分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/yK9Q9LmkpP_7IlhQbWogGA)
+!!! info
+    作者：Void，发布于2021-10-14，阅读时间：约5分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484626&idx=1&sn=bcd9360a407ae2dde75e0ae5acd0cb16&chksm=eb90f7a6dce77eb0e8b97d3ef36195f91836fc83e897d44853f2424332af13dafc2a07ff53a0&token=78049789&lang=zh_CN#rd)
 
 ## 1 引言
 
