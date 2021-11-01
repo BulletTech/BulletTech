@@ -121,6 +121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Analytics_Tools/2021-11-01-GitHub-Resume/</loc>
+         <lastmod>2021-11-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Coding/2021-08-03-useful-python-packages/</loc>
          <lastmod>2021-11-01</lastmod>
          <changefreq>daily</changefreq>
