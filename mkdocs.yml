@@ -16,7 +16,8 @@ nav:
   - Product Center: http://bullettech.cn/
   - Main Course:
     - Intro: Main_course_blog_intro.md
-    - Data Analytics:
+    - Data Analytics: 
+        - KDD Cup2021时间序列异常检测竞赛总结: Main_Course/Data_Analytics/2021-10-30-kdd-cup2021.md
         - 浅谈数据的搜索和排序: Main_Course/Data_Analytics/2021-10-26-Data-Search-and-Sort.md
         - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md
         - SQL Tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
