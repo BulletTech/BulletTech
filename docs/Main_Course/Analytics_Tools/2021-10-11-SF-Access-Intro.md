@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # SnowFlake权限概览
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/fmtJR9O3jVVBav0A0X8yFw)
 
 ## 1 前言
 
