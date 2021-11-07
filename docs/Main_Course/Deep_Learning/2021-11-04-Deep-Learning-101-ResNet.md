@@ -52,7 +52,7 @@ $$
 
 ## 3 用 ResNet 构造分类模型
 
-在下列 demo 中，我们使用 keras 已有的 ResNet50 与训练模型，对 Oxford 102 Flowers 数据集中的 10 种花卉图片进行多分类任务模型的构造。在工程上我们只需要修改 ResNet50 顶部的全连接层，对输入的图片数据进行裁剪，旋转，放大等数据增强，训练顶层参数即可。代码如下：
+在下列 demo 中，我们使用 keras 已有的 ResNet50预训练模型，对 Oxford 102 Flowers 数据集中的 10 种花卉图片进行多分类任务模型的构造。在工程上我们只需要修改 ResNet50 顶部的全连接层，对输入的图片数据进行裁剪，旋转，放大等数据增强，训练所有模型参数即可。代码如下：
 
 ```python
 
@@ -117,12 +117,15 @@ def call_back():
     callbacks = [early_stopping, model_checkpoint]
     return callbacks
 
+# path_to_img: 'dataset/flower_data_10/train/1//image_06734.jpg'
 train_path = 'dataset/flower_data_10/train'
 valid_path = 'dataset/flower_data_10/valid'
 
 nb_epoch = 20
 batch_size = 32
 img_size = (224,224)
+
+# output classes
 classes = list(map(str,[1,2,3,4,5,6,7,8,9,10]))
 rgb_mean = [123.68, 116.779, 103.939]
 fc_layer_units = [512,64]
