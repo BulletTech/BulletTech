@@ -32,7 +32,9 @@ $$
 \begin{aligned}
 a^{[l+2]} &=g\left(z^{[l+2]}+a^{[l]}\right) \\
 &=g\left(W^{[l+2]} a^{[l+1]}+b^{[l+2]}+a^{[l]}\right)
-a^{[l+2]}=g\left(a^{[l]}\right)=\operatorname{ReLU}\left(a^{[l]}\right)=a^{[l]}
+a^{[l+2]}=g\left(a^{[l]}\right) \\
+&=\operatorname{ReLU}\left(a^{[l]}\right) \\
+&=a^{[l]}
 \end{aligned}
 $$
 
