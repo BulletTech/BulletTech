@@ -36,6 +36,7 @@ nav:
         - 使用tf.keras自定义模型: Main_Course/Deep_Learning/2021-10-04-Keras-Custom-Model.md
         - Keras各种Callbacks介绍: Main_Course/Deep_Learning/2021-10-02-TF-Callbacks.md
         - 神经网络调参技巧: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
+        - 深度学习 101-搭建 ResNet 识别鲜花图像: Main_Course/Deep_Learning/2021-11-04-Deep-Learning-101-ResNet.md
     - Machine Learning:
         - 特征选择小介: Main_Course/Data_Analytics/2021-09-26-feature-selection.md
         - 金融风控特征工程: Main_Course/Data_Analytics/2021-09-25-Feature-engineering.md
