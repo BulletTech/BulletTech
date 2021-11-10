@@ -26,7 +26,7 @@ a^{[l+2]}=g\left(z^{[l+2]}+a^{[l]}\right)
 \end{gathered}
 $$
 
-论文作者推测模型对残差的拟合优化会比对随机权重的拟合更加容易（因为baseline就是恒等映射），所以在极端状况下，残差块的中间层没有激活，即W≈0，b≈0，则有：
+[论文](https://arxiv.org/abs/1512.03385 'Deep Residual Learning for Image Recognition')作者推测模型对残差的拟合优化会比对随机权重的拟合更加容易（因为baseline就是恒等映射），所以在极端状况下，残差块的中间层没有激活，即W≈0，b≈0，则有：
 
 $$
 \begin{aligned}
@@ -144,10 +144,6 @@ model.fit_generator(train_data, steps_per_epoch= math.ceil(train_data.samples / 
 ## 4 小结
 
 本文章简单地介绍了 ResNet 的特点，以及提供了搭建图片分类模型的代码模板。显卡配置较高的同学可以尝试搭建不同规模的 ResNet 网络观察网络深度对模型性能的影响；对于图像识别模型感兴趣的同学推荐细读 ResNet 论文: Deep Residual Learning for Image Recognition。
-
-## 5 参考文献
-
-[1] [Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
