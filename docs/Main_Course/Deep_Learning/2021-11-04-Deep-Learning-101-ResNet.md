@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 深度学习 101-搭建 ResNet 识别鲜花图像
 
 !!! info
-作者：Jeremy，发布于 2021-11-07，阅读时间：约 6 分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+作者：Jeremy，发布于 2021-11-07，阅读时间：约 6 分钟，微信公众号文章链接：[:fontawesome-solid-link:](http://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484833&idx=1&sn=ce699ce77f78c8f205fdaad306a6b043&chksm=eb90f6d5dce77fc322aafa60057257ec282407c5f7627c716239e4cd8849399e0f3cdb0d5a14#rd)
 
 ## 1 前言
 
