@@ -20,7 +20,7 @@ template: overrides/blogs.html
 
 ## 2 GitHub Action概览
 
-GitHub Action可以自动执行自定义的脚本完成预先设定的工作。用户需要设置触发条件（事件）及条件满足时的命令，GitHub就可以自动完成预设的操作，例如当有更新给合并到master/main分支时，自动执行测试脚本检查错误。下图展示了GitHub Action执行时的组件：
+GitHub Action可以自动执行自定义的脚本完成预先设定的工作。用户需要设置触发条件（事件）及条件满足时的命令，GitHub就可以自动完成预设的操作，例如当有更新合并到master/main分支时，自动执行测试脚本检查错误。下图展示了GitHub Action执行时的组件：
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/overview-actions-design.png"  />
