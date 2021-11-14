@@ -22,7 +22,7 @@ template: overrides/blogs.html
   <figcaption> Docker启动失败 </figcaption>
 </figure>
 
-这是因为Docker无法在Windows系统中直接运行，而需要创建一个Windows系统中的Linux虚拟机（VM）为Docker的正常运行搭建好底层依赖。虽然[官方文档](https://docs.docker.com/desktop/windows/install/#wsl-2-backend 'WSL2的安装')提供了hyper-V和WSL2两种解决方案，但是WSL2是基于hpyer-v在WSL1的升级版，其功能，安装方式也简单方便，因此作者就选择了WSL2的后端方式来运行Docker。
+这是因为Docker无法在Windows系统中直接运行，而需要创建一个Windows系统中的Linux虚拟机（VM）为Docker的正常运行搭建好底层依赖。虽然[官方文档](https://docs.docker.com/desktop/windows/install/#wsl-2-backend 'WSL2的安装')提供了hyper-V和WSL2两种解决方案，但是WSL2是基于hpyer-V在WSL1的升级版，其功能，安装方式也简单方便，因此作者就选择了WSL2的后端方式来运行Docker。
 
 ## 3 安装WSL2
 
@@ -108,7 +108,7 @@ localhostForwarding=true
   <figcaption> 成功界面 </figcaption>
 </figure>
 
-## 总结
+## 5 总结
 
 有些软件在系统中为了成功地运行，确实需要一些先决条件。不管是参考具体的官方文档还是搜索一些避雷的经验贴，安装成功并使用后，你会发现这些环境的搭建是一劳永逸的，快尝试在你的Windows系统中运行Docker吧！之后我们还会持续分享Docker的学习经验，敬请期待。
 
