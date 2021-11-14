@@ -48,6 +48,7 @@ nav:
         - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Analytics Tool:
+        - 教你成功在Win10系统中运行docker: Main_Course/Analytics_Tools/2021-11-13-Docker-Windows.md
         - GitHub Action概览: Main_Course/Analytics_Tools/2021-11-13-GitHub-Action.md
         - Docker初体验: Main_Course/Analytics_Tools/2021-11-05-Docker-Sharing.md
         - 用GitHub做一份精美的在线简历: Main_Course/Analytics_Tools/2021-11-01-GitHub-Resume.md
