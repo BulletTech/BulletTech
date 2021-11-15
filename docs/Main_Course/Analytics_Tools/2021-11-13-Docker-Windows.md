@@ -9,7 +9,7 @@ template: overrides/blogs.html
     
 ## 1 前言
 
-在上文[Docker初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)中我们介绍了Docker的一些基本概念和常用命令，但因为Docker是在Linux系统下创建的资源分离机制，所以它无法在Windows系统下直接运行。这次我们将用3分钟的时间介绍一下如何在Win10系统下运行Docker。
+在上文[Docker初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)中我们介绍了Docker的一些基本概念和常用命令，但因为Docker是在Linux系统下创建的资源分离机制，所以它无法在Windows系统下直接运行。这次我们将用4分钟的时间介绍一下如何在Win10系统下运行Docker。
 
 ## 2 下载Docker
 
