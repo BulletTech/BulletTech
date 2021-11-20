@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-我们之前介绍了很多GitHub的酷炫功能，为了方便理解这篇文章的内容，建议阅读之前的文章回顾基本的GitHub操作知识，特别是GitHub Action：
+在这篇文章里，我们将介绍如何使用GitHub Action自动推送Docker镜像到镜像仓库，大大简化构建镜像、推送镜像的繁琐步骤！我们之前介绍了很多GitHub的酷炫功能，为了方便理解这篇文章的内容，建议阅读之前的文章回顾基本的GitHub操作知识，特别是GitHub Action：
 
 - [一行代码都不写，教你使用GitHub](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484191&idx=1&sn=73a2aae2e46b2a836729c636b937f2ef&chksm=eb90f06bdce7797d71dee815e283559f05d0db8dcab9c6430c856a8da05aa79617a9c0eee39f&token=150554771&lang=zh_CN#rd)
 - [Git常用命令一览](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484312&idx=1&sn=420520ba2de61eedb13569b8cb03b0c6&chksm=eb90f0ecdce779fae14099e90400637b801dd4689372c466c033c36ce0c9dd55e9ec8deb10bb&token=2142567738&lang=zh_CN#rd)
@@ -21,8 +21,6 @@ template: overrides/blogs.html
 
 - [教你成功在Win10系统中运行docker](https://mp.weixin.qq.com/s/8B9ye55zpWCCVTA4g4fLQQ)
 - [Docker 初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)
-
-在这篇文章里，我们将介绍如何使用GitHub Action自动推送Docker镜像到镜像仓库，大大简化构建镜像、推送镜像的繁琐步骤！
 
 ## 2 配置镜像仓库
 
