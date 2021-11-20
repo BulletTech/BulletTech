@@ -19,7 +19,7 @@ template: overrides/blogs.html
 
 同时，如果需要理解Docker的知识，可以查看Tina老师的佳作：
 
-- [教你成功在Win10系统中运行docker](https://mp.weixin.qq.com/s/8B9ye55zpWCCVTA4g4fLQQ)
+- [教你成功在Win10系统中运行Docker](https://mp.weixin.qq.com/s/8B9ye55zpWCCVTA4g4fLQQ)
 - [Docker 初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)
 
 ## 2 配置镜像仓库
