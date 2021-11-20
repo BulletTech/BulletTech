@@ -2,11 +2,11 @@
 template: overrides/blogs.html
 ---
 
-# 教你成功在Win10系统中运行docker
+# 教你成功在Win10系统中运行Docker
 
-!!! info 
+!!! info
     作者：Tina，发布于2021-11-13，阅读时间：约5分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/8B9ye55zpWCCVTA4g4fLQQ)
-    
+
 ## 1 前言
 
 在上文[Docker初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)中我们介绍了Docker的一些基本概念和常用命令，但因为Docker是在Linux系统下创建的资源分离机制，所以它无法在Windows系统下直接运行。这次我们将用4分钟的时间介绍一下如何在Win10系统下运行Docker。
@@ -85,7 +85,7 @@ localhostForwarding=true
 
 ## 4 检查Docker设置
 
-成功安装好Linux distribution后，还需要在docker desktop中设置一下关于WSL2的基本参数才能确保Docker的成功运行。
+成功安装好Linux distribution后，还需要在Docker desktop中设置一下关于WSL2的基本参数才能确保Docker的成功运行。
 
 首先，需要在通用设置下，勾选使用WSL2基础的引擎，如图所示：
 
@@ -117,4 +117,3 @@ localhostForwarding=true
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
 </figure>
-
