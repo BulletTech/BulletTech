@@ -26,8 +26,8 @@ template: overrides/blogs.html
 
 这里以阿里云的镜像容器服务为例做演示，其他的镜像仓库原理类似，可以触类旁通。登录[阿里云镜像容器服务](https://cr.console.aliyun.com/cn-shanghai/instance/repositories '阿里云镜像容器服务')，进行如下操作：
 
-- 创建命名空间（namespace），作为镜像仓库的合计，可以以公司或组织命名，如我们使用`bullettech_services`。
-- 创建镜像仓库（registry），作为镜像的合集，可以存储不同版本的镜像到仓库中。
+- 创建命名空间（namespace）作为镜像仓库的合集，可以以公司或组织命名，如我们使用`bullettech_services`。
+- 创建镜像仓库（registry）作为镜像的合集，可以存储不同版本的镜像到仓库中。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/registry.png"  />
