@@ -16,9 +16,9 @@ argparse 模块可以让人轻松编写用户友好的命令行接口，通常�
 
 argparse 的使用主要分为三步：
 
-- 实例化对象
-- 使用 add_argument()方法定义可以传递的参数
-- 将参数传入程序
+1. 实例化对象
+2. 使用 add_argument() 方法定义可以传递的参数
+3. 使用 parse_args() 方法将参数对象传入程序
 
 ### 2.1 传递位置参数
 
@@ -30,6 +30,7 @@ argparse 的使用主要分为三步：
 import argparse
 
 def compute_square(d):
+    '''计算平方'''
     return d ** 2
 
 def create_parser():
@@ -73,6 +74,7 @@ import argparse
 
 
 def compute_area(d, objshape="square", return_int=False):
+    '''计算正方形或圆形的面积'''
     if objshape == "square":
         result = d**2
     elif objshape == "circle":
