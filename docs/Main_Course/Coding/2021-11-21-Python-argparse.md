@@ -2,7 +2,7 @@
 
 ## 1 前言
 
-Python 作为脚本语言，可以简单地在命令行中进行启动，但有的时候我们往往需要传入一些参数让同一套程序解决更多类型的任务。例如在 [12306 智能订票](https://bullettech.github.io/BulletTech/Main_Course/One_Day_Build/2021-11-10-12306ticket/)项目中，脚本根据命令行中传入参数的不同，有三种不同的运行模式，如:
+Python 作为脚本语言，可以简单地在命令行中进行启动，但有的时候我们往往需要传入一些参数让同一套程序解决更多类型的任务。例如在 [12306 智能订票](http://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484848&idx=1&sn=7e5b0b4e4740c42fa629a2c98e159839&chksm=eb90f6c4dce77fd266441c22a659668af98bc34e1bea9c264a296bc89a4f5c7da3570c6cb1e8#rd)项目中，脚本根据命令行中传入参数的不同，有三种不同的运行模式，如:
 
 - python run.py -r: 运行抢票程序
 - python run.py -c: 过滤 cdn
@@ -22,7 +22,7 @@ argparse 的使用主要分为三步：
 
 ### 2.1 传递位置参数
 
-位置参数是在命令行中唤起脚本时，必须携带的参数。在 add_argument()方法中定义时，参数名称前缀没有"-"或"--"。一般用于传递执行程序时必不可少的参数。
+位置参数是在命令行中唤起脚本时，必须携带的参数。在 add_argument()方法中定义时，参数名称前缀没有"-"或"--"。如果定义了位置参数，该参数在命令行中必不可少。
 
 我们看一个简单的实例:
 
@@ -50,7 +50,7 @@ if __name__ == "__main__":
     print("return value: ",compute_square(args.number))
 ```
 
-我们设置改文件名为 `ap.py`。当我们在终端中启动该文件并传入一个整数时，程序将会打印该数的平方:
+我们设置改文件名为 `ap.py`。当我们在终端中启动该文件并传入一个整数时，程序将会打印整数的平方:
 
 ```shell
 $ python ap.py 4
@@ -138,9 +138,9 @@ Area: 12
 
 除了常用的方法以外，argparse 模块还包含
 
-- add_argument_group():添加参数组
-- add_subparsers():添加子命令
-- add_mutually_exclusive_group():创建互斥组
+- add_argument_group(): 添加参数组
+- add_subparsers(): 添加子命令
+- add_mutually_exclusive_group(): 创建互斥组
 
 等等实现相对复杂的参数传递逻辑的方法，了解并适时地运用这些方法可以节省不少设定规则的时间。
 
