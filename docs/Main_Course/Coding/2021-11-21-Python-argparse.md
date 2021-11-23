@@ -1,4 +1,11 @@
+---
+template: overrides/blogs.html
+---
+
 # Python argparse 模块介绍
+
+!!! info
+作者：Jeremy，发布于 2021-11-22，阅读时间：约 7 分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
 ## 1 前言
 
@@ -118,7 +125,7 @@ if __name__ == "__main__":
     print(compute_area(**vars(args)))
 ```
 
-注意这里分别用了 add_argument()方法中一些常用参数来实现更规范和流畅的参数传:
+注意这里分别用了 add_argument()方法中一些常用参数来实现更规范和流畅的参数传递:
 
 - dest: 指定传入的命名空间(Namespace)的参数对象名称
 - choices: 限定参数的可选输入范围
