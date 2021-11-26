@@ -14,7 +14,9 @@ template: overrides/blogs.html
 初次体验Docker的人可能会发现，每当我们重启容器时，之前的数据都会丢失，又或是感觉数据很难转移。这些都是因为Docker的默认设置会将所有的文件都创建在一个容器中的某些可读容器层。换句话说，一个容器的数据是独立不能共享的，为了实现数据共享和数据迁移，就需要我们使用一些方法可持续化地管理数据。
 
 ## 3 关于Volumes
+
 ### 3.1 优势
+
 Volumes是一种由Docker创建并维护的数据管理机制。如下图所示，它最大的特点是将文件存放在Docker主机内，是不允许其他程序的访问，在不同容器间共享数据时具有较高的安全性；且可直接用Docker命令进行数据备份和数据迁移。除此之外，Volumes在Docker Desktop的表现性能比其他方式更加出色，这也是官方最推荐的方式。
 
 <figure>
@@ -23,6 +25,7 @@ Volumes是一种由Docker创建并维护的数据管理机制。如下图所示�
 </figure>
 
 ### 3.2 Volumes常见操作
+
 这里参考[官方文档](https://docs.docker.com/storage/volumes/ 'Docker Volumes')，我们介绍几种不同情况下对Volumes的使用。
 
 1.我们可通过以下基本命令创建及管理Volumes:
@@ -98,7 +101,8 @@ volumes:
 docker run -v /dbdata --name dbstore ubuntu /bin/bash
 ```
 
-接下来，为这个容器的Volumes进行备份，利用`--volumes-from`指定容器的来源，指定将`dbdata`备份到路径`/backup`下的`backup.tar`文件中：
+第二步，为这个容器的Volumes进行备份，利用`--volumes-from`指定容器的来源，指定将`dbdata`备份到路径`/backup`下的`backup.tar`文件中：
+
 ```shell
 docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
 ```
@@ -109,15 +113,17 @@ docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf /backup/
 docker run -v /dbdata --name dbstore2 ubuntu /bin/bash
 ```
 
-再从`backup.tar`文件中迁移到新的容器中：
+最后，再从`backup.tar`文件中迁移到新的容器中：
+
 ```shell
  docker run --rm --volumes-from dbstore2 -v $(pwd):/backup ubuntu bash -c "cd /dbdata && tar xvf /backup/backup.tar --strip 1"
 ```
 
 ## 4 总结
-当部署服务时，功能的开发是一方面，数据的可持续化管理也是必不可少的一个部分。希望这篇文章可以帮助你在Docker学习过程中对Volumes有更深的理解并选择合适的命令管理容器中的数据。
 
-欢迎各位小伙伴留言讨论。
+当部署服务时，功能的开发是一方面，数据的可持续化管理也是必不可少的一个部分。希望这篇文章可以帮助你在使用Docker Volume时选择合适的命令来管理容器中的数据。
+
+欢迎各位小伙伴留言讨论！
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
