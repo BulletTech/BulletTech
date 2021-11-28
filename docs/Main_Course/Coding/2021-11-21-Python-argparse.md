@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Python argparse 模块介绍
 
 !!! info
-    作者：Jeremy，发布于 2021-11-22，阅读时间：约 7 分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Jeremy，发布于 2021-11-22，阅读时间：约 7 分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/A58uLo9wbMGLSdYqAJXqsw)
 
 ## 1 前言
 
