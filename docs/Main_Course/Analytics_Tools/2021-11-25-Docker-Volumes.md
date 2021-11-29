@@ -8,7 +8,7 @@ template: overrides/blogs.html
     作者：Tina，发布于2021-11-25，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/633YSdxPLfOA7JZ4znsZ0A)
 
 ## 1 前言
-在[Docker初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)一文中我们介绍了Docker的基本概念，之后我们又分享了如何[教你成功在Win10系统中运行docker](https://mp.weixin.qq.com/s/8B9ye55zpWCCVTA4g4fLQQ)和[使用GitHub Action自动构建和推送Docker镜像](https://mp.weixin.qq.com/s/BCzu346DvNga84vEUXUbTQ)，尝试过的朋友应该可以在Docker中为自己的程序代码创建镜像，运行容器，或是在`github action`中使用Docker等基本操作。今天，我们将说说如何Docker中持续化管理数据--数据卷(Volumes)的使用。
+在[Docker初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)一文中我们介绍了Docker的基本概念，之后我们又分享了如何[教你成功在Win10系统中运行docker](https://mp.weixin.qq.com/s/8B9ye55zpWCCVTA4g4fLQQ)和[使用GitHub Action自动构建和推送Docker镜像](https://mp.weixin.qq.com/s/BCzu346DvNga84vEUXUbTQ)，尝试过的朋友应该可以在Docker中为自己的程序代码创建镜像，运行容器，或是在`Github Action`中使用Docker等基本操作。今天，我们将说说如何Docker中持续化管理数据--数据卷(Volumes)的使用。
 
 ## 2 管理数据的必要性
 初次体验Docker的人可能会发现，每当我们重启容器时，之前的数据都会丢失，又或是感觉数据很难转移。这些都是因为Docker的默认设置会将所有的文件都创建在一个容器中的某些可读容器层。换句话说，一个容器的数据是独立不能共享的，为了实现数据共享和数据迁移，就需要我们使用一些方法可持续化地管理数据。
