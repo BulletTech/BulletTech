@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Docker之数据的可持续化
 
 !!! info
-    作者：Tina，发布于2021-11-25，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Tina，发布于2021-11-25，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/633YSdxPLfOA7JZ4znsZ0A)
 
 ## 1 前言
 在[Docker初体验](https://mp.weixin.qq.com/s/gfO5BiK9fqRtWf8rjP8mPA)一文中我们介绍了Docker的基本概念，之后我们又分享了如何[教你成功在Win10系统中运行docker](https://mp.weixin.qq.com/s/8B9ye55zpWCCVTA4g4fLQQ)和[使用GitHub Action自动构建和推送Docker镜像](https://mp.weixin.qq.com/s/BCzu346DvNga84vEUXUbTQ)，尝试过的朋友应该可以在Docker中为自己的程序代码创建镜像，运行容器，或是在`github action`中使用Docker等基本操作。今天，我们将说说如何Docker中持续化管理数据--数据卷(Volumes)的使用。
