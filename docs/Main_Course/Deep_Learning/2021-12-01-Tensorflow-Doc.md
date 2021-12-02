@@ -31,8 +31,8 @@ template: overrides/blogs.html
 
 ## 4 层次结构
 
-第三部分介绍了TensorFlow的层次结构，主要是低、中、高三阶的api示例。  
-低阶api直接操作张量、计算图和自动微分。虽然显得有些复杂和原始，但是是我们离开新手村，自定义模型时不可获取的知识点。
+第三部分介绍了TensorFlow的层次结构，主要是低、中、高三阶的API示例。  
+低阶API直接操作张量、计算图和自动微分。虽然显得有些复杂和原始，但是是我们离开新手村，自定义模型时不可或缺的工具。
 
 如定义模型：
 
@@ -53,7 +53,7 @@ class LinearRegression:
 model = LinearRegression()
 ```
 
-中阶api提供了更高程度的封装，如损失函数、优化器等组件。
+中阶API提供了更高程度的封装，如损失函数、优化器等组件。
 
 ```python
 model = layers.Dense(units = 1) 
@@ -64,7 +64,7 @@ model.optimizer = optimizers.SGD(learning_rate=0.001)
 
 我们只需要选择想要的优化器，调节学习速率即可。并不需要关心优化器本身是如何实现的。这些小组件给我们的建模提供了很多便利。
 
-高阶api主要是模型类的接口。主要包括以下三点：
+高阶API主要是模型类的接口。主要包括以下三点：
 
 - 序列化模型
     ```python
@@ -72,7 +72,7 @@ model.optimizer = optimizers.SGD(learning_rate=0.001)
     model.add(layers.Dense(1,input_shape =(2,)))
     model.summary()
     ```
-- 函数式api
+- 函数式API
     ```python
     input_tensor = Input(shape=(64, ))
     z = layers.Dense(32, activation='relu')(input_tensor)
@@ -107,9 +107,9 @@ model.optimizer = optimizers.SGD(learning_rate=0.001)
     model.summary()
     
     ```
-## 5 api
+## 5 API
 
-最后是低、中、高阶api具体的介绍。感兴趣的读者可以自行阅读。有示例、有中文，读起来感觉轻松又愉快。
+最后是低、中、高阶API具体的介绍。感兴趣的读者可以自行阅读。有示例、有中文，读起来感觉轻松又愉快。
 
 ## 6 总结
 
