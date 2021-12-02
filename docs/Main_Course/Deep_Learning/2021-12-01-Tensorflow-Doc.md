@@ -10,7 +10,9 @@ template: overrides/blogs.html
 ## 1 前言
 
 在工作中，需要使用TensorFlow来构建模型(由于不断内卷，需要模型又Fancy效果又好)。碰到问题，搜索他人的回答或是TensorFlow的官方文档是解决问题的高效方法。但是面向搜索引擎编程，不免觉得获取的知识有点破碎。  
+
 为了构建一个较为完整的TensorFlow的知识体系，而又不一上来就陷入官方文档难以自拔，作者找到了《30天吃掉那只TensorFlow2》这一关于TensorFlow的[开源工具书](https://jackiexiao.github.io/eat_tensorflow2_in_30_days/chinese/ '30天吃掉那只TensorFlow2')。  
+
 这一项目不仅提供了文档，还提供了环境，可以直接运行示例。事实上，有一定基础的读者也并不需要30天就能完成阅读。有一定基础，想快速构建TensorFlow知识体系的读者不妨吃下这颗安利。
 
 ## 2 建模流程
@@ -20,8 +22,11 @@ template: overrides/blogs.html
 ## 3 核心概念
 
 这一部分介绍了TensorFlow的核心组成：张量，计算图以及自动微分。  
+
 张量可以理解为多维数组，是TensorFlow中的基本数据结构。  
+
 计算图就是整个计算关系。TensorFlow1.0采用的是静态计算图，在创建完计算图后，需要开启一个session才会显式执行。进入TensorFlow2.0后，为了方便调试，TensorFlow采用了动态计算图。由于动态计算图效率会低一些，TensorFlow允许我们使用@tf.function装饰器构建静态计算图，也被称作Autograph。  
+
 神经网络在更新权重时，很重要的一步是求解梯度。TensorFlow提供了tf.GradientTape(梯度磁带)，使我们可以很方便的求解梯度，更新网络。
 
 ## 4 层次结构
@@ -76,12 +81,39 @@ model.optimizer = optimizers.SGD(learning_rate=0.001)
     from keras.models import Model
     model = Model(input_tensor, y)
     ```
+- 继承Model基类，自定义模型
+    ```python
+    class DNNModel(models.Model):
+        def __init__(self):
+            super(DNNModel, self).__init__()
 
-## 3 总结
+        def build(self,input_shape):
+            self.dense1 = layers.Dense(4,activation = "relu",name = "dense1") 
+            self.dense2 = layers.Dense(8,activation = "relu",name = "dense2")
+            self.dense3 = layers.Dense(1,activation = "sigmoid",name = "dense3")
+            super(DNNModel,self).build(input_shape)
 
-上述例子介绍了如何自定义keras模型，能够为日常的工作流更添灵活性，实际工作中，还需反复推敲，确保正确无误。
+        # 正向传播
+        @tf.function(input_signature=[tf.TensorSpec(shape = [None,2], dtype = tf.float32)])  
+        def call(self,x):
+            x = self.dense1(x)
+            x = self.dense2(x)
+            y = self.dense3(x)
+            return y
 
-希望这次的分享对你有帮助，欢迎在评论区留言讨论！
+    model = DNNModel()
+    model.build(input_shape =(None,2))
+
+    model.summary()
+    
+    ```
+## 5 api
+
+最后是低、中、高阶api具体的介绍。感兴趣的读者可以自行阅读。有示例、有中文，读起来感觉轻松又愉快。
+
+## 6 总结
+
+《30天吃掉那只TensorFlow2》这本工具书可以让我们很快对TensorFlow建立起知识框架。内容不会太多，深度也足够。适合有一定基础，又想进一步了解TensorFlow的读者。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
