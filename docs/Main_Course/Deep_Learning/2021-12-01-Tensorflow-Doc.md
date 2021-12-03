@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 读《30天吃掉那只TensorFlow2》
 
 !!! info
-    作者：Void，发布于2021-12-01，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/z2uBxwe8UNDXWMDNS_k-Gg)
+    作者：Void，发布于2021-12-01，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/cw2DW7al5nJV93roAN_gwg)
 
 ## 1 前言
 
