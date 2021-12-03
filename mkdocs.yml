@@ -31,6 +31,7 @@ nav:
         - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
     - Deep Learning:
+        - 读《30天吃掉那只TensorFlow2》: Main_Course/Deep_Learning/2021-12-01-Tensorflow-Doc.md
         - 深度学习 101-搭建 ResNet 识别鲜花图像: Main_Course/Deep_Learning/2021-11-04-Deep-Learning-101-ResNet.md
         - 算法中的multi家族: Main_Course/Deep_Learning/2021-10-10-multi-algo.md
         - 在Apple Silicon Macs上安装TensorFlow: Main_Course/Deep_Learning/2021-10-10-TF-on-M1-Mac.md
