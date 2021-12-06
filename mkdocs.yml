@@ -70,6 +70,7 @@ nav:
         - Python元组常用操作小技巧: Main_Course/Coding/2021-08-07-Python-Tuple.md
         - 好用的Python包: Main_Course/Coding/2021-08-03-useful-python-packages.md
     - One Day Build:
+        - 租房信息获取： Main_Course/One_Day_Build/2021-12-04-renting_data.md
         - 获取基金行情数据: Main_Course/One_Day_Build/2021-11-27-fund_data.md
         - 12306智能订票: Main_Course/One_Day_Build/2021-11-10-12306ticket.md
         - 解读FlaskBB源码: Main_Course/One_Day_Build/2021-10-29-flaskbb2.md
