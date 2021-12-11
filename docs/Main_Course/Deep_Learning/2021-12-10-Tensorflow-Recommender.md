@@ -8,6 +8,7 @@ template: overrides/blogs.html
     作者：Tina，发布于2021-12-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
 ## 1 前言
+
 我们浏览在各个平台时会发现"为你推荐"功能。比如Youtube推荐爱看的视频，音乐软件为你提供你可能喜欢的音乐等。其实这一功能的背后涉及的原理就是人工智能的推荐系统。今天我们将介绍Tensorflow推荐系统模型的库——[Tensoflow Recommenders(TFRS)](https://www.tensorflow.org/recommenders?hl=en 'TensorFlow Recommenders')。
 
 对Tensorflow感兴趣的朋友们，还可以回顾我们之前相关的文章：
@@ -18,6 +19,7 @@ template: overrides/blogs.html
 - [读《30天吃掉那只TensorFlow2》](https://mp.weixin.qq.com/s/cw2DW7al5nJV93roAN_gwg)
 
 ## 2 推荐原理
+
 这里我们用电影推荐的例子来讲解推荐系统的原理。
 
 对于现有的四个用户和五部类型不同的电影，首先，我们需要创建用户画像和定义电影类别，这一步是为了区分数据，将现实特征转化为可计算的变量。对于现有的用户数据和电影数据，我们如何给用户D推荐她可能喜欢的电影呢？
@@ -33,7 +35,7 @@ template: overrides/blogs.html
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/movie2.png" width="500" />
 </figure>
 
-接下来，用矩阵分解进行协同过滤计算预测的反馈矩阵。如下图所示，U代表用户矩阵，V代表电影候选条目的矩阵，计算的A值就是预测的反馈值。所以**协同过滤**就是依据用户和候选条目之间的相似度来进行推荐。
+接下来，用矩阵分解进行协同过滤计算预测的反馈矩阵。如下图所示，U代表用户矩阵，V代表电影候选条目的矩阵，计算的A值就是预测的反馈值。所以`协同过滤`就是依据用户和候选条目之间的相似度来进行推荐。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/movie3.png" width="500" />
@@ -187,7 +189,7 @@ model.compile(optimizer=tf.keras.optimizers.Adagrad(learning_rate=0.1))
 cached_train = train.shuffle(100_000).batch(8192).cache()
 cached_test = test.batch(4096).cache()
 
-model.fit(cached_train, epochs=3
+model.fit(cached_train, epochs=3)
 #使用test data evaluate
 model.evaluate(cached_test, return_dict=True)
 {'factorized_top_k/top_1_categorical_accuracy': 0.00044999999227002263,
@@ -217,6 +219,7 @@ print(f"Recommendations for user 9: {titles[0, :3]}")
 </figure>
 
 ## 4 总结
+
 TensorFlow 为NLP的学习提供了非常丰富且强大的资源，感兴趣的朋友可以将这些模型运用到现有的文本数据中，去探究一些有趣的惊喜吧！
 
 希望这篇分享可以对你有所帮助，也欢迎各位留言讨论。
