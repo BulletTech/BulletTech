@@ -8,8 +8,7 @@ template: overrides/blogs.html
     作者：Tina，发布于2021-12-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
 ## 1 前言
-
-当我们浏览在各个平台时会发现**为你推荐**功能。比如Youtube推荐爱看的视频，音乐软件为你提供你可能喜欢的音乐等。其实这一功能的背后涉及的原理就是人工智能的推荐系统。今天我们将介绍Tensorflow推荐系统模型的库——[Tensoflow Recommenders(TFRS)](https://www.tensorflow.org/recommenders?hl=en 'TensorFlow Recommenders')。
+我们浏览在各个平台时会发现"为你推荐"功能。比如Youtube推荐爱看的视频，音乐软件为你提供你可能喜欢的音乐等。其实这一功能的背后涉及的原理就是人工智能的推荐系统。今天我们将介绍Tensorflow推荐系统模型的库——[Tensoflow Recommenders(TFRS)](https://www.tensorflow.org/recommenders?hl=en 'TensorFlow Recommenders')。
 
 对Tensorflow感兴趣的朋友们，还可以回顾我们之前相关的文章：
 
@@ -19,10 +18,9 @@ template: overrides/blogs.html
 - [读《30天吃掉那只TensorFlow2》](https://mp.weixin.qq.com/s/cw2DW7al5nJV93roAN_gwg)
 
 ## 2 推荐原理
-
 这里我们用电影推荐的例子来讲解推荐系统的原理。
 
-对于现有的四个用户和五部类型不同的电影，首先，我们需要对创建用户画像和电影类别的定义，这一步是为了区分数据，将现实特征转化为可计算的变量。对于现有的用户数据的电影数据，我们如何给用户D推荐她可能喜欢的电影呢？
+对于现有的四个用户和五部类型不同的电影，首先，我们需要创建用户画像和定义电影类别，这一步是为了区分数据，将现实特征转化为可计算的变量。对于现有的用户数据和电影数据，我们如何给用户D推荐她可能喜欢的电影呢？
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/movie1.png" width="500" />
 </figure>
@@ -58,7 +56,7 @@ template: overrides/blogs.html
 
 2. 对于提取模型的结果，我们还需要排序来缩小选择最有可能被用户选择的items。
 
-这一部分，我们先介绍第一阶段的信息提取模型。信息提取模型又包含两个子模型，查询模型和候选模型，对应上述的例子就是用户矩阵和候选条目矩阵，通过计算两个子模型的乘积，得到的`query-candidate affinity score`就是反应查询和候选条目之间的匹配程度，即用户喜欢推荐条目的可能性。
+这一部分，我们先介绍第一阶段的信息提取模型。信息提取模型又包含两个子模型，查询模型和候选模型，对应上述的例子就是用户矩阵和候选条目矩阵，通过计算两个子模型的乘积，得到的`query-candidate affinity score`就是反映查询和候选条目之间的匹配程度，即用户喜欢推荐条目的可能性。
 
 
 ```Python
@@ -219,7 +217,6 @@ print(f"Recommendations for user 9: {titles[0, :3]}")
 </figure>
 
 ## 4 总结
-
 TensorFlow 为NLP的学习提供了非常丰富且强大的资源，感兴趣的朋友可以将这些模型运用到现有的文本数据中，去探究一些有趣的惊喜吧！
 
 希望这篇分享可以对你有所帮助，也欢迎各位留言讨论。
