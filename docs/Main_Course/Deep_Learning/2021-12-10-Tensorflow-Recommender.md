@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-我们浏览在各个平台时会发现"为你推荐"功能。比如YouTube推荐爱看的视频，音乐软件为你提供你可能喜欢的音乐等。其实这一功能的背后涉及的原理就是人工智能的推荐系统。今天我们将介绍TensorFlow推荐系统模型的库——[Tensoflow Recommenders(TFRS)](https://www.tensorflow.org/recommenders?hl=en 'TensorFlow Recommenders')。
+我们浏览在各个平台时会发现"为你推荐"功能。比如YouTube推荐爱看的视频，音乐软件为你提供你可能喜欢的音乐等。其实这一功能的背后涉及的原理就是人工智能的推荐系统。今天我们将介绍TensorFlow推荐系统模型的库——[TensorFlow Recommenders(TFRS)](https://www.tensorflow.org/recommenders?hl=en 'TensorFlow Recommenders')。
 
 对TensorFlow感兴趣的朋友们，还可以回顾我们之前相关的文章：
 
