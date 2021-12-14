@@ -5,13 +5,13 @@ template: overrides/blogs.html
 # TensorFlow推荐系统（一）
 
 !!! info
-    作者：Tina，发布于2021-12-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Tina，发布于2021-12-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/OUsG-JqqYeh9q6oAa_uhmg)
 
 ## 1 前言
 
-我们浏览在各个平台时会发现"为你推荐"功能。比如Youtube推荐爱看的视频，音乐软件为你提供你可能喜欢的音乐等。其实这一功能的背后涉及的原理就是人工智能的推荐系统。今天我们将介绍Tensorflow推荐系统模型的库——[Tensoflow Recommenders(TFRS)](https://www.tensorflow.org/recommenders?hl=en 'TensorFlow Recommenders')。
+我们浏览在各个平台时会发现"为你推荐"功能。比如YouTube推荐爱看的视频，音乐软件为你提供你可能喜欢的音乐等。其实这一功能的背后涉及的原理就是人工智能的推荐系统。今天我们将介绍TensorFlow推荐系统模型的库——[Tensoflow Recommenders(TFRS)](https://www.tensorflow.org/recommenders?hl=en 'TensorFlow Recommenders')。
 
-对Tensorflow感兴趣的朋友们，还可以回顾我们之前相关的文章：
+对TensorFlow感兴趣的朋友们，还可以回顾我们之前相关的文章：
 
 - [Keras各种Callbacks介绍](https://mp.weixin.qq.com/s/N3_1lJ_a1gAVLyqsXUwN9Q)
 - [使用tf.keras自定义模型](https://mp.weixin.qq.com/s/z2uBxwe8UNDXWMDNS_k-Gg)
