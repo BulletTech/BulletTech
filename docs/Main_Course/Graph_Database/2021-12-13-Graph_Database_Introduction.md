@@ -54,7 +54,7 @@ template: overrides/blogs.html
 
 属性使图数据库中的信息变的更加丰富，查询时也可以利用到这些属性，如查询在1970年后出生的人。
 
-  <figure>
+<figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V3.png"  />
   <figcaption></figcaption>
 </figure>
@@ -68,7 +68,7 @@ template: overrides/blogs.html
 
 当你看到以下这样的查询结果时，是不是很赏心悦目呢？电影与人之间的关系可以一目了然。当然，这只是一小部分数据查询的结果。
 
-  <figure>
+<figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V4.png"  />
   <figcaption></figcaption>
 </figure>
