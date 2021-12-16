@@ -39,8 +39,7 @@ template: overrides/blogs.html
 
 ### 2.4 标签
 
-标签是节点或者关系的种类（Type)。如上述图中，定义蓝色节点时，他们的Label是Person；定义橙色节点时，他们的Label是Movie。
-<p>标签的作用是，当你进行查询时只返回特定某些类型的节点。比如只查询Person节点。
+标签是节点或者关系的种类（Type)。如上述图中，定义蓝色节点时，他们的Label是Person；定义橙色节点时，他们的Label是Movie。标签的作用是，当你进行查询时只返回特定某些类型的节点。比如只查询Person节点。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V2.png"  />
@@ -49,9 +48,7 @@ template: overrides/blogs.html
 
 ### 2.5 属性
 
-节点与关系都能添加属性。属性是以name-value对的形式添加的。比如，返回上述图中所有Person的name和born属性。
-
-属性使图数据库中的信息变的更加丰富，查询时也可以利用到这些属性，如查询在1970年后出生的人。
+节点与关系都能添加属性。属性是以name-value对的形式添加的。比如，返回上述图中所有Person的name和born属性。属性使图数据库中的信息变的更加丰富，查询时也可以利用到这些属性，如查询在1970年后出生的人。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V3.png"  />
@@ -76,12 +73,10 @@ template: overrides/blogs.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V5.png"  />
-  <figcaption>结果可视化 - 1</figcaption>
+  <figcaption>结果可视化 - 2</figcaption>
 </figure>
 
-当然没有人会从这样的可视化结果中获取有价值的信息，那图数据库具体应该如何应用在业务中呢？请期待之后的图数据库实战系列，绝对能让你对这个又新又潮的技术有更具体的认识！
-
-希望这次的分享对你有帮助，欢迎在评论区留言讨论！
+当然没有人会从这样的可视化结果中获取有价值的信息，那图数据库具体应该如何应用在业务中呢？请期待之后的图数据库实战系列，绝对能让你对这个又新又潮的技术有更具体的认识！希望这次的分享对你有帮助，欢迎在评论区留言讨论！
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
