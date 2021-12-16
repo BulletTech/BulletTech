@@ -50,7 +50,7 @@ nav:
         - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Graph:
-        - 初识图数据库: Main_Course/Graph_Database/Graph_Database_Introduction.md
+        - 初识图数据库: Main_Course/Graph_Database/2021-12-13-Graph_Database_Introduction.md
     - Analytics Tool:
         - Docker踩坑日记: Main_Course/Analytics_Tools/2021-12-09-Docker2.md
         - Docker之数据的持续性化: Main_Course/Analytics_Tools/2021-11-25-Docker-Volumes.md
