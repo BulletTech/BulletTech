@@ -17,7 +17,7 @@ template: overrides/blogs.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V1.png"  />
-  <figcaption></figcaption>
+  <figcaption>节点与关系</figcaption>
 </figure>
 
 
@@ -44,7 +44,7 @@ template: overrides/blogs.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V2.png"  />
-  <figcaption></figcaption>
+  <figcaption>标签</figcaption>
 </figure>
 
 ### 2.5 属性
@@ -55,7 +55,7 @@ template: overrides/blogs.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V3.png"  />
-  <figcaption></figcaption>
+  <figcaption>属性</figcaption>
 </figure>
 
 ## 3 Why图数据库
@@ -69,14 +69,14 @@ template: overrides/blogs.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V4.png"  />
-  <figcaption></figcaption>
+  <figcaption>结果可视化 - 1</figcaption>
 </figure>
 
 当数据变多时，可视化的结果是这样的。。。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V5.png"  />
-  <figcaption></figcaption>
+  <figcaption>结果可视化 - 1</figcaption>
 </figure>
 
 当然没有人会从这样的可视化结果中获取有价值的信息，那图数据库具体应该如何应用在业务中呢？请期待之后的图数据库实战系列，绝对能让你对这个又新又潮的技术有更具体的认识！
