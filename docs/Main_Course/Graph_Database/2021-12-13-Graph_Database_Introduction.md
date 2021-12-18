@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 初识图数据库
 
 !!! info
-    作者：Dragond41，发布于2021-12-13，阅读时间：约2分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Dragond41，发布于2021-12-13，阅读时间：约2分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485112&idx=1&sn=efd4f9b472a3d58378407bb6fad46a2f&chksm=eb90f5ccdce77cda0285d53331834a787364d4458a3588173c9fe8ef6953499362bd64f7c918&token=1650861834&lang=zh_CN#rd)
 
 ## 1 前言
 
