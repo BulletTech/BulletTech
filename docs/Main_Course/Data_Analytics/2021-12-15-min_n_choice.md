@@ -8,6 +8,7 @@ template: overrides/blogs.html
     作者：Echo，发布于 2021-12-11，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
 ## 1 前言
+
 读曼昆的经济学原理的时候，印象最深刻的一句话是：People face trade-offs, the cost of something is what you give up to get it. 简单来说就是事物都有成本，每个选择都面临取舍。这句话在生产环境中尤为合适。当研发新药的时候，当金融机构对策略进行分析的时候，当判断系统某个新功能是否有效的时候，在一切需要假设检验的地方，就会面临检验样本量的选择。样本量太小，则检验的可信度不高，没有说服力；样本量太大，则成本过高，不可取。在这种情况下，如何选择使样本有代表性、使检验有效的最小样本量变得尤其重要。
 
 
@@ -37,6 +38,7 @@ template: overrides/blogs.html
 ### 2.2 确定检验方法
 
 明确好研究对象之后，我们就可以选择合适的检验方法。若对象为均值，多采用Z检验/t检验；若为比率，则可以考虑采用卡方检验。当确定了检验方法，我们可以写出统计量的公式，反推之后即可得到最小样本量n的计算公式。统计量公式繁多，这里不再赘述。均值公式举例如下图。注意，如为双边检验，则将α改成α/2即可。
+
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/test_flow.png" width="500"/>
   <figcaption>均值的检验方式选择</figcaption>
@@ -65,6 +67,7 @@ GofChisquarePower().solve_power(effect_size=es(prop1=0.33, prop2=0.30, method= '
 #设定显著性水平为0.05，检验功效为0.8，效应量为标准均差计算方式，对照组和实验组的（预期）比率分别为30%和33%，实验组和对照组数量相等，双边检验。
 zt_ind_solve_power(effect_size=es(prop1=0.33, prop2=0.30, method= 'normal'), alpha=0.05, power=0.8, ratio=1.0, alternative="two-sided")
 ```
+
 结果如下。
 
 <figure>
@@ -77,9 +80,9 @@ zt_ind_solve_power(effect_size=es(prop1=0.33, prop2=0.30, method= 'normal'), alp
 此外：常用α为0.05，常用β为0.2。从中我们也可以看出偏好。人们倾向于严格控制拒真的概率，为此宁愿付出接受错误原假设的代价。
 
 ## 3 小结
-假设检验方法千千万，但万变不离其宗。只要明确了研究对象，接下来的步骤就顺理成章非常顺滑。样本大小、显著性水平α、检验功效（1-β）、效应量，给定其中任意三个量，我们就可以推算出第四个量。
+假设检验方法千千万，但万变不离其宗。只要明确了研究对象，接下来的步骤就顺理成章非常顺滑。样本大小、显著性水平α、检验功效（1-β）、效应量，给定其中任意三个量，我们就可以推算出第四个量。网络上也有很多现成的AB test计算器，例如[Evan's Awesome A/B Tools](https://www.evanmiller.org/ab-testing/sample-size.html)，可供大家参考。
 
-最后留一个开放性问题。还是刚刚的例子，当期待B型广告的点击率提升的更多时，需要的最小样本量是增多还是减少呢？
+最后留一个开放性问题。还是刚刚的例子，当期待B型广告的点击率提升得更多时，需要的最小样本量是增多还是减少呢？
 
 
 <figure>
