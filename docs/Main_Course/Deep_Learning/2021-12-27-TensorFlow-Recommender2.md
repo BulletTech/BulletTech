@@ -186,7 +186,7 @@ model.evaluate(cached_test, return_dict=True)
 # 'total_loss': 1.2078243494033813}
 ```
 
-最后，为用户9推荐以下三部电影并附有模型预测的ranking结果：+
+最后，为用户9推荐以下三部电影并附有模型预测的ranking结果：
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/rank_result2.png" width="500" />
@@ -196,6 +196,7 @@ model.evaluate(cached_test, return_dict=True)
 ## 3 总结
 
 TensorFlow电影推荐系统中，第一步先从数据集中获取用户可能会喜欢的电影条目，第二步则是对这些电影条目进行预测排序，目的就是推荐有限的用户最有可能感兴趣并点击的电影。而在现实生活中，你就是用户。所以，教给大家一个解决剧荒的小技巧，与其随机浏览寻找，不如搜索一些你看过的喜欢的电影，和你喜欢相似的电影就在”为你推荐“一栏了，不妨试试吧！
+
 希望这篇分享可以对你有所帮助，欢迎各位留言讨论。
 
 <figure>
