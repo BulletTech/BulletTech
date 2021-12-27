@@ -115,9 +115,11 @@ class RankingModel(tf.keras.Model):
 
 ```
 由下图所示，用未经过训练的模型为用户号为9推荐电影《One Flew Over the Cuckoo's Nest (1975)》，预测的可能性为0.016：
+
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/rank_result11.png" width="500" align="left"/>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/rank_result11.png" width="500"/>
 </figure>
+
 
 为了让模型有更好的表现，在原有的模型任务中加入`MSE`均方误差的损失函数和`RMSE`均方根误差的评估函数：
 
@@ -187,8 +189,9 @@ model.evaluate(cached_test, return_dict=True)
 最后，为用户9推荐以下三部电影并附有模型预测的ranking结果：+
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/rank_result2.png" width="500" align="left"/>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/rank_result2.png" width="500" />
 </figure>
+
 
 ## 3 总结
 
