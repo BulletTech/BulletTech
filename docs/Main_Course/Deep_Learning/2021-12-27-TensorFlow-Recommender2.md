@@ -57,7 +57,7 @@ train = shuffled.take(80_000)
 test = shuffled.skip(80_000).take(20_000)
 ```
 
-为原分类型数据创造嵌入的数组，这里使用的是用连续整数来匹配电影标题和用户ID的每行数据：
+为了给分类型变量做嵌入向量，这里是先用连续整数来匹配电影标题和用户ID的每个数值：
 
 ```Python
 movie_titles = ratings.batch(1_000_000).map(lambda x: x["movie_title"])
@@ -69,7 +69,8 @@ unique_user_ids = np.unique(np.concatenate(list(user_ids)))
 
 ### 2.2 搭建排序模型
 
-先设置用户和电影的`Embedding`，设置模型层和预测层，接着用`call()`函数输入input，从而返回ranking的结果：
+在文本模型中，需要先为用户和电影做词嵌入（Embeddings），简单来说就是将文本型数据转化为可计算数值型向量的过程，这里每一个嵌入向量的维度为32。第二步是搭建顺序模型，其模型调用的是`Keras Dense`的全连接层，激活函数为`relu`整流线性单元，它的特点是在用默认值时，返回逐元素的`max(x,0)`。最后用`call()`函数输入input，从而返回ranking的结果。
+
 
 ```Python
 class RankingModel(tf.keras.Model):
@@ -121,7 +122,7 @@ class RankingModel(tf.keras.Model):
 </figure>
 
 
-为了让模型有更好的表现，在原有的模型任务中加入`MSE`均方误差的损失函数和`RMSE`均方根误差的评估函数：
+为了可以在训练时有评估值，在原有的模型任务中加入`MSE`均方误差的损失函数和`RMSE`均方根误差的评估函数：
 
 ```Python
 task = tfrs.tasks.Ranking(
@@ -160,7 +161,7 @@ class MovielensModel(tfrs.models.Model):
 
 ### 2.3 拟合并评估模型
 
-调用`complie()`使用`Adagrad`的优化器，并指定学习率为0.1:
+调用模型编译`complie()`方法并使用`Adagrad`的优化器，指定学习率为0.1:
 
 ```Python
 model = MovielensModel()
