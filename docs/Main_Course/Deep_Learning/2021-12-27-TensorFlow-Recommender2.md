@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # TensorFlow推荐系统（二）
 
 !!! info
-    作者：Tina，发布于2021-12-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/OUsG-JqqYeh9q6oAa_uhmg)
+    作者：Tina，发布于2021-12-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/0WcTB6WLBZX0EwbVZ_DeCg)
     
 ## 1 前言
 读过[TensorFlow推荐系统（一）](https://mp.weixin.qq.com/s/OUsG-JqqYeh9q6oAa_uhmg)的朋友们应该还有印象，上回我们介绍的模型是信息检索（retrieval），而在推荐系统中还有另一个任务模型，即为信息排序（ranking）。在排序阶段，其主要任务是对检索模型产出的条目进行调整以选择最有可能被用户喜欢和选择的电影条目。
