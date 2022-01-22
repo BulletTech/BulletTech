@@ -80,7 +80,7 @@ neg_mean_squared_error
 
 同时，基于不纯净度的特征重要性容易受到高数量类别属性的影响（High Cardinality Features），所以那些数值型变量往往排名靠前。而Permutation Importance对模型的特征没有偏见，也不局限于特定的模型类别，适用性较广。请注意。如果特征有较强的多重共线性，建议只取一个重要的特征，方法可查看[示例](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-multicollinear-py 'Permutation Importance with Multicollinear or Correlated Features')。
 
-同时，`sklearn`还提供了一个直观的[示例](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-py 'Permutation Importance vs Random Forest Feature Importance (MDI)')展现基于不纯静态度的特征重要性和Permutation Importance的区别。
+同时，`Scikit Learn`还提供了一个直观的[示例](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-py 'Permutation Importance vs Random Forest Feature Importance (MDI)')展现基于不纯静态度的特征重要性和Permutation Importance的区别。
 
 希望这次的分享对你有帮助，欢迎在评论区留言讨论！
 
