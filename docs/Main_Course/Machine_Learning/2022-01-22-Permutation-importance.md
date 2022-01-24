@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 特征选择之Permutation Importance
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485194&idx=1&sn=60a358eeed0c7fa7b2ebb362cce92a9b&chksm=eb90f47edce77d68bc54cd35d12a5530c9639250b19b469269f2e0559eeb81c5b2d0052e74a4&token=120973643&lang=zh_CN#rd)
 
 
 ## 1 前言
@@ -24,9 +24,7 @@ Permutation Importance适用于表格型数据，其对于特征重要性的评�
 - 对于数据集D的每一个特征j
   - 对于K次重复实验中的每一次迭代k，随机重排列特征j，构造一个被污染的数据集$Dc_{k,j}$
   - 计算模型m在数据集$Dc_{k,j}$上的性能评分$s_{k,j}$
-  - 特征j的重要性分数$i_{j}$则可以记作
-
-$$ i_{j} = s - \frac{1}{K}\sum_{k=1}^{K}s_{k,j} $$
+  - 特征j的重要性分数$i_{j}$则可以记作$$ i_{j} = s - \frac{1}{K}\sum_{k=1}^{K}s_{k,j} $$
 
 ## 3 示例代码
 
