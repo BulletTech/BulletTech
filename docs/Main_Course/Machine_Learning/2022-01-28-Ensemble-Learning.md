@@ -124,7 +124,7 @@ accuracy_score(y_test,y_pred)
   <figcaption>AdaBoost sequential training</figcaption>
 </figure>
 
-
+**其代码实现如下所示：**
 ```Python
 from sklearn.ensemble import AdaBoostClassifier
 ## 200 decision stumps with 0.5 learning rate using the 
@@ -141,7 +141,7 @@ ada_clf.fit(X_train,y_train)
 
 #### 2.3.2 Gradient Boosting
 
-和`AdaBoosting`一样，梯度提升也是按照一定序列去学习数据集，不断迭代来生成强壮的集成模型。然而，不同之处在于梯度提升是拟合新数据来减少前者的残差，而非更新前者的权重。
+和`AdaBoosting`一样，梯度提升(Gradient Boosting)也是按照一定序列去学习数据集，不断迭代来生成强壮的集成模型。然而，不同之处在于梯度提升是拟合新数据来减少前者的残差，而非更新前者的权重。
 
 我们可以用`Gradient Boosted Regression Trees(GBRT)`为例来学习代码的实现方式：
 
@@ -205,22 +205,3 @@ gbrt_best.fit(X_train, y_train)
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
 </figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
