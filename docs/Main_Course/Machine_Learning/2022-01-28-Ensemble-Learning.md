@@ -116,7 +116,7 @@ accuracy_score(y_test,y_pred)
 
 #### 2.3.1 AdaBoost
 
-`AdaBoost`在进化分类器过程中是着重训练欠拟合的训练数据集。如下图所示，在搭建此类分类器时，后续的分类器在训练时会不断地学义以更新前者的权重以提高数据的拟合效果。
+`AdaBoost`在进化分类器过程中是着重训练欠拟合的训练数据集。如下图所示，在搭建此类分类器时，后续的分类器在训练时会不断地学习以更新前者的权重以提高数据的拟合效果。
 
 
 <figure>
@@ -141,7 +141,7 @@ ada_clf.fit(X_train,y_train)
 
 #### 2.3.2 Gradient Boosting
 
-和`AdaBoosting`一样，梯度提升(Gradient Boosting)也是按照一定序列去学习数据集，不断迭代来生成强壮的集成模型。然而，不同之处在于梯度提升是拟合新数据来减少前者的残差，而非更新前者的权重。
+和`AdaBoosting`一样，梯度提升(Gradient Boosting)也是按照一定序列去学习数据集，不断迭代来生成稳健的集成模型。然而，不同之处在于梯度提升是拟合新数据来减少前者的残差，而非更新前者的权重。
 
 我们可以用`Gradient Boosted Regression Trees(GBRT)`为例来学习代码的实现方式：
 
