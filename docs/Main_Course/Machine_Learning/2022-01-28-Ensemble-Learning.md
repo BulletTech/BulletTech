@@ -9,7 +9,7 @@ template: overrides/blogs.html
     
 ## 1 前言
 
-在机器学习中有一个常见且重要的概念——集成学习（Ensemble Learning），即把多个预测模型的结果集合在一起学习数据集的过程。今天，我们将介绍集成学习的一些常见方法，如`Voting Classifiers`,`Bagging`和`Boosting`。
+在机器学习中有一个常见且重要的概念——集成学习（Ensemble Learning），即通过构建多个机器学习器来完成学习任务。今天，我们将介绍集成学习的一些常见方法，如`Voting Classifiers`,`Bagging`和`Boosting`。
 
 ## 2 集成方法
 
@@ -112,7 +112,7 @@ accuracy_score(y_test,y_pred)
 
 ### 2.3 Boosting
 
-`Boosting`是指将多个`weak learner`组合在一起的集成方式。与前面几个不同的是，它是按照顺逐个训练分类器，并在每次训练中纠正前一个分类器，最常见的方法就是`Adaptive Boosting(AdaBoost)`和`Gradient Boosting`。
+`Boosting`是指将多个`weak learner`组合在一起的集成方式。与前面几个不同的是，它是按照顺序逐个训练分类器，并在每次训练中纠正前一个分类器，最常见的方法就是`Adaptive Boosting(AdaBoost)`和`Gradient Boosting`。
 
 #### 2.3.1 AdaBoost
 
