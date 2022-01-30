@@ -44,7 +44,7 @@ nav:
         - Keras各种Callbacks介绍: Main_Course/Deep_Learning/2021-10-02-TF-Callbacks.md
         - 神经网络调参技巧: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
     - Machine Learning:
-        - 集成学习小介绍: Main_Course/Machine_Learning/2022-01-28-Ensemble-Learning.md
+        - 集成学习小介: Main_Course/Machine_Learning/2022-01-28-Ensemble-Learning.md
         - 特征选择之Permutation Importance: Main_Course/Machine_Learning/2022-01-22-Permutation-importance.md
         - 特征选择小介: Main_Course/Data_Analytics/2021-09-26-feature-selection.md
         - 金融风控特征工程: Main_Course/Data_Analytics/2021-09-25-Feature-engineering.md
