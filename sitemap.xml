@@ -376,6 +376,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Graph_Database/2022-01-29-Neo4J-Fraud-s1/</loc>
+         <lastmod>2022-01-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-28-Decision-Tree/</loc>
          <lastmod>2022-01-30</lastmod>
          <changefreq>daily</changefreq>
