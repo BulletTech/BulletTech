@@ -88,7 +88,7 @@ def create_ae_mlp(num_columns, num_labels, hidden_units, dropout_rates, ls = 1e-
 ```
 
 
-可以看到最终的损失是Decoder的MAE损失加上自编码器BCE损失(是否交易)加上原始Input和Encoder拼接后网络的BCE损失(是否交易)。虽然比赛时已经有开源的方案使用了自编码器。但是Cats Trading...做了一些优化，如将自编码器部分和拼接后的网络同时优化，这样也避免了先在整体训练自编码器再使用CV(cross validation)带来的leakage(数据泄露)。
+可以看到最终的损失是Decoder的MSE损失加上自编码器BCE损失(是否交易)加上原始Input和Encoder拼接后网络的BCE损失(是否交易)。虽然比赛时已经有开源的方案使用了自编码器。但是Cats Trading...做了一些优化，如将自编码器部分和拼接后的网络同时优化，这样也避免了先在整体训练自编码器再使用CV(cross validation)带来的leakage(数据泄露)。
 
 ### 3.2 [Optiver Top 1 solution from nyanp](https://www.kaggle.com/c/optiver-realized-volatility-prediction/discussion/302626 'Optiver Top 1 solution from nyanp')
 
