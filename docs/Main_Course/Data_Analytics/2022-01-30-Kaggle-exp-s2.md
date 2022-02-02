@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # Kaggle量化竞赛Top方案
 
 !!! info 
-    作者：Void，发布于2022-01-30，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/oaT49hLhGiL_ajz1dIlGcQ)
+    作者：Void，发布于2022-01-30，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/M1UrhmJ9dlBlsZUv_jAHxg)
 
 ## 1 引言
 
