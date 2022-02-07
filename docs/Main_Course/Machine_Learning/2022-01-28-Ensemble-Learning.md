@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 集成学习小介
 
 !!! info
-    作者：Tina，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：Tina，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/CrNeVH2Qm84QQvdHZAIp2g)
     
 ## 1 前言
 
