@@ -67,7 +67,7 @@ $$ τ(X_i) = E[Y_i(1)∣X_i]−E[Y_i(0)∣X_i] = E[Y_i^obs∣X_i=x,T=1]−E[Y_i^
 
 ## 3 示例代码
 
-Python有pylift包可供使用，也有详尽的[官方文档](https://pylift.readthedocs.io/en/latest/quick-start.html)可供参考。示例代码如下。
+Python有pylift包可供使用，也有详尽的(https://pylift.readthedocs.io/en/latest/quick-start.html '官方文档')可供参考。示例代码如下。
 
 ```python
 import numpy as np
