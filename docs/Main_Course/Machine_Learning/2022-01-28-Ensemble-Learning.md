@@ -18,7 +18,7 @@ template: overrides/blogs.html
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/voting_classifier.png"/>
-  <figcaption>Voting Classifier Predicton</figcaption>
+  <figcaption>Voting Classifier Prediction</figcaption>
 </figure>
 
 
