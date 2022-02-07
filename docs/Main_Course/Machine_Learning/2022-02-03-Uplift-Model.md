@@ -2,7 +2,7 @@
 template: overrides/blogs.html
 ---
 
-# 因果推断 Uplift Model
+# 因果推断之 Uplift Model
 
 !!! info
     作者：Echo，发布于2022-02-03，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
@@ -85,7 +85,7 @@ df = {'X1':list(np.random.normal(10,5,100)),
 df = pd.DataFrame(df)
 df.head()
 
-#以下为官方示例代码
+#以下为官方示例代码，默认使用XGBoost模型
 from pylift import TransformedOutcome
 up = TransformedOutcome(df1, col_treatment='Treatment', col_outcome='Converted')
 
