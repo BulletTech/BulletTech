@@ -37,15 +37,19 @@ template: overrides/blogs.html
 
 ## 2 理论依据
 
-定义X为用户特征（如性别，年龄，收入等），T代表treatment（有无干预，1为有，0为无），Y表示因变量结果（如点击率/转化率等）。Uplift Model旨在预测ITE（Individual Treatment Effect），$τ_i=Y_i(1)−Y_i(0)$ 可以表示为用户在有无干预时的转化概率之差，也就是独立样本的treated和control的潜在结果的差值。Uplift Model的目标为最大化$τ_i$。考虑到不可能对同一个用户既知道发优惠券的结果又知道不发优惠券的结果（这就是反事实之处），模型因此强依赖于条件独立假设CIA(Conditional Independent Assumption)，即要求用户特征和干预策略相互独立。
+定义X为用户特征（如性别，年龄，收入等），T代表treatment（有无干预，1为有，0为无），Y表示因变量结果（如点击率/转化率等）。Uplift Model旨在预测ITE（Individual Treatment Effect），$\tau_{i}=Y_{i}(1)-Y_{i}(0)$ 可以表示为用户在有无干预时的转化概率之差，也就是独立样本的treated和control的潜在结果的差值。Uplift Model的目标为最大化$\tau_{i}$。考虑到不可能对同一个用户既知道发优惠券的结果又知道不发优惠券的结果（这就是反事实之处），模型因此强依赖于条件独立假设CIA(Conditional Independent Assumption)，即要求用户特征和干预策略相互独立。
 
-$$ {Y_i (1),Y_i (0)}⊥ T_i | X_i $$
+$$
+\left\{Y_{i}(1), Y_{i}(0)\right\} \perp T_{i} \mid X_{i}
+$$
 
 实际应用中可以通过A/B test随机试验得到使用干预策略和不干预策略的两组样本，且两组样本的特征分布一致。只有在CIA假设下，用所有样本的因果效应的期望的估计值来代表总体用户才是无偏的，可得条件平均干预效应 CATE(Conditional Average Treatment Effect)为
 
-$$ τ(X_i) = E[Y_i(1)∣X_i]−E[Y_i(0)∣X_i] = E[Y_i^obs∣X_i=x,T=1]−E[Y_i^obs∣X_i=x,T=0] $$
+$$
+\tau\left(X_{i}\right)=E\left[Y_{i}(1) \mid X_{i}\right]-E\left[Y_{i}(0) \mid X_{i}\right]=E\left[Y_{i}^{o b s} \mid X_{i}=x, T=1\right]-E\left[Y_{i}^{o b s} \mid X_{i}=x, T=0\right]
+$$
 
-其中 $ Y_i^obs=T_iY_i(1)+(1−T_i)Y_i(0) $.
+其中 $Y_{i}^{o b s}=T_{i} Y_{i}(1)+\left(1-T_{i}\right) Y_{i}(0)$.
 
 ## 3 模型
 
