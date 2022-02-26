@@ -58,6 +58,7 @@ nav:
         - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Graph:
+        - Neo4J图数据库反欺诈分析实战（二） - 准备环境: Main_Course/Graph_Database/2022-01-29-Neo4J-Fraud-s2.md
         - Neo4J图数据库反欺诈分析实战（一） - 搭建分析环境: Main_Course/Graph_Database/2022-01-29-Neo4J-Fraud-s1.md
         - 初识图数据库: Main_Course/Graph_Database/2021-12-13-Graph_Database_Introduction.md
     - Analytics Tool:
