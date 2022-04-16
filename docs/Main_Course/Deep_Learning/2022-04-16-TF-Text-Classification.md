@@ -87,7 +87,7 @@ Label: 0
 
 ## 3 文本预处理
 
-该小节使用tf_text和tf.stings的处理文本的API对数据进行处理，tf.data.Dataset能够很方便得将对应的函数映射到数据中，推荐学习和使用。
+该小节使用tf_text和tf.stings的处理文本的API对数据进行处理，tf.data.Dataset能够很方便地将对应的函数映射到数据中，推荐学习和使用。
 
 ### 3.1 转换文字大小写
 
