@@ -12,11 +12,12 @@ template: overrides/blogs.html
 
 在自然语言处理中，文本分类是非常普遍的应用，本文将介绍使用TensorFlow开发基于嵌入（Embedding）的文本分类模型，由于TensorFlow的API变化迅速且兼容性感人，因此本文均使用的截至2022年4月16日最新版的TensorFlow(tf)及相关库，主要包括：TensorFlow（v2.8.0），TensorFlow Datasets（tfds v4.0.1）和TensorFlow Text（tf_text v2.8.1），如遇bug，请首先检查TensorFlow相关库的版本。此工作流主要使用的API有：
 
-- tf.data.Dataset
-- tf.keras (Sequential & Functional API)
 - tf.strings
 - tfds
 - tf_text
+- tf.data.Dataset
+- tf.keras (Sequential & Functional API)
+
 
 ## 1 获取数据
 
@@ -29,7 +30,6 @@ import collections
 import pathlib
 
 import tensorflow as tf
-
 from tensorflow.keras import layers
 from tensorflow.keras import losses
 from tensorflow.keras import utils
@@ -37,10 +37,6 @@ from tensorflow.keras.layers import TextVectorization
 
 import tensorflow_datasets as tfds
 import tensorflow_text as tf_text
-
-import re
-
-import collections
 
 import plotly.express as px
 import matplotlib.pyplot as plt
