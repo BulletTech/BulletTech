@@ -120,7 +120,7 @@ for pattern, rewrite in str_regex_pattern:
 
 ### 2.3 构建词表
 
-使用训练集构造词表（注意不要使用验证集或者测试集，会导致信息泄露），改步骤将字符映射到相应的索引，利于将数据转化为模型能够进行训练和预测的格式。
+使用训练集构造词表（注意不要使用验证集或者测试集，会导致信息泄露），该步骤将字符映射到相应的索引，利于将数据转化为模型能够进行训练和预测的格式。
 
 ```python
 # Do not use validation set as that will lead to data leak
