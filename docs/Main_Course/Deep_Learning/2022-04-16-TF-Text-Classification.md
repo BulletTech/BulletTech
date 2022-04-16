@@ -8,7 +8,7 @@ template: overrides/blogs.html
     作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
 
-## 前言
+## 1 前言
 
 在自然语言处理中，文本分类是非常普遍的应用，本文将介绍使用TensorFlow开发基于嵌入（Embedding）的文本分类模型，由于TensorFlow的API变化迅速且兼容性感人，因此本文均使用的截至2022年4月16日最新版的TensorFlow(tf)及相关库，主要包括：`TensorFlow（v2.8.0）`，`TensorFlow Datasets（tfds v4.0.1）`和`TensorFlow Text（tf_text v2.8.1）`，如遇bug，请首先检查TensorFlow相关库的版本。此工作流主要使用的API有：
 
@@ -19,7 +19,7 @@ template: overrides/blogs.html
 - tf.keras (Sequential & Functional API)
 
 
-## 1 获取数据
+## 2 获取数据
 
 TensorFlow Datasets（tfds）里含有非常多的[示例数据](https://www.tensorflow.org/datasets 'TensorFlow Datasets数据集')用于研究试验，本文使用经典的电影评论数据，进行情感二分类任务的研究。首先使用tfds的API直接加载数据，结果将存在一个[tf.data.Dataset](https://www.tensorflow.org/api_docs/python/tf/data/Dataset 'tf.data.Dataset')对象中。
 
@@ -87,11 +87,11 @@ Text: b"This was an absolutely terrible movie. Don't be lured in by Christopher 
 Label: 0
 ```
 
-## 2 文本预处理
+## 3 文本预处理
 
 该小节使用tf_text和tf.stings的处理文本的API对数据进行处理，tf.data.Dataset能够很方便得将对应的函数映射到数据中，推荐学习和使用。
 
-### 2.1 转换文字大小写
+### 3.1 转换文字大小写
 
 分类任务中字符大小写对模型预测没有贡献，因此对dataset使用`map`操作把所有字符转为小写，务必注意tf.data.Dataset里的数据格式。
 
@@ -100,7 +100,7 @@ train_ds = train_ds.map(lambda text, label: (tf_text.case_fold_utf8(text), label
 val_ds = val_ds.map(lambda text, label: (tf_text.case_fold_utf8(text), label))
 ```
 
-### 2.2 文本格式化
+### 3.2 文本格式化
 
 该步骤对文本使用正则表达式进行格式化处理，如标点前后加上空格，利于后续步骤使用空格分词。
 
@@ -114,7 +114,7 @@ for pattern, rewrite in str_regex_pattern:
 
 ```
 
-### 2.3 构建词表
+### 3.3 构建词表
 
 使用训练集构造词表（注意不要使用验证集或者测试集，会导致信息泄露），该步骤将字符映射到相应的索引，利于将数据转化为模型能够进行训练和预测的格式。
 
@@ -171,7 +171,7 @@ fig.show()
 
 由图可见，在七万多个字符中，许多字符出现的频率极低，因此选择词表大小为两万。
 
-### 2.4 构建词表映射
+### 3.4 构建词表映射
 
 使用TensorFlow的`tf.lookup.StaticVocabularyTable`对字符进行映射，其能将字符映射到对应的索引上，并使用一个简单的样本进行测试。
 
@@ -214,7 +214,7 @@ train_ds = train_ds.map(text_index_lookup)
 val_ds = val_ds.map(text_index_lookup)
 ```
 
-### 2.5 配置数据集
+### 3.5 配置数据集
 
 借助tf.data.Dataset的`cache`和`prefetch`API，能够有效提高性能，`cache`方法将数据加载在内存中用于快速读写，而`prefetch`则能够在模型预测时同步处理数据，提高时间利用率。
 
@@ -237,7 +237,7 @@ train_ds = train_ds.padded_batch(BATCH_SIZE  )
 val_ds = val_ds.padded_batch(BATCH_SIZE  )
 ```
 
-### 2.6 处理测试集
+### 3.6 处理测试集
 
 用于验证模型性能的测试集也可以使用同样的方式处理，确保模型可以正常预测：
 
@@ -260,9 +260,9 @@ test_ds = configure_dataset(test_ds)
 test_ds = test_ds.padded_batch(BATCH_SIZE  )
 ```
 
-## 3 建立模型
+## 4 建立模型
 
-### 3.1 使用Sequential API构建卷积神经网络
+### 4.1 使用Sequential API构建卷积神经网络
 
 ```Python
 vocab_size += 2 # 0 for padding and 1 for oov token
@@ -355,7 +355,7 @@ Loss:  0.45827823877334595
 Accuracy: 86.78%
 ```
 
-### 3.2 使用Functional API构建双向LSTM
+### 4.2 使用Functional API构建双向LSTM
 
 步骤与使用Sequential API类似，但Functional API更为灵活。
 
@@ -429,7 +429,7 @@ Loss:  0.4105057716369629
 Accuracy: 81.60%
 ```
 
-## 4 总结
+## 5 总结
 
 关于文本分类，还有许多新的技术可以尝试，上述工作流中也还有许多决策可以做试验（炼丹），本文旨在使用最新的TensorFlow API过一遍文本分类任务中的重要知识点和常用API，实际工作中仍有许多地方可以优化。希望这次的分享对你有帮助，欢迎在评论区留言讨论！
 
