@@ -39,7 +39,6 @@ import tensorflow_text as tf_text
 import plotly.express as px
 import matplotlib.pyplot as plt
 
-BATCH_SIZE = 32
 
 # Training set.
 train_ds = tfds.load(
