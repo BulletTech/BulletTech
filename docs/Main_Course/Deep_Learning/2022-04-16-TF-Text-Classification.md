@@ -24,8 +24,6 @@ template: overrides/blogs.html
 TensorFlow Datasets（tfds）里含有非常多的[示例数据](https://www.tensorflow.org/datasets 'TensorFlow Datasets数据集')用于研究试验，本文使用经典的电影评论数据，进行情感二分类任务的研究。首先使用tfds的API直接加载数据，结果将存在一个[tf.data.Dataset](https://www.tensorflow.org/api_docs/python/tf/data/Dataset 'tf.data.Dataset')对象中。
 
 ```python
-!pip install "tensorflow-text==2.8.*"
-
 import collections
 import pathlib
 
