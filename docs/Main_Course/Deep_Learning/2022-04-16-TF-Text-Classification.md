@@ -5,7 +5,7 @@ template: overrides/blogs.html
 # 使用TensorFlow进行文本分类
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485273&idx=1&sn=d672fbcc65edeb115f628ad231caeca8&chksm=eb90f42ddce77d3b680b48c9cda52db5f96e3d3a64fc1bf94537dae7efa1a9f8908016572e35&token=200682583&lang=zh_CN#rd)
 
 
 ## 1 前言
