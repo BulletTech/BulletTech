@@ -10,7 +10,7 @@ template: overrides/blogs.html
 
 ## 前言
 
-在自然语言处理中，文本分类是非常普遍的应用，本文将介绍使用TensorFlow开发基于嵌入（Embedding）的文本分类模型，由于TensorFlow的API变化迅速且兼容性感人，因此本文均使用的截至2022年4月16日最新版的TensorFlow(tf)及相关库，主要包括：TensorFlow（v2.8.0），TensorFlow Datasets（tfds v4.0.1）和TensorFlow Text（tf_text v2.8.1），如遇bug，请首先检查TensorFlow相关库的版本。此工作流主要使用的API有：
+在自然语言处理中，文本分类是非常普遍的应用，本文将介绍使用TensorFlow开发基于嵌入（Embedding）的文本分类模型，由于TensorFlow的API变化迅速且兼容性感人，因此本文均使用的截至2022年4月16日最新版的TensorFlow(tf)及相关库，主要包括：`TensorFlow（v2.8.0）`，`TensorFlow Datasets（tfds v4.0.1）`和`TensorFlow Text（tf_text v2.8.1）`，如遇bug，请首先检查TensorFlow相关库的版本。此工作流主要使用的API有：
 
 - tf.strings
 - tfds
