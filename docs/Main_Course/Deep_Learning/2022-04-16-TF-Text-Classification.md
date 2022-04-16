@@ -95,7 +95,7 @@ Label: 0
 
 该小节使用tf_text和tf.stings的处理文本的API对数据进行处理，tf.data.Dataset能够很方便得将对应的函数映射到数据中，推荐学习和使用。
 
-### 2.1 讲文字转为小写
+### 2.1 转换文字大小写
 
 分类任务中字符大小写对模型预测没有贡献，因此对dataset使用`map`操作把所有字符转为小写，务必注意tf.data.Dataset里的数据格式。
 
@@ -266,7 +266,7 @@ test_ds = test_ds.padded_batch(BATCH_SIZE  )
 
 ## 3 建立模型
 
-## 使用Sequential API构建卷积神经网络
+### 3.1 使用Sequential API构建卷积神经网络
 
 ```Python
 vocab_size += 2 # 0 for padding and 1 for oov token
@@ -359,7 +359,7 @@ Loss:  0.45827823877334595
 Accuracy: 86.78%
 ```
 
-## 使用Functional API构建双向LSTM
+### 3.2 使用Functional API构建双向LSTM
 
 步骤与使用Sequential API类似，但Functional API更为灵活。
 
