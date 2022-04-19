@@ -87,7 +87,7 @@ template: overrides/blogs.html
 
 ### 2.5 其他重要属性
 
-`Scikit-Learn`的实现中，决策树的`feature_importances_`属性能展示特征的重要性，其依据是各特征对于衡量指标的减少量，返回正态化后的值。如果特征中不同值的数量非常多（高数量类别属性，High Cardinality Features），推荐使用[sklearn.inspection.permutation_importance](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.permutation_importance.html#sklearn.inspection.permutation_importance)。
+`Scikit-Learn`的实现中，决策树的`feature_importances_`属性能展示特征的重要性，其依据是各特征对于衡量指标的减少量，返回归一化后的值。如果特征中不同值的数量非常多（高数量类别属性，High Cardinality Features），推荐使用[sklearn.inspection.permutation_importance](https://scikit-learn.org/stable/modules/generated/sklearn.inspection.permutation_importance.html#sklearn.inspection.permutation_importance)。
 
 如果要对树进行手动调整如改变分裂的阈值，可以使用[sklearn.tree._tree.Tree](https://scikit-learn.org/stable/auto_examples/tree/plot_unveil_tree_structure.html#sphx-glr-auto-examples-tree-plot-unveil-tree-structure-py)。
 
