@@ -4,7 +4,7 @@ template: overrides/blogs.html
 
 # A/B测试实战case分享，面对考官追问也不慌
 
-!!! info 
+!!! info
     作者：Jeremy，发布于2021-06-28，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/OC5YpJf01E-IvLy8mK5PHA)
 
 ## 前言
@@ -100,12 +100,14 @@ $$
 $$
 sd_{1}=\sqrt{p(1-p)+p(1-p)}
 $$
+
 $$
 sd_{2}=\sqrt{\{p(1-p)+(p+d)(1-(1-(p+d)\}}
 $$
+
 （p为基准转化率，d为最小变化值）
 
-页面浏览cookies所需的最小样本数量 = $$ \frac{n}{0.08} \times 2 $$
+页面浏览cookies所需的最小样本数量 = $ \frac{n}{0.08} \times 2 $
 
 各评估指标需要的最小样本数量分别为：
 
@@ -133,9 +135,11 @@ $$
 
 检验Pageviews(cookies), Clicks, View_click_CTR。 Cookies 和
 Clicks服从二项分布，p = 0.5; 根据中值定理，可得X服从正态分布：
+
 $$
 N\sim(p,\sqrt{p(1-p)/N})
 $$
+
 对于CTR而言，标准偏差计算方式为：
 
 $$
