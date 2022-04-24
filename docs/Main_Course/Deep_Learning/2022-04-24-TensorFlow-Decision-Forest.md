@@ -90,14 +90,14 @@ test_ds = tfdf.keras.pd_dataframe_to_tf_dataset(test_ds_pd, label=label)
 
 ```python
 # 构建随机森林
-model_1 = tfdf.keras.RandomForestModel()
+model = tfdf.keras.RandomForestModel()
 
 # 训练模型
-model_1.fit(x=train_ds)
+model.fit(x=train_ds)
 
 # 评估模型
-model_1.compile(metrics=["accuracy"])
-evaluation = model_1.evaluate(test_ds, return_dict=True)
+model.compile(metrics=["accuracy"])
+evaluation = model.evaluate(test_ds, return_dict=True)
 print()
 
 for name, value in evaluation.items():
@@ -119,7 +119,7 @@ accuracy: 0.9608
 
 ```python
 with open("plot.html", "w") as f:
-  f.write(tfdf.model_plotter.plot_model(model_1, tree_idx=0, max_depth=3))
+  f.write(tfdf.model_plotter.plot_model(model, tree_idx=0, max_depth=3))
 
 from IPython.display import IFrame
 IFrame(src='./plot.html', width=700, height=600)
@@ -130,12 +130,12 @@ IFrame(src='./plot.html', width=700, height=600)
   <figcaption>可视化树</figcaption>
 </figure>
 
-同时在`model_1.summary()`方法里也有许多重要的信息，如输入特征、特征重要性、节点信息等（篇幅有限，在此不一一展开）。同时训练过程中的精度和损失也可以可视化：
+同时在`model.summary()`方法里也有许多重要的信息，如输入特征、特征重要性、节点信息等（篇幅有限，在此不一一展开）。同时训练过程中的精度和损失也可以可视化：
 
 ```Python
 import matplotlib.pyplot as plt
 
-logs = model_1.make_inspector().training_logs()
+logs = model.make_inspector().training_logs()
 
 plt.figure(figsize=(12, 4))
 
