@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-一直以来深度学习和传统机器学习都有在各自领域出色的框架，如构建神经网络，基本上会选择使用TensorFlow和PyTorch，而应对表格型数据，传统的树模型表现仍然十分强劲。在很长一段时间里，深度学习框架并没有API构建树模型，直到`TensorFlow Decision Forests`的出现。
+一直以来深度学习和传统机器学习都有在各自领域出色的框架，如构建神经网络，基本上会选择使用TensorFlow和PyTorch。在现实工作中应对表格型数据时，传统的树模型表现仍然十分强劲。可以在很长一段时间里，深度学习框架并没有API构建树模型，直到`TensorFlow Decision Forests`的出现。
 
 `TensorFlow Decision Forests`提供了一系列API构建基于决策树的模型，如分类回归树（CART），随机森林，梯度提升树等，使用`TensorFlow Decision Forests`，可以使用像构建神经网络一样的范式，构建树模型。本文将一探究竟！
 
