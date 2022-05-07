@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-本人在学习深度学习时，对可视化的好处深有体会：如果对数据、模型结构、模型输出等信息有直观的理解，将更容易发现其中可能出现的错误，这有利于优化模型，并且自己对于相关知识点的认识也更加深刻。对于TensorFlow框架而言，Google做了一个非常有趣的应用来展示神经网络的工作原理 - [TensorFlow Playground](https://playground.tensorflow.org/ "TensorFlow Playground").
+本人在学习深度学习时，对可视化的好处深有体会：如果对数据、模型结构、模型输出等信息有直观的理解，将更容易发现其中可能出现的错误，这有利于优化模型，并且自己对于相关知识点的认识也更加深刻。对于TensorFlow框架而言，Google做了一个非常有趣的应用来展示神经网络的工作原理 - [TensorFlow Playground](https://playground.tensorflow.org/ "TensorFlow Playground")。
 
 ## 2 产品特征
 
