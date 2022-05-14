@@ -15,7 +15,7 @@ template: overrides/blogs.html
 
 ### 2.1 获取数据
 
-本文使用比特币历史价格数据(2013年10月至2021年5月)进行预测，请注意本文不构成投资检建议！
+本文使用比特币历史价格数据(2013年10月至2021年5月)进行预测，请注意本文不构成投资建议！
 
 ```python
 !wget https://raw.githubusercontent.com/mrdbourke/tensorflow-deep-learning/main/extras/BTC_USD_2013-10-01_2021-05-18-CoinDesk.csv
@@ -43,7 +43,7 @@ df.tail()
 | 2021-05-17 | BTC | 45604.615754 | 46805.537852 | 49670.414174 | 43868.638969 |
 | 2021-05-18 | BTC | 43144.471291 | 46439.336570 | 46622.853437 | 42102.346430 |
 
-在此取仅收盘价进行预测：
+在此取收盘价进行预测：
 
 ```python
 bitcoin_prices = pd.DataFrame(df["Closing Price (USD)"]).rename({"Closing Price (USD)":"Price"},axis=1)
