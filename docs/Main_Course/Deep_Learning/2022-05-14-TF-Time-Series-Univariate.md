@@ -15,7 +15,7 @@ template: overrides/blogs.html
 
 ### 2.1 获取数据
 
-本文使用比特币历史价格数据(2013年10月至2021年5月)进行预测，请注意不要以此支撑投资策略！
+本文使用比特币历史价格数据(2013年10月至2021年5月)进行预测，请注意本文不构成投资检建议！
 
 ```python
 !wget https://raw.githubusercontent.com/mrdbourke/tensorflow-deep-learning/main/extras/BTC_USD_2013-10-01_2021-05-18-CoinDesk.csv
