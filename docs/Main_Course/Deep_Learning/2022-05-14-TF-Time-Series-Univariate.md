@@ -9,9 +9,9 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-本文将使用TensorFlow解决时间序列预测的问题，TensorFlow官网也有一个非常详尽但繁杂的[教程](https://www.tensorflow.org/tutorials/structured_data/time_series "Time series forecasting")，所以本文将剥茧抽丝，用通俗易懂的办法过一遍单变量时间序列最核心的内容。
+本文将使用TensorFlow解决时间序列预测的问题，TensorFlow官网有一个非常详尽但冗长的[教程](https://www.tensorflow.org/tutorials/structured_data/time_series "Time series forecasting")，所以本文将剥茧抽丝，用通俗易懂的办法过一遍单变量时间序列预测最核心的内容。
 
-## 2 比特币数据集
+## 2 比特币价格数据集
 
 ### 2.1 获取数据
 
@@ -74,7 +74,7 @@ plt.xlabel("Date")
 
 ### 2.2 制作时间窗口
 
-预期的数据格式为`[0,1,2,3,4,5,6] -> [7]`，即为使用过去七天的价格预测接下来一天的价格。在此，使用TensorFlow提供的[timeseries_dataset_from_array](https://www.tensorflow.org/api_docs/python/tf/keras/utils/timeseries_dataset_from_array "timeseries_dataset_from_array") API进行窗口划分。
+预期的数据格式为`[0,1,2,3,4,5,6] -> [7]`，即使用过去七天的价格预测接下来一天的价格。在此，使用TensorFlow提供的[timeseries_dataset_from_array](https://www.tensorflow.org/api_docs/python/tf/keras/utils/timeseries_dataset_from_array "timeseries_dataset_from_array") API进行窗口划分。
 
 ```python
 
@@ -99,7 +99,7 @@ for batch in dataset:
   break
 ```
 
-返回如下，数据正确地变成了预期的格式。
+返回如下，数据正确地转化成了预期的格式。
 
 ```python
 First Input:[123.65499 125.455   108.58483 118.67466 121.33866 120.65533 121.795  ], Target:123.033
@@ -124,7 +124,7 @@ test_dataset = dataset.skip(split_index).batch(batch_size=32)
 
 ## 3 建模
 
-使用全连接层构建模型，代码如下：
+本文不追求极致的预测准确率，因此仅使用全连接层构建模型，代码如下：
 
 ```python
 tf.random.set_seed(42)
@@ -161,7 +161,7 @@ model.fit( train_dataset,
 
 ```
 
-然后把表现最好的模型加载回来做评估：
+将表现最好的模型加载回来做评估：
 
 ```python
 model = tf.keras.models.load_model("model_checkpoint/model_dense_base")
@@ -179,7 +179,7 @@ model.evaluate(test_dataset)
 
 ## 4 总结
 
-本文对单变量时间序列预测任务做了一个基线，其中TensorFlow的`tf.keras.preprocessing.timeseries_dataset_from_array`API简化了许多处理时间窗口的工作，之后将继续对TensorFlow预测时间序列的任务进行讨论。希望这次的分享对你有帮助，欢迎在评论区留言讨论！
+本文对单变量时间序列预测任务做了一个基准，其中TensorFlow的`tf.keras.preprocessing.timeseries_dataset_from_array`API简化了许多处理时间窗口的工作，之后将继续对TensorFlow预测时间序列的任务进行讨论。希望这次的分享对你有帮助，欢迎在评论区留言讨论！
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
