@@ -56,7 +56,7 @@
  <span class=n>layers</span><span class=o>.</span><span class=n>Dense</span><span class=p>(</span><span class=mi>128</span><span class=p>,</span> <span class=n>activation</span><span class=o>=</span><span class=s2>&quot;relu&quot;</span><span class=p>),</span>
  <span class=n>layers</span><span class=o>.</span><span class=n>Dense</span><span class=p>(</span><span class=n>HORIZON</span><span class=p>,</span> <span class=n>activation</span><span class=o>=</span><span class=s2>&quot;linear&quot;</span><span class=p>)</span>
 <span class=p>]</span>
-<span class=p>,</span> <span class=n>name</span><span class=o>=</span><span class=s2>&quot;model_1_Dense_altnv&quot;</span><span class=p>)</span>
+<span class=p>,</span> <span class=n>name</span><span class=o>=</span><span class=s2>&quot;model_dense_base&quot;</span><span class=p>)</span>
 
 <span class=c1># 2. 编译模型</span>
 <span class=n>model</span><span class=o>.</span><span class=n>compile</span><span class=p>(</span><span class=n>loss</span><span class=o>=</span><span class=s1>&#39;mae&#39;</span><span class=p>,</span>
@@ -77,7 +77,7 @@
             <span class=n>validation_data</span><span class=o>=</span><span class=n>test_dataset</span><span class=p>,</span>
             <span class=n>callbacks</span><span class=o>=</span><span class=p>[</span><span class=n>create_model_checkpoint</span><span class=p>(</span><span class=n>model_name</span><span class=o>=</span><span class=n>model</span><span class=o>.</span><span class=n>name</span><span class=p>)]</span>
             <span class=p>)</span>
-</code></pre></div> <p>然后把表现最好的模型加载回来做评估：</p> <div class=highlight><pre><span></span><code><span class=n>model</span> <span class=o>=</span> <span class=n>tf</span><span class=o>.</span><span class=n>keras</span><span class=o>.</span><span class=n>models</span><span class=o>.</span><span class=n>load_model</span><span class=p>(</span><span class=s2>&quot;model_checkpoint/model_1_Dense_altnv&quot;</span><span class=p>)</span>
+</code></pre></div> <p>然后把表现最好的模型加载回来做评估：</p> <div class=highlight><pre><span></span><code><span class=n>model</span> <span class=o>=</span> <span class=n>tf</span><span class=o>.</span><span class=n>keras</span><span class=o>.</span><span class=n>models</span><span class=o>.</span><span class=n>load_model</span><span class=p>(</span><span class=s2>&quot;model_checkpoint/model_dense_base&quot;</span><span class=p>)</span>
 <span class=n>model</span><span class=o>.</span><span class=n>evaluate</span><span class=p>(</span><span class=n>test_dataset</span><span class=p>)</span>
 </code></pre></div> <p>返回如下，由平均绝对误差（MAE）可见预测的价格平均和真实价格相差700多美元。</p> <div class=highlight><pre><span></span><code><span class=mi>18</span><span class=o>/</span><span class=mi>18</span> <span class=p>[</span><span class=o>==============================</span><span class=p>]</span> <span class=o>-</span> <span class=mi>1</span><span class=n>s</span> <span class=mi>6</span><span class=n>ms</span><span class=o>/</span><span class=n>step</span> <span class=o>-</span> <span class=n>loss</span><span class=p>:</span> <span class=mf>759.4327</span> <span class=o>-</span> <span class=n>mae</span><span class=p>:</span> <span class=mf>759.4327</span>
 <span class=p>[</span><span class=mf>759.4326782226562</span><span class=p>,</span> <span class=mf>759.4326782226562</span><span class=p>]</span>
