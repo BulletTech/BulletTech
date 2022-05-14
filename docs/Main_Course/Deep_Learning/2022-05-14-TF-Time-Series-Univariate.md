@@ -137,7 +137,7 @@ model = tf.keras.models.Sequential(
  layers.Dense(128, activation="relu"),
  layers.Dense(HORIZON, activation="linear")
 ]
-, name="model_1_Dense_altnv")
+, name="model_dense_base")
 
 # 2. 编译模型
 model.compile(loss='mae',
@@ -164,7 +164,7 @@ model.fit( train_dataset,
 然后把表现最好的模型加载回来做评估：
 
 ```python
-model = tf.keras.models.load_model("model_checkpoint/model_1_Dense_altnv")
+model = tf.keras.models.load_model("model_checkpoint/model_dense_base")
 model.evaluate(test_dataset)
 ```
 
