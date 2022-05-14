@@ -43,7 +43,7 @@
 <span class=n>test_split</span> <span class=o>=</span> <span class=mf>0.2</span>
 <span class=n>split_index</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=nb>list</span><span class=p>(</span><span class=n>dataset</span><span class=p>))</span> <span class=o>*</span> <span class=p>(</span><span class=mi>1</span><span class=o>-</span><span class=n>test_split</span><span class=p>))</span>
 
-<span class=c1># 分割完之后再分Batch，增加一维，不然无法满足模型数据格式要求</span>
+<span class=c1># 分割完之后再分Batch，增加一维，不然无法满足模型数据维度要求</span>
 <span class=n>train_dataset</span> <span class=o>=</span> <span class=n>dataset</span><span class=o>.</span><span class=n>take</span><span class=p>(</span><span class=n>split_index</span><span class=p>)</span><span class=o>.</span><span class=n>batch</span><span class=p>(</span><span class=n>batch_size</span><span class=o>=</span><span class=mi>32</span><span class=p>)</span>
 <span class=n>test_dataset</span> <span class=o>=</span> <span class=n>dataset</span><span class=o>.</span><span class=n>skip</span><span class=p>(</span><span class=n>split_index</span><span class=p>)</span><span class=o>.</span><span class=n>batch</span><span class=p>(</span><span class=n>batch_size</span><span class=o>=</span><span class=mi>32</span><span class=p>)</span>
 </code></pre></div> <h2 id=3>3 建模<a class=headerlink href=#3 title="Permanent link">&para;</a></h2> <p>使用全连接层构建模型，代码如下：</p> <div class=highlight><pre><span></span><code><span class=n>tf</span><span class=o>.</span><span class=n>random</span><span class=o>.</span><span class=n>set_seed</span><span class=p>(</span><span class=mi>42</span><span class=p>)</span>
