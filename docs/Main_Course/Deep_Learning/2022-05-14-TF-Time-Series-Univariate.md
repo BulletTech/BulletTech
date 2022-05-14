@@ -108,7 +108,7 @@ Second Input:[125.455   108.58483 118.67466 121.33866 120.65533 121.795   123.03
 
 ### 2.3 分割数据
 
-使用时间来划分训练集和验证集，为简化流程，不留测试集，实际中可按需操作。
+使用时间来划分训练集和验证集，仅做示例故不留测试集，实际中可按需操作。
 
 ```python
 # tf.keras.preprocessing.timeseries_dataset_from_array返回的是batched dataset，所以先unbatch，方便分割数据
