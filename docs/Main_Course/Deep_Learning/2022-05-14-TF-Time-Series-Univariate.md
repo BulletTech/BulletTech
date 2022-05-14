@@ -117,7 +117,7 @@ dataset = dataset.unbatch()
 test_split = 0.2
 split_index = int(len(list(dataset)) * (1-test_split))
 
-# 分割完之后再分Batch，增加一维，不然无法满足模型数据格式要求
+# 分割完之后再分Batch，增加一维，不然无法满足模型数据维度要求
 train_dataset = dataset.take(split_index).batch(batch_size=32)
 test_dataset = dataset.skip(split_index).batch(batch_size=32)
 ```
