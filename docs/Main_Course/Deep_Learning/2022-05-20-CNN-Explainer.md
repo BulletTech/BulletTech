@@ -48,7 +48,7 @@ CNN Explainer网站的头部即是一个用于图片分类的卷积神经网络�
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/MaxPooling.png"  />
-  <figcaption>MaxPooling层示意图</figcaption>
+  <figcaption>Max Pooling层示意图</figcaption>
 </figure>
 
 最后输出层用不同程度高亮的方式展示了模型预测的类别。
