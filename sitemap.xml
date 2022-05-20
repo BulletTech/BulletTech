@@ -396,6 +396,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Deep_Learning/2022-05-20-CNN-Explainer/</loc>
+         <lastmod>2022-05-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Graph_Database/2021-12-13-Graph_Database_Introduction/</loc>
          <lastmod>2022-05-20</lastmod>
          <changefreq>daily</changefreq>
