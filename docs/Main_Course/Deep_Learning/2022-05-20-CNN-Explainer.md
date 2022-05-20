@@ -10,7 +10,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-在[TensorFlow Playground简介](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485294&idx=1&sn=deef8a34853332612aa43bff8de23bf0&chksm=eb90f41adce77d0c78b4c510645f1a04ba7644f7ed53e039b09e91e900f04cfae88a28a2d1e3&token=1726922856&lang=zh_CN#rd)这篇文章里，笔者介绍了一个可视化的方法认识神经网络（CNN）的产品，本次内容将分享一个类似的网站 - `CNN Explainer`，它专注于用可视化的方式讲解卷积神经网络，该产品同样以非常直观的方式展示了卷积神经网络及其相关知识点。CNN Explainer网站地址为：https://poloclub.github.io/cnn-explainer/。
+在[TensorFlow Playground简介](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485294&idx=1&sn=deef8a34853332612aa43bff8de23bf0&chksm=eb90f41adce77d0c78b4c510645f1a04ba7644f7ed53e039b09e91e900f04cfae88a28a2d1e3&token=1726922856&lang=zh_CN#rd)这篇文章里，笔者介绍了一个用可视化的方法认识神经网络（CNN）的产品，本次内容将分享一个类似的网站 - `CNN Explainer`，它专注于用可视化的方式讲解`卷积神经网络`，该产品同样以非常直观的方式展示了卷积神经网络及其相关知识点。CNN Explainer网站地址为：https://poloclub.github.io/cnn-explainer/。
 
 ## 2 产品特性
 
