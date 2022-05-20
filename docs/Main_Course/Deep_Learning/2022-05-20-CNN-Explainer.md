@@ -29,7 +29,7 @@ CNN Explainer网站的头部即是一个用于图片分类的卷积神经网络�
   <figcaption>卷积操作</figcaption>
 </figure>
 
-点击感叹号即可跳转到对应的文档和示例，比如针对卷积操作，你可以通过调整输入和卷积核的参数来体会它的工作原理，动画将根据输入进行变化，同时还附有详细的文档说明和参考链接。产品的开发者真得是非常用心了！
+点击感叹号即可跳转到对应的文档和示例，比如针对卷积操作，你可以通过调整输入和卷积核的参数来体会它的工作原理，动画将根据输入进行变化，同时还附有详细的文档说明和参考链接。产品的开发者真是非常用心了！
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/conv_tool.png"  />
@@ -48,7 +48,7 @@ CNN Explainer网站的头部即是一个用于图片分类的卷积神经网络�
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/MaxPooling.png"  />
-  <figcaption>Max Pooling层示意图</figcaption>
+  <figcaption>Max Pooling示意图</figcaption>
 </figure>
 
 最后输出层用不同程度高亮的方式展示了模型预测的类别。
