@@ -33,6 +33,7 @@ nav:
         - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
         - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
     - Deep Learning:
+        - 卷积神经网络解释器简介: Main_Course/Deep_Learning/2022-05-20-CNN-Explainer.md
         - 使用TensorFlow进行单变量时间序列预测:  Main_Course/Deep_Learning/2022-05-14-TF-Time-Series-Univariate.md
         - TensorFlow Playground简介: Main_Course/Deep_Learning/2022-05-07-TF-Playground.md
         - 使用TensorFlow Decision Forests构建树模型: Main_Course/Deep_Learning/2022-04-24-TensorFlow-Decision-Forest.md
