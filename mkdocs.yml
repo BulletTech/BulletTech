@@ -171,6 +171,7 @@ theme:
 # Plugins
 plugins:
   - search
+  - tags
   - redirects:
       redirect_maps:
         changelog/insiders.md: insiders/changelog.md
