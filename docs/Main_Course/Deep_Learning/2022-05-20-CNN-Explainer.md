@@ -1,7 +1,7 @@
 ---
 template: overrides/blogs.html
 tags:
-  - Deep Learning
+  - DeepLearning
 ---
 
 
