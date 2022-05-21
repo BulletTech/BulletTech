@@ -8,7 +8,7 @@ site_description: >-
 # Repository
 repo_name: BulletTech/BulletTech
 repo_url: https://github.com/BulletTech/BulletTech
-edit_uri: ""
+edit_uri: edit/master/docs/
 
 # Page tree
 nav:
@@ -251,4 +251,4 @@ google_analytics:
   - UA-198351102-1
   - auto
   
-edit_uri: edit/master/docs/
+
