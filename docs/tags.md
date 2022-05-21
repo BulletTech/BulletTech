@@ -1,10 +1,8 @@
 ---
 template: overrides/general_no_comments.html
-hide:
-  - tags
 ---
 
 
-# Files Search Through Tags
+# 文章标签系统
 
 [TAGS]
