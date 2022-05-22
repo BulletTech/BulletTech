@@ -283,6 +283,7 @@ model.evaluate(test_data)
   <figcaption>TensorBoard展示训练过程</figcaption>
 </figure>
 
+同时可以在TensorBoard里下载模型的计算图，可见Xception远比基线模型复杂，因此它的性能远超基线也不足为奇。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/xception_train.png"  />
