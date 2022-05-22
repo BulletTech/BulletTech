@@ -9,7 +9,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-本文将使用TensorFlow对多类别图片分类的任务进行讨论，主要内容包含图片数据的加载、数据增强、模型训练和迁移学习和TensorBoard的使用，所有的API均基于TensorFlow v2.9。以下代码在Google Colab里运行，因为Google提供了免费的GPU显著加快训练速度。
+本文将使用TensorFlow对多类别图片分类的任务进行讨论，主要内容包含图片数据的加载、数据增强、模型训练和迁移学习和TensorBoard的使用，所有的API均基于TensorFlow v2.8.0。以下代码在Google Colab里运行，因为Google提供了免费的GPU显著加快训练速度。
 
 ## 2 处理图片
 
