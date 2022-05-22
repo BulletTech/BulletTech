@@ -13,7 +13,7 @@ template: overrides/blogs.html
 
 ## 2 处理图片
 
-加载包含目标有10类的原始数据。
+加载包含目标有10类的原始图片数据。
 
 ```python
 import zipfile
