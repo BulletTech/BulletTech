@@ -209,7 +209,7 @@ history_cnn = cnn_model.fit(train_data,
               validation_steps=len(test_data),
               callbacks=[tf_board_callback])
 
-model_7.evaluate(test_data)
+cnn_model.evaluate(test_data)
 ```
 
 输出如下，准确率差强人意：
@@ -222,7 +222,7 @@ model_7.evaluate(test_data)
 查看训练过程，可以发现曲线趋势是正常的，如果加深模型、或者训练更长的时间应该能达到更好的精度。
 
 ```py
-plot_loss_curves(history_7)
+plot_loss_curves(history_cnn)
 ```
 
 <figure>
