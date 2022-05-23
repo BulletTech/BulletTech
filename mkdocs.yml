@@ -131,7 +131,7 @@ copyright: Copyright &copy; 2021 - Now BulletTech
 # Configuration
 theme:
   name: material
-  custom_dir: overrides
+  custom_dir: material
 
   # Static files
   static_templates:
