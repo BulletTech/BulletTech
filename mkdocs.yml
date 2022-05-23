@@ -100,7 +100,6 @@ nav:
         - 基于FlaskBB自建论坛: Main_Course/One_Day_Build/2021-10-21-flaskbb.md
         - 利用显卡实现咖啡自由: Main_Course/One_Day_Build/2021-06-21-Mining.md
         - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
-  - Tags: tags.md
   - Dessert:
     - Intro: Dessert_blog_intro.md
     - Hardware:
@@ -120,6 +119,7 @@ nav:
         - 个人笔记应用 - Notion: Dessert/Apps/2021-06-06-Notion.md
     - Exp:
         - 如何以最快的速度写出一篇优美的文章: Dessert/Tactics/2021-07-02-Posting-Workflow.md
+  - Tags: tags.md
   - About Us:
         - 关于BulletTech: About_us.md
         - 我们的故事: Our_story.md
