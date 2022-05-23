@@ -90,14 +90,14 @@
 
 <span class=c1># 生成数据集</span>
 <span class=n>train_data</span> <span class=o>=</span> <span class=n>train_datagen_augmented</span><span class=o>.</span><span class=n>flow_from_directory</span><span class=p>(</span><span class=n>train_dir</span><span class=p>,</span>
-                                                                  <span class=n>target_size</span><span class=o>=</span><span class=p>(</span><span class=mi>224</span><span class=p>,</span><span class=mi>224</span><span class=p>),</span>
-                                                                  <span class=n>batch_size</span><span class=o>=</span><span class=mi>32</span><span class=p>,</span>
-                                                                  <span class=n>shuffle</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
+                                                        <span class=n>target_size</span><span class=o>=</span><span class=p>(</span><span class=mi>224</span><span class=p>,</span><span class=mi>224</span><span class=p>),</span>
+                                                        <span class=n>batch_size</span><span class=o>=</span><span class=mi>32</span><span class=p>,</span>
+                                                        <span class=n>shuffle</span><span class=o>=</span><span class=kc>True</span><span class=p>)</span>
 
 <span class=n>test_data</span> <span class=o>=</span> <span class=n>test_datagen</span><span class=o>.</span><span class=n>flow_from_directory</span><span class=p>(</span><span class=n>test_dir</span><span class=p>,</span>
-                                                          <span class=n>target_size</span><span class=o>=</span><span class=p>(</span><span class=mi>224</span><span class=p>,</span><span class=mi>224</span><span class=p>),</span>
-                                                            <span class=n>batch_size</span><span class=o>=</span><span class=mi>32</span>
-                                                             <span class=p>)</span>
+                                              <span class=n>target_size</span><span class=o>=</span><span class=p>(</span><span class=mi>224</span><span class=p>,</span><span class=mi>224</span><span class=p>),</span>
+                                                <span class=n>batch_size</span><span class=o>=</span><span class=mi>32</span>
+                                                 <span class=p>)</span>
 </code></pre></div> <h2 id=3>3 建模<a class=headerlink href=#3 title="Permanent link">&para;</a></h2> <h3 id=31>3.1 基线模型<a class=headerlink href=#31 title="Permanent link">&para;</a></h3> <p>先做一个卷积神经网络作为基线模型：</p> <div class=highlight><pre><span></span><code><span class=c1># 绘制训练曲线</span>
 <span class=k>def</span> <span class=nf>plot_loss_curves</span><span class=p>(</span><span class=n>history</span><span class=p>):</span>
   <span class=sd>&quot;&quot;&quot;</span>
@@ -132,7 +132,8 @@
 <span class=n>tf</span><span class=o>.</span><span class=n>keras</span><span class=o>.</span><span class=n>backend</span><span class=o>.</span><span class=n>clear_session</span><span class=p>()</span>
 
 <span class=n>cnn_model</span> <span class=o>=</span> <span class=n>tf</span><span class=o>.</span><span class=n>keras</span><span class=o>.</span><span class=n>models</span><span class=o>.</span><span class=n>Sequential</span><span class=p>([</span>
-    <span class=n>layers</span><span class=o>.</span><span class=n>Conv2D</span><span class=p>(</span><span class=n>filters</span><span class=o>=</span><span class=mi>10</span><span class=p>,</span> <span class=n>kernel_size</span><span class=o>=</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span><span class=mi>3</span><span class=p>),</span> <span class=n>activation</span><span class=o>=</span><span class=s2>&quot;relu&quot;</span><span class=p>,</span> <span class=n>input_shape</span><span class=o>=</span><span class=p>(</span><span class=mi>224</span><span class=p>,</span> <span class=mi>224</span><span class=p>,</span> <span class=mi>3</span><span class=p>)),</span>
+    <span class=n>layers</span><span class=o>.</span><span class=n>Conv2D</span><span class=p>(</span><span class=n>filters</span><span class=o>=</span><span class=mi>10</span><span class=p>,</span> <span class=n>kernel_size</span><span class=o>=</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span><span class=mi>3</span><span class=p>),</span> <span class=n>activation</span><span class=o>=</span><span class=s2>&quot;relu&quot;</span><span class=p>,</span>
+                  <span class=n>input_shape</span><span class=o>=</span><span class=p>(</span><span class=mi>224</span><span class=p>,</span> <span class=mi>224</span><span class=p>,</span> <span class=mi>3</span><span class=p>)),</span>
     <span class=n>layers</span><span class=o>.</span><span class=n>MaxPooling2D</span><span class=p>(</span><span class=n>pool_size</span><span class=o>=</span><span class=mi>2</span><span class=p>),</span>
 
       <span class=n>layers</span><span class=o>.</span><span class=n>Conv2D</span><span class=p>(</span><span class=n>filters</span><span class=o>=</span><span class=mi>10</span><span class=p>,</span> <span class=n>kernel_size</span><span class=o>=</span><span class=p>(</span><span class=mi>3</span><span class=p>,</span><span class=mi>3</span><span class=p>),</span> <span class=n>activation</span><span class=o>=</span><span class=s2>&quot;relu&quot;</span><span class=p>),</span>
