@@ -166,7 +166,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: logo/Bullet_No_text
+  favicon: assets/logo/Bullet_No_text.svg # This is in the /docs/ folder
   icon:
     logo: logo/Bullet_Plain_White
 
