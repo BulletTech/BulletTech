@@ -182,21 +182,7 @@ plugins:
       j2_variable_end_string: '%]'
   - git-revision-date-localized
 
-# Customization
-extra:
-  social:
-    - icon: fontawesome/solid/rocket
-      link: http://bullettech.cn/
-    - icon: fontawesome/brands/weixin
-      link: https://mp.weixin.qq.com/s/YYZilgFSHrh-nrjF3Z2G7A
-    - icon: fontawesome/brands/zhihu
-      link: https://www.zhihu.com/people/bullettech
-    - icon: fontawesome/brands/github
-      link: https://github.com/BulletTech/BulletTech
-    - icon: fontawesome/solid/book
-      link: https://www.toutiao.com/c/user/token/MS4wLjABAAAAsxrzZdUCIQdOMU8albHKSb_ZCFAzIbwqzn9XFfIeoa-rd2rDsl7qOoCyd3wEgW5v/?source=feed
-    - icon: fontawesome/brands/tiktok
-      link: https://www.douyin.com/user/MS4wLjABAAAAPFvcvoD4PrSqrAvA1ehFu9S3OL-oKdCqH_V54POznMI
+
 
 extra_javascript:
   - javascripts/config.js
@@ -247,8 +233,21 @@ markdown_extensions:
       generic: true
 
 
-
-# Google Analytics
-google_analytics:
-  - UA-198351102-1
-  - auto
+# Customization
+extra:
+  social:
+    - icon: fontawesome/solid/rocket
+      link: http://bullettech.cn/
+    - icon: fontawesome/brands/weixin
+      link: https://mp.weixin.qq.com/s/YYZilgFSHrh-nrjF3Z2G7A
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/bullettech
+    - icon: fontawesome/brands/github
+      link: https://github.com/BulletTech/BulletTech
+    - icon: fontawesome/solid/book
+      link: https://www.toutiao.com/c/user/token/MS4wLjABAAAAsxrzZdUCIQdOMU8albHKSb_ZCFAzIbwqzn9XFfIeoa-rd2rDsl7qOoCyd3wEgW5v/?source=feed
+    - icon: fontawesome/brands/tiktok
+      link: https://www.douyin.com/user/MS4wLjABAAAAPFvcvoD4PrSqrAvA1ehFu9S3OL-oKdCqH_V54POznMI
+  analytics:
+    provider: google
+    property: UA-198351102-1
