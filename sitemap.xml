@@ -495,4 +495,9 @@
          <lastmod>2022-05-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/tags/</loc>
+         <lastmod>2022-05-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
