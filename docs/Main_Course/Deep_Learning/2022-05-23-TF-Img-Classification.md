@@ -126,14 +126,14 @@ test_datagen = ImageDataGenerator(rescale=1/255.)
 
 # 生成数据集
 train_data = train_datagen_augmented.flow_from_directory(train_dir,
-                                                                  target_size=(224,224),
-                                                                  batch_size=32,
-                                                                  shuffle=True)
+                                                        target_size=(224,224),
+                                                        batch_size=32,
+                                                        shuffle=True)
 
 test_data = test_datagen.flow_from_directory(test_dir,
-                                                          target_size=(224,224),
-                                                            batch_size=32
-                                                             )
+                                              target_size=(224,224),
+                                                batch_size=32
+                                                 )
 ```
 
 ## 3 建模
@@ -178,7 +178,8 @@ tf.random.set_seed(42)
 tf.keras.backend.clear_session()
 
 cnn_model = tf.keras.models.Sequential([
-    layers.Conv2D(filters=10, kernel_size=(3,3), activation="relu", input_shape=(224, 224, 3)),
+    layers.Conv2D(filters=10, kernel_size=(3,3), activation="relu",
+                  input_shape=(224, 224, 3)),
     layers.MaxPooling2D(pool_size=2),
 
       layers.Conv2D(filters=10, kernel_size=(3,3), activation="relu"),
