@@ -166,9 +166,9 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/images/Bullet_No_text.svg
+  favicon: logo/Bullet_No_text.svg
   icon:
-    logo: assets/logo/Bullet_Plain_White
+    logo: logo/Bullet_Plain_White
 
 # Plugins
 plugins:
