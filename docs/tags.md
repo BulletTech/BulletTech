@@ -1,5 +1,5 @@
 ---
-template: overrides/general_no_comments.html
+template: overrides/blogs.html
 ---
 
 
