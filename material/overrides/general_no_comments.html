@@ -26,16 +26,11 @@
         <hr>
         <div class="md-source-date">
           <small>
-            {% if page.meta.git_revision_date_localized %}
-              {{ label }}: {{ page.meta.git_revision_date_localized }}
-            {% elif page.meta.revision_date %}
-              {{ label }}: {{ page.meta.revision_date }}
-            {% endif %}
             <span id="busuanzi_container_site_pv" style="float:right">Viewed <span id="busuanzi_value_page_pv"></span> times</span>
           </small>
         </div>
       {% endif %}
     {% endif %}
-	
+
 
 {% endblock %}
