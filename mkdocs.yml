@@ -173,7 +173,6 @@ theme:
 plugins:
   - search
   - tags
-      tags_file: tags.md
   - minify:
       minify_html: true
   - macros:
