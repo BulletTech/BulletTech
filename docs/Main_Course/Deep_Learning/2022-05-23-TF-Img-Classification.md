@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep_learning
+  - tensorflow
 ---
 
 # 使用TensorFlow进行图片分类
