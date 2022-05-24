@@ -13,11 +13,17 @@
 {% endif %}
 
 
-    {% if page.edit_url %}
-      <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
-        {% include ".icons/material/pencil.svg" %}
-      </a>
-    {% endif %}
+{% if page.edit_url %}
+{% set edit = "https://github.com/BulletTech/BulletTech/edit" %}
+{% set view = "https://raw.githubusercontent.com/BulletTech/BulletTech" %}
+        <a href="{{ page.edit_url }}" title="{{ lang.t('edit.link.title') }}" class="md-content__button md-icon">
+     {% include ".icons/material/file-edit-outline.svg" %}
+    </a>
+    <a href="{{ page.edit_url | replace(edit, view) }}" title="View source of this page" class="md-content__button md-icon">
+     {% include ".icons/material/file-eye-outline.svg" %}
+    </a>
+{% endif %}
+
     {% if not "\x3ch1" in page.content %}
       <h1>{{ page.title | d(config.site_name, true)}}</h1>
     {% endif %}
