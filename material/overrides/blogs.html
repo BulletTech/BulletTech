@@ -28,13 +28,14 @@
       <h1>{{ page.title | d(config.site_name, true)}}</h1>
     {% endif %}
     {{ page.content }}
-    {% if page and page.meta %}
-      {% if page.meta.git_revision_date_localized or
-            page.meta.revision_date
-      %}
-        <!-- include "partials/source-date.html" -->
-        {% import "partials/language.html" as lang with context %}
-        {% set label = lang.t("source.revision.date") %}
+
+    {% if page and page.meta and (
+          page.meta.git_revision_date_localized or
+          page.meta.revision_date
+        ) %}
+          {% include "partials/source-file.html" %}
+        {% endif %}
+        
         <hr>
 
 <div style="display: flex;
