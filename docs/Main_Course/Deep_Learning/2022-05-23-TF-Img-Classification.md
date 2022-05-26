@@ -113,7 +113,7 @@ test_dir = "10_food_classes_all_data/test/"
 ```py
 train_datagen_augmented = ImageDataGenerator(rescale=1/255.,
                                              rotation_range=20, #旋转图片
-                                             shear_range=0.2, #拉扯图片
+                                             shear_range=0.2, #剪切图片
                                              zoom_range=0.2, #缩放图片
                                              width_shift_range=0.2, #左右平移
                                              height_shift_range=0.2, #上下平移
