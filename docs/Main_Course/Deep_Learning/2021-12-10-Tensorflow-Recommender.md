@@ -1,5 +1,9 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - recommendation
 ---
 
 # TensorFlow推荐系统（一）
@@ -178,7 +182,7 @@ class MovielensModel(tfrs.Model):
     positive_movie_embeddings = self.movie_model(features["movie_title"])
 
     # The task computes the loss and the metrics.
-    return self.task(user_embeddings, positive_movie_embeddings) 
+    return self.task(user_embeddings, positive_movie_embeddings)
 ```
 训练并评估模型结果：
 

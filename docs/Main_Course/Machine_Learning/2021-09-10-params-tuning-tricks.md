@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 神经网络调参技巧
 
-!!! info 
+!!! info
     作者：Void，发布于2021-09-10，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484538&idx=1&sn=ae97eac88e44ae8b2f0466cf09e606c0&chksm=eb90f70edce77e1852aaf09ccca473b088b91d870f63c326166f7921d02ae7bb97e614b491ad&scene=178&cur_album_id=2045821482966024195#rd)
 
 ## 1 引言
@@ -54,7 +56,7 @@ batch normalization在norm的时候，使每个独立样本看到了同一个bat
 
 ## 9 小结
 
-调参有科学也有艺术的成分。在实际使用过程中，不妨尝试一下上述经验之谈。可能某些tips恰好适用于你的模型和任务，助你模型表现一飞冲天。 
+调参有科学也有艺术的成分。在实际使用过程中，不妨尝试一下上述经验之谈。可能某些tips恰好适用于你的模型和任务，助你模型表现一飞冲天。
 
 
 <figure>

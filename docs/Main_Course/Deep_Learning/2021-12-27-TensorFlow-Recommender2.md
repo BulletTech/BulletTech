@@ -1,12 +1,16 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - recommendation
 ---
 
 # TensorFlow推荐系统（二）
 
 !!! info
     作者：Tina，发布于2021-12-10，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/0WcTB6WLBZX0EwbVZ_DeCg)
-    
+
 ## 1 前言
 读过[TensorFlow推荐系统（一）](https://mp.weixin.qq.com/s/OUsG-JqqYeh9q6oAa_uhmg)的朋友们应该还有印象，上回我们介绍的模型是信息检索（retrieval），而在推荐系统中还有另一个任务模型，即为信息排序（ranking）。在排序阶段，其主要任务是对检索模型产出的条目进行调整以选择最有可能被用户喜欢和选择的电影条目。
 
@@ -104,7 +108,7 @@ class RankingModel(tf.keras.Model):
       # Make rating predictions in the final layer.
       tf.keras.layers.Dense(1)
   ])
-    
+
   def call(self, inputs):
     ##用户ID和电影标题为模型的输入值
     user_id, movie_title = inputs
@@ -150,7 +154,7 @@ class MovielensModel(tfrs.models.Model):
 
   def compute_loss(self, features: Dict[Text, tf.Tensor], training=False) -> tf.Tensor:
     labels = features.pop("user_rating")
-    
+
     rating_predictions = self(features)
 
     # The task computes the loss and the metrics.

@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
 ---
 
 # 读《30天吃掉那只TensorFlow2》
@@ -43,7 +46,7 @@ b = tf.Variable(tf.zeros_like(b0,dtype = tf.float32))
 # 定义模型
 class LinearRegression:     
     #正向传播
-    def __call__(self,x): 
+    def __call__(self,x):
         return x@w + b
 
     # 损失函数
@@ -56,7 +59,7 @@ model = LinearRegression()
 中阶API提供了更高程度的封装，如损失函数、优化器等组件。
 
 ```python
-model = layers.Dense(units = 1) 
+model = layers.Dense(units = 1)
 model.build(input_shape = (2,)) #用build方法创建variables
 model.loss_func = losses.mean_squared_error
 model.optimizer = optimizers.SGD(learning_rate=0.001)
@@ -88,7 +91,7 @@ model.optimizer = optimizers.SGD(learning_rate=0.001)
             super(DNNModel, self).__init__()
 
         def build(self,input_shape):
-            self.dense1 = layers.Dense(4,activation = "relu",name = "dense1") 
+            self.dense1 = layers.Dense(4,activation = "relu",name = "dense1")
             self.dense2 = layers.Dense(8,activation = "relu",name = "dense2")
             self.dense3 = layers.Dense(1,activation = "sigmoid",name = "dense3")
             super(DNNModel,self).build(input_shape)
@@ -105,7 +108,7 @@ model.optimizer = optimizers.SGD(learning_rate=0.001)
     model.build(input_shape =(None,2))
 
     model.summary()
-    
+
     ```
 ## 5 API
 

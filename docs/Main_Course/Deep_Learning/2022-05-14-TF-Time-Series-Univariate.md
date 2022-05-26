@@ -1,5 +1,9 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - time series
 ---
 
 # 使用TensorFlow进行单变量时间序列预测

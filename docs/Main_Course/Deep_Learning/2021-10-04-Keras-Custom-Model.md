@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
 ---
 
 # 使用tf.keras自定义模型

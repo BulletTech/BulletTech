@@ -1,7 +1,9 @@
 ---
 template: overrides/blogs.html
 tags:
-  - deep_learning
+  - deep learning
+  - tensorflow
+  - cnn
 ---
 
 

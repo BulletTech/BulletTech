@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 因果推断之 Uplift Model

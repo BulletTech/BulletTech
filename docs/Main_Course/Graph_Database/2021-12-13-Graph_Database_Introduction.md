@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - knowledge graph
 ---
 
 # 初识图数据库

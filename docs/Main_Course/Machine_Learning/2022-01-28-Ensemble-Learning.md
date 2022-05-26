@@ -1,12 +1,14 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 集成学习小介
 
 !!! info
     作者：Tina，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/CrNeVH2Qm84QQvdHZAIp2g)
-    
+
 ## 1 前言
 
 在机器学习中有一个常见且重要的概念——集成学习（Ensemble Learning），即通过构建多个机器学习器来完成学习任务。今天，我们将介绍集成学习的一些常见方法，如`Voting Classifiers`,`Bagging`和`Boosting`。
@@ -24,7 +26,7 @@ template: overrides/blogs.html
 
 **其代码实现如下所示**：
 ```Python
-## RandomForest, Logistic Regression and SVC 
+## RandomForest, Logistic Regression and SVC
 ## participate in ensemble learning
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import VotingClassifier
@@ -75,8 +77,8 @@ for clf in (log_cf,rnd_clf,svm_clf,voting_clf):
 ```Python
 from sklearn.ensemble import BaggingClassifier
 from sklearn.tree import DecisionTreeClassifier
-## with 500 trees, n_jobs = -1 
-## means using all processors 
+## with 500 trees, n_jobs = -1
+## means using all processors
 ##to fit and predict in parallel.
 bag_clf = BaggingClassifier(
     DecisionTreeClassifier(), n_estimators=500,
@@ -127,7 +129,7 @@ accuracy_score(y_test,y_pred)
 **其代码实现如下所示：**
 ```Python
 from sklearn.ensemble import AdaBoostClassifier
-## 200 decision stumps with 0.5 learning rate using the 
+## 200 decision stumps with 0.5 learning rate using the
 ## Stagewise Additive Modeling Multiclass Exponential loss function
 ada_clf = AdaBoostClassifier(
     DecisionTreeClassifier(max_depth =1),n_estimator = 200,
@@ -159,7 +161,7 @@ tree_reg2.fit(X,y2)
  y3 = y2 - tree_reg2.predict(X)
  tree_reg3 = DecisionTreeRegressor(max_depth=2)
  tree_reg3.fit(X,y3)
-## The ensemble model contains three trees, it can make predictions on a 
+## The ensemble model contains three trees, it can make predictions on a
 ## new instance by adding up the predictions of all trees
  y_pred = sum(tree.predict(X_new) for tree in (tree_reg1, tree_reg2,tree_reg3))
 ```
@@ -173,7 +175,7 @@ gbrt = GradientBoostingRegressor(max_depth = 2,n_estimators = 3, learning_rate=1
 gbrt.fit(X,y)
 ```
 
-为了找到最佳的决策树的数量，`staged_predict()`根据设定的`n_estimators`，从0到`n_estimators`不断地预测，产生预测值和误差值，然后根据`n_estimator`和对应的误差值，找到最佳的参数值，代码如下： 
+为了找到最佳的决策树的数量，`staged_predict()`根据设定的`n_estimators`，从0到`n_estimators`不断地预测，产生预测值和误差值，然后根据`n_estimator`和对应的误差值，找到最佳的参数值，代码如下：
 
 ```Python
 import numpy as np

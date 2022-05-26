@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
 ---
 
 # 使用TensorFlow Decision Forests构建树模型

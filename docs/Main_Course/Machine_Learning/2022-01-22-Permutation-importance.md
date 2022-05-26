@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 特征选择之Permutation Importance

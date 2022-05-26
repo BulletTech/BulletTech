@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
 ---
 
 # 算法中的multi家族

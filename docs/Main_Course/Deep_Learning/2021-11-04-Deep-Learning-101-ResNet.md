@@ -1,5 +1,9 @@
 ---
 template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - cnn
 ---
 
 # 深度学习 101-搭建 ResNet 识别鲜花图像
