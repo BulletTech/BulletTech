@@ -15,7 +15,7 @@ tags:
 本人一直是Google Colab的忠实用户，其免费的GPU对于数据科学研究人员是非常实用的计算资源，但是Colab的基础免费版只能同时使用一个运行时，并且必须科学上网才能访问产品。而Amazon最近推出的[SageMaker Studio Lab](https://studiolab.sagemaker.aws/ "Amazon SageMaker Studio Lab")可谓是Google Colab的同类产品，Amazon也十分慷慨地提供了免费的算力（有CPU和GPU供选择）。==注册账号之后即可在Web端随时开展实验，无需科学上网！==
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/SageMaker_studio_lab.png"  />
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/SageMaker_studio_lab.jpg"  />
   <figcaption>Amazon SageMaker Studio Lab</figcaption>
 </figure>
 
