@@ -246,26 +246,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-08-10-Kaggle-tips/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-08-18-Sql-tips/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
@@ -276,17 +256,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-08-27-Kaggle-optiver/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-08-27-SQL-tips-2/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-09-02-Kaggle-janestreet/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -296,22 +266,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-09-25-Feature-engineering/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-09-26-feature-selection/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-10-26-Data-Search-and-Sort/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-10-30-kdd-cup2021/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -322,11 +277,6 @@
     </url>
     <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2022-01-03-ANOVA/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2022-01-30-Kaggle-exp-s2/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -431,12 +381,57 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-07-22-notes-of-rules-of-ML/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-07-24-notes-of-rules-of-ML2.0/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-08-Loan-Default-Competition-Review/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-10-Kaggle-tips/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-27-Kaggle-optiver/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-08-28-Decision-Tree/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-09-02-Kaggle-janestreet/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-09-25-Feature-engineering/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-09-26-feature-selection/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-10-30-kdd-cup2021/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -447,6 +442,11 @@
     </url>
     <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2022-01-28-Ensemble-Learning/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2022-01-30-Kaggle-exp-s2/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
