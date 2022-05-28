@@ -25,7 +25,6 @@ nav:
         - SQL Tips（一）: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
         - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
         - PayPal职位爬虫: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
-        - 时间序列异常检测: Main_Course/Data_Analytics/2021-07-16-Timeseries-algo.md
         - 爬取并下载URL不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
         - A/B测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
         - 双重差分小介: Main_Course/Data_Analytics/2021-06-24-DID.md
@@ -63,6 +62,7 @@ nav:
         - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
         - 读《Rules of Machine Learning》有感（下）: Main_Course/Machine_Learning/2021-07-24-notes-of-rules-of-ML2.0.md
         - 读《Rules of Machine Learning》有感（上）: Main_Course/Machine_Learning/2021-07-22-notes-of-rules-of-ML.md
+        - 时间序列异常检测: Main_Course/Machine_Learning/2021-07-16-Timeseries-algo.md
     - Graph:
         - Neo4J图数据库反欺诈分析实战（四） - 风险评分: Main_Course/Graph_Database/2022-04-09-Neo4J-Fraud-s4.md
         - Neo4J图数据库反欺诈分析实战（三） - 识别犯罪团伙: Main_Course/Graph_Database/2022-03-06-Neo4J-Fraud-s3.md

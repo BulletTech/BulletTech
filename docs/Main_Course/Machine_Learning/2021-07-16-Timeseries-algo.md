@@ -2,7 +2,7 @@
 template: overrides/blogs.html
 tags:
   - time series
-  - python
+  - machine learning
 ---
 
 # 时间序列异常检测
@@ -21,7 +21,7 @@ tags:
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-18/1626574899890-3.png" width="500" />
-  <figcaption>example</figcaption>
+  <figcaption>Example</figcaption>
 </figure>
 
 评估时会考察我们给出的位置前后100个点的范围内是否包含真正的异常点。序列长度从几千到几十万个观测点不等。数据的来源可能有心电图、传感器数据等具有明显周期性的数据。目的是想让我们找到有效的算法，自动化地监测大规模的此类数据。  
@@ -62,7 +62,7 @@ tags:
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-18/1626574877648-1.gif" width="500" />
-  <figcaption>demo</figcaption>
+  <figcaption>Demo</figcaption>
 </figure>
 
 matrixprofile这个包更多的是在计算效率上做了优化，如在距离的计算上，将子序列标准化后只需要计算点积，避免了欧式距离的计算等等。  
