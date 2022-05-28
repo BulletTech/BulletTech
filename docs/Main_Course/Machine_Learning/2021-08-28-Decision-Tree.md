@@ -7,7 +7,7 @@ tags:
 # 决策树学习笔记
 
 !!! info
-    作者：袁子弹起飞，发布于2021-08-28，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/waV7HG3KWs-Qx574aUHj3Q)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-08-28，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/waV7HG3KWs-Qx574aUHj3Q)
 
 ## 1 前言
 

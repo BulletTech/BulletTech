@@ -7,7 +7,7 @@ tags:
 # Python元组常用操作小技巧
 
 !!! info
-    作者：袁子弹起飞，发布于2021-08-07，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/GmZ1Du4qJRai7D7oXKh75w)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-08-07，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/GmZ1Du4qJRai7D7oXKh75w)
 
 ## 1 前言
 

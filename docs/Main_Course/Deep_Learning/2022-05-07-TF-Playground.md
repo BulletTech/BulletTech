@@ -8,7 +8,7 @@ tags:
 # TensorFlow Playground简介
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485294&idx=1&sn=deef8a34853332612aa43bff8de23bf0&chksm=eb90f41adce77d0c78b4c510645f1a04ba7644f7ed53e039b09e91e900f04cfae88a28a2d1e3&token=1726922856&lang=zh_CN#rd)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485294&idx=1&sn=deef8a34853332612aa43bff8de23bf0&chksm=eb90f41adce77d0c78b4c510645f1a04ba7644f7ed53e039b09e91e900f04cfae88a28a2d1e3&token=1726922856&lang=zh_CN#rd)
 
 ## 1 前言
 

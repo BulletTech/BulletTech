@@ -10,7 +10,7 @@ tags:
 # 卷积神经网络解释器简介
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485314&idx=1&sn=02d6f35c358ab4a596f3aaabc2704547&chksm=eb90f4f6dce77de0553c383583e4347835b15c44cf1d142fb028ed450f70e0e65e0528e314d4&token=762444875&lang=zh_CN#rd)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485314&idx=1&sn=02d6f35c358ab4a596f3aaabc2704547&chksm=eb90f4f6dce77de0553c383583e4347835b15c44cf1d142fb028ed450f70e0e65e0528e314d4&token=762444875&lang=zh_CN#rd)
 
 
 ## 1 前言

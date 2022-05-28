@@ -8,7 +8,7 @@ tags:
 # Keras各种Callbacks介绍
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484578&idx=1&sn=54593557289d011ac6aff472597a731b&chksm=eb90f7d6dce77ec0d896ff1149f89f4c6d9bab7753be123ef269aa781a3ae88012bfa90ce2e0&token=221998215&lang=zh_CN#rd)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484578&idx=1&sn=54593557289d011ac6aff472597a731b&chksm=eb90f7d6dce77ec0d896ff1149f89f4c6d9bab7753be123ef269aa781a3ae88012bfa90ce2e0&token=221998215&lang=zh_CN#rd)
 
 ## 1 前言
 

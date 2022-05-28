@@ -8,7 +8,7 @@ tags:
 # 使用TensorFlow Decision Forests构建树模型
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485279&idx=1&sn=d31a0146b9b82ad1e64c5bc02f134382&chksm=eb90f42bdce77d3d2e8e5c3a8e4f6da3019652a0a8fb3cf74d8e7527c944ce44866840b660bf&token=709422112&lang=zh_CN#rd)
 
 ## 1 前言
 

@@ -8,7 +8,7 @@ tags:
 # 使用GitHub Action自动构建和推送Docker镜像
 
 !!! info
-    作者：袁子弹起飞，发布于2021-11-20，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/BCzu346DvNga84vEUXUbTQ)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-11-20，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/BCzu346DvNga84vEUXUbTQ)
 
 ## 1 前言
 

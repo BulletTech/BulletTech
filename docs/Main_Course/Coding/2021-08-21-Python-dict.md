@@ -7,7 +7,7 @@ tags:
 # Python字典常用操作小技巧
 
 !!! info
-    作者：袁子弹起飞，发布于2021-08-21，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484449&idx=1&sn=227c9fd7dfa3baacbfeb877570450a52&chksm=eb90f755dce77e4305d6b352e8d4d828edc10456edd92e5d77010ba316582ce9fdd8f2e715af&token=874200166&lang=zh_CN#rd)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-08-21，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484449&idx=1&sn=227c9fd7dfa3baacbfeb877570450a52&chksm=eb90f755dce77e4305d6b352e8d4d828edc10456edd92e5d77010ba316582ce9fdd8f2e715af&token=874200166&lang=zh_CN#rd)
 
 ## 1 前言
 

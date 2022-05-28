@@ -7,7 +7,7 @@ tags:
 # 用GitHub做一份精美的在线简历
 
 !!! info
-    作者：袁子弹起飞，发布于2021-11-01，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/Ns0YXYQBEZbUJEJyX21L0w)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-11-01，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/Ns0YXYQBEZbUJEJyX21L0w)
 
 ## 1 前言
 

@@ -7,7 +7,7 @@ tags:
 # 理解Python闭包
 
 !!! info
-    作者：袁子弹起飞，发布于2021-09-21，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484557&idx=1&sn=bd624bdb21757e391d01c5ced51cb5f8&chksm=eb90f7f9dce77eef2a8c67bc0d3637e9d90708ffd061ce4773916fa3c58d137e4b859adf1c40&token=1570026209&lang=zh_CN#rd)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-09-21，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484557&idx=1&sn=bd624bdb21757e391d01c5ced51cb5f8&chksm=eb90f7f9dce77eef2a8c67bc0d3637e9d90708ffd061ce4773916fa3c58d137e4b859adf1c40&token=1570026209&lang=zh_CN#rd)
 
 ## 1 前言
 

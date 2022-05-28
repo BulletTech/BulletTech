@@ -7,7 +7,7 @@ tags:
 # 特征选择之Permutation Importance
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485194&idx=1&sn=60a358eeed0c7fa7b2ebb362cce92a9b&chksm=eb90f47edce77d68bc54cd35d12a5530c9639250b19b469269f2e0559eeb81c5b2d0052e74a4&token=120973643&lang=zh_CN#rd)
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485194&idx=1&sn=60a358eeed0c7fa7b2ebb362cce92a9b&chksm=eb90f47edce77d68bc54cd35d12a5530c9639250b19b469269f2e0559eeb81c5b2d0052e74a4&token=120973643&lang=zh_CN#rd)
 
 
 ## 1 前言

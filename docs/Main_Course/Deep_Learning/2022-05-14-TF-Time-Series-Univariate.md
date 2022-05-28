@@ -9,7 +9,7 @@ tags:
 # 使用TensorFlow进行单变量时间序列预测
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485305&idx=1&sn=b8a2cf6c598ed9cf06a8950e892edc93&chksm=eb90f40ddce77d1bebf7d5703bf298c87692fd275731ac9bc1238996937d3da42f274ad85f22&token=709422112&lang=zh_CN#rd)
 
 ## 1 前言
 
