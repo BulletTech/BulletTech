@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
 ---
 
 # Python argparse 模块介绍

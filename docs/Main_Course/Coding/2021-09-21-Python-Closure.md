@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
 ---
 
 # 理解Python闭包

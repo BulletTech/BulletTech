@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - analytics
+  - database
 ---
 
 # SnowFlake权限概览

@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - docker
 ---
 
 # 教你成功在Win10系统中运行Docker

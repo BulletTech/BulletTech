@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - git
 ---
 
 # Git常用命令一览

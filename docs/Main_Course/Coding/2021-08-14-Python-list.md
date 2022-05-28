@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
 ---
 
 # Python列表常用操作小技巧

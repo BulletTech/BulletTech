@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
 ---
 
 # Python字典常用操作小技巧
@@ -120,7 +122,7 @@ ValueError                                Traceback (most recent call last)
 
 <ipython-input-32-be75152f6e58> in reversed_lookup(d, v)
       4             return i
-      5 
+      5
 ----> 6     raise ValueError("所查找的值不在字典中")
 
 ValueError: 所查找的值不在字典中

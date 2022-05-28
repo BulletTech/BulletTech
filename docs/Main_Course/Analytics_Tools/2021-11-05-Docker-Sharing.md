@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - docker
 ---
 
 # Docker 初体验
 
-!!! info 
+!!! info
     作者：Tina，发布于2021-11-05，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
 
 ## 1. 前言
@@ -60,7 +62,7 @@ CMD            <e.g. python run main.py>    # 启动镜像的命令
 docker build .  
 
 # 2.基于github URL 路径寻找Dockerfile来创建
-docker build github.com/creack/docker-firefox 
+docker build github.com/creack/docker-firefox
 
 # 3.基于本地Dockerfile创建
 docker build -t /path/to/Dockerfile .

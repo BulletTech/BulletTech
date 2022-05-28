@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - docker
 ---
 
 # Docker之数据的可持续化
@@ -128,4 +130,3 @@ docker run -v /dbdata --name dbstore2 ubuntu /bin/bash
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
 </figure>
-

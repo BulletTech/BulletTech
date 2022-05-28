@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - docker
+  - git
 ---
 
 # 使用GitHub Action自动构建和推送Docker镜像

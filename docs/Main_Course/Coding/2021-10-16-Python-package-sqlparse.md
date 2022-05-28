@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
 ---
 
 # SQL代码解析神器-sqlparse
@@ -14,14 +16,14 @@ template: overrides/blogs.html
 懒惰是程序员的第一生产力，既然是重复的工作，那么有没有什么工具可以帮助我们自动化这一过程呢？
 
 
-## 2 Python开源工具——sqlparse 
+## 2 Python开源工具——sqlparse
 
 ### 2.1 介绍
 
 想要改写SQL代码，关键的一步是对SQL进行解析。[sqlparse](https://sqlparse.readthedocs.io/en/latest/intro/)是基于Python的一个无验证解析器，他提供了一个简单的parse()函数来返回类似语法树的解析结构。我们用_pprint_tree()函数打印下解析后的SQL语句:
 
 ``` Python
-import sqlparse 
+import sqlparse
 query = 'Select a, col_2 as b from Table_A;'
 sqlparse.parse(query)[0]._pprint_tree()
 ```
@@ -98,7 +100,7 @@ class sqlparse.sql.TokenList(tokens=None):
 
 sqlparse作者在源码中提供了提取表名的范例，主要思路是在解析过程中遇到关键词from或者join后，提取其后的tokenList。
 
-``` python 
+``` python
 
 ALL_JOIN_TYPE = ('LEFT JOIN', 'RIGHT JOIN', 'INNER JOIN', 'FULL JOIN', 'LEFT OUTER JOIN', 'FULL OUTER JOIN')
 

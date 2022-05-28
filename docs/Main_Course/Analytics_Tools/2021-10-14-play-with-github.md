@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - git
 ---
 
 # 玩转GitHub

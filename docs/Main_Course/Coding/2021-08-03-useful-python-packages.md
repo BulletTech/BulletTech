@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
 ---
 
 # 好用的Python包
 
-!!! info 
+!!! info
     作者：Void，发布于2021-08-03，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/FdsPsRgO9unQW-aK_6RoIA)
 
 ## 1 引言
@@ -40,7 +42,7 @@ tqdm.pandas(desc="my bar!")
 df.progress_apply(lambda x: x**2)
 ```
 
-### 2.2 dateutil 
+### 2.2 dateutil
 
 在关于时间格式的处理中，我很喜欢使用[dateutil](https://dateutil.readthedocs.io/en/stable/parser.html)这个包中的parse方法。  
 它可以根据不同格式的时间输入很智能的给出标准化的时间输出。
@@ -108,7 +110,7 @@ def slow_function(a, b, c):
     ...
 ```
 
-然后在命令行中运行： 
+然后在命令行中运行：
 
 ```
 python -m line_profiler script_to_profile.py.lprof

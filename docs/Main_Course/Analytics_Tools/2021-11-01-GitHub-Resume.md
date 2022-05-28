@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - git
 ---
 
 # 用GitHub做一份精美的在线简历
