@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # Kaggle tips
 
-!!! info 
+!!! info
     作者：Void，发布于2021-07-20，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/LVw3rcDCOk0R3oZ_MEDAEQ)
 
 ## 1 引言
@@ -34,7 +36,7 @@ Kaggle作为最有名的数据科学竞赛平台(没有之一)，提供了各种
 - 赛题的关键是识别出客户的uid。但是不能直接把uid等id类变量作为特征，因为测试集中有很多新出现的uid。
 - CatBoost模型在树模型中表现较好。
 - 变量的时间一致性：这里Chris所用的方式是对每一个变量用第一个月的数据去训练一个模型，然后看最后一个月的模型表现。如果表现较差，则说明这个变量可能只在过去起作用，这时应该丢弃这些变量。
-- 低variance的数字变量往往是没有用的。sklearn.feature_selection中有VarianceThreshold来进行特征筛选。 
+- 低variance的数字变量往往是没有用的。sklearn.feature_selection中有VarianceThreshold来进行特征筛选。
 
 Chris还参加了一些图像、NLP相关的比赛，由于和自己的主营业务不太相关，这里就不做整理了。
 

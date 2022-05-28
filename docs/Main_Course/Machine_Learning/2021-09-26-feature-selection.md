@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 如何做特征选择
 
-!!! info 
+!!! info
     作者：Void，发布于2021-09-26，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/Cuw1ugpxm-5lF_rUkAu56Q)
 
 ## 1 引言

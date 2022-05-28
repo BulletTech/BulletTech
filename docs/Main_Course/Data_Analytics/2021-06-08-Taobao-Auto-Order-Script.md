@@ -1,10 +1,13 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
+  - automation
 ---
 
 # 两分钟打造淘宝抢单机器人
 
-!!! info 
+!!! info
     作者：袁子弹起飞、Void，发布于2021-06-08，阅读时间：约4分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/du-t9DyeC2INQsXg1m1xOQ)
 
 ## 1 痛点
@@ -24,49 +27,49 @@ template: overrides/blogs.html
 !!! example "配置Python的编程环境"
 
     === "Windows 配置Python"
-        
+
         下列步骤适用于Windows系统。
 
         Anaconda是一个开源的Python发行版本，集成了Python和众多科学包。
-        
+
         - 第一步：下载Anaconda Windows版本的[64-Bit Graphical Installer](https://www.anaconda.com/products/individual-b)
         - 第二步：安装Anaconda
         - 第三步：打开Anaconda Navigator，点击Launch Notebook或JupyterLab
-        
+
         然后你会看到这样的画面：
-        
+
         <figure>
           <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="600" />
           <figcaption>Jupyter Lab</figcaption>
         </figure>
-        
+
         看到右侧的Notebook区域，添加一个Notebook，然后使用下面的代码打造机器人！
 
     === "Mac 配置Python"
-        
+
         下列步骤适用于Intel Mac和M1 Mac。
-        
+
         - 第一步：打开终端（command + space 激活Spotlight，输入Terminal）
-        
+
         <figure>
           <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623155498233-image.png" width="600" />
           <figcaption>终端Terminal</figcaption>
         </figure>
-        
-        
+
+
         - 第二步：输入`pip3 install jupyter`
         - 第三步：输入`pip3 install jupyter-lab`
         - 第四步：输入`jupyter lab`
-        
+
         然后你会看到这样的画面：
-        
+
         <figure>
           <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-8/1623156140452-Jupyter_lab_blur.png" width="500" />
           <figcaption>Jupyter Lab</figcaption>
         </figure>
-        
+
         看到右侧的Notebook区域，添加一个Notebook，然后使用下面的代码打造机器人！
-        
+
 
 
 ## 3 代码
@@ -145,7 +148,7 @@ def picking():
 #等待抢购时间，定时秒杀，这里我们定义一个buy函数
 def buy(order_time, browser):
     print(order_time)
- 
+
     order_placed_status = False
     while order_placed_status != True:
         now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S.%f')
@@ -167,13 +170,13 @@ def buy(order_time, browser):
                         break
                 except:
                     pass
-            
+
             order_element = WebDriverWait(browser, 20).until(
                             EC.element_to_be_clickable((By.LINK_TEXT, "提交订单")))
             # 点击提交订单按钮
             order_element.click()
             order_placed_status = True
-            
+
             time.sleep(0.01)
 ```
 

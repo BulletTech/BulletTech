@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - analytics
+  - python
 ---
 
 # 功效分析 —— 最小样本量n的选取

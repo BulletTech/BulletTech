@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - analytics
 ---
 
 # 利用递归思想处理半结构化数据
@@ -65,7 +67,7 @@ print(df)
 ```Python
 # 使用json_normalize():
 pd.json_normalize(
-    data, 
+    data,
     record_path = 'counties',  # 定义数据粒度
     meta = ['state', 'shortname',['info', 'governor']] # 定义存入结果表的列名
     )
@@ -124,14 +126,14 @@ def _json_normalize(
     errors: str = "raise",
     sep: str = ".",
     max_level: Optional[int] = None,
-) 
+)
     # 定义一些辅助函数
     def _pull_field(js: Dict[str, Any], spec: Union[List, str])：
         """Internal function to pull field"""
         # 省略具体实现代码
         ...
         return result
-        
+
     def _pull_records(js: Dict[str, Any], spec: Union[List, str]) -> List:
         """
         Internal function to pull field for records, and similar to
@@ -140,9 +142,9 @@ def _json_normalize(
         # 省略具体实现代码
         ...
         return result  
-       
+
     # 省略一些对输入参数的处理和判定的代码   
-    
+
     # 定义一些函数内变量
     _meta = [m if isinstance(m, list) else [m] for m in meta] # 需要展现在结果里的字段
     records: List = []
@@ -151,7 +153,7 @@ def _json_normalize(
     meta_vals: DefaultDict = defaultdict(list)
     # 在深层字典里的字段，用上一层的字段名+分隔符+这一层的字段名代替，防止字段重复，如例子中的 ['info', 'governor'] 处理成 info.governor
     meta_keys = [sep.join(val) for val in _meta]
-    
+
     # 核心代码：
     # Disastrously inefficient for now
     def _recursive_extract(data, path, seen_meta, level=0):
@@ -197,12 +199,12 @@ def _json_normalize(
                                     f"{e} is not always present"
                                 ) from e
                     meta_vals[key].append(meta_val)
-                records.extend(recs) 
+                records.extend(recs)
 
     _recursive_extract(data, record_path, {}, level=0)
-    
+
     # 省略一些对result的格式后处理代码
-    
+
     return result
 ```
 

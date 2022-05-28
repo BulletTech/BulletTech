@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - analytics
+  - python
 ---
 
 # 浅谈数据的搜索和排序
@@ -8,7 +11,7 @@ template: overrides/blogs.html
     作者：Tina，发布于2021-10-28，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/r8WJdmDF4h7xsVRSXnHRKA)
 
 ## 1. 引言
- 
+
 作为一名数据分析师，当然离不开数据结构中的重要概念——搜索和排序。
 
 了解各类排序和搜索算法，可以帮助我们在工作中选择排序和搜索方式时，不仅要考虑数据的特点，还要考虑计算资源。接下来，我们就来简单地用Python代码介绍几种数据搜索和数据排序方法。
@@ -29,7 +32,7 @@ def sequential_Search(alist, item):
         if alist[pos] == item:
             found = True
         else:
-            pos = pos + 1 
+            pos = pos + 1
     return found
 ```
 
@@ -126,7 +129,7 @@ def shell_Sort(alist):
         print("After increments of size", count_sub, "The list is", alist)
 
         count_sub = count_sub // 2
-  
+
 def gap_sort(alist,start,gap):
     for i in range(start+gap,len(alist), gap):
         current_value = alist[i]
@@ -206,7 +209,7 @@ def partition(alist, first, last):
             right_mark = right_mark - 1
         if right_mark < left_mark:
             done = True
-        else: 
+        else:
             temp = alist[left_mark]
             alist[left_mark] = alist[right_mark]
             alist[right_mark] = temp

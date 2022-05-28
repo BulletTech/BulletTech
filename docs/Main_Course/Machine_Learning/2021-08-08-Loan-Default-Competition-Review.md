@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 天池零基础金融风控比赛小结
 
-!!! info 
+!!! info
     作者：Jeremy，发布于2021-08-08，阅读时间：约12分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/dvHbk5NaKz4a15oke3FXkA)
 
 ## 1 背景
@@ -90,16 +92,16 @@ template: overrides/blogs.html
 
 特征交互方面，简单构造了一些可能有实际意义的交互特征，这一部分的业务经验不多，有经验的小伙伴欢迎在评论区分享一下特征构造的思路。
 
-``` python 
+``` python
 # 利率/贷款总额
-data['interestRateOLoanAmnt'] = data['interestRate']/data['loanAmnt'] 
+data['interestRateOLoanAmnt'] = data['interestRate']/data['loanAmnt']
 # 年收入/贷款总额
-data['annualIncomeOLoanAmnt'] = data['annualIncome']/data['loanAmnt'] 
+data['annualIncomeOLoanAmnt'] = data['annualIncome']/data['loanAmnt']
 # 年收入/就业年限
-data['annualIncomeOImploymentLength'] = data['annualIncome']/data['employmentLength'] 
+data['annualIncomeOImploymentLength'] = data['annualIncome']/data['employmentLength']
 # 年收入*就业年限
-data['annualIncomeMImploymentLength'] = data['interestRate']*data['loanAmnt'] 
-# 未结信用额度的数量/当前的信用额度总数 
+data['annualIncomeMImploymentLength'] = data['interestRate']*data['loanAmnt']
+# 未结信用额度的数量/当前的信用额度总数
 data['openAccOTotalAcc'] = data['openAcc']/data['totalAcc']
 # 未结信用额度的数量/最早信用额度开立距今时间
 data['openAccOEarliestCreditLine'] = data['openAcc']/data['earliesCreditLine']
@@ -119,8 +121,8 @@ data['pubRecOissueDate'] = data['pubRec']/data['issueDate']
 
 
 |  模型  | Training AUC | Validation AUC | Test AUC * |
-|  ----  | ----  | ----  |  ----  | 
-| XGBoost(baseline)  | **0.7845** | 0.7367 | - | 
+|  ----  | ----  | ----  |  ----  |
+| XGBoost(baseline)  | **0.7845** | 0.7367 | - |
 | Light-GBM | 0.7407 | 0.7351 | - |
 | CatBoost  | 0.7446 | **0.7434** | 0.7342 |
 | MLP | 0.7263 | 0.7247 | - |

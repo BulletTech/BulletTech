@@ -51,17 +51,17 @@ nav:
         - 神经网络调参技巧: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
     - Machine Learning:
         - 因果推断之Uplift Model: Main_Course/Machine_Learning/2022-02-03-Uplift-Model.md
-        - Kaggle量化竞赛Top方案: Main_Course/Data_Analytics/2022-01-30-Kaggle-exp-s2.md
+        - Kaggle量化竞赛Top方案: Main_Course/Machine_Learning/2022-01-30-Kaggle-exp-s2.md
         - 集成学习小介: Main_Course/Machine_Learning/2022-01-28-Ensemble-Learning.md
         - 特征选择之Permutation Importance: Main_Course/Machine_Learning/2022-01-22-Permutation-importance.md
-        - 特征选择小介: Main_Course/Data_Analytics/2021-09-26-feature-selection.md
-        - 金融风控特征工程: Main_Course/Data_Analytics/2021-09-25-Feature-engineering.md
-        - Kaggle Jane Street: Main_Course/Data_Analytics/2021-09-02-Kaggle-janestreet.md
-        - Kaggle Optiver: Main_Course/Data_Analytics/2021-08-27-Kaggle-optiver.md
-        - Kaggle tips: Main_Course/Data_Analytics/2021-08-10-Kaggle-tips.md
+        - 特征选择小介: Main_Course/Machine_Learning/2021-09-26-feature-selection.md
+        - 金融风控特征工程: Main_Course/Machine_Learning/2021-09-25-Feature-engineering.md
+        - Kaggle Jane Street: Main_Course/Machine_Learning/2021-09-02-Kaggle-janestreet.md
+        - Kaggle Optiver: Main_Course/Machine_Learning/2021-08-27-Kaggle-optiver.md
+        - Kaggle tips: Main_Course/Machine_Learning/2021-08-10-Kaggle-tips.md
         - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
-        - 读《Rules of Machine Learning》有感（下）: Main_Course/Data_Analytics/2021-07-24-notes-of-rules-of-ML2.0.md
-        - 读《Rules of Machine Learning》有感（上）: Main_Course/Data_Analytics/2021-07-22-notes-of-rules-of-ML.md
+        - 读《Rules of Machine Learning》有感（下）: Main_Course/Machine_Learning/2021-07-24-notes-of-rules-of-ML2.0.md
+        - 读《Rules of Machine Learning》有感（上）: Main_Course/Machine_Learning/2021-07-22-notes-of-rules-of-ML.md
         - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
     - Graph:
         - Neo4J图数据库反欺诈分析实战（四） - 风险评分: Main_Course/Graph_Database/2022-04-09-Neo4J-Fraud-s4.md

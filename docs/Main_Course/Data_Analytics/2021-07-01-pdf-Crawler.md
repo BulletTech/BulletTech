@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
+  - automation
 ---
 
 # 爬取并下载URL不变的pdf文件

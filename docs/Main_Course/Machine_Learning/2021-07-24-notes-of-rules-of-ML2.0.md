@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 读《Rules of Machine Learning》有感（下）
 
-!!! info 
+!!! info
     作者：Void，发布于2021-07-22，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/eZqfAIiE9wP2M8x-7CE9-w)
 
 ## 1 引言

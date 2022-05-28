@@ -1,10 +1,13 @@
 ---
 template: overrides/blogs.html
+tags:
+  - analytics
+  - python
 ---
 
 # PySpark简介
 
-!!! info 
+!!! info
     作者：Void，发布于2021-09-20，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/3oJdhYxrIoRqbvYGnH0cKQ)
 
 ## 1 引言

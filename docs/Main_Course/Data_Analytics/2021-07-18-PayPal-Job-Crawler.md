@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
+  - automation
 ---
 
 # Python爬虫应用 - PayPal职位抓取

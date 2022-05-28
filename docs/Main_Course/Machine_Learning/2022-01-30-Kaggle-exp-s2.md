@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # Kaggle量化竞赛Top方案
 
-!!! info 
+!!! info
     作者：Void，发布于2022-01-30，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/M1UrhmJ9dlBlsZUv_jAHxg)
 
 ## 1 引言
@@ -17,7 +19,7 @@ template: overrides/blogs.html
 - [想体验量化交易吗](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484518&idx=1&sn=1110c1bc0a927d0a43446e2ac538fee1&scene=19#wechat_redirect)
 - [抄作业啦](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484478&idx=1&sn=87de555f9ccfb00fc4d9ec6934bc61fa&scene=19#wechat_redirect)
 
-本文将解读已结束的Jane Street Market Prediction以及Optiver Realized Volatility Prediction最终排名第一的解决方案。
+本文将解读已结束的`Jane Street Market Prediction`以及`Optiver Realized Volatility Prediction`最终排名第一的解决方案。
 
 
 ## 2 竞赛介绍
@@ -41,15 +43,15 @@ template: overrides/blogs.html
 
 ```python
 def create_ae_mlp(num_columns, num_labels, hidden_units, dropout_rates, ls = 1e-2, lr = 1e-3):
-    
+
     inp = tf.keras.layers.Input(shape = (num_columns, ))
     x0 = tf.keras.layers.BatchNormalization()(inp)
-    
+
     encoder = tf.keras.layers.GaussianNoise(dropout_rates[0])(x0)
     encoder = tf.keras.layers.Dense(hidden_units[0])(encoder)
     encoder = tf.keras.layers.BatchNormalization()(encoder)
     encoder = tf.keras.layers.Activation('swish')(encoder)
-    
+
     decoder = tf.keras.layers.Dropout(dropout_rates[1])(encoder)
     decoder = tf.keras.layers.Dense(num_columns, name = 'decoder')(decoder)
 
@@ -59,31 +61,31 @@ def create_ae_mlp(num_columns, num_labels, hidden_units, dropout_rates, ls = 1e-
     x_ae = tf.keras.layers.Dropout(dropout_rates[2])(x_ae)
 
     out_ae = tf.keras.layers.Dense(num_labels, activation = 'sigmoid', name = 'ae_action')(x_ae)
-    
+
     x = tf.keras.layers.Concatenate()([x0, encoder])
     x = tf.keras.layers.BatchNormalization()(x)
     x = tf.keras.layers.Dropout(dropout_rates[3])(x)
-    
+
     for i in range(2, len(hidden_units)):
         x = tf.keras.layers.Dense(hidden_units[i])(x)
         x = tf.keras.layers.BatchNormalization()(x)
         x = tf.keras.layers.Activation('swish')(x)
         x = tf.keras.layers.Dropout(dropout_rates[i + 2])(x)
-        
+
     out = tf.keras.layers.Dense(num_labels, activation = 'sigmoid', name = 'action')(x)
-    
+
     model = tf.keras.models.Model(inputs = inp, outputs = [decoder, out_ae, out])
     model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate = lr),
-                  loss = {'decoder': tf.keras.losses.MeanSquaredError(), 
+                  loss = {'decoder': tf.keras.losses.MeanSquaredError(),
                           'ae_action': tf.keras.losses.BinaryCrossentropy(label_smoothing = ls),
-                          'action': tf.keras.losses.BinaryCrossentropy(label_smoothing = ls), 
+                          'action': tf.keras.losses.BinaryCrossentropy(label_smoothing = ls),
                          },
-                  metrics = {'decoder': tf.keras.metrics.MeanAbsoluteError(name = 'MAE'), 
-                             'ae_action': tf.keras.metrics.AUC(name = 'AUC'), 
-                             'action': tf.keras.metrics.AUC(name = 'AUC'), 
-                            }, 
+                  metrics = {'decoder': tf.keras.metrics.MeanAbsoluteError(name = 'MAE'),
+                             'ae_action': tf.keras.metrics.AUC(name = 'AUC'),
+                             'action': tf.keras.metrics.AUC(name = 'AUC'),
+                            },
                  )
-    
+
     return model
 ```
 
@@ -107,26 +109,26 @@ NearestNeighbors是无监督的最近邻算法，包括了brute force以及通�
 
 ```python
 class Neighbors:
-    def __init__(self, 
-                 name: str, 
-                 pivot: pd.DataFrame, 
-                 p: float, 
-                 metric: str = 'minkowski', 
-                 metric_params: Optional[Dict] = None, 
+    def __init__(self,
+                 name: str,
+                 pivot: pd.DataFrame,
+                 p: float,
+                 metric: str = 'minkowski',
+                 metric_params: Optional[Dict] = None,
                  exclude_self: bool = False):
         self.name = name
         self.exclude_self = exclude_self
         self.p = p
         self.metric = metric
-        
+
         if metric == 'random':
             n_queries = len(pivot)
             self.neighbors = np.random.randint(n_queries, size=(n_queries, N_NEIGHBORS_MAX))
         else:
             nn = NearestNeighbors(
-                n_neighbors=N_NEIGHBORS_MAX, 
-                p=p, 
-                metric=metric, 
+                n_neighbors=N_NEIGHBORS_MAX,
+                p=p,
+                metric=metric,
                 metric_params=metric_params
             )
             nn.fit(pivot)
@@ -143,8 +145,8 @@ class Neighbors:
         start = 1 if self.exclude_self else 0
 
         pivot_aggs = pd.DataFrame(
-            agg(self.feature_values[start:n,:,:], axis=0), 
-            columns=self.columns, 
+            agg(self.feature_values[start:n,:,:], axis=0),
+            columns=self.columns,
             index=self.index
         )
 
@@ -168,7 +170,7 @@ class TimeIdNeighbors(Neighbors):
         self.index = list(feature_pivot.index)
         self.feature_values = feature_values
         self.feature_col = feature_col
-        
+
     def __repr__(self) -> str:
         return f"time-id NN (name={self.name}, metric={self.metric}, p={self.p})"
 ```

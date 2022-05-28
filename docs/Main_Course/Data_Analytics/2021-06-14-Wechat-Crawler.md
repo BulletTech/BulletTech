@@ -1,10 +1,13 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
+  - automation
 ---
 
 # 微信小程序爬虫
 
-!!! info 
+!!! info
     作者：Void，发布于2021-06-14，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/PBHXRCzPUKyRLYSOkkZmLw)
 
 Big brother是我们公司的网球王子，他总是使用某微信小程序预定网球场地。然而，热门时间段的场地总是如同变魔术一般在一瞬间被订满。  
@@ -70,9 +73,9 @@ Help -> SSL Proxying -> Install Charles Root Certificate
 
 Charles常用的工具有工具栏下面扫帚状按钮(清除当前session的数据)和摄像头状按钮(开始以及停止抓取数据)。  
 
-## 2 探索数据 
+## 2 探索数据
 
-我们在pc端登录微信，打开我们想爬取的小程序，可以看到Charles已经为我们抓取了所有的访问数据。 
+我们在pc端登录微信，打开我们想爬取的小程序，可以看到Charles已经为我们抓取了所有的访问数据。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623654447258-vx7.png" width="600" />
@@ -114,7 +117,7 @@ Charles成功为我们获取了微信小程序的内容。下一步，我们将�
 - venues文件夹下存取的是场地相关的信息，包括小程序上可以看到的仙霞网球中心、东方体育中心等可以预定的场地。
 - block文件夹下存取的是已经被预定的场地信息。
 
-以及和下单有关的u文件夹。u文件夹由block、order两个子文件夹以及info组成。info存储了用户的信息，从右侧Contents可以看到自己的用户名、手机号码等等。block初始化了这笔订单，并没有太多别的信息。order文件夹下包括cancel文件夹以及下订单的各种请求。其中createkBlock这个post请求对应于我们在小程序上所做的**确认订单**。blockPay代表了**立即支付**的操作。 
+以及和下单有关的u文件夹。u文件夹由block、order两个子文件夹以及info组成。info存储了用户的信息，从右侧Contents可以看到自己的用户名、手机号码等等。block初始化了这笔订单，并没有太多别的信息。order文件夹下包括cancel文件夹以及下订单的各种请求。其中createkBlock这个post请求对应于我们在小程序上所做的**确认订单**。blockPay代表了**立即支付**的操作。
 
 ## 3 Python脚本
 
@@ -161,7 +164,7 @@ this_block=this_orders['blockModel'][0]
 我们打印一下获得的场地信息。
 
 ```python
-print(this_block) 
+print(this_block)
 
 {'groundId': 41,
  'groundName': '1号场',
@@ -226,17 +229,17 @@ def send_email():
     import smtplib
     from email.mime.text import MIMEText
     from email.mime.multipart import MIMEMultipart  
-    
+
     _user = "XXX"
     _pwd  = "XXX"
     _to   = "XXX"
-    
+
     msg = MIMEMultipart('related')
     msg = MIMEText('has room')
     msg["Subject"] = "Tennis booking"
     msg["From"]    = _user
     msg["To"]      = _to
-    
+
     try:
         s = smtplib.SMTP_SSL("smtp.qq.com", 465)
         s.login(_user, _pwd)
@@ -245,7 +248,7 @@ def send_email():
         print ("Success!")
     except smtplib.SMTPException:
         print ("Falied")
-        
+
 id=True
 while id:
     for u in range(len(urls)):
@@ -262,7 +265,7 @@ while id:
             for j in i['blockModel']:
                 if j['status']!=0:
                     send_email()
-                    print('has room!') 
+                    print('has room!')
                     id=False
                     break
         time.sleep(3)

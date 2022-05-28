@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # 金融风控特征工程小结
 
-!!! info 
+!!! info
     作者：Jeremy，发布于2021-09-25，阅读时间：约8分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484564&idx=1&sn=e13190de19bb84676db3902527685159&chksm=eb90f7e0dce77ef69155a7f19a4181f04b35c01e1297b2355389667e8b178ff5f7c373bd9479&token=1727747278&lang=zh_CN#rd)
 
 ## 1 前言
@@ -39,7 +41,7 @@ template: overrides/blogs.html
 
 有时数据中的时间信息为时间戳，我们可以手工将其转换成数值信息，如计算最近一次使用信用卡的时间，上一次联系时间，上次逾期时间等。
 
-### 3.2 统计特征 
+### 3.2 统计特征
 
 一个申请id会对应拉取其申请人的征信(Bureau Credit)数据和信用卡使用数据，一个申请id在其他表中对应多行记录。对于这部分变量，往往会考虑构造统计性特征，如均值，最大/最小值，合计值，频次等等。
 
@@ -53,7 +55,7 @@ def agg_numeric(df, group_var, df_name):
     for col in df:
         if col != group_var and 'SK_ID' in col:
             df = df.drop(columns = col)
-            
+
     group_ids = df[group_var]
     numeric_df = df.select_dtypes('number')
     numeric_df[group_var] = group_ids
@@ -74,7 +76,7 @@ def agg_numeric(df, group_var, df_name):
                 columns.append('%s_%s_%s' % (df_name, var, stat))
 
     agg.columns = columns
-    return agg 
+    return agg
 ```
 
 ### 3.3 时序特征

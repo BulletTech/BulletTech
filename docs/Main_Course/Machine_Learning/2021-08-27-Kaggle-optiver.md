@@ -1,10 +1,12 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
 ---
 
 # Kaggle Optiver竞赛前排大神开源方案
 
-!!! info 
+!!! info
     作者：Void，发布于2021-08-27，阅读时间：约10分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/tIowQSB7mX2j-gVQCHw1eg)
 
 ## 1 引言
@@ -49,7 +51,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import QuantileTransformer
 from sklearn.metrics import r2_score
 
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy.matlib
 
@@ -66,7 +68,7 @@ scores_folds = {}
 
 $$
 W A P=\frac{\text { BidPrice }_{1} * \text { AskSize }_{1}+\text { AskPrice }_{1} * \text { BidSize }_{1}}{\text { BidSize }_{1}+\text { AskSize }_{1}}
-$$ 
+$$
 
 这种计算方式适用于有买一卖一等的订单薄数据，同时考虑了价格和挂单量。  
 
@@ -142,7 +144,7 @@ def book_preprocessor(file_path):
     df["bid_ask_spread"] = abs(df['bid_spread'] - df['ask_spread'])
     df['total_volume'] = (df['ask_size1'] + df['ask_size2']) + (df['bid_size1'] + df['bid_size2'])
     df['volume_imbalance'] = abs((df['ask_size1'] + df['ask_size2']) - (df['bid_size1'] + df['bid_size2']))
-    
+
     # Dict for aggregations
     create_feature_dict = {
         'wap1': [np.sum, np.std],
@@ -168,7 +170,7 @@ def book_preprocessor(file_path):
         'log_return3': [realized_volatility],
         'log_return4': [realized_volatility],
     }
-    
+
     # Function to get group stats for different windows (seconds in bucket)
     def get_stats_window(fe_dict,seconds_in_bucket, add_suffix = False):
         # Group by the window
@@ -179,7 +181,7 @@ def book_preprocessor(file_path):
         if add_suffix:
             df_feature = df_feature.add_suffix('_' + str(seconds_in_bucket))
         return df_feature
-    
+
     # Get the stats for different windows
     df_feature = get_stats_window(create_feature_dict,seconds_in_bucket = 0, add_suffix = False)
     df_feature_500 = get_stats_window(create_feature_dict_time,seconds_in_bucket = 500, add_suffix = True)
@@ -196,8 +198,8 @@ def book_preprocessor(file_path):
     df_feature = df_feature.merge(df_feature_100, how = 'left', left_on = 'time_id_', right_on = 'time_id__100')
     # Drop unnecesary time_ids
     df_feature.drop(['time_id__500','time_id__400', 'time_id__300', 'time_id__200','time_id__100'], axis = 1, inplace = True)
-    
-    
+
+
     # Create row_id so we can merge
     stock_id = file_path.split('=')[1]
     df_feature['row_id'] = df_feature['time_id_'].apply(lambda x: f'{stock_id}-{x}')
@@ -241,7 +243,7 @@ def trade_preprocessor(file_path):
         if add_suffix:
             df_feature = df_feature.add_suffix('_' + str(seconds_in_bucket))
         return df_feature
-    
+
 
     # Get the stats for different windows
     df_feature = get_stats_window(create_feature_dict,seconds_in_bucket = 0, add_suffix = False)
@@ -250,13 +252,13 @@ def trade_preprocessor(file_path):
     df_feature_300 = get_stats_window(create_feature_dict_time,seconds_in_bucket = 300, add_suffix = True)
     df_feature_200 = get_stats_window(create_feature_dict_time,seconds_in_bucket = 200, add_suffix = True)
     df_feature_100 = get_stats_window(create_feature_dict_time,seconds_in_bucket = 100, add_suffix = True)
-    
+
     def tendency(price, vol):    
         df_diff = np.diff(price)
         val = (df_diff/price[1:])*100
         power = np.sum(val*vol[1:])
         return(power)
-    
+
     lis = []
     for n_time_id in df['time_id'].unique():
         df_id = df[df['time_id'] == n_time_id]        
@@ -269,21 +271,21 @@ def trade_preprocessor(file_path):
         abs_diff = np.median(np.abs( df_id['price'].values - np.mean(df_id['price'].values)))        
         energy = np.mean(df_id['price'].values**2)
         iqr_p = np.percentile(df_id['price'].values,75) - np.percentile(df_id['price'].values,25)
-        
+
         # vol vars
-        
+
         abs_diff_v = np.median(np.abs( df_id['size'].values - np.mean(df_id['size'].values)))        
         energy_v = np.sum(df_id['size'].values**2)
         iqr_p_v = np.percentile(df_id['size'].values,75) - np.percentile(df_id['size'].values,25)
-        
+
         lis.append({'time_id':n_time_id,'tendency':tendencyV,'f_max':f_max,'f_min':f_min,'df_max':df_max,'df_min':df_min,
                    'abs_diff':abs_diff,'energy':energy,'iqr_p':iqr_p,'abs_diff_v':abs_diff_v,'energy_v':energy_v,'iqr_p_v':iqr_p_v})
-    
+
     df_lr = pd.DataFrame(lis)
-        
-   
+
+
     df_feature = df_feature.merge(df_lr, how = 'left', left_on = 'time_id_', right_on = 'time_id')
-    
+
     # Merge all
     df_feature = df_feature.merge(df_feature_500, how = 'left', left_on = 'time_id_', right_on = 'time_id__500')
     df_feature = df_feature.merge(df_feature_400, how = 'left', left_on = 'time_id_', right_on = 'time_id__400')
@@ -292,8 +294,8 @@ def trade_preprocessor(file_path):
     df_feature = df_feature.merge(df_feature_100, how = 'left', left_on = 'time_id_', right_on = 'time_id__100')
     # Drop unnecesary time_ids
     df_feature.drop(['time_id__500','time_id__400', 'time_id__300', 'time_id__200','time_id','time_id__100'], axis = 1, inplace = True)
-    
-    
+
+
     df_feature = df_feature.add_prefix('trade_')
     stock_id = file_path.split('=')[1]
     df_feature['row_id'] = df_feature['trade_time_id_'].apply(lambda x:f'{stock_id}-{x}')
@@ -302,8 +304,8 @@ def trade_preprocessor(file_path):
 
 # Function to get group stats for the stock_id and time_id
 def get_time_stock(df):
-    vol_cols = ['log_return1_realized_volatility', 'log_return2_realized_volatility', 'log_return1_realized_volatility_400', 'log_return2_realized_volatility_400', 
-                'log_return1_realized_volatility_300', 'log_return2_realized_volatility_300', 'log_return1_realized_volatility_200', 'log_return2_realized_volatility_200', 
+    vol_cols = ['log_return1_realized_volatility', 'log_return2_realized_volatility', 'log_return1_realized_volatility_400', 'log_return2_realized_volatility_400',
+                'log_return1_realized_volatility_300', 'log_return2_realized_volatility_300', 'log_return1_realized_volatility_200', 'log_return2_realized_volatility_200',
                 'trade_log_return_realized_volatility', 'trade_log_return_realized_volatility_400', 'trade_log_return_realized_volatility_300', 'trade_log_return_realized_volatility_200']
 
 
@@ -318,7 +320,7 @@ def get_time_stock(df):
     # Rename columns joining suffix
     df_time_id.columns = ['_'.join(col) for col in df_time_id.columns]
     df_time_id = df_time_id.add_suffix('_' + 'time')
-    
+
     # Merge with original dataframe
     df = df.merge(df_stock_id, how = 'left', left_on = ['stock_id'], right_on = ['stock_id__stock'])
     df = df.merge(df_time_id, how = 'left', left_on = ['time_id'], right_on = ['time_id__time'])
@@ -348,7 +350,7 @@ print(kmeans.labels_)
 l = []
 for n in range(7):
     l.append ( [ (x-1) for x in ( (ids+1)*(kmeans.labels_ == n)) if x > 0] )
-    
+
 
 mat = []
 matTest = []
@@ -360,14 +362,14 @@ for ind in l:
     newDf = newDf.groupby(['time_id']).agg(np.nanmean)
     newDf.loc[:,'stock_id'] = str(n)+'c1'
     mat.append ( newDf )
-    
+
     newDf = test.loc[test['stock_id'].isin(ind) ]    
     newDf = newDf.groupby(['time_id']).agg(np.nanmean)
     newDf.loc[:,'stock_id'] = str(n)+'c1'
     matTest.append ( newDf )
-    
+
     n+=1
-    
+
 mat1 = pd.concat(mat).reset_index()
 mat1.drop(columns=['target'],inplace=True)
 
@@ -382,7 +384,7 @@ mat2 = pd.concat(matTest).reset_index()
 
 # Funtion to make preprocessing function in parallel (for each stock id)
 def preprocessor(list_stock_ids, is_train = True):
-    
+
     # Parrallel for loop
     def for_joblib(stock_id):
         # Train
@@ -393,13 +395,13 @@ def preprocessor(list_stock_ids, is_train = True):
         else:
             file_path_book = data_dir + "book_test.parquet/stock_id=" + str(stock_id)
             file_path_trade = data_dir + "trade_test.parquet/stock_id=" + str(stock_id)
-    
+
         # Preprocess book and trade data and merge them
         df_tmp = pd.merge(book_preprocessor(file_path_book), trade_preprocessor(file_path_trade), on = 'row_id', how = 'left')
-        
+
         # Return the merge dataframe
         return df_tmp
-    
+
     # Use parallel api to call paralle for loop
     df = Parallel(n_jobs = -1, verbose = 1)(delayed(for_joblib)(stock_id) for stock_id in list_stock_ids)
     # Concatenate all the dataframes that return from Parallel
@@ -420,13 +422,13 @@ def feval_rmspe(y_pred, lgb_train):
 # Read train and test
 train, test = read_train_test()
 
-# Get unique stock ids 
+# Get unique stock ids
 train_stock_ids = train['stock_id'].unique()
 # Preprocess them using Parallel and our single stock id functions
 train_ = preprocessor(train_stock_ids, is_train = True)
 train = train.merge(train_, on = ['row_id'], how = 'left')
 
-# Get unique stock ids 
+# Get unique stock ids
 test_stock_ids = test['stock_id'].unique()
 # Preprocess them using Parallel and our single stock id functions
 test_ = preprocessor(test_stock_ids, is_train = False)
@@ -446,14 +448,14 @@ test = get_time_stock(test)
 Ensemble这块就是LGBM和NN的简单平均。
 
 ```python
-test_nn["row_id"] = test_nn["stock_id"].astype(str) + "-" + test_nn["time_id"].astype(str) 
+test_nn["row_id"] = test_nn["stock_id"].astype(str) + "-" + test_nn["time_id"].astype(str)
 test_nn[target_name] = (test_predictions_nn+predictions_lgb)/2
 
 score = round(rmspe(y_true = train_nn[target_name].values, y_pred = train_nn[pred_name].values),5)
 print('RMSPE {}: {} - Folds: {}'.format(model_name, score, scores_folds[model_name]))
 
 display(test_nn[['row_id', target_name]].head(3))
-test_nn[['row_id', target_name]].to_csv('submission.csv',index = False) 
+test_nn[['row_id', target_name]].to_csv('submission.csv',index = False)
 ```
 
 ## 4 小结

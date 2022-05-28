@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - analytics
 ---
 
 # A/B测试实战case分享，面对考官追问也不慌
