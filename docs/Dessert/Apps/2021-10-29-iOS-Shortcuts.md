@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - app
 ---
 
 # iOS Shortcuts捷径 - 自动化神器

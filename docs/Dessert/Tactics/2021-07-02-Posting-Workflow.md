@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - experience
 ---
 
 # 如何以最快的速度写出一篇优美的文章

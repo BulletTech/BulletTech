@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - hardware
 ---
 
 # Apple Watch S5 使用一年感受 - 不后悔！

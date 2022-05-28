@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - python
 ---
 
 # 获取租房房源数据
@@ -9,7 +11,7 @@ template: overrides/blogs.html
 
 ## 1 前言
 
-租房/有房要出租的小伙伴们看过来~ 
+租房/有房要出租的小伙伴们看过来~
 
 衣食住行是生活的基本需求。衣和食好解决，不喜欢的衣服可以买新的，不好吃的食物可以换一家吃。可是在住宿上，买房和租房的置换成本都相对较高，因此房源选择尤为慎重。作为目前买不起房的自然人，我们一般是通过中介来实现租房的需求，比如自如，贝壳找房和链家。看来宇宙的尽头是铁岭，租房的尽头是链家……  
 链家占据了租赁市场的主导地位，且提供的信息相对公允。但每当我刷超过十个房源，我就会记不起来每一个的信息，也无法可视化去比较很多个房源。那么让我们开始动手，用万能的Python来让链家变成你家，获取链家网上的你想要的信息吧。（真的不是广告）
@@ -49,7 +51,7 @@ template: overrides/blogs.html
 以属性为content__list--item--title的paragraph为例，其中包含了租赁方式，街区，房屋朝向等信息。我们可以用XPath来匹配和定位到这个段落，取出里面的文本。常用的匹配规则为 / 代表选取直接子节点，// 代表选择所有子孙节点，. 代表选取当前节点，.. 代表选取当前节点的父节点，@ 则是加了属性的限定，选取匹配属性的特定节点。下面是租赁方式（整租/合租）的匹配方式。
 
 <figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/SH_rent04.PNG" width="500"/> 
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/SH_rent04.PNG" width="500"/>
 </figure>
 
 ```python
@@ -99,7 +101,7 @@ user_agents = [
 ]
 
 def getHeaders():
-    user_agent = user_agents[random.randint(0, len(user_agents)-1)] 
+    user_agent = user_agents[random.randint(0, len(user_agents)-1)]
     headers = {
         'User-Agent': user_agent
     }
@@ -128,7 +130,7 @@ def get_data(url):
         releaseTime = li.xpath('.//div[@class="content__list--item--main"]/p[@class="content__list--item--brand oneline"]/span[@class="content__list--item--time oneline"]/text()')[0]
         Link = li.xpath('.//div[@class="content__list--item--main"]/p[@class="content__list--item--title"]/a[@class="twoline"]//@href')[0]
         all_house_list.append((Nbhood,LeaseMethod,HouseOrientation,Rent,District,Location,Size,HouseType,releaseTime))
-        
+
     return all_house_list
 
 #循环爬取所需租房信息

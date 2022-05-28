@@ -21,8 +21,8 @@ nav:
         - 最小样本量n的选取: Main_Course/Data_Analytics/2021-12-15-min_n_choice.md
         - 浅谈数据的搜索和排序: Main_Course/Data_Analytics/2021-10-26-Data-Search-and-Sort.md
         - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md
-        - SQL Tips 2: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
-        - SQL Tips: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
+        - SQL Tips（二）: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
+        - SQL Tips（一）: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
         - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
         - PayPal职位爬虫: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
         - 时间序列异常检测: Main_Course/Data_Analytics/2021-07-16-Timeseries-algo.md
@@ -38,8 +38,8 @@ nav:
         - TensorFlow Playground简介: Main_Course/Deep_Learning/2022-05-07-TF-Playground.md
         - 使用TensorFlow Decision Forests构建树模型: Main_Course/Deep_Learning/2022-04-24-TensorFlow-Decision-Forest.md
         - 使用TensorFlow进行文本分类:  Main_Course/Deep_Learning/2022-04-16-TF-Text-Classification.md
-        - TensorFlow推荐系统（二）: Main_Course/Deep_Learning/2021-12-27-TensorFlow-Recommender2.md
         - TabNet模型介绍: Main_Course/Deep_Learning/2021-12-18-Tabnet.md
+        - TensorFlow推荐系统（二）: Main_Course/Deep_Learning/2021-12-27-TensorFlow-Recommender2.md
         - TensorFlow推荐系统（一）: Main_Course/Deep_Learning/2021-12-10-Tensorflow-Recommender.md
         - 读《30天吃掉那只TensorFlow2》: Main_Course/Deep_Learning/2021-12-01-Tensorflow-Doc.md
         - 深度学习 101-搭建 ResNet 识别鲜花图像: Main_Course/Deep_Learning/2021-11-04-Deep-Learning-101-ResNet.md

@@ -1,5 +1,7 @@
 ---
 template: overrides/blogs.html
+tags:
+  - bullettech
 ---
 
 # “年终”文章回顾及新菜单发布

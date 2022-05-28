@@ -1,5 +1,7 @@
 ---
 template: overrides/general_no_comments.html
+tags:
+  - bullettech
 ---
 
 # 我们的故事
