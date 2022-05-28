@@ -231,11 +231,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-07-16-Timeseries-algo/</loc>
-         <lastmod>2022-05-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
@@ -372,6 +367,11 @@
     </url>
     <url>
          <loc>https://bullettech.github.io/BulletTech/Main_Course/Graph_Database/2022-04-09-Neo4J-Fraud-s4/</loc>
+         <lastmod>2022-05-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://bullettech.github.io/BulletTech/Main_Course/Machine_Learning/2021-07-16-Timeseries-algo/</loc>
          <lastmod>2022-05-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
