@@ -172,7 +172,8 @@ theme:
 
 # Plugins
 plugins:
-  - search
+  - search:
+      separator: '[\s\u200b\-]'
   - tags:
       tags_file: tags.md
   - minify:
