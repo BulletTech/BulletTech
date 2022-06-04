@@ -17,7 +17,7 @@ tags:
 
 ## 2 比特币价格数据集
 
-### 2.1 获取数据
+### 2.1 获取数据
 
 本文使用比特币历史价格数据(2013年10月至2021年5月)进行预测，请注意本文不构成投资建议！
 
@@ -183,7 +183,11 @@ model.evaluate(test_dataset)
 
 ## 4 总结
 
-本文对单变量时间序列预测任务做了一个基准，其中TensorFlow的`tf.keras.preprocessing.timeseries_dataset_from_array`API简化了许多处理时间窗口的工作，之后将继续对TensorFlow预测时间序列的任务进行讨论。希望这次的分享对你有帮助，欢迎在评论区留言讨论！
+本文对单变量时间序列预测任务做了一个基准，其中TensorFlow的`tf.keras.preprocessing.timeseries_dataset_from_array`API简化了许多处理时间窗口的工作，之后将继续对TensorFlow预测时间序列的任务进行讨论。
+
+## 5 相关阅读资料
+
+- [Forecasting: Principles and Practice](https://otexts.com/fpp3/index.html)
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
