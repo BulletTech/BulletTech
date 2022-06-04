@@ -10,13 +10,13 @@ tags:
 !!! info
     作者：Tina，发布于2021-10-28，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/r8WJdmDF4h7xsVRSXnHRKA)
 
-## 1. 引言
+## 1 引言
 
 作为一名数据分析师，当然离不开数据结构中的重要概念——搜索和排序。
 
 了解各类排序和搜索算法，可以帮助我们在工作中选择排序和搜索方式时，不仅要考虑数据的特点，还要考虑计算资源。接下来，我们就来简单地用Python代码介绍几种数据搜索和数据排序方法。
 
-## 2. Python的代码实现
+## 2 Python的代码实现
 
 ### 2.1 数据搜索
 #### 2.1.1 顺序搜索
@@ -220,7 +220,7 @@ def partition(alist, first, last):
     return right_mark
 ```
 
-## 3.总结
+## 3 总结
 
 总的来说，搜索和排序的算法有很多，但是没有哪一种是完美无缺的。只有了解每种算法的基本原理和优缺点，尽可能地去规避它的不足，才有可能帮助我们选择最适合自己工作内容的方法和相对应的开源接口。
 
@@ -228,6 +228,3 @@ def partition(alist, first, last):
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
 </figure>
-
-### 参考文献
-[1] 《Python数据结构与算法分析》
