@@ -19,6 +19,7 @@ tags:
 - [跟李沐学AI - Bilibili](https://space.bilibili.com/1567748478/channel/series)
 - [TensorFlow Developer Certificate Course - Zero to Mastery](https://dbourke.link/ZTMTFcourse)
 - [Intro to TensorFlow for Deep Learning - Udacity](https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187)
+- [Machine Learning Crash Course - Google](https://developers.google.com/machine-learning/crash-course)
 
 ## 3 技术博客 & 电子书
 
@@ -38,6 +39,7 @@ tags:
 - [动手学深度学习 - Amazon](https://zh-v2.d2l.ai/)
 - [HuggingFace Course](https://huggingface.co/course/chapter1/1)
 - [Forecasting: Principles and Practice - 3rd Edition](https://otexts.com/fpp3/index.html)
+- [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml#terminology
 
 ## 4 GitHub 资源
 
