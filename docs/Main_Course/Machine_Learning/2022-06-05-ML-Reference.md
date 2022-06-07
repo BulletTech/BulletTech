@@ -48,10 +48,12 @@ tags:
 - [Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow](https://github.com/ageron/handson-ml2)
 
 
-## Notion 笔记
+## 5 Notion 笔记
 
 - [Getting TensorFlow Developer Certified Curriculum](https://www.notion.so/Getting-TensorFlow-Developer-Certified-Curriculum-752a0fbc256e48dbb085a0481cc787a7)
 - [MIT Introduction to Deep Learning Notes](https://www.notion.so/Course-MIT-Introduction-to-Deep-Learning-Notes-0e48ecc9ed7342b7b448956bed9e0e75)
+
+## 总结
 
 本文将持续更新，也欢迎提交Pull Requests补充资源。
 
