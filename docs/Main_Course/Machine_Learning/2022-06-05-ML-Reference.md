@@ -4,7 +4,7 @@ tags:
   - machine learning
 ---
 
-# Machine Learning学习资料汇总（不定期更新）
+# Machine Learning学习资料汇总（持续更新）
 
 !!! info
     作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
@@ -48,7 +48,12 @@ tags:
 - [Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow](https://github.com/ageron/handson-ml2)
 
 
-本文将不定期更新，也欢迎提交Pull Requests补充资源。
+## Notion 笔记
+
+- [Getting TensorFlow Developer Certified Curriculum](https://www.notion.so/Getting-TensorFlow-Developer-Certified-Curriculum-752a0fbc256e48dbb085a0481cc787a7)
+- [MIT Introduction to Deep Learning Notes](https://www.notion.so/Course-MIT-Introduction-to-Deep-Learning-Notes-0e48ecc9ed7342b7b448956bed9e0e75)
+
+本文将持续更新，也欢迎提交Pull Requests补充资源。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
