@@ -50,10 +50,10 @@ tags:
 
 ## 5 Notion 笔记
 
-- [Getting TensorFlow Developer Certified Curriculum](https://www.notion.so/Getting-TensorFlow-Developer-Certified-Curriculum-752a0fbc256e48dbb085a0481cc787a7)
+- [TensorFlow in Practice on Coursera Notes](https://www.notion.so/Course-TensorFlow-in-Practice-on-Coursera-Notes-5f4f8915fe3342e2a69f75ef1986ba3b)
 - [MIT Introduction to Deep Learning Notes](https://www.notion.so/Course-MIT-Introduction-to-Deep-Learning-Notes-0e48ecc9ed7342b7b448956bed9e0e75)
 
-## 总结
+## 6 总结
 
 本文将持续更新，也欢迎提交Pull Requests补充资源。
 
