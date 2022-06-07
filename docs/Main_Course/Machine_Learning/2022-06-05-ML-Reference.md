@@ -39,7 +39,7 @@ tags:
 - [动手学深度学习 - Amazon](https://zh-v2.d2l.ai/)
 - [HuggingFace Course](https://huggingface.co/course/chapter1/1)
 - [Forecasting: Principles and Practice - 3rd Edition](https://otexts.com/fpp3/index.html)
-- [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml#terminology
+- [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml#terminology)
 
 ## 4 GitHub 资源
 
