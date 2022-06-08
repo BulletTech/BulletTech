@@ -20,6 +20,8 @@ tags:
 - [TensorFlow Developer Certificate Course - Zero to Mastery](https://dbourke.link/ZTMTFcourse)
 - [Intro to TensorFlow for Deep Learning - Udacity](https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187)
 - [Machine Learning Crash Course - Google](https://developers.google.com/machine-learning/crash-course)
+- [Machine Learning for Beginners - Microsoft](https://microsoft.github.io/ML-For-Beginners/#/)
+- [Data Science for Beginners - Microsoft](https://microsoft.github.io/Data-Science-For-Beginners/#/)
 
 ## 3 技术博客 & 电子书
 
@@ -43,8 +45,8 @@ tags:
 
 ## 4 GitHub 资源
 
-- [Data-Science-For-Beginners - MicroSoft](https://github.com/microsoft/Data-Science-For-Beginners)
-- [ML-For-Beginners - MicroSoft](https://github.com/microsoft/ML-For-Beginners)
+- [Data-Science-For-Beginners - Microsoft](https://github.com/microsoft/Data-Science-For-Beginners)
+- [ML-For-Beginners - Microsoft](https://github.com/microsoft/ML-For-Beginners)
 - [Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow](https://github.com/ageron/handson-ml2)
 - [TensorFlow In Practice](https://github.com/lmoroney/dlaicourse)
 
