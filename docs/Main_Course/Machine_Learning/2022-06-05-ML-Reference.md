@@ -31,6 +31,7 @@ tags:
 - [Han Xiao tech blog](https://hanxiao.io/)
 - [Google AI](https://blog.google/technology/ai/)
 - [Open AI](https://openai.com/)
+- [The Unofficial Google Data Science Blog](https://www.unofficialgoogledatascience.com/)
 
 电子书：
 
