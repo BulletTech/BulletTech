@@ -46,6 +46,7 @@ tags:
 - [Data-Science-For-Beginners - MicroSoft](https://github.com/microsoft/Data-Science-For-Beginners)
 - [ML-For-Beginners - MicroSoft](https://github.com/microsoft/ML-For-Beginners)
 - [Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow](https://github.com/ageron/handson-ml2)
+- [TensorFlow In Practice](https://github.com/lmoroney/dlaicourse)
 
 
 ## 5 Notion 笔记
