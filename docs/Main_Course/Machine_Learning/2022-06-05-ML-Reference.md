@@ -57,11 +57,15 @@ tags:
 - [TensorFlow in Practice on Coursera Notes](https://www.notion.so/Course-TensorFlow-in-Practice-on-Coursera-Notes-5f4f8915fe3342e2a69f75ef1986ba3b)
 - [MIT Introduction to Deep Learning Notes](https://www.notion.so/Course-MIT-Introduction-to-Deep-Learning-Notes-0e48ecc9ed7342b7b448956bed9e0e75)
 
-## 6 总结
+## 6 竞赛经验
+
+- [2021年Kaggle所有赛事TOP方案汇总](https://zhuanlan.zhihu.com/p/472915303)
+- [Tabular Data Binary Classification: All Tips and Tricks from 5 Kaggle Competitions](https://neptune.ai/blog/tabular-data-binary-classification-tips-and-tricks-from-5-kaggle-competitions)
+
+## 7 总结
 
 本文将持续更新，也欢迎提交Pull Requests补充资源。
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
 </figure>
-
