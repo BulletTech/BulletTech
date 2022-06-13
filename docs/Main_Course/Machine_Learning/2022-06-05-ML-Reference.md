@@ -7,7 +7,7 @@ tags:
 # Machine Learning学习资料汇总（持续更新）
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：[Vincent](https://github.com/Realvincentyuan)，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s/Y1VF1Iw8kg-JmOPbIVM1mw)
 
 ## 1 概述
 
