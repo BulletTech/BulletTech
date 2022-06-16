@@ -62,6 +62,7 @@ tags:
 - [2021年Kaggle所有赛事TOP方案汇总](https://zhuanlan.zhihu.com/p/472915303)
 - [Tabular Data Binary Classification: All Tips and Tricks from 5 Kaggle Competitions](https://neptune.ai/blog/tabular-data-binary-classification-tips-and-tricks-from-5-kaggle-competitions)
 - [Data Science for tabular data: Advanced Techniques](https://www.kaggle.com/code/vbmokin/data-science-for-tabular-data-advanced-techniques/notebook)
+- [Deep Learning for Time Series Forecasting](https://www.kaggle.com/code/dimitreoliveira/deep-learning-for-time-series-forecasting/notebook)
 
 ## 7 总结
 
