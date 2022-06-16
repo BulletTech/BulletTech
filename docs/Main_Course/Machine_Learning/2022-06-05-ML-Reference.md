@@ -27,11 +27,13 @@ tags:
 
 技术博客：
 
+- [Kaggle Winner's Blog](https://medium.com/kaggle-blog)
 - [Visualizing machine learning one concept at a time - Jay Alammar](http://jalammar.github.io/)
 - [Han Xiao tech blog](https://hanxiao.io/)
 - [Google AI](https://blog.google/technology/ai/)
 - [Open AI](https://openai.com/)
 - [The Unofficial Google Data Science Blog](https://www.unofficialgoogledatascience.com/)
+
 
 电子书：
 
