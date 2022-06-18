@@ -25,7 +25,7 @@ tags:
 
 ## 3 技术博客 & 电子书
 
-技术博客：
+### 3.1 技术博客
 
 - [Kaggle Winner's Blog](https://medium.com/kaggle-blog)
 - [Visualizing machine learning one concept at a time - Jay Alammar](http://jalammar.github.io/)
@@ -35,7 +35,7 @@ tags:
 - [The Unofficial Google Data Science Blog](https://www.unofficialgoogledatascience.com/)
 
 
-电子书：
+### 3.2 电子书
 
 - [TensorFlow Developer Certificate Learning E-book](https://dev.mrdbourke.com/tensorflow-deep-learning/)
 - [简单粗暴 TensorFlow 2 | A Concise Handbook of TensorFlow 2](https://tf.wiki/)
@@ -63,11 +63,13 @@ tags:
 
 - [2021年Kaggle所有赛事TOP方案汇总](https://zhuanlan.zhihu.com/p/472915303)
 
-表格型数据：
+### 6.1 表格型数据
+
 - [Tabular Data Binary Classification: All Tips and Tricks from 5 Kaggle Competitions](https://neptune.ai/blog/tabular-data-binary-classification-tips-and-tricks-from-5-kaggle-competitions)
 - [Data Science for tabular data: Advanced Techniques](https://www.kaggle.com/code/vbmokin/data-science-for-tabular-data-advanced-techniques/notebook)
 
-时间序列：
+### 6.2 时间序列
+
 - [Deep Learning for Time Series Forecasting](https://www.kaggle.com/code/dimitreoliveira/deep-learning-for-time-series-forecasting/notebook)
 - [Electricity price forecasting with DNNs (+ EDA)](https://www.kaggle.com/code/dimitriosroussis/electricity-price-forecasting-with-dnns-eda)
 
