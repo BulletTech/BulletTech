@@ -33,6 +33,8 @@ tags:
 - [Google AI](https://blog.google/technology/ai/)
 - [Open AI](https://openai.com/)
 - [The Unofficial Google Data Science Blog](https://www.unofficialgoogledatascience.com/)
+- [Andrej Karpathy blog](http://karpathy.github.io/)
+- [Surge AI blog](http://blog.echen.me/)
 
 
 ### 3.2 电子书
