@@ -13,7 +13,6 @@ edit_uri: edit/main/docs/
 # Page tree
 nav:
   - Home: index.md
-  - Product Center: http://bullettech.cn/
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
