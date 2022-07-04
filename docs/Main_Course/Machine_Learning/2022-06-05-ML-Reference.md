@@ -35,6 +35,7 @@ tags:
 - [The Unofficial Google Data Science Blog](https://www.unofficialgoogledatascience.com/)
 - [Andrej Karpathy blog](http://karpathy.github.io/)
 - [Surge AI blog](http://blog.echen.me/)
+- [Paper with Code](https://paperswithcode.com/)
 
 
 ### 3.2 电子书
