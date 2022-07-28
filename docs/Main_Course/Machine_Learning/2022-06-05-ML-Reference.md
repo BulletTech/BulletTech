@@ -22,6 +22,7 @@ tags:
 - [Machine Learning Crash Course - Google](https://developers.google.com/machine-learning/crash-course)
 - [Machine Learning for Beginners - Microsoft](https://microsoft.github.io/ML-For-Beginners/#/)
 - [Data Science for Beginners - Microsoft](https://microsoft.github.io/Data-Science-For-Beginners/#/)
+- [Kaggle courses](https://www.kaggle.com/learn)
 
 ## 3 技术博客 & 电子书
 
