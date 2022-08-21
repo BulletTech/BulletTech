@@ -49,6 +49,7 @@ tags:
 - [HuggingFace Course](https://huggingface.co/course/chapter1/1)
 - [Forecasting: Principles and Practice - 3rd Edition](https://otexts.com/fpp3/index.html)
 - [Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml#terminology)
+- [Machine Learning Glossary](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
 
 ## 4 GitHub 资源
 
