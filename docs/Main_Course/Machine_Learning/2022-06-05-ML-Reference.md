@@ -16,6 +16,7 @@ tags:
 ## 2 在线课程
 
 - [Standford CS 229: Machine Learning - Bilibili](https://www.bilibili.com/video/BV1pp4y1t7Na?spm_id_from=333.337.search-card.all.click)
+- [Stanford Seminar CS25: Transformers United - YouTube](https://www.youtube.com/watch?v=P127jhj-8-Y&list=PLoROMvodv4rNiJRchCzutFw5ItR_Z27CM&ab_channel=StanfordOnline)
 - [跟李沐学AI - Bilibili](https://space.bilibili.com/1567748478/channel/series)
 - [TensorFlow Developer Certificate Course - Zero to Mastery](https://dbourke.link/ZTMTFcourse)
 - [Intro to TensorFlow for Deep Learning - Udacity](https://www.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187)
