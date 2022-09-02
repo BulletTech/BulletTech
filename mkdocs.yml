@@ -47,6 +47,7 @@ nav:
         - Keras各种Callbacks介绍: Main_Course/Deep_Learning/2021-10-02-TF-Callbacks.md
         - 神经网络调参技巧: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
     - Machine Learning:
+        - AMEX - Default Prediction Kaggle竞赛精华总结: Main_Course/Machine_Learning/2022-08-30-AMEX-Kaggle-Summary.md
         - Machine Learning学习资料汇总: Main_Course/Machine_Learning/2022-06-05-ML-Reference.md
         - 因果推断之Uplift Model: Main_Course/Machine_Learning/2022-02-03-Uplift-Model.md
         - Kaggle量化竞赛Top方案: Main_Course/Machine_Learning/2022-01-30-Kaggle-exp-s2.md
