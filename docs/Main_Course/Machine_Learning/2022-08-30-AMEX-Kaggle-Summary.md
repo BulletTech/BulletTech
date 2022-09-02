@@ -8,7 +8,7 @@ tags:
 # AMEX - Default Prediction Kaggle竞赛精华总结
 
 !!! info
-    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:]()
+    作者：袁子弹起飞，发布于2021-06-06，阅读时间：约6分钟，微信公众号文章链接：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485350&idx=1&sn=630219a13b43b343585b69c048f5f640&chksm=eb90f4d2dce77dc40ed6a88d7e174b6de9a0211e02588b686f76e6840af72fdb72afb8b61876&token=1184541802&lang=zh_CN#rd)
 
 
 ## 1 概述
