@@ -1,5 +1,8 @@
 ---
 template: overrides/blogs.html
+tags:
+  - machine learning
+  - python
 ---
 
 # AMEX - Default Prediction Kaggle竞赛精华总结
