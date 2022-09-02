@@ -13,7 +13,7 @@ tags:
 
 ## 1 概述
 
-美国著名金融服务公司American Express（AMEX）在Kaggle上举办了一个数据科学竞赛，要求参赛者针对信用卡账单数据预测持卡人是否在未来会逾期。其中，各个特征都做了脱敏处理，AMEX提供了特征前缀的解释:
+美国著名金融服务公司American Express（AMEX）在Kaggle上举办了一个[数据科学竞赛](https://www.kaggle.com/competitions/amex-default-prediction)，要求参赛者针对信用卡账单数据预测持卡人是否在未来会逾期。其中，各个特征都做了脱敏处理，AMEX提供了特征前缀的解释:
 
 ```
 D_* = 逾期相关的变量
