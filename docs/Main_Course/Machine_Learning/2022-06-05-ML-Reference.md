@@ -74,6 +74,7 @@ tags:
 - [Tabular Data Binary Classification: All Tips and Tricks from 5 Kaggle Competitions](https://neptune.ai/blog/tabular-data-binary-classification-tips-and-tricks-from-5-kaggle-competitions)
 - [Data Science for tabular data: Advanced Techniques](https://www.kaggle.com/code/vbmokin/data-science-for-tabular-data-advanced-techniques/notebook)
 - [Tabular Classification - Tips and Tricks](https://www.kaggle.com/competitions/amex-default-prediction/discussion/335892)
+- [Feature Engineering Techniques](https://www.kaggle.com/competitions/ieee-fraud-detection/discussion/108575)
 
 ### 6.2 时间序列
 
