@@ -69,19 +69,23 @@ tags:
 
 - [2021年Kaggle所有赛事TOP方案汇总](https://zhuanlan.zhihu.com/p/472915303)
 
-### 6.1 特征工程
+### 6.1 探索性数据分析
+
+- [Exploratory Data Analysis with Pandas](https://www.kaggle.com/code/kashnitsky/topic-1-exploratory-data-analysis-with-pandas/notebook)
+- [Comprehensive data exploration with Python](https://www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python)
+
+### 6.2 特征工程
 
 - [Feature Engineering Techniques](https://www.kaggle.com/competitions/ieee-fraud-detection/discussion/108575)
 - [IEEE - FE for Local test](https://www.kaggle.com/code/kyakovlev/ieee-fe-for-local-test/notebook)
 
-### 6.2 表格型数据
+### 6.3 表格型数据建模
 
 - [Tabular Data Binary Classification: All Tips and Tricks from 5 Kaggle Competitions](https://neptune.ai/blog/tabular-data-binary-classification-tips-and-tricks-from-5-kaggle-competitions)
 - [Data Science for tabular data: Advanced Techniques](https://www.kaggle.com/code/vbmokin/data-science-for-tabular-data-advanced-techniques/notebook)
 - [Tabular Classification - Tips and Tricks](https://www.kaggle.com/competitions/amex-default-prediction/discussion/335892)
 
-
-### 6.3 时间序列
+### 6.4 时间序列建模
 
 - [Deep Learning for Time Series Forecasting](https://www.kaggle.com/code/dimitreoliveira/deep-learning-for-time-series-forecasting/notebook)
 - [Electricity price forecasting with DNNs (+ EDA)](https://www.kaggle.com/code/dimitriosroussis/electricity-price-forecasting-with-dnns-eda)
