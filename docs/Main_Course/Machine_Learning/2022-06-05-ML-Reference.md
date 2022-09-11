@@ -87,6 +87,7 @@ tags:
 
 ### 6.4 时间序列建模
 
+- [Time Series Analysis in Python](https://www.kaggle.com/code/kashnitsky/topic-9-part-1-time-series-analysis-in-python)
 - [Deep Learning for Time Series Forecasting](https://www.kaggle.com/code/dimitreoliveira/deep-learning-for-time-series-forecasting/notebook)
 - [Electricity price forecasting with DNNs (+ EDA)](https://www.kaggle.com/code/dimitriosroussis/electricity-price-forecasting-with-dnns-eda)
 
