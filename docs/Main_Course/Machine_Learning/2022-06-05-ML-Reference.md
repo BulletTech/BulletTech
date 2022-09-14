@@ -84,6 +84,7 @@ tags:
 - [Tabular Data Binary Classification: All Tips and Tricks from 5 Kaggle Competitions](https://neptune.ai/blog/tabular-data-binary-classification-tips-and-tricks-from-5-kaggle-competitions)
 - [Data Science for tabular data: Advanced Techniques](https://www.kaggle.com/code/vbmokin/data-science-for-tabular-data-advanced-techniques/notebook)
 - [Tabular Classification - Tips and Tricks](https://www.kaggle.com/competitions/amex-default-prediction/discussion/335892)
+- [Feature Ranking RFE, Random Forest, linear models](https://www.kaggle.com/code/arthurtok/feature-ranking-rfe-random-forest-linear-models)
 
 ### 6.4 时间序列建模
 
