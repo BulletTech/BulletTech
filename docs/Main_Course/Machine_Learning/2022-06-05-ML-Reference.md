@@ -38,6 +38,7 @@ tags:
 - [Andrej Karpathy blog](http://karpathy.github.io/)
 - [Surge AI blog](http://blog.echen.me/)
 - [Paper with Code](https://paperswithcode.com/)
+- [Diving into data](http://blog.datadive.net/)
 
 
 ### 3.2 电子书
