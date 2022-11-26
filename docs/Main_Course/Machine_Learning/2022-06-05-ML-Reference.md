@@ -39,6 +39,7 @@ tags:
 - [Surge AI blog](http://blog.echen.me/)
 - [Paper with Code](https://paperswithcode.com/)
 - [Diving into data](http://blog.datadive.net/)
+- [Cloudera Blog](https://blog.cloudera.com/)
 
 
 ### 3.2 电子书
