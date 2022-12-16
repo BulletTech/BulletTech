@@ -42,6 +42,9 @@ for post in Post_list:
     chinese_words = re.findall(r'[\u4E00-\u9FFF]',markdown)
     markdown = re.sub(r"阅读时间：约\d+分钟", "阅读时间：约{}分钟".format(int(len(chinese_words)/200)), markdown)
     
+    # let it snow
+    markdown = markdown.replace("---", "---\nᴴₒᴴₒᴴₒ: true\n", 1)
+    
     if qr_pic_path not in markdown:
         markdown += ending_pic
         
