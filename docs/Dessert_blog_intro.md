@@ -1,5 +1,6 @@
 ---
 template: overrides/blogs.html
+ᴴₒᴴₒᴴₒ: true
 ---
 
 # 科技甜点简介

@@ -1,4 +1,5 @@
 ---
+ᴴₒᴴₒᴴₒ: true
 template: overrides/blogs.html
 hide:
   - navigation
