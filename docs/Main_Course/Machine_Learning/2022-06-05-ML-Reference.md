@@ -61,6 +61,7 @@ tags:
 - [Hands-on Machine Learning with Scikit-Learn, Keras and TensorFlow](https://github.com/ageron/handson-ml2)
 - [TensorFlow In Practice](https://github.com/lmoroney/dlaicourse)
 - [TensorFlow Examples](https://github.com/tensorflow/examples)
+- [Deep Learning Tuning Playbook](https://github.com/google-research/tuning_playbook)
 
 ## 5 Notion 笔记
 
