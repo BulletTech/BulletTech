@@ -17,18 +17,18 @@ tags:
 
 L1签证持有者
 
-- [ ] Latest I-94
-- [ ] Visa stamp
-- [ ] Form I-129S with the approval stamp
-- [ ] Fully vaccinated proof 
-- [ ] Covid negative proof in the last 2 days
+- [X} Latest I-94
+- [X} Visa stamp
+- [X} Form I-129S with the approval stamp
+- [X} Fully vaccinated proof 
+- [X} Covid negative proof in the last 2 days
 
 L1签证持有者的配偶与孩子
 
-- [ ] Latest I-94
-- [ ] L-2 Visa stamp
-- [ ] Fully vaccinated proof 
-- [ ] Covid negative proof in the last 2 days
+- [X} Latest I-94
+- [X} L-2 Visa stamp
+- [X} Fully vaccinated proof 
+- [X} Covid negative proof in the last 2 days
 
 对于第一次入境美国的中国公民，I-94为空，不需要携带，之前有入境记录的，在[I-94官网](https://i94.cbp.dhs.gov/I94/#/recent-search)下载打印最新的I-94即可。
  
