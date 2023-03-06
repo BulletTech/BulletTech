@@ -45,7 +45,7 @@ L1签证持有者的配偶与孩子
 ## 3 参考链接
 
 - [入境美国后I-94表格问题汇总](https://mp.weixin.qq.com/s/brFB535_t6f-86noh328Qg)
-- [下载疫苗接种官方证明](https://mp.weixin.qq.com/s/13tBsDg8-LZLZzRumehejw)：使用**防疫健康码国际版**微信小程序下载
+- [下载疫苗接种官方证明](https://mp.weixin.qq.com/s/13tBsDg8-LZLZzRumehejw)：使用`防疫健康码国际版`微信小程序下载
 - [入境美国核酸检测阴性，或者康复证明](https://mp.weixin.qq.com/s/JlK1_uxuqNrbMm1vye_Neg)
 
 希望这次的分享对你有帮助，欢迎在评论区留言讨论！
