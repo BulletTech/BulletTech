@@ -40,6 +40,7 @@ tags:
 - [Paper with Code](https://paperswithcode.com/)
 - [Diving into data](http://blog.datadive.net/)
 - [Cloudera Blog](https://blog.cloudera.com/)
+- [Cookiecutter Data Science](http://drivendata.github.io/cookiecutter-data-science/)
 
 
 ### 3.2 电子书
