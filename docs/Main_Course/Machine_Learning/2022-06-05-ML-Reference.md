@@ -41,6 +41,7 @@ tags:
 - [Diving into data](http://blog.datadive.net/)
 - [Cloudera Blog](https://blog.cloudera.com/)
 - [Cookiecutter Data Science](http://drivendata.github.io/cookiecutter-data-science/)
+- [Hugging Face Chinese Blog](https://huggingface.co/blog/zh)
 
 
 ### 3.2 电子书
