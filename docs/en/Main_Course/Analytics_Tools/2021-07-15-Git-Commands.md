@@ -1,226 +1,297 @@
 ---
 template: overrides/blogs.html
 tags:
-  -git
+  - git
 ---
 
-# Git common commands list
+# Git常用命令一览
 
-!!! Info
-    Author: [vincent] (https://github.com/realvincentyuan), published in 2021-07-15, reading time: about 5 minutes, WeChat public account article link: [: fontaWesome-Solid-Link:] (https:: https:: https:: https:: https://mp.weixinIn.qqpom/s ?__biz=mzi4mjk3nzgxoq===2247484312&IDX=1&SN=420520ba2de61eedb13569b0c6&Chksm=ECDCDCE779FAE11111 4099e90400637B801dd4689372C466C033C36CE0C9DD55E9EC8DEB10BB & Token = 2142567738 & Lang = zh_cn#RD)
+!!! info
+    Author:：[Vincent](https://github.com/Realvincentyuan)，Posted on 2021-07-15，Reading time: 5 mins，WeChat Post Link:：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484312&idx=1&sn=420520ba2de61eedb13569b8cb03b0c6&chksm=eb90f0ecdce779fae14099e90400637b801dd4689372c466c033c36ce0c9dd55e9ec8deb10bb&token=2142567738&lang=zh_CN#rd)
 
-Do not write in [one line of code, teach you to use using github] (https://mp.weixin.qq.com/s ?__biz=mzi4mjk3nzgxoq=&MID=2247484191&IDX=1&SN=73AE46B2A836729C636B937F2 EF & CHKSM = EB90F06BDCE7797D71DEE815E283559F05D0D0DCAB9C6430C856A8AA79617A9C0EEE39F & Token = 150554771 & Lang = zh_cn#RD)In this article, we introduced how to use GitHub Desktop to operate GitHub. The graphical interface is very friendly to face friends who are not familiar with the command, but sometimes it is more convenient to operate the command directly in the code editor or terminal, so it is more convenient to operate Git, soThis article will introduce some commonly used commands to make your Git level go to the next level.
+在[一行代码都不写，教你使用GitHub](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484191&idx=1&sn=73a2aae2e46b2a836729c636b937f2ef&chksm=eb90f06bdce7797d71dee815e283559f05d0db8dcab9c6430c856a8da05aa79617a9c0eee39f&token=150554771&lang=zh_CN#rd)这篇文章中，我们介绍了如何使用GitHub Desktop对GitHub进行操作，图形化的界面对不太熟悉命令的朋友非常友好，但有时候，在代码编辑器或者终端中直接运行命令操作Git更方便，所以这篇文章将介绍一些常用的命令，让你的Git水平更上一层楼。
 
 <figure>
-  <img src = "https://cdn.jsdelivr.net/gh/bullettech2021/pics/2021-7-17/1626508940064-git.png" width = "700"/>/>/>/>/>/>/>/>/>/>/>/>/>/>/> 700 "/>
-  <figcaption> Use git </figcaption> in the terminal
-</Figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-17/1626508940064-Git.png" width="700" />
+  <figcaption>在终端中使用Git</figcaption>
+</figure>
 
 ## 1 Configure git
 
+
 First of all, you need to let Git know who you are, so set your username first:
 
-`` `Bash
-git config ---global user.name
-`` `
+
+```bash
+git config –-global user.name
+```
+
 
 Set mailbox:
 
-`` `Bash
+
+```bash
 git config --global user.email
-`` `
+```
+
 
 ## 2 Set the git warehouse
 
+
 Create a blank new warehouse:
 
-`` `Bash
+
+```bash
 git init
-`` `
+```
+
 
 A folder of a clone warehouse to the present:
 
-`` `Bash
-git clone <repo url>
-`` `
+
+```bash
+git clone <repo URL>
+```
+
 
 Display the list of remote warehouses:
 
-`` `Bash
-git remote -V
-`` `
+
+```bash
+git remote -v
+```
+
 
 Delete a remote warehouse:
 
-`` `Bash
+
+```bash
 git remote RM <remote warehouse name>
-`` `
+```
+
 
 Pull the latest modification on the server back to the local area, but do not merge with the current work documents:
 
-`` `Bash
+
+```bash
 git fetch
-`` `
+```
+
 
 Pull the latest modification on the server back to the local area and merge directly with the working document:
 
-`` `Bash
+
+```bash
 git pull
-`` `
+```
+
 
 ## 3 Management file changes
 
+
 Add all changes to the buffer:
 
-`` `Bash
+
+```bash
 git add <file name>
-`` `
+```
+
 
 Remove a file and not save its modification history:
 
-`` `Bash
+
+```bash
 git rm <file name>
-`` `
+```
+
 
 Reply to a deleted file and prepare it to submit the update:
 
-`` `Bash
+
+```bash
 git checkout <deleted file name>
-`` `
+```
+
 
 Display the status of the modified file:
 
-`` `Bash
-git Status
-`` `
+
+```bash
+git status
+```
+
 
 Some files are useless for projects, such as cache and log files, which are ignored by versions of management. Through this command, you can view the neglected file list:
 
-`` `Bash
-git LS-Files –other – Ignored -exClude-Standard
-`` `
+
+```bash
+git ls-files –other –ignored –exclude-standard
+```
+
 
 Show the change of all files in the current directory:
 
-`` `Bash
+
+```bash
 git diff
-`` `
+```
+
 
 ## 4 Git submitted related commands
 
+
 Submit code and comment content:
 
-`` `Bash
+
+```bash
 git commit -m "<submit content>" "" "" ""
-`` `
+```
+
 
 Switch to a certain state of submission:
 
-`` `Bash
-git checkout <Commit>
-`` `
+
+```bash
+git checkout <commit>
+```
+
 
 Revisit all changes when submitting:
 
-`` `Bash
-git reset – Hard <Commit>
-`` `
+
+```bash
+git reset –hard <commit>
+```
+
 
 Rejection of changes in the current work folder:
 
-`` `Bash
-Git Reset – Hard Head
-`` `
+
+```bash
+git reset –hard Head
+```
+
 
 Show modification history:
 
-`` `Bash
+
+```bash
 git log
-`` `
+```
+
 
 Stay on the current modification first, and then use it:
 
-`` `Bash
-git Stash
-`` `
+
+```bash
+git stash
+```
+
 
 Retrieve the previously shelved file:
 
-`` `Bash
-git Stash Pop
-`` `
+
+```bash
+git stash pop
+```
+
 
 Clear the shelves file:
 
-`` `Bash
-git Stash Drop
-`` `
+
+```bash
+git stash drop
+```
+
 
 Create a TAG, mark the current file version:
 
-`` `Bash
+
+```bash
 git tag <tag version>
-`` `
+```
+
 
 Push the change to Origin:
 
-`` `Bash
+
+```bash
 git push
-`` `
+```
+
 
 Push the change to another branch:
 
-`` `Bash
+
+```bash
 git push <Current branch>: <Want to push the branch>
-`` `
+```
+
 
 ## 5 git branch operation
 
+
 Show all branches:
 
-`` `Bash
-git Branch
-`` `
+
+```bash
+git branch
+```
+
 
 Create a new branch and switch to the new branch:
 
-`` `Bash
+
+```bash
 git checkout -b <branch name>
-`` `
+```
+
 
 Switch to the new branch:
 
-`` `Bash
+
+```bash
 git checkout <branch name>
-`` `
+```
+
 
 Delete branch:
 
-`` `Bash
+
+```bash
 git Branch -d <branch name>
-`` `
+```
+
 
 Merge another branch to the current branch:
 
-`` `Bash
+
+```bash
 Git Merge <branch name>
-`` `
+```
+
 
 Pull the branch from the remote warehouse:
 
-`` `Bash
+
+```bash
 git fetch remote <branch name>
-`` `
+```
+
 
 View the difference between the two branches:
 
-`` `Bash
+
+```bash
 Git Diff <Source Branch> <Target Branch>
-`` `
+```
+
 
 ## 6 git tips
 
+
 Is there a dazzling command to make you dazzling?Test it yourself in the code editor and terminal!Finally, we are summing up some small tips to use git daily to help you reduce errors and improve efficiency:
+
 
 -At look at the latest Origin status before starting work. May
 -Yessor enough tests before submitting updates to ensure that your update is effective
