@@ -187,6 +187,12 @@ plugins:
       j2_variable_end_string: '%]'
   - git-revision-date-localized
   - rss
+  - i18n:
+    default_language: 
+    docs_structure: folder
+    languages:
+      en:
+        name: English
 
 
 
