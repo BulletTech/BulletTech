@@ -192,6 +192,7 @@ plugins:
         en:
           name: English
           build: true
+          link: /en/
   - git-revision-date-localized
   - rss
 
