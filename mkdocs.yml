@@ -257,3 +257,7 @@ extra:
   analytics:
     provider: google
     property: G-YBLW55DHTJ
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
