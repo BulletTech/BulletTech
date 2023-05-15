@@ -187,8 +187,8 @@ plugins:
       j2_variable_end_string: '%]'
   - git-revision-date-localized
   - rss
-  - i18n:
-    default_language: 
+  - i18n: 
+    default_language: zh
     docs_structure: folder
     languages:
       en:
