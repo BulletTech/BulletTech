@@ -85,6 +85,7 @@ nav:
         - Git常用命令一览: Main_Course/Analytics_Tools/2021-07-15-Git-Commands.md
         - 一行代码都不写，教你使用GitHub: Main_Course/Analytics_Tools/2021-06-23-Github-Intro.md
     - Coding:
+        - Python风格最佳实践: Main_Course/Coding/2023-05-14-Python-style.md
         - 命令行交互工具argparse: Main_Course/Coding/2021-11-21-Python-argparse.md
         - 语法解析工具sqlparse: Main_Course/Coding/2021-10-16-Python-package-sqlparse.md
         - Python闭包浅析: Main_Course/Coding/2021-09-21-Python-Closure.md
