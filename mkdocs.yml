@@ -191,8 +191,7 @@ plugins:
     default_language: zh
     docs_structure: folder
     languages:
-      en:
-        name: English
+      en: english
 
 
 
