@@ -192,7 +192,7 @@ plugins:
         en:
           name: English
           build: true
-          link: /en/
+          link: /BulletTech/en/
   - git-revision-date-localized
   - rss
 
