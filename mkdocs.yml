@@ -188,10 +188,12 @@ plugins:
   - git-revision-date-localized
   - rss
   - i18n: 
-    default_language: zh
-    docs_structure: folder
-    languages:
-      en: english
+      default_language: zh
+      docs_structure: folder
+      languages:
+        en:
+          name: English
+          build: true
 
 
 
