@@ -25,5 +25,6 @@ jobs:
       - run: pip install --upgrade mkdocs-minify-plugin
       - run: pip install --upgrade mkdocs-macros-plugin
       - run: pip install --upgrade mkdocs-git-revision-date-localized-plugin
+      - run: pip install --upgrade mkdocs-static-i18n
       - run: git pull
       - run: mkdocs gh-deploy --force
