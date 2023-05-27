@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+---
+
 # SQL Parsing Tool: sqlparse
 
 !!! info

@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Introduction to Ensemble Learning
 
 !!! info

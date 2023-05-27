@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - git
+---
+
 # Explore GitHub
 
 !!! info

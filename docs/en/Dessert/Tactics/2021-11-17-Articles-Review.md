@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - bullettech
+---
+
 # "Year-end" Article Review and New Menu Release
 
 !!! info

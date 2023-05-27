@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+---
+
 # Customizing Models with tf.keras
 
 !!! info

@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - experience
+---
+
 # How to Write a Beautiful Article at the Fastest Speed
 
 !!! info

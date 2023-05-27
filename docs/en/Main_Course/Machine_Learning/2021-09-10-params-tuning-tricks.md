@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Tips for Tuning Neural Networks
 
 !!! info

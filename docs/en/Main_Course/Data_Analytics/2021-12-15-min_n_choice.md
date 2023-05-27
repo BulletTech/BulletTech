@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - analytics
+  - python
+---
+
 # Efficacy Analysis - Selection of Minimum Sample Size n
 
 !!! info

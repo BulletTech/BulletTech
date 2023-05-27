@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - app
+  - python
+---
+
 # Free Experiment Platform - Amazon SageMaker Studio Lab
 
 !!! info

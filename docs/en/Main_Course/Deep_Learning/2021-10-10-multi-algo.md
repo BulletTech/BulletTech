@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+---
+
 # The Multi-Family in Algorithms
 
 !!! info

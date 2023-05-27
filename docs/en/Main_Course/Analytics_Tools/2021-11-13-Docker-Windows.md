@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - docker
+---
+
 # Teaching You to Successfully Run Docker on Win10 System
 
 !!! info

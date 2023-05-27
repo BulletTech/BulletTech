@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Notes on Decision Tree Learning
 
 !!! info

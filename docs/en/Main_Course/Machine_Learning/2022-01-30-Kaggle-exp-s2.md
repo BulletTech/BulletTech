@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Top Solutions for Kaggle Quantitative Competitions
 
 !!! info

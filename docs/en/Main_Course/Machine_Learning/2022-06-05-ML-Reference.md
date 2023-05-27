@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Summary of Machine Learning Learning Resources (Continuously Updated)
 
 !!! info

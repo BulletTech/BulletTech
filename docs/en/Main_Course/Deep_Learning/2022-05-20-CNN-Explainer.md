@@ -1,3 +1,11 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - cnn
+---
+
 # Introduction to Convolutional Neural Network Explainer
 
 !!! info

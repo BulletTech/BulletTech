@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+---
+
 # Useful Python Packages
 
 !!! info

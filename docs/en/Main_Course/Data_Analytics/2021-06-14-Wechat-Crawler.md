@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+  - automation
+---
+
 # WeChat Mini Program Spider
 
 !!! info

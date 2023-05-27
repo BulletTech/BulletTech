@@ -6,6 +6,14 @@ tags:
   - nlp
 ---
 
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - nlp
+---
+
 # 使用TensorFlow进行文本分类
 
 !!! info

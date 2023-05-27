@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Summary of Feature Engineering in Financial Risk Control
 
 !!! info

@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Summary of Tianchi Zero-based Financial Risk Control Competition
 
 !!! info

@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - analytics
+---
+
 # Using Recursive Thinking to Process Semi-Structured Data
 
 !!! info

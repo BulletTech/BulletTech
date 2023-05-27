@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - knowledge graph
+---
+
 # Introduction to Graph Databases
 
 !!! info

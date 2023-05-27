@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+  - automation
+---
+
 # Crawl and download PDF files with unchanged URLs
 
 !!! info

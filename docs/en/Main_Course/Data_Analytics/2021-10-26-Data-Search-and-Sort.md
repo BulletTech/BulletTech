@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - analytics
+  - python
+---
+
 # A Brief Discussion on Data Search and Sorting
 
 !!! info

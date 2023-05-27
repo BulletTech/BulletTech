@@ -1,3 +1,11 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - cnn
+---
+
 # Deep Learning 101 - Building ResNet for Flower Image Recognition
 
 !!! info

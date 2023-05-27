@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - usa
+---
+
 # Memo for L Visa Holders to Enter the United States
 
 !!! info

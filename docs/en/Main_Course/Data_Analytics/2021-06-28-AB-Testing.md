@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - analytics
+---
+
 # A/B Test Practical Case Sharing, Facing Examiner's Questions with Confidence
 
 !!! info

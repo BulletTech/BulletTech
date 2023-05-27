@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - analytics
+  - database
+---
+
 # SnowFlake Permission Overview
 
 !!! info

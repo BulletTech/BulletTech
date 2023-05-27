@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+  - automation
+---
+
 # Build a Taobao Robotic Purchasing Tool in Two Minutes
 
 !!! info

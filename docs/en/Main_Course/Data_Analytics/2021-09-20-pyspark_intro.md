@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - analytics
+  - python
+---
+
 # Introduction to PySpark
 
 !!! info

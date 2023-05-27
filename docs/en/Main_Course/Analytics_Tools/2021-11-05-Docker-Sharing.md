@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - docker
+---
+
 # First Experience with Docker 
 
 !!! info

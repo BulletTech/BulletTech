@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - git
+---
+
 # A List of Common Git Commands
 
 !!! info

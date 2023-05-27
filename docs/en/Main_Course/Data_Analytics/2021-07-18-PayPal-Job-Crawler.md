@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+  - automation
+---
+
 # Python Web Scraping Application - Scraping PayPal Job Positions
 
 !!! info

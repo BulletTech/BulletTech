@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+---
+
 # Reflections on "Rules of Machine Learning" (Part 2)
 
 !!! info

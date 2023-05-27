@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+---
+
 # Introduction to various Keras Callbacks
 
 !!! info

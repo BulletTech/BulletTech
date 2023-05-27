@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+---
+
 # Tips for Common Operations on Python Dictionaries
 
 !!! info

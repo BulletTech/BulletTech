@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+---
+
 # Building Tree Models with TensorFlow Decision Forests
 
 !!! info

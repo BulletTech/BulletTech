@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - python
+---
+
 # Understanding Python Closures
 
 !!! info

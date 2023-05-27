@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - machine learning
+  - python
+---
+
 # AMEX - Default Prediction Kaggle Competition Summary
 
 !!! info

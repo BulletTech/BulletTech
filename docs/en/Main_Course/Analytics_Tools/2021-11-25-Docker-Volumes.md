@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - docker
+---
+
 # Persisting Data in Docker
 
 !!! info

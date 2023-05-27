@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - analytics
+  - database
+---
+
 # Overview of SnowFlake Architecture
 
 !!! info

@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - hardware
+---
+
 # One Year's Use of Apple Watch S5 - No Regrets!
 
 !!! info

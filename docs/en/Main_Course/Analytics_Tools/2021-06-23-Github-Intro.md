@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - git
+---
+
 # How to Use GitHub without Writing a Single Line of Code
 
 !!! info

@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - app
+---
+
 # iOS Shortcuts - The Automation Artifact
 
 !!! info

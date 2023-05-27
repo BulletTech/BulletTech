@@ -1,3 +1,9 @@
+---
+template: overrides/blogs.html
+tags:
+  - git
+---
+
 # Creating a Beautiful Online Resume using GitHub
 
 !!! info

@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+---
+
 # Reading "30 Days to Eat TensorFlow2"
 
 !!! info

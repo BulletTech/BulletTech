@@ -1,3 +1,11 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - time series
+---
+
 # Univariate Time Series Prediction with TensorFlow
 
 !!! info

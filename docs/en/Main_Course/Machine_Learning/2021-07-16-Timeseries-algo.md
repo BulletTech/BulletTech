@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - time series
+  - machine learning
+---
+
 # Time Series Anomaly Detection
 !!! info
     Author: Void, Published on 2021-07-20, Reading time: about 10 minutes, WeChat official account article link: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s/XwtXpa1hOKrN6fIC-zpyKw)

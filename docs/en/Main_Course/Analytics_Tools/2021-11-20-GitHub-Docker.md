@@ -1,3 +1,10 @@
+---
+template: overrides/blogs.html
+tags:
+  - docker
+  - git
+---
+
 # Automatically Build and Push Docker Image with GitHub Action
 
 !!! info

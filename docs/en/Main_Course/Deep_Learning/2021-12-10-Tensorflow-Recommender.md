@@ -1,3 +1,11 @@
+---
+template: overrides/blogs.html
+tags:
+  - deep learning
+  - tensorflow
+  - recommendation
+---
+
 # TensorFlow Recommender System (Part 1)
 
 !!! info
