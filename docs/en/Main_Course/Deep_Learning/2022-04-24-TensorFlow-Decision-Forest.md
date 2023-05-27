@@ -1,169 +1,162 @@
----
-template: overrides/blogs.html
-tags:
-  -Deep Learning
-  -tensorflow
----
+# Building Tree Models with TensorFlow Decision Forests
 
-# Use TensorFlow DECISION FORESTS to build a tree model
-
-!!! Info
-    Author: [vincent] (https://github.com/realvincentyuan), published in 2021-06-06, reading time: about 6 minutes, WeChat public account article link: [: fontaWesome-solid-Link:] (https://mp.weixin.qqqpom/s ?__biz=mzi4mjk3nzgxoq===2247485279&IDX=1&SN=D31A0146B9B82AD1E64C02F134382BDCE77D3D3D2E 8E5C3A8E4F6DA3019652A0A8FB3CF74D8E7527C944CE4866840B660BF & Token = 709422112 & Lang = zh_cn#RD)
+!!! info
+    Author: [Vincent](https://github.com/Realvincentyuan), Published: 2021-06-06, Time: About 6 minutes read, WeChat article link: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485279&idx=1&sn=d31a0146b9b82ad1e64c5bc02f134382&chksm=eb90f42bdce77d3d2e8e5c3a8e4f6da3019652a0a8fb3cf74d8e7527c944ce44866840b660bf&token=709422112&lang=zh_CN#rd)
 
 ## 1 Introduction
 
-In -depth learning and traditional machine learning have always been excellent frameworks in their respective fields. If they build neural networks, they will basically choose to use TensorFlow and PyTorch.When dealing with table -type data in real work, the traditional tree model performance is still very strong.However, for a long time, the deep learning framework did not build a tree model until the appears of the `tensorFlow decision forests`.
+Both deep learning and traditional machine learning have excellent frameworks in their respective fields. For example, when building neural networks, TensorFlow and PyTorch are the common choices. The traditional tree model still performs very well in dealing with tabular data in real work. However, for a long time, deep learning frameworks did not have APIs to build tree models, until the emergence of `TensorFlow Decision Forests`.
 
-`TensorFlow Decision Forests` provides a series of API -based models based on decision -making trees, such as classified regression trees (CART), random forests, gradients, etc., use the `TensorFlow Decision Forests`, you can use a paradigm like a neural network.Build a tree model.This article will be found!
+`TensorFlow Decision Forests` provides a series of APIs to build tree-based models, such as Classification and Regression Trees (CART), Random Forest, Gradient Boosted Trees, etc. With `TensorFlow Decision Forests`, we can construct tree models using a paradigm similar to building neural networks. This article will explore it!
 
-## 2 Get data
+## 2 Obtain Data
 
-As usual, first import dependencies and download data.Use a table type dataset here to predict the type of penguin.
+As usual, import dependencies and download data. We use a tabular dataset to predict the species of penguins.
 
-`` `python
-Import tensorFlow_Decision_Forests as tfdf
+```python
+import tensorflow_decision_forests as tfdf
 
-Import OS
+import os
 import numpy as np
-Import Pandas as PD
-Import Tensorflow as tf
+import pandas as pd
+import tensorflow as tf
 import math
 
 # Download the dataset
-! wget -q https://storage.googleapis.com/download.tensorflow.org/data/palmer_penguins/penguins.csv-o /TMP/penguins.CSV
+!wget -q https://storage.googleapis.com/download.tensorflow.org/data/palmer_penguins/penguins.csv -O /tmp/penguins.csv
 
-# Load a dataset into a pandas dataframe.
-dataset_df = pd.read_csv ("/tmp/penguins.csv"))
+# Load a dataset into a Pandas Dataframe.
+dataset_df = pd.read_csv("/tmp/penguins.csv")
 
 # Display the first 3 examples.
-dataset_df.head (3)
-`` `
+dataset_df.head(3)
+```
+
+|   species  |   island  |   bill_length_mm  |   bill_depth_mm  |   flipper_length_mm  |   body_mass_g  |   sex  |   year  |
+|---|---|---|---|---|---|---|---|
+|   Adelie  |   Torgersen  |   39.1  |   18.7  |   181.0  |   3750.0  |   male  |   2007  |
+|   Adelie  |   Torgersen  |   39.5  |   17.4  |   186.0  |   3800.0  |   female  |   2007  |
+|   Adelie  |   Torgersen  |   40.3  |   18.0  |   195.0  |   3250.0  |   female  |   2007  |
+
+Specify the label field and convert the label category to integer data.
+
+```python
+label = "species"
+
+classes = dataset_df[label].unique().tolist()
+print(f"Label classes: {classes}")
+
+dataset_df[label] = dataset_df[label].map(classes.index)
+```
+
+## 3 Split and Process Data
+
+Split the data into training set and test set:
+
+```python
+def split_dataset(dataset, test_ratio=0.30):
+  """Splits a panda dataframe in two."""
+  test_indices = np.random.rand(len(dataset)) < test_ratio
+  return dataset[~test_indices], dataset[test_indices]
 
 
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Adelie | Torgersen | 39.1 | 18.7 | 181.0 | 3750.0 | Male | 2007 |
-| Adelie | Torgersen | 39.5 | 17.4 | 186.0 | 3800.0 | Female | 2007 |
-| Adelie | Torgersen | 40.3 | 18.0 | 195.0 | 3250.0 | Female | 2007 |
+train_ds_pd, test_ds_pd = split_dataset(dataset_df)
+print("{} examples in training, {} examples for testing.".format(
+    len(train_ds_pd), len(test_ds_pd)))
+```
 
-Specify the labeling field and convert the tag category into integer data.
+Then convert the `Pandas DataFrame` to the `TensorFlow Dataset`, which makes it easier to simplify the subsequent program and improve efficiency.
 
-`` `python
-label = "Species"
+```python
+train_ds = tfdf.keras.pd_dataframe_to_tf_dataset(train_ds_pd, label=label)
+test_ds = tfdf.keras.pd_dataframe_to_tf_dataset(test_ds_pd, label=label)
+```
 
-Classes = dataset_df [label] .unique (). Tolist ()
-Print (F "Label Classes: {Classes}")
+Then data can be injected into the model for training. Unlike traditional machine learning frameworks, `TensorFlow Decision Forests` has the following advantages in implementing tree models:
 
-dataset_df [label] = dataset_df [label] .map (CLASSES.INDEX)
-`` `
+- Automatically handles numeric and categorical variables, eliminating the need to encode categorical variables and normalize numeric variables. The algorithm can also handle missing data well!
+- Hyperparameters are basically similar to those in other frameworks and default parameters give decent results in most cases.
+- Before training, there is no need to compile the model, and there is no need for a validation set during training. The validation set is only used to display performance metrics.
 
-## 3 Divide and process data
+Note that this does not mean that using `TensorFlow Decision Forests` can eliminate all feature engineering, but it does save a lot of time.
 
-Divide data into training sets and test sets:
+## 4 Modeling
 
-`` `python
-DEF SPLIT_DATASET (dataset, test_ratio = 0.30):
-  "" "Splits a panda dataframe in two." "" "" "" "" "" "" "" "" "" "" "" "" ""
-  test_indices = np.random.rand (len (dataset)) <test_ratio
-  Return dataset [~ test_indices], dataset [test_indices]
+Construction of a random forest:
 
+```python
+# 构建随机森林
+model = tfdf.keras.RandomForestModel()
 
-Train_DS_PD, TEST_DS_PD = Split_dataset (dataset_df)
-Print ("{} examples in trailing, {} examples for testing." Format (
-    Len (Train_DS_PD), Len (TEST_DS_PD))))
-`` `
+# 训练模型
+model.fit(x=train_ds)
 
-And convert the `pandas dataframe` to` tensorflow dataset`, which is conducive to simplifying subsequent programs and improving efficiency.
+# 评估模型
+model.compile(metrics=["accuracy"])
+evaluation = model.evaluate(test_ds, return_dict=True)
+print()
 
-`` `python
-Train_ds = tfdf.keras.pd_dataframe_to_tf_dataset (train_ds_pd, label = label)
-test_ds = tfdf.keras.pd_dataframe_to_tf_dataset (test_ds_pd, label = label)
-`` `
+for name, value in evaluation.items():
+  print(f"{name}: {value:.4f}")
+```
 
-At this step, you can train the data injection model.Different from the traditional machine learning framework, `tensorflow decision forests` has the following advantages for the realization of tree models:
+Output:
 
--In automatically handle the variables of numerical and category types, no need to encode the category variables, nor does it need to be normalized for numerical variables.The algorithm can be handled well for the missing value!
--Surium is basically similar to other frameworks. At the same time, the default parameters can give good results in most cases.
--When training before training, no compile model is required, and no verification set is required during training. Verification set is only used to display performance indicators
-
-Note that this does not mean that the use of the `tensorflow decision forests` can save all the feature engineering, but it does save a lot of time.
-
-## 4 modeling
-
-It is very similar to using the `TensorFlow Decision Forests` to build a tree model and use TensorFlow to build a neural network:
-
-`` `python
-#
-Model = tfdf.kers.randomForestmodel ()
-
-#
-Model.fit (x = TRAIN_DS)
-
-# 评 评
-MODEL.COMPILE (Metrics = ["Accuracy"])
-Evaluation = Model.evaluate (test_ds, return_dict = true)
-Print ()
-
-for name, value in event .Items ():
-  Print (f "{name}: {value: .4f}")
-`` `
-
-The output is:
-
-`` `python
-1/1 [============================================================= =================================================================================================================================================================================== ====] -1S 706ms/STE -Loss -Loss: 0.0000E+00 -Accuracy:0.9608
+```python
+1/1 [==============================] - 1s 706ms/step - loss: 0.0000e+00 - accuracy: 0.9608
 
 loss: 0.0000
-account: 0.9608
-`` `
+accuracy: 0.9608
+```
 
-## 5 Visual Tree Model
+## 5 Visualize Tree Model
 
-`Tensorflow decision forests` provides native API visualization of trees. Here is a tree in the forest for display.
+`TensorFlow Decision Forests` provides a native API for visualizing trees. Here we select a tree from the forest for display.
 
-`` `python
-With open ("plot.html", "w") as f:
-  f.write (tfdf.model_plotter.plot_model (Model, Tree_idx = 0, Max_depth = 3)))
+```python
+with open("plot.html", "w") as f:
+  f.write(tfdf.model_plotter.plot_model(model, tree_idx=0, max_depth=3))
 
-From ipython.display image iframe
-Iframe (src = './Plot.html', width = 700, height = 600)
-`` `
-
-<figure>
-  <img src = "httts://cdn.jsdelivr.net/gh/bullettech2021/pics/img/1_v/forestsviz.png"/>/>
-  <figcaption> Visualized Tree </figcaption>
-</Figure>
-
-At the same time, there are many important information in the method of `Model.summary ()`, such as input features, characteristics importance, node information, etc. (limited space, do not start here).At the same time, the accuracy and losses in the training process can also be visually visual:
-
-`` `Python
-Import Matplotlib.pyplot as PLT
-
-LOGS = MODEL.MAKE_INSPECTOR (). Training_logs ()
-
-PLT.FIGURE (figsize = (12, 4))
-
-PLT.SUBPLOT (1, 2, 1)
-PLT.Plot
-PLT.XLabel ("Number of Trees")
-PLT.YLabel ("Accuracy (Out-OF-BAG)"))
-
-PLT.SUBPLOT (1, 2, 2)
-PLT.PLOT ([log.num_trees for log in logs], [log.evaluation.loss for log in logs])
-PLT.XLabel ("Number of Trees")
-PLT.YLabel ("Logloss (Out-OF-BAG)"))
-
-plt.show ()
-`` `
+from IPython.display import IFrame
+IFrame(src='./plot.html', width=700, height=600)
+```
 
 <figure>
-  <img src = "httts://cdn.jsdelivr.net/gh/bullettech2021/pics/img/1_v/trainin_log.png"/>/>
-  <figcaption> training process </figcaption>
-</Figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/ForestsViz.png"  />
+  <figcaption>Visualized Tree</figcaption>
+</figure>
 
-## 6 Summary
+There's also a lot of useful information in `model.summary()`, such as input features, feature importance, node information, etc. (limited space, not elaborating one by one). During the training process, the accuracy and loss can also be visualized:
 
-`Tensorflow defision forests` reinforced the TensorFlow ecology, and provided new ideas for data scientists for modeling data.It is still in the initial stage (V0.2.3), but there are already many available high -quality APIs. More functions can be viewed [document] (https://www.tensorflow.org/decision_forests/api_docs/tfdf 'TensorFlow Decision Forests Document ').I hope this sharing will help you, please leave a message in the comment area!
+```Python
+import matplotlib.pyplot as plt
+
+logs = model.make_inspector().training_logs()
+
+plt.figure(figsize=(12, 4))
+
+plt.subplot(1, 2, 1)
+plt.plot([log.num_trees for log in logs], [log.evaluation.accuracy for log in logs])
+plt.xlabel("Number of trees")
+plt.ylabel("Accuracy (out-of-bag)")
+
+plt.subplot(1, 2, 2)
+plt.plot([log.num_trees for log in logs], [log.evaluation.loss for log in logs])
+plt.xlabel("Number of trees")
+plt.ylabel("Logloss (out-of-bag)")
+
+plt.show()
+```
 
 <figure>
-  <img src = "httts://cdn.jsdelivr.net/gh/bullettech2021/pics/2021-6-14/1623639526512-1080p%20hd)%20tail .png" widt "widt" widt "widt h = "500 " />
-</Figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/img/1_V/Trainin_log.png"  />
+  <figcaption>Training Logs</figcaption>
+</figure>
+
+## 6 Conclusion
+
+`TensorFlow Decision Forests` strengthens the TensorFlow ecosystem and provides new ideas for data scientists to model tabular data. It is still in its early stages (v0.2.3), but it already has many available high-quality APIs. More functionalities can be found in the [documentations](https://www.tensorflow.org/decision_forests/api_docs/python/tfdf 'TensorFlow Decision Forests'). Hope this sharing will help you in your work. Welcome to leave a comment for discussion!
+
+<figure>
+  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
+</figure>

@@ -1,175 +1,132 @@
----
-template: overrides/blogs.html
-tags:
-  - python
-  - automation
----
-
-# Python爬虫应用 - PayPal职位抓取
+# Python Web Scraping Application - Scraping PayPal Job Positions
 
 !!! info
-    Author:：[Vincent](https://github.com/Realvincentyuan)，Posted on 2021-07-18，Reading time: 6 mins，WeChat Post Link:：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484353&idx=1&sn=fa3c49192bd8ba303b2d796364a6a088&chksm=eb90f0b5dce779a31d0d8eae377ab8d453f65c7b046b5fc973303d6f14a340670601420321af&token=447292391&lang=zh_CN#rd)
+    Author: [Vincent](https://github.com/Realvincentyuan), Published: 2021-07-18, Reading Time: About 6 minutes, WeChat public account article link: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484353&idx=1&sn=fa3c49192bd8ba303b2d796364a6a088&chksm=eb90f0b5dce779a31d0d8eae377ab8d453f65c7b046b5fc973303d6f14a340670601420321af&token=447292391&lang=zh_CN#rd)
 
 ## 1 Introduction
 
-
-It wasn't long before Jin Sanyin Si had just passed, and the autumn recruitment was coming again. In the busy and rolled season, I once imagined that I could grasp all the positions of the company's company with one click, and then broke according to my strength and the willingness to apply for job application.Basket offer.In fact, with the help of python, you can easily complete this goal. This article will take the official website of the famous fintech company Paypal as an example to display the tips for automatic batch of positioning of Python to help you one step on the job search road!
-
-
-
+Not long after the traditional job-hunting season (around March/April in China), the autumn job-hunting season is approaching. In this busy and stressful period of time, I once dreamed of being able to grab all the job positions of my target companies with one click, and then conquer them one by one based on my strengths and job-seeking desires, and get a basketful of offers. In fact, we can easily accomplish the first step of this goal using Python. This article will take the official website of PayPal, a well-known financial technology company, as an example to demonstrate the small technique of automatically scraping job positions with Python, and help you take a faster step on the job-hunting path!
 
 !!! warning
-Note: This article is only used to learn Python programming skills. If infringement, it will be deleted immediately.
-
+    Note: This article is for learning and researching Python programming techniques only. If any infringement is found, it will be deleted immediately.
 
 ## 2 Preparation
 
-
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-19/1626696168541-PayPal%20job.png" width="700" />
-
-<figcaption> PayPal Recruitment </figcaption>
+  <figcaption>PayPal recruitment website</figcaption>
 </figure>
 
+First of all, check the structure of the PayPal job search website. The released job positions are displayed in the form of a list, and clicking on a position in the list will take us to its corresponding details page. At the same time, some job positions in certain countries and regions are relatively large in quantity and are displayed on multiple pages, with URLs distinguished by their corresponding page numbers, such as `https://jobsearch.paypal-corp.com/en-US/search?facetcitystate=san%20jose,ca&pagenumber=2`. Therefore, we can roughly crawl the details of each job position by performing the following steps:
 
-First of all, check the structure of the official website of PayPal.At the same time, there are many positions in some countries and regions. When it is divided into multiple pages, URL will distinguish it with the corresponding page number, such as `https://jobsearch.paypal-corp.com/en-search?FacetCityState= san%20Jose, CA & Pagenumber = 2 `.Therefore, the details of judgment need to be taken as follows to grasp the details of each position:
-
-
--Preate the position list and find the URL corresponding to each position
--The through all pages, repeatedly complete the above operations, and store all positions URL
--In the URL of the position, visit the position description, locate the location of the details, and save the position description
-
+- Locate the list of job positions and find the URL corresponding to each job position
+- Traverse all pages and repeat the above operation to store all job positions URLs
+- Access the job position description through the URL of the job position, locate the position of the details, and save the job position description
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-7-19/1626698254470-JD.png" width="700" />
-
-<figcaption> PayPal Position Description </figcaption>
+  <figcaption>PayPal job position description</figcaption>
 </figure>
 
+## 3 Building the Web Scraper with Python Code
 
-## 3 Use code to build crawlers
+Please refer to the previous article [Two-minute Taobao Order Grab Robot](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484044&idx=1&sn=ed68ae67ea2f1360053e4ecae0be3ba7&chksm=eb90f1f8dce778eeba987ea0b2f37341999418fd9541c4c7a7b1c256dbada1185e6f4c2aae87&token=261686941&lang=zh_CN#rd) for Python environment configuration.
 
-
-For the configuration of the Python environment, please refer to the previous article:
-[Two minutes to build Taobao single robot] (https://mp.weixin.qq.com/s ?__biz=mzi4mjk3nzgxoq==&mid=22474844 enfilledx=1&ED67EA2F1360053be3ba7&CH KSM = EB90F1F8DCE778EEBA987EA0B2F37341999418FD9541C4C7A7B1C256DBADA1185E6F4C2AE87 & Token = 261686941 & LANG = zh_cn#RD)
-
-
-### 3.1 Import dependent bags
-
+### 3.1 Importing Dependent Packages
 
 ```Python
-# Analysis webpage
+# Parsing web pages
 import requests
 from bs4 import BeautifulSoup
 
-
-# 表 表
+# Table operation
 import numpy as np
 import pandas as pd
 
-
-# # 通
+# Common
 import re
-Import us
+import os
 import unicodedata
 ```
 
-
-### 3.2 Visit position list
-
+### 3.2 Accessing the Job Position List
 
 ```Python
-# URL, and retrieve the return result
+# Request the URL and get the returned result
 def url_request(url):
-header = {
-'User-Agent': 'Mozilla / 5.0 (Windows NT 6.1) Applewebkit / 537.3,159.159.1599.101 / 537.36'}
-r = requests.get(url, headers=header)
-print('Connection status:', r.status_code, '\n')
-return r.text
+    header = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36'}
+    r = requests.get(url, headers=header)
+    print('Connection status:', r.status_code, '\n')
+    return r.text
 ```
 
-
-### 3.3 Analysis job category
-
+### 3.3 Parsing Job Position Categories
 
 ```Python
-# Find the required elements in the page, storage position list information
+# Find the elements needed in the page and store the job position list information
 def job_parser(html):
-header,desc,link = [[] for i in range(3)]
-soup = BeautifulSoup(html, 'html.parser')
-# Right-click by turning on the browser checker, check the web source code in the element TAB, you can see that the category name of the position name is Primary-Text-COLOR job-result-title, and it is an A tag
-job_header = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'})
-# Element search method is the same as above
-job_link = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'}, href=True)
+    header,desc,link = [[] for i in range(3)]
+    soup = BeautifulSoup(html, 'html.parser')
+    # Right-click to open the browser inspector, check the page source code, and you can see that the name of the job position category is "primary-text-color job-result-title", which is an a tag
+    job_header = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'})
+    # Element lookup method is the same as before
+    job_link = soup.find_all('a', attrs={'class': 'primary-text-color job-result-title'}, href=True)
 
+    header = [i.contents[0] for i in job_header]
+    link = ['https://jobsearch.paypal-corp.com/'+i['href'] for i in job_link]
 
-header = [i.contents[0] for i in job_header]
-link = ['https://jobsearch.paypal-corp.com/'+i['href'] for i in job_link]
-
-
-# Move the result up
-return pd.DataFrame({'Title':header, 'Link':link})
+    # Save the result
+    return pd.DataFrame({'Title':header, 'Link':link})
 ```
 
-
-### 3.4 to pass all pages
-
+### 3.4 Traverse All Pages
 
 ```Python
-# Create a dataframe of the storage result
+# Create a dataframe to store the result
 df = pd.DataFrame(columns=['Title','Link'])
-# Create a template for URL, add different page numbers to match different pages
+# Create a URL template and add different page numbers to match different pages
 job_url_header = 'https://jobsearch.paypal-corp.com/en-US/search?facetcountry=cn&facetcity=shanghai&pagenumber='
 
-
-#Prink through all pages and store results
+# Traverse all pages and store the results
 for i in range(2):
-job_url = job_url_header + str(i+1)
-print('URL: {}'.format(job_url))
-job_html = url_request(job_url)
-# Save the results of each page
-df = df.append(job_parser(job_html))
+  job_url = job_url_header + str(i+1)
+  print('URL: {}'.format(job_url))
+  job_html = url_request(job_url)
+  # Store the results of each page
+  df = df.append(job_parser(job_html))
 ```
 
-
-### 3.5 Grabbing position details
-
+### 3.5 Scraping Job Position Details
 
 ```Python
 def get_jd(url):
-jd_html = url_request(url)
-soup = BeautifulSoup(jd_html, 'html.parser')
-jd_desc = soup.find('div', attrs={'class': 'jdp-job-description-card content-card'})
-# Jd formats are different, only a demonstration here
-if jd_desc:
-if jd_desc.findAll('ul')[:]:
-desc = [i.text + '\n{}'.format(j.text) for i,j in zip(jd_desc.findAll('p')[:], jd_desc.findAll('ul')[:])]
-else:
-desc = [i.text  for i in jd_desc.findAll('p')[:]]
+  jd_html = url_request(url)
+  soup = BeautifulSoup(jd_html, 'html.parser')
+  jd_desc = soup.find('div', attrs={'class': 'jdp-job-description-card content-card'})
+  # JD formats are different, here are just demonstrations
+  if jd_desc:
+    if jd_desc.findAll('ul')[:]:
+      desc = [i.text + '\n{}'.format(j.text) for i,j in zip(jd_desc.findAll('p')[:], jd_desc.findAll('ul')[:])]
+    else:
+      desc = [i.text  for i in jd_desc.findAll('p')[:]]
 
+    return unicodedata.normalize('NFKD', '\n'.join(i for i in desc))
 
-return unicodedata.normalize('NFKD', '\n'.join(i for i in desc))
-
-
-#At the details of the previously stored content to capture the function and save the details.
+# Use the detail scraping function on previously stored content, and save detail information.
 df['JD'] = df['Link'].apply(get_jd)
 
-
-# Print results
+# Print the result
 df.tail(2)
 ```
-
 
 | Title                              | Link                                                                                               | JD                                                                                                                                                                                                                                                                                                                                                                                                              |
 |------------------------------------|----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Manager, APAC Portfolio Management | https://jobsearch.paypal-corp.com//en-US/job/manager-apac-portfolio-management/J3N1SM76FQPVMX4VFZG | As the Shanghai Team Manager of PayPal APAC Portfolio Management team in GSR Enterprise Seller Risk Ops, you will manage a team of underwriters, and drive a risk management strategy and framework leveraging your strong business and financial acumen, logical reasoning and communication skills. This role will be covering the markets such as Hong Kong, Taiwan, Korea and Japan, based out of Shanghai. |
 | FBO Accountant                      | https://jobsearch.paypal-corp.com//en-US/job/fbo-accoutant/J3W8C0677G8FLJQQZDL                     | Responsibilities    Timely and effective reconciliation of all assigned General Ledger accounts, including timely and accurate clearing of reconciling items in accordance with Company Policy.   Ensure accurate posting of general ledger...                                                                                                                                                                |
 
-
-You can see the information that has been successfully grasped (interception).There are other information on the webpage. You can also continue to add information according to your needs. If you have any questions, you can add Bullettech WeChat customer service to discuss in detail!
-
+We can see that we have successfully scraped job position information (with some text truncated). There is other information on the web page, and you can add more information according to your needs. If you have any questions, feel free to contact us via the BulletTech WeChat customer service! 
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-
 </figure>
