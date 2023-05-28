@@ -186,13 +186,6 @@ plugins:
   - macros:
       j2_variable_start_string: '[%'
       j2_variable_end_string: '%]'
-  - i18n: 
-      default_language: zh
-      docs_structure: folder
-      languages:
-        en:
-          name: English
-          build: true
   - git-revision-date-localized
   - rss
 
