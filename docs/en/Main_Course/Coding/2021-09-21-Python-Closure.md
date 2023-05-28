@@ -4,137 +4,107 @@ tags:
   - python
 ---
 
-# 理解Python闭包
+# Understanding Python Closures
 
 !!! info
-    Author:：[Vincent](https://github.com/Realvincentyuan)，Posted on 2021-09-21，Reading time: 6 mins，WeChat Post Link:：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484557&idx=1&sn=bd624bdb21757e391d01c5ced51cb5f8&chksm=eb90f7f9dce77eef2a8c67bc0d3637e9d90708ffd061ce4773916fa3c58d137e4b859adf1c40&token=1570026209&lang=zh_CN#rd)
+    Author: [Vincent](https://github.com/Realvincentyuan), published on 2021-09-21, Reading time: about 6 minutes, WeChat Official Account article link: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484557&idx=1&sn=bd624bdb21757e391d01c5ced51cb5f8&chksm=eb90f7f9dce77eef2a8c67bc0d3637e9d90708ffd061ce4773916fa3c58d137e4b859adf1c40&token=1570026209&lang=zh_CN#rd)
 
 ## 1 Introduction
 
-
-In the daily work of Python, you may have encountered this code similar to this:
-
+When working with Python in daily work, you may have encountered code like this:
 
 ```Python
 def make_counter():
-# Outer closure function
-count = 0
-def counter():
-# Nested function
+    # Outer closure function
+    count = 0
+    def counter():
+      # Nested function
+        nonlocal count
+        count += 1
+        return count
 
-
-nonlocal count
-count += 1
-return count
-
-
-return counter
+    return counter
 ```
 
+Why define functions like this - with one function inside another, and the outer function returning the inner function as its output? What are the benefits of this approach? In this article, we will uncover the mysterious veil of closures.
 
-There is a function in a function, and the return value of the outer function is the function of the inner layer. Why do you define the function like this?What are the benefits of this, we will unveil this mysterious veil -closure.
+## 2 Key points of closures
 
+A closure is a function that extends the scope of a function, referring to a non-global variable (such as count in the example above) that is not defined in the function. By adding nonlocal, the variable is marked as a free variable (nonlocal keyword was added in Python 3), allowing the nested function to modify the immutable variable outside the scope.
 
-## 2 The main points of closing
-
-
-The closure refers to the function that extends the scope of action. It will quote a non -global variable that is not in the definition of the function (such as the count in the above example)., Make the inner nested function that can modify the unable variables outside the domain.
-
-
-When calling make_counter, return a counter function object. Each time you call the counter, it will update the count. The example is as follows:
-
+When we call make_counter, it returns a counter function object. Each time we call the counter, it updates count, as shown below:
 
 ```Python
-# Run closure function
+# Run the closure function
 counter = make_counter()
 print(counter())
 print(counter())
 ```
 
-
-The output is:
-
+Output:
 
 ```python
 1
 2
 ```
 
+In this example, one thing that needs to be expanded is the storage location of the historical value of count. Count is a local variable in the make_counter function, and its initial value is 0. However, when counter is called, the make_counter function has already been returned, and the local scope should no longer exist.
 
-In this example, one thing that needs to be expanded is the storage location of the historical value of Count. Count is a local variable of the Make_Counter function. When initializationThe scope of action should no longer exist.
-
-
-In the counter function, Countnt is a free variable, and the Counter function implements the binding of variables.You can view the name of the saved local variables and free variables in the __code__ attribute (indicating the function definition body after compiled) in Python, as shown below:
-
+In the counter function, count is a free variable, and the counter function implements the binding of this variable. We can check the names of stored local variables and free variables using the __code__ attribute (which represents the compiled function definition body) in Python. For example:
 
 ```Python
-# View free variable
+# View free variables
 counter.__code__.co_freevars
 ```
 
+Output:
 
-The output is:
 ```
 ('count',)
 ```
 
-
-The COUNT is binding in the __closure__ attribute of the returned counter function, where the elements of __clOSURE__ correspond to a name in the `Counter .__ CODE __. Co_freevars'.These elements are Cell objects, which can access the storage values through the cell_contents property. The example is as follows:
-
+The binding of count is in the __closure__ attribute of the returned counter function, where each element of __closure__ corresponds to a name in `counter.__code__.co_freevars`. These elements are cell objects, and their stored values can be accessed through the cell_contents attribute, as shown below:
 
 ```python
 counter.__closure__[0].cell_contents
 ```
 
-
-The output is:
-
+Output:
 
 ```
 2
 ```
 
-
-The closure can solve the problem of lightweight very concisely and intuitively. If the above functions are implemented in category `, it will grow:
-
+Closures can solve lightweight problems very concisely and intuitively. If we were to use a `class` to implement the functionality above, it would look like this:
 
 ```Python
-# Define a counter with a class, start counting from 0
+# Define a counter using a class, starting from 0
 class Counter:
-def __init__(self):
-self.count = 0
+    def __init__(self):
+        self.count = 0
 
-
-def __call__(self):
-self.count += 1
-return self.count
-
+    def __call__(self):
+        self.count += 1
+        return self.count
 
 counter = Counter()
 print(counter())
 print(counter())
 ```
 
-
-The output is:
-
+Output:
 
 ```Python
 1
 2
 ```
 
-
 ## 3 Summary
 
+A closure is a function that retains the binding of free variables that were present when the function was defined, so even if the scope no longer exists after the function is returned, the bindings can still be used. Closures can easily implement simple class functionality, and there are many Python "magic" functions that can be implemented based on this, such as decorators, which we will explore next time!
 
-Closure is a function that retains the binding of free variables when defining a function. Therefore, even if the function of the function is returned, the scope does not exist, and those binding can still be used.Closures can easily achieve some simple classes. At the same time, there are many Python magics that can be achieved, such as decorators, to be decomposed next!
-
-
-I hope this sharing will help you, welcome to discuss in the comment area!
-
+I hope this article has been helpful to you, and feel free to discuss in the comments!
 
 <figure>
   <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-
 </figure>

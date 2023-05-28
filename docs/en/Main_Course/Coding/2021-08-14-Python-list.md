@@ -4,204 +4,154 @@ tags:
   - python
 ---
 
-# Python列表常用操作小技巧
+# Tips for Common Operations on Python Lists
 
 !!! info
-    Author:：[Vincent](https://github.com/Realvincentyuan)，Posted on 2021-08-14，Reading time: 6 mins，WeChat Post Link:：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484437&idx=1&sn=6d58dbd242157e216cb0e573678686d9&chksm=eb90f761dce77e7711ad25f26be3ff212d80db386a74d5902af1247e027e1108c84ec8d0fb7c&token=891223383&lang=zh_CN#rd)
+    Author: [Vincent](https://github.com/Realvincentyuan), Published on 2021-08-14, Reading Time: about 6 minutes, Wechat Official Account Article Link: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247484437&idx=1&sn=6d58dbd242157e216cb0e573678686d9&chksm=eb90f761dce77e7711ad25f26be3ff212d80db386a74d5902af1247e027e1108c84ec8d0fb7c&token=891223383&lang=zh_CN#rd)
 
-## 1 Introduction
+## 1. Preface
 
+In the previous article, we reviewed the [common operations on Python tuples](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&tempkey=MTEyNl96d1NDWlZlNm1CSWJxKzEyeTlkcTIybWVyQmlFcFJWZncyZGFqZndNUFl1dHA2R1Jzb09STmVLYzZNeGNFUk5nUDJsanZSOUMzMFpLbUlmTUhzOWVUeDZVUjM5MnJtVlc3MkpTRWc0a1haaDBGdmFJUDVLLVFUR29QYlhteDhaN3RTRmpNZFRJTVBJTGs5cmpCcHdtMnAzQjhTbjl2aXBxRzl1S1p3fn4%3D&chksm=6b90f0865ce77990c57a2be4493364667bb91c1a0f0d2f70498bc6f318395c9abbcc5f9cd376#rd), in this article, let's talk about another common data type in Python: lists.
 
-In the previous article, we reviewed
-[Common operation of the python element group] (https://mp.weixin.qq.com/s ?__biz=mzi4mjk3ngxoq=&TEMPKEY=mteynl96dwlzlnmwjxkzeyqmlFCFJWZNCY ZGFQZNDNUFL1JZB09stmvlyzznegnfuk5NudjsoumzMFPLMTUHZUEDZUJM5MNJTVLC3MK3MK3MK3MK3MK3MK3MK3MK3MK3MNJT RTRMPNZFRJTVBJTGS5CMPCCCHDTMNAZQJHTBJL2AXBXRZL1S1P3FN4%3d & CHKSM = 6b90F0865CE77A2BE44933666670D2F070498BC6183999318399 5C9ABBCC5F9CD376#RD)
-We continue to talk about another commonly used data type -list (list) in Python.
+Like tuples, lists are also sequences created by square brackets `[]`. The values in the list are commonly referred to as elements, and the data type of the elements can be different. For example, `test_list = [0,1,1,'a','b']` can successfully create a list.
 
+Unlike tuples, lists are mutable sequences, so the operations available for sequences will be more flexible. Next, we will review the most commonly used operations on lists.
 
-Like the Yuan group, the list is also a sequence, which can be created through square brackets `[` and `].The values in the list are often called elements, and the data types of the element can be different.
+## 2. Common operations on lists
 
+### 2.1 Traversal
 
-Different from the tuples, the list is a variable sequence, so the operation of the sequence can be more flexible. Next, let's review the most commonly used operations of the list.
-
-
-## 2 List commonly used operation
-
-
-### 2.1 travers
-
-
-Taking the list `people = ['adam', 'nick', 'tony']` as an example, you can use the for loop to traverse:
-
+Taking the list `people = ['Adam','Nick','Tony']` as an example, we can use a for loop to traverse:
 
 ```python
 for i in people:
-print(i)
+  print(i)
 ```
 
-
-When you need to update the list, it will be more convenient to use the bidding traversal:
-
+When updating the list, using an index to traverse will be more convenient:
 
 ```python
 for i in range(len(people)):
-people[i] += '_suffix'
+  people[i] += '_suffix'
 ```
 
+### 2.2 Slicing
 
-### 2.2 Slice
-
-
-Like the Yuan group, you can obtain the element of the list by slicing (the bid in Python starts from 0):
-
+Like tuples, you can get the elements of a list by slicing (the index in Python starts from 0):
 
 ```python
 print(people[:2])
 ```
 
+Output:
 
-The output is:
 ```
 ['Adam','Nick']
 ```
 
+### 2.3 Deleting Elements
 
-### 2.3 Delete elements
+a. The `pop` method can return the value to be deleted, and you can use an index to delete or delete the last element: `a = people.pop(2)` or `a = people.pop()`, the value of `a` will be `'Tony'`, and the original list will delete the corresponding element.
 
+b. If you don't need the deleted value, `del` is a good method: `del people[0]`, then the list `people` will become `['Nick','Tony']`.
 
-a. POP method can return the value to be deleted, you can use the bidding to delete, or delete the last element: `A = People.pop (2)` or `a = peple.pop ()`, `a` of the value of` a`, `a`They will be `tony'`, and the original list will delete the corresponding elements.
+c. The `remove` method will delete the first required element in the list. For example, after the `test_list.remove(1)` operation, the list will become `test_list = [0,1,'a','b']`. Note that the `remove` method does not return any value.
 
+### 2.4 Interaction between Lists and Strings
 
-b. If you do n’t need to use the deleted value, Del is a good way: `Del people [0]`, then the list of the `people will become` ['nick', 'tony'] `.
-
-
-c. Remove method will delete the first element to delete in the list, such as `test_list.remove (1)` operation, the list will become `test_list = [0,1, 'a', 'b']`, Note that the Remove method will not return any value.
-
-
-
-
-### 2.4 list and string
-
-
-List and string can be converted flexibly, such as converting the string into a list:
-
+Lists and strings can be flexibly converted. For example, convert a string to a list:
 
 ```python
-# Convert the string into a list
+# Convert string to list
 name = 'Adam is very cool'
 name_list_1 = list(name)
 print(name_list_1)
 
-
-# SPLIT method can use a separatist scholarship strings
+# The split method can split the string using a delimiter
 name_list_2 = name.split()
 print(name_list_2)
 ```
 
-
-The output is:
-
+Output:
 
 ```
 ['A', 'd', 'a', 'm', ' ', 'i', 's', ' ', 'v', 'e', 'r', 'y', ' ', 'c', 'o', 'o', 'l']
 
-
 ['Adam', 'is', 'very', 'cool']
 ```
 
-
-And sometimes it is necessary to merge the list into a string. The method is very easy to use:
-
+Sometimes you need to merge a list into a string, the `join` method is very useful:
 
 ```Python
-# Use the element to connect the list with a space to form a new string
+# Join the elements in the list with spaces into a new string
 print(' '.join(['Adam', 'is', 'very', 'cool']))
 ```
 
-
-The output is:
-
+Output:
 
 ```
 'Adam is very cool'
 ```
 
+### 2.5 Aliases of Lists
 
-### 2.5 list alias
-
-
-This is a point that is easy to make errors. In the following code, the two variables are exactly the same, change one, and the other value will be changed:
-
+This is a point that is easy to make a mistake. In the following code, two variables are exactly the same, changing one will also change the value of the other:
 
 ```Python
-# alias is the alias of list name
+# alias is an alias for the list name
 name = ['Adam', 'is', 'very', 'cool']
 alias = name
 alias.pop()
 print(name)
 ```
 
-
-The output is:
-
+Output:
 
 ```Python
 ['Adam', 'is', 'very']
 ```
 
-
-Therefore, when you want to use two independent lists, try to use a separate assignment statement or shallow replication:
-
+Therefore, when you want to use two independent lists, try to use separate assignment statements or shallow copies:
 
 ```Python
 name = ['Adam', 'is', 'very', 'cool']
 
-
-# Create the same list list
+# Create a list with the same values
 name_2 = ['Adam', 'is', 'very', 'cool']
-#
+# Shallow copy
 name_3 = name[:]
 ```
 
+### 2.6 List Arguments
 
-### 2.6 list parameter
-
-
-The tuple can be passed into the function through the `*` operator as a parameter, and the list can also be output into the function as a parameter. At this time, the function will get a quotation of the list, which means that if the list is modified in the function, the original list of the original list willIt will also be modified, the example is as follows:
-
+Tuples can be passed into functions as parameters using the `*` operator, and lists can also be passed as parameters to functions. At this time, the function will get a reference to the list, which means that if the function modifies the list, the original list will also be modified. The following example demonstrates this:
 
 ```Python
-#Define a function, delete the first element of the list
+# Define a function to delete the first element of a list
 def del_head(t):
-of T [0]
-
+  del t[0]
 
 name = ['Adam', 'is', 'very', 'cool']
 del_head(name)
 print(name)
 ```
 
-
-The output is:
-
+Output:
 
 ```
 ['is', 'very', 'cool']
 ```
 
+Parameter `t` and the variable `name` refer to the same list, so when `t` changes, `name` also changes. This knowledge point is very important. When writing functions, be very careful about whether the operation will create a new list or make changes to the original list.
 
-Parameter T and variable name point to the same list, so when T changes, name also changes.This knowledge point is very important. When writing functions, pay attention to whether the operation will create a new list or change on the original list.
+### 2.7 Mapping and List Comprehensions
 
-
-### 2.7 mapping and list derivative
-
-
-If you want to operate the list by a function, mapping (MAP) and list derivation are a good choice.The built -in function Map provided by Python receives two parameters -mapping functions and iteration objects, and returns an iteration object. The example is as follows:
-
+If you want to operate on a list with a function, mapping and list comprehensions are good choices. The built-in function map provided by Python takes two parameters - a mapping function and an iterable object, and returns an iterable object. The following example demonstrates this:
 
 ```Python
-# Return to the square of element
+# Return the square of the element
 def square(n):
-return n*n
-
+    return n*n
 
 test_list = [1,2,4,5]
 result = map(square, test_list)
@@ -209,18 +159,14 @@ print(result)
 print(list(result))
 ```
 
-
-The output is:
-
+Output:
 
 ```
 <map object at 0x1101b9400>
 [1, 4, 16, 25]
 ```
 
-
-You can also complete the above operation with the list derivative:
-
+You can also use list comprehensions to perform the same operation:
 
 ```Python
 test_list = [1,2,4,5]
@@ -228,52 +174,14 @@ result = [i*i for i in test_list]
 print(result)
 ```
 
-
-The output is:
-
+Output:
 
 ```
 [1, 4, 16, 25]
 ```
 
+## 3. Summary
 
-## 3 Summary
+The above knowledge basically summarizes the common operations on lists. Here are some brief experiences:
 
-
-The above knowledge basically summarizes the common operations of the list, and simply summarize the experience:
-
-
--Dyn list method is to modify the parameters and return NONE. Be sure to choose the right method to ensure the safety of the variable.
--It has many ways to achieve the same operation. Sometimes the errors are not reported in the wrong method, but the result may be wrong. Make sure that the appropriate method is selected after understanding the difference.
--The aliases of the list of caution, in fact, more than the list, other data types will also have aliases mechanisms.
-
-
-I hope these knowledge points will be helpful to you. Come on the LeetCode algorithm to consolidate the list of knowledge. Welcome to leave your answer in the comment area!Next time we will talk about the dictionary.
-
-
-Title: Rotate array
-
-
-Given an array and move the element in the array to the right position, where K is not negative.Example:
-
-
-```
-Enter: nums = [1,2,3,4,5,6,7], K = 3
-Output: [5,6,7,1,2,3,4]
-explain:
-Step to the right: [7,1,2,3,4,5,6]
-Step to the right: [6,7,1,2,3,4,5]
-Rotate 3 steps to the right: [5,6,7,1,2,3,4]
-
-
-Author: LEETCODE
-Link: https://letcode-cn.com/leetbook/read/top-nterview-qiestions-easy/x2skh7///
-Source: LEETCODE
-Copyright belongs to the author.Please contact the author for business reprints. Please indicate the source for non -business reprints.
-```
-
-
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-
-</figure>
+- Most list methods modify the parameter

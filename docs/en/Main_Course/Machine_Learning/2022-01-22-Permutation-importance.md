@@ -1,93 +1,89 @@
 ---
 template: overrides/blogs.html
 tags:
-  -Machine Learning
+  - machine learning
 ---
 
-#The feature selection Permutation Importance
+# Permutation Importance for Feature Selection
 
-!!! Info
-    Author: [vincent] (https://github.com/realvincentyuan), published in 2021-06-06, reading time: about 6 minutes, WeChat public account article link: [: fontaWesome-solid-Link:] (https://mp.weixinin.qqqpom/s/s?_biz=mzi4mjk3nzgxoq===2247485194&IDX=1&Sn=60a358eeed0c7b2ebb362a9b&Chksm=eDce77d68bc 54CD35D12A5530C9639250B19B469269F2E0559EEB81C5B2D0052e74a4 & Token = 120973643 & Lang = zh_cn#RD)
-
+!!! info
+    Author: [Vincent](https://github.com/Realvincentyuan), Published on 2021-06-06, Reading time: about 6 minutes, WeChat official account article link: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485194&idx=1&sn=60a358eeed0c7fa7b2ebb362cce92a9b&chksm=eb90f47edce77d68bc54cd35d12a5530c9639250b19b469269f2e0559eeb81c5b2d0052e74a4&token=120973643&lang=zh_CN#rd)
 
 ## 1 Introduction
 
-The previous article mentioned some commonly used feature selection techniques. This article continues to study this topic to explain a new method of checking feature importance: Permutation Importance.Before reading, you can read the relevant previous review:
+In previous articles, some common feature selection techniques have been introduced. In this article, we will continue to focus on this topic and explain a new method for assessing feature importance: Permutation Importance. Before continuing reading, it is recommended to review relevant previous knowledge:
 
-- [Decision Tree Learning Notes] (https://mp.weixin.qq.com/s/wav7hg3kws-qx574auhj3q)
-- [How to choose feature selection] (https://mp.weixin.qq.com/s/cuw1ugpxm-5LF_RUKAU56q)
+- [Decision Tree Learning Notes](https://mp.weixin.qq.com/s/waV7HG3KWs-Qx574aUHj3Q)
+- [How to Do Feature Selection](https://mp.weixin.qq.com/s/Cuw1ugpxm-5lF_rUkAu56Q)
 
-## 2 algorithm deconstruction
+## 2 Algorithm Deconstruction
 
-Permutation Importation is suitable for table data, and its judgment of feature importance depends on the degree of decline of the model performance score after the characteristics are randomly discharged.Its mathematical expression can be expressed as:
+Permutation Importance is suitable for tabular data, and its assessment of feature importance depends on the extent to which the model performance score decreases when the feature is randomly rearranged. Its mathematical expression can be represented as:
 
--Enter: Model M after training, training set (or verification set, or test set) D
--The performance score of Model M on Data Set D S
--Ad the features of data set D.
-  -S for each iteration of K in the K sub -repeat experiment, randomly arranges characteristic J to construct a contaminated data set $ dc_ {k, j} $
-  -Ac calculating model m in the dataset $ DC_ {k, j} $ performance score $ s_ {k, j} $
-  -The importance scores of feature J $ i_ {j} $ can be recorded as
+- Input: model m after training, training set (or validation set, or test set) D
+- Performance score s of model m on dataset D
+- For each feature j of dataset D
+  - For each iteration k of K repeated experiments, randomly permute feature j to construct a contaminated dataset $Dc_{k,j}$
+  - Calculate the performance score $s_{k,j}$ of model m on dataset $Dc_{k,j}$
+  - Feature j's importance score $i_{j}$ can be expressed as
 
-$o I_ {j} = s - \ frac {1} {k} \ sum_ {k = 1}^{k} s_ {k, j} $o
+$$ i_{j} = s - \frac{1}{K}\sum_{k=1}^{K}s_{k,j} $$
 
-## 3 sample code
+## 3 Example Code
 
-`` `python
-From Sklearn.datases Import Load_diabetes
-From Sklearn.model_selection Import Train_Test_Split
-From Sklearn.Linear_model Import Ridge
-diabetes = load_diabetes ()
-X_train, x_val, y_train, y_val = train_test_split (
-    Diabetes.data, Diabetes.Target, RANDOM_STATE = 0)
+```python
+from sklearn.datasets import load_diabetes
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import Ridge
+from sklearn.inspection import permutation_importance
+diabetes = load_diabetes()
+X_train, X_val, y_train, y_val = train_test_split(
+    diabetes.data, diabetes.target, random_state=0)
 
-Model = Ridge (alpha = 1E-2) .fit (x_train, y_train)
-Model.score (X_VAL, Y_VAL)
+model = Ridge(alpha=1e-2).fit(X_train, y_train)
+model.score(X_val, y_val)
 
 
 scoring = ['r2', 'neg_mean_absolute_percentage_error', 'neg_mean_squared_error']
-# Scoring parameters can add multiple calculation indicators at the same time, so that it is more efficient to use Permutation_importance, because the predictable value can be used to calculate different indicators to calculate different indicators
-R_multi = Permutation_importance (Model, X_VAL, Y_VAL, N_Repeats = 30, RANDOM_STATE = 0, Scoring = Scoring)
+# The scoring parameter can include multiple calculation indicators at the same time. This is more efficient than using permutation_importance repeatedly, because the predicted value can be used to calculate different indicators.
+r_multi = permutation_importance(model, X_val, y_val, n_repeats=30, random_state=0, scoring=scoring)
 
-For Metric in R_Multi:
-    Print (f "{metric}")
-    r = r_multi [metric]
-    for I in R.importances_mean.argsort () [::-1]:
-        if r.importances_mean [i] - 2 * r.importances_std [i]> 0: 0:
-            Print (f "{diabetes.feature_names [i]: <8}"
-                  f "{r.importances_mean [i] :. 3F}"
-                  f "+/- {r.importances_std [i] :. 3F}")
+for metric in r_multi:
+    print(f"{metric}")
+    r = r_multi[metric]
+    for i in r.importances_mean.argsort()[::-1]:
+        if r.importances_mean[i] - 2 * r.importances_std[i] > 0:
+            print(f"    {diabetes.feature_names[i]:<8}"
+                  f"{r.importances_mean[i]:.3f}"
+                  f" +/- {r.importances_std[i]:.3f}")
 
-`` `
+```
 
 The output is:
 
-`` `python
-R2
-  S5 0.204 +/- 0.050
-  BMI 0.176 +/- 0.048
-  BP 0.088 +/- 0.033
-  SEX 0.056 +/- 0.023
+```python
+r2
+  s5      0.204 +/- 0.050
+  bmi     0.176 +/- 0.048
+  bp      0.088 +/- 0.033
+  sex     0.056 +/- 0.023
 neg_mean_absolute_percentage_error
-  S5 0.081 +/- 0.020
-  BMI 0.064 +/- 0.015
-  BP 0.029 +/- 0.010
+  s5      0.081 +/- 0.020
+  bmi     0.064 +/- 0.015
+  bp      0.029 +/- 0.010
 neg_mean_squared_error
-  S5 1013.903 +/- 246.460
-  BMI 872.694 +/- 240.296
-  BP 438.681 +/- 163.025
-  SEX 277.382 +/-115.126
-`` `
+  s5      1013.903 +/- 246.460
+  bmi     872.694 +/- 240.296
+  bp      438.681 +/- 163.025
+  sex     277.382 +/- 115.126
+```
 
-## 4 Summary
+## 4 Conclusion
 
-In contrast, tree models are usually judged by the decline of impureness. The importance is usually based on the `training set. When the model is overfit, the importance of the feature is misleading.In this case, seemingly important features may not have satisfactory prediction capabilities for the new data encountered after the model.
+Compared with tree models, feature importance is usually judged based on the decrease in impurity, which is usually based on the `training set`. When the model is overfitting, the importance of features is misleading. In this case, seemingly important features may not have satisfactory predictive power for new data encountered by the model online.
 
-At the same time, the importance importance based on impureness is easily affected by high quantity class properties (High Cardinality), so those numerical variables often rank forward.The Permutation Importance has no prejudice to the model's features, nor is it limited to specific model categories, and the applicability is wide.Please note.If the features have a strong multiple common linearity, it is recommended to take only one important feature. The method can view [Example] (https://scikit-rearn.org/Auto_examples/Inspection/plotation_importance_multicolinear.html.html #SPHX-GLR-Auto-examples-innspect-Plot-Plot-Importance-Multicolinear-Permutance with Multicoliner or Correled Features').
+At the same time, feature importance based on reduction in impurity is easily affected by high-cardinality features, so numerical variables often rank higher. In contrast, Permutation Importance has no bias towards model features and is not limited to specific model types, so it has a wide range of applications. Please note that if the features have strong multicollinearity, it is recommended to take only one important feature. The method can be viewed in this [example](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance_multicollinear.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-multicollinear-py 'Permutation Importance with Multicollinear or Correlated Features').
 
-At the same time, `Scikit Learn` also provides an intuitive [Example] (https://scikit-rearn.org/Auto_Examples/inspection/plot_Permutance.html#Sphx-glr- EXA MPLES-inSpection-PLOT-PERMUTATATION-Importance-Permutation Importance Vs Random Forest Feature Importance (MDI)) shows the difference between unnoticed characteristic importance and Permutation Importance.
+At the same time, `Scikit Learn` also provides an intuitive [example](https://scikit-learn.org/stable/auto_examples/inspection/plot_permutation_importance.html#sphx-glr-auto-examples-inspection-plot-permutation-importance-py 'Permutation Importance vs Random Forest Feature Importance (MDI)') to demonstrate the difference between feature importance based on impurity reduction and Permutation Importance.
 
-I hope this sharing will help you, please leave a message in the comment area!
-
-<figure>
-  <img src = "httts://cdn.jsdelivr.net/gh/bullettech2021/pics/2021-6-14/1623639526512-1080p%20hd)%20tail .png" widt "widt" widt "widt h = "500 " />
-</Figure>
+Hope this sharing is helpful to you, and welcome to leave comments for discussion!
