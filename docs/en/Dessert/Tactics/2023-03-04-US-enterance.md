@@ -7,7 +7,7 @@ tags:
 # Memo for L Visa Holders to Enter the United States
 
 !!! info
-    Author: Yuan Zidantiqifei, published on June 6, 2021, reading time: about 6 minutes, WeChat Public Account Article Link: [:fontawesome-solid-link:]()
+    Author: [Vincent](https://github.com/Realvincentyuan), published on June 6, 2021, reading time: about 6 minutes, WeChat Public Account Article Link: [:fontawesome-solid-link:]()
 
 ## 1 Overview
 

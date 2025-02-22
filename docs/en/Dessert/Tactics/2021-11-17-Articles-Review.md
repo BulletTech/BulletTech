@@ -4,7 +4,7 @@ tags:
   - bullettech
 ---
 
-# "Year-end" Article Review and New Menu Release
+# Year-end Article Review and New Menu Release
 
 !!! info
     Author: Void, Published on 2021-11-17, Reading Time: About 4 minutes, Link to the WeChat article: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s/FvHSosm25M1OLJ-UWBXtqw)
