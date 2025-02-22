@@ -3,13 +3,13 @@ template: overrides/blogs.html
 ᴴₒᴴₒᴴₒ: true
 ---
 
-# 科技甜点简介
+# Introduction to Technology Desserts
 
-在这个模块中，我们会分享日常生活、工作中实用、有趣的所见所闻以及经验和技巧。总的来说，主要内容包括如下几个部分：
+In this section, we will share practical and interesting experiences, observations, and tips from daily life and work. Overall, the main content includes the following parts:
 
-- 工作体验
-- 科技产品的使用体验
-- 科技产品、软件、Apps使用技巧
-- 其他任何有趣的事情（~~灌水~~）
+- Work experiences
+- Experiences with technology products
+- Tips for using technology products, software, and apps
+- Anything else interesting (~~filler~~)
 
-如果你有想看的内容，不妨在底部的评论区告诉我们。 如果我们懂，下次一定写 :smile: 
+If there’s anything you'd like to see, feel free to tell us in the comments section below. If we know it, we'll definitely write about it next time! :smile:

@@ -3,13 +3,13 @@ template: overrides/blogs.html
 ᴴₒᴴₒᴴₒ: true
 ---
 
-# 科技正餐简介
+# Introduction to Tech Main Course
 
-在这个板块中，我们会分享关于编程、数据分析、机器学习、深度学习的经验技巧、和相关热点资讯。总的来说，主要内容包括如下几个部分：
+In this section, we will share tips and tricks about programming, data analysis, machine learning, and deep learning, as well as related hot topics. Overall, the main content includes the following parts:
 
-- 编程技巧实战: Python，SQL，Spark等
-- 数据分析经验技巧分享
-- 数据建模实战：机器学习、深度学习、自然语言处理等
-- 热点资讯：编程语言、开发框架新版本、新特性介绍等（~~灌水~~）
+- Practical Programming Skills: Python, SQL, Spark, etc.
+- Data Analysis Tips and Techniques
+- Data Modeling in Practice: Machine Learning, Deep Learning, Natural Language Processing, etc.
+- Hot Topics: New versions and features of programming languages, development frameworks, etc. (~~Filler~~)
 
-如果你有想看的内容，不妨在底部的评论区告诉我们。 如果我们懂，下次一定写 :smile: 
+If you have content you'd like to see, feel free to tell us in the comments section at the bottom. If we know it, we'll definitely write about it next time :smile:

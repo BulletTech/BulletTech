@@ -6,8 +6,8 @@ hide:
 ---
 
 
-# 文章标签系统
+# Tags of all articles
 
-可以使用下列标签搜索本站所有的文章：
+You can use below tags to get to all articles in this website：
 
 [TAGS]
