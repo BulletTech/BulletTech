@@ -6,15 +6,7 @@ tags:
   - nlp
 ---
 
----
-template: overrides/blogs.html
-tags:
-  - deep learning
-  - tensorflow
-  - nlp
----
-
-# 使用TensorFlow进行文本分类
+# Text Classification with TensorFlow
 
 !!! info
     Author:：[Vincent](https://github.com/Realvincentyuan)，Posted on 2021-06-06，Reading time: 6 mins，WeChat Post Link:：[:fontawesome-solid-link:](https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485273&idx=1&sn=d672fbcc65edeb115f628ad231caeca8&chksm=eb90f42ddce77d3b680b48c9cda52db5f96e3d3a64fc1bf94537dae7efa1a9f8908016572e35&token=200682583&lang=zh_CN#rd)
