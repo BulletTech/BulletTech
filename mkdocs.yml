@@ -138,8 +138,7 @@ theme:
 plugins:
   - search:
       separator: '[\s\u200b\-]'
-  - tags:
-      tags_file: tags.md
+  - tags
   - minify:
       minify_html: true
   - macros:
