@@ -138,13 +138,11 @@ theme:
 plugins:
   - search:
       separator: '[\s\u200b\-]'
-  - tags
   - minify:
       minify_html: true
   - macros:
       j2_variable_start_string: '[%'
       j2_variable_end_string: '%]'
-  - rss
   - i18n:
       docs_structure: folder
       languages:
@@ -156,6 +154,8 @@ plugins:
           name: Chinese
           build: true
   - git-revision-date-localized
+  - tags
+  - rss
 
 
 
