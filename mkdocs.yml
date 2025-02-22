@@ -11,124 +11,83 @@ repo_url: https://github.com/BulletTech/BulletTech
 edit_uri: edit/main/docs/
 
 # Page tree
+# Page tree
 nav:
   - Home: index.md
   - Main Course:
     - Intro: Main_course_blog_intro.md
     - Data Analytics:
-        - 方差分析: Main_Course/Data_Analytics/2022-01-03-ANOVA.md
-        - 最小样本量n的选取: Main_Course/Data_Analytics/2021-12-15-min_n_choice.md
-        - 浅谈数据的搜索和排序: Main_Course/Data_Analytics/2021-10-26-Data-Search-and-Sort.md
-        - PySpark小介: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md
-        - SQL Tips（二）: Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
-        - SQL Tips（一）: Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
-        - 利用递归思想处理半结构化数据: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
-        - PayPal职位爬虫: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
-        - 爬取并下载URL不变的pdf文件: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
-        - A/B测试实战项目: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
-        - 双重差分小介: Main_Course/Data_Analytics/2021-06-24-DID.md
-        - 微信小程序爬虫: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
-        - 淘宝自动抢单: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
+        - ANOVA: Main_Course/Data_Analytics/2022-01-03-ANOVA.md
+        - Selection of Minimum Sample Size n: Main_Course/Data_Analytics/2021-12-15-min_n_choice.md
+        - A Brief Discussion on Data Search and Sorting: Main_Course/Data_Analytics/2021-10-26-Data-Search-and-Sort.md
+        - Introduction to PySpark: Main_Course/Data_Analytics/2021-09-20-pyspark_intro.md
+        - SQL Tips (II): Main_Course/Data_Analytics/2021-08-27-SQL-tips-2.md
+        - SQL Tips (I): Main_Course/Data_Analytics/2021-08-18-Sql-tips.md
+        - Handling Semi-structured Data with Recursive Thinking: Main_Course/Data_Analytics/2021-08-20-practical-recursion-for-data-cleaning.md
+        - PayPal Job Crawler: Main_Course/Data_Analytics/2021-07-18-PayPal-Job-Crawler.md
+        - Crawling and Downloading PDFs with Static URLs: Main_Course/Data_Analytics/2021-07-01-pdf-Crawler.md
+        - A/B Testing Practical Project: Main_Course/Data_Analytics/2021-06-28-AB-Testing.md
+        - Introduction to Difference-in-Differences (DID): Main_Course/Data_Analytics/2021-06-24-DID.md
+        - WeChat Mini Program Crawler: Main_Course/Data_Analytics/2021-06-14-Wechat-Crawler.md
+        - Taobao Auto Order Script: Main_Course/Data_Analytics/2021-06-08-Taobao-Auto-Order-Script.md
     - Deep Learning:
-        - 使用TensorFlow进行图片分类: Main_Course/Deep_Learning/2022-05-23-TF-Img-Classification.md
-        - 卷积神经网络解释器简介: Main_Course/Deep_Learning/2022-05-20-CNN-Explainer.md
-        - 使用TensorFlow进行单变量时间序列预测:  Main_Course/Deep_Learning/2022-05-14-TF-Time-Series-Univariate.md
-        - TensorFlow Playground简介: Main_Course/Deep_Learning/2022-05-07-TF-Playground.md
-        - 使用TensorFlow Decision Forests构建树模型: Main_Course/Deep_Learning/2022-04-24-TensorFlow-Decision-Forest.md
-        - 使用TensorFlow进行文本分类:  Main_Course/Deep_Learning/2022-04-16-TF-Text-Classification.md
-        - TabNet模型介绍: Main_Course/Deep_Learning/2021-12-18-Tabnet.md
-        - TensorFlow推荐系统（二）: Main_Course/Deep_Learning/2021-12-27-TensorFlow-Recommender2.md
-        - TensorFlow推荐系统（一）: Main_Course/Deep_Learning/2021-12-10-Tensorflow-Recommender.md
-        - 读《30天吃掉那只TensorFlow2》: Main_Course/Deep_Learning/2021-12-01-Tensorflow-Doc.md
-        - 深度学习 101-搭建 ResNet 识别鲜花图像: Main_Course/Deep_Learning/2021-11-04-Deep-Learning-101-ResNet.md
-        - 算法中的multi家族: Main_Course/Deep_Learning/2021-10-10-multi-algo.md
-        - 在Apple Silicon Macs上安装TensorFlow: Main_Course/Deep_Learning/2021-10-10-TF-on-M1-Mac.md
-        - 使用tf.keras自定义模型: Main_Course/Deep_Learning/2021-10-04-Keras-Custom-Model.md
-        - Keras各种Callbacks介绍: Main_Course/Deep_Learning/2021-10-02-TF-Callbacks.md
-        - 神经网络调参技巧: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
+        - Image Classification with TensorFlow: Main_Course/Deep_Learning/2022-05-23-TF-Img-Classification.md
+        - Introduction to Convolutional Neural Network Explainers: Main_Course/Deep_Learning/2022-05-20-CNN-Explainer.md
+        - Univariate Time Series Forecasting with TensorFlow: Main_Course/Deep_Learning/2022-05-14-TF-Time-Series-Univariate.md
+        - Introduction to TensorFlow Playground: Main_Course/Deep_Learning/2022-05-07-TF-Playground.md
+        - Building Tree Models with TensorFlow Decision Forests: Main_Course/Deep_Learning/2022-04-24-TensorFlow-Decision-Forest.md
+        - Text Classification with TensorFlow: Main_Course/Deep_Learning/2022-04-16-TF-Text-Classification.md
+        - Introduction to TabNet Model: Main_Course/Deep_Learning/2021-12-18-Tabnet.md
+        - TensorFlow Recommender System (II): Main_Course/Deep_Learning/2021-12-27-TensorFlow-Recommender2.md
+        - TensorFlow Recommender System (I): Main_Course/Deep_Learning/2021-12-10-Tensorflow-Recommender.md
+        - Reading "30 Days to Master TensorFlow 2": Main_Course/Deep_Learning/2021-12-01-Tensorflow-Doc.md
+        - Deep Learning 101 - Building ResNet for Flower Image Recognition: Main_Course/Deep_Learning/2021-11-04-Deep-Learning-101-ResNet.md
+        - The "Multi" Family in Algorithms: Main_Course/Deep_Learning/2021-10-10-multi-algo.md
+        - Installing TensorFlow on Apple Silicon Macs: Main_Course/Deep_Learning/2021-10-10-TF-on-M1-Mac.md
+        - Customizing Models with tf.keras: Main_Course/Deep_Learning/2021-10-04-Keras-Custom-Model.md
+        - Introduction to Various Keras Callbacks: Main_Course/Deep_Learning/2021-10-02-TF-Callbacks.md
+        - Neural Network Hyperparameter Tuning Techniques: Main_Course/Machine_Learning/2021-09-10-params-tuning-tricks.md
     - Machine Learning:
-        - AMEX - Default Prediction Kaggle竞赛精华总结: Main_Course/Machine_Learning/2022-08-30-AMEX-Kaggle-Summary.md
-        - Machine Learning学习资料汇总: Main_Course/Machine_Learning/2022-06-05-ML-Reference.md
-        - 因果推断之Uplift Model: Main_Course/Machine_Learning/2022-02-03-Uplift-Model.md
-        - Kaggle量化竞赛Top方案: Main_Course/Machine_Learning/2022-01-30-Kaggle-exp-s2.md
-        - 集成学习小介: Main_Course/Machine_Learning/2022-01-28-Ensemble-Learning.md
-        - 特征选择之Permutation Importance: Main_Course/Machine_Learning/2022-01-22-Permutation-importance.md
-        - KDD Cup2021时间序列异常检测竞赛总结: Main_Course/Machine_Learning/2021-10-30-kdd-cup2021.md
-        - 特征选择小介: Main_Course/Machine_Learning/2021-09-26-feature-selection.md
-        - 金融风控特征工程: Main_Course/Machine_Learning/2021-09-25-Feature-engineering.md
-        - Kaggle Jane Street: Main_Course/Machine_Learning/2021-09-02-Kaggle-janestreet.md
-        - 决策树学习笔记: Main_Course/Machine_Learning/2021-08-28-Decision-Tree.md
-        - Kaggle Optiver: Main_Course/Machine_Learning/2021-08-27-Kaggle-optiver.md
-        - Kaggle tips: Main_Course/Machine_Learning/2021-08-10-Kaggle-tips.md
-        - 天池零基础金融风控比赛小结: Main_Course/Data_Analytics/2021-08-08-Loan-Default-Competition-Review.md
-        - 读《Rules of Machine Learning》有感（下）: Main_Course/Machine_Learning/2021-07-24-notes-of-rules-of-ML2.0.md
-        - 读《Rules of Machine Learning》有感（上）: Main_Course/Machine_Learning/2021-07-22-notes-of-rules-of-ML.md
-        - 时间序列异常检测: Main_Course/Machine_Learning/2021-07-16-Timeseries-algo.md
+        - AMEX - Summary of Default Prediction Kaggle Competition: Main_Course/Machine_Learning/2022-08-30-AMEX-Kaggle-Summary.md
+        - Compilation of Machine Learning Study Materials: Main_Course/Machine_Learning/2022-06-05-ML-Reference.md
+        - Uplift Model for Causal Inference: Main_Course/Machine_Learning/2022-02-03-Uplift-Model.md
+        - Top Solutions for Kaggle Quantitative Competition: Main_Course/Machine_Learning/2022-01-30-Kaggle-exp-s2.md
+        - Introduction to Ensemble Learning: Main_Course/Machine_Learning/2022-01-28-Ensemble-Learning.md
+        - Feature Selection via Permutation Importance: Main_Course/Machine_Learning/2022-01-22-Permutation-importance.md
+        - KDD Cup 2021 Time Series Anomaly Detection Competition Summary: Main_Course/Machine_Learning/2021-10-30-kdd-cup2021.md
     - Graph:
-        - Neo4J图数据库反欺诈分析实战（四） - 风险评分: Main_Course/Graph_Database/2022-04-09-Neo4J-Fraud-s4.md
-        - Neo4J图数据库反欺诈分析实战（三） - 识别犯罪团伙: Main_Course/Graph_Database/2022-03-06-Neo4J-Fraud-s3.md
-        - Neo4J图数据库反欺诈分析实战（二） - 准备数据: Main_Course/Graph_Database/2022-02-26-Neo4J-Fraud-s2.md
-        - Neo4J图数据库反欺诈分析实战（一） - 搭建分析环境: Main_Course/Graph_Database/2022-01-29-Neo4J-Fraud-s1.md
-        - 初识图数据库: Main_Course/Graph_Database/2021-12-13-Graph_Database_Introduction.md
-    - Analytics Tool:
-        - Docker踩坑日记: Main_Course/Analytics_Tools/2021-12-09-Docker2.md
-        - Docker之数据的持续性化: Main_Course/Analytics_Tools/2021-11-25-Docker-Volumes.md
-        - 使用GitHub Action自动推送Docker镜像: Main_Course/Analytics_Tools/2021-11-20-GitHub-Docker.md
-        - 教你成功在Win10系统中运行docker: Main_Course/Analytics_Tools/2021-11-13-Docker-Windows.md
-        - GitHub Action概览: Main_Course/Analytics_Tools/2021-11-13-GitHub-Action.md
-        - Docker初体验: Main_Course/Analytics_Tools/2021-11-05-Docker-Sharing.md
-        - 用GitHub做一份精美的在线简历: Main_Course/Analytics_Tools/2021-11-01-GitHub-Resume.md
-        - GitHub也可以很好玩: Main_Course/Analytics_Tools/2021-10-14-play-with-github.md
-        - SnowFlake权限概览: Main_Course/Analytics_Tools/2021-10-11-SF-Access-Intro.md
-        - SnowFlake架构概览: Main_Course/Analytics_Tools/2021-09-11-SF-Archi-Intro.md
-        - 浅谈Google Analytics: Main_Course/Analytics_Tools/2021-07-31-GA-Intro.md
-        - Git常用命令一览: Main_Course/Analytics_Tools/2021-07-15-Git-Commands.md
-        - 一行代码都不写，教你使用GitHub: Main_Course/Analytics_Tools/2021-06-23-Github-Intro.md
-    - Coding:
-        - Python风格最佳实践: Main_Course/Coding/2023-05-14-Python-style.md
-        - 命令行交互工具argparse: Main_Course/Coding/2021-11-21-Python-argparse.md
-        - 语法解析工具sqlparse: Main_Course/Coding/2021-10-16-Python-package-sqlparse.md
-        - Python闭包浅析: Main_Course/Coding/2021-09-21-Python-Closure.md
-        - Python字典常用操作小技巧: Main_Course/Coding/2021-08-21-Python-dict.md
-        - Python列表常用操作小技巧: Main_Course/Coding/2021-08-14-Python-list.md
-        - Python元组常用操作小技巧: Main_Course/Coding/2021-08-07-Python-Tuple.md
-        - 好用的Python包: Main_Course/Coding/2021-08-03-useful-python-packages.md
-    - One Day Build:
-        - 域名注册及备案全流程: Main_Course/One_Day_Build/2022-01-03-domain.md
-        - 租房信息获取: Main_Course/One_Day_Build/2021-12-04-renting_data.md
-        - 获取基金行情数据: Main_Course/One_Day_Build/2021-11-27-fund_data.md
-        - 12306智能订票: Main_Course/One_Day_Build/2021-11-10-12306ticket.md
-        - 解读FlaskBB源码: Main_Course/One_Day_Build/2021-10-29-flaskbb2.md
-        - 基于FlaskBB自建论坛: Main_Course/One_Day_Build/2021-10-21-flaskbb.md
-        - 利用显卡实现咖啡自由: Main_Course/One_Day_Build/2021-06-21-Mining.md
-        - Python实现简单区块链货币: Main_Course/One_Day_Build/2021-06-05-blockchain_intro.md
+        - Neo4J Graph Database Fraud Analysis (IV) - Risk Scoring: Main_Course/Graph_Database/2022-04-09-Neo4J-Fraud-s4.md
+        - Neo4J Graph Database Fraud Analysis (III) - Identifying Criminal Groups: Main_Course/Graph_Database/2022-03-06-Neo4J-Fraud-s3.md
+        - Neo4J Graph Database Fraud Analysis (II) - Data Preparation: Main_Course/Graph_Database/2022-02-26-Neo4J-Fraud-s2.md
+        - Neo4J Graph Database Fraud Analysis (I) - Setting Up the Environment: Main_Course/Graph_Database/2022-01-29-Neo4J-Fraud-s1.md
+        - Introduction to Graph Databases: Main_Course/Graph_Database/2021-12-13-Graph_Database_Introduction.md
   - Dessert:
     - Intro: Dessert_blog_intro.md
     - Hardware:
-        - M1 Mac mini 使用半年体验 - Mac的新未来: Dessert/Hardware/2021-06-03-Mac-mini.md
-        - Apple Watch S5 使用一年感受 - 不后悔！: Dessert/Hardware/2021-01-02-Apple-Watch-S5.md
-        - 初识2020款12.9英寸iPad Pro - 未来可期: Dessert/Hardware/2020-04-05-iPad-Pro.md
-        - 换种姿势，在家办公 - 罗技MX Keys + M720主观评测: Dessert/Hardware/2020-03-14-MX-Keys.md
+        - Six-Month Experience with M1 Mac mini - The New Future of Mac: Dessert/Hardware/2021-06-03-Mac-mini.md
+        - One-Year Experience with Apple Watch S5 - No Regrets!: Dessert/Hardware/2021-01-02-Apple-Watch-S5.md
+        - First Encounter with the 2020 12.9-inch iPad Pro - A Promising Future: Dessert/Hardware/2020-04-05-iPad-Pro.md
+        - A Different Approach to Working from Home - Logitech MX Keys + M720 Subjective Review: Dessert/Hardware/2020-03-14-MX-Keys.md
     - Apps:
-        - 免费实验平台 - Amazon SageMaker Studio Lab: Dessert/Apps/2022-05-28-SageMaker-Studio-Lab.md
-        - Z-Library，优质科研电子书下载平台: Dessert/Apps/2022-01-04-Z-Library.md
-        - Apache项目介绍: Dessert/Apps/2021-12-25-Apache.md
-        - 有趣的API介绍1.0: Dessert/Apps/2021-11-26-APIintro.md
-        - iOS Shortcuts捷径: Dessert/Apps/2021-10-29-iOS-Shortcuts.md
-        - PicGo图床，功能刚刚好: Dessert/Apps/2021-10-23-PicGo.md
-        - Copilot测试版本体验: Dessert/Apps/2021-07-19-Copilot.md
-        - Paste - 剪切板工具: Dessert/Apps/2021-07-12-Paste.md
-        - 装机必备之实用电脑软件: Dessert/Apps/2021-06-15-Hotapps.md
-        - 个人笔记应用 - Notion: Dessert/Apps/2021-06-06-Notion.md
+        - Free Experimentation Platform - Amazon SageMaker Studio Lab: Dessert/Apps/2022-05-28-SageMaker-Studio-Lab.md
+        - Z-Library, A High-Quality Research eBook Download Platform: Dessert/Apps/2022-01-04-Z-Library.md
+        - Introduction to Apache Projects: Dessert/Apps/2021-12-25-Apache.md
+        - Interesting APIs Introduction 1.0: Dessert/Apps/2021-11-26-APIintro.md
+        - iOS Shortcuts: Dessert/Apps/2021-10-29-iOS-Shortcuts.md
+        - PicGo Image Hosting, Just the Right Features: Dessert/Apps/2021-10-23-PicGo.md
+        - Copilot Beta Experience: Dessert/Apps/2021-07-19-Copilot.md
+        - Paste - Clipboard Tool: Dessert/Apps/2021-07-12-Paste.md
+        - Essential Software for New Installations: Dessert/Apps/2021-06-15-Hotapps.md
+        - Personal Notes Application - Notion: Dessert/Apps/2021-06-06-Notion.md
     - Exp:
-        - 办理在美必备证件及服务指南: Dessert/Tactics/2023-03-26-US-Svc.md
-        - 考取美国驾照精简指南: Dessert/Tactics/2023-03-05-US-DL.md
-        - L签证持有者入境美国备忘录: Dessert/Tactics/2023-03-04-US-enterance.md
-        - 如何以最快的速度写出一篇优美的文章: Dessert/Tactics/2021-07-02-Posting-Workflow.md
+        - Essential Documents and Services Guide for U.S. Residency: Dessert/Tactics/2023-03-26-US-Svc.md
+        - Streamlined Guide to Obtaining a U.S. Driver's License: Dessert/Tactics/2023-03-05-US-DL.md
+        - Memo for L Visa Holders Entering the U.S.: Dessert/Tactics/2023-03-04-US-enterance.md
+        - How to Write a Beautiful Article in the Fastest Way: Dessert/Tactics/2021-07-02-Posting-Workflow.md
   - About Us:
-        - 关于BulletTech: About_us.md
-        - 我们的故事: Our_story.md
-        - “年终”文章回顾及新菜单发布: Dessert/Tactics/2021-11-17-Articles-Review.md
+        - About BulletTech: About_us.md
+        - Our Story: Our_story.md
+        - Year-End Article Review and New Menu Release: Dessert/Tactics/2021-11-17-Articles-Review.md
 
 # Copyright
 copyright: Copyright &copy; 2021 - Now BulletTech
@@ -186,8 +145,19 @@ plugins:
   - macros:
       j2_variable_start_string: '[%'
       j2_variable_end_string: '%]'
-  - git-revision-date-localized
   - rss
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: Chinese
+          build: true
+  - git-revision-date-localized
+
 
 
 extra_javascript:
@@ -199,7 +169,6 @@ extra_javascript:
 markdown_extensions:
   - admonition
   - abbr
-  - attr_list
   - def_list
   - footnotes
   - meta
@@ -213,9 +182,6 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.snippets
   - pymdownx.highlight
   - pymdownx.inlinehilite
@@ -237,6 +203,10 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 
 # Customization
@@ -257,10 +227,3 @@ extra:
   analytics:
     provider: google
     property: G-YBLW55DHTJ
-  alternate:
-    - name: English
-      link: /en/ 
-      lang: en
-    - name: Chinese
-      link: /zh/ 
-      lang: zh
