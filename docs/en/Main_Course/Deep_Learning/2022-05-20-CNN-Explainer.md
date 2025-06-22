@@ -9,7 +9,7 @@ tags:
 # Introduction to Convolutional Neural Network Explainer
 
 !!! info
-    Author: [Vincent](https://github.com/Realvincentyuan), Published on June 6, 2021, Reading time: about 6 minutes, WeChat Public Account Article link: [: fontawesome-solid-link:] (https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485314&idx=1&sn=02d6f35c358ab4a596f3aaabc2704547&chksm=eb90f4f6dce77de0553c383583e4347835b15c44cf1d142fb028ed450f70e0e65e0528e314d4&token=762444875&lang=zh_CN #rd)
+    Author: [Vincent](https://github.com/Realvincentyuan), Published on June 6, 2021, Reading time: about 6 minutes, WeChat Public Account Article link: [: fontawesome-solid-link:] (https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid=2247485314&idx=1&sn=02d6f35c358ab4a596f3aaabc2704547&chksm=eb90f4f6dce77de0553c383583e4347835b15c44cf1d142fb028ed450f70e0e65e0528e314d4&token=762444875&lang=zh_CN)
 
 
 ## 1 Introduction
