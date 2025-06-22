@@ -14,7 +14,7 @@ tags:
 
 ## 1 Introduction
 
-In the article [Introduction to TensorFlow Playground] (https://mp.weixin.qq.com/s?__biz=MzI4Mjk3NzgxOQ==&mid= 2247485294 & idx = 1 & sn = deef8a34853332612aa43bff8de23bf0 & chksm = eb90f41adce77d0c78b4c510645f1a04ba7644f7ed53e039b09e91e900f04cfae88a28a2d1e3 & token = 1726922856 & lang = zh_CN #rd), the author introduced a product that uses visualization to understand neural networks (CNNs). This article will share a similar website - `CNN Explainer`, which focuses on explaining `Convolutional Neural Networks` in a visual way. The product shows convolutional neural networks and related knowledge points in a very intuitive way. The CNN Explainer website address is: https://poloclub.github.io/cnn-explainer/.
+In the article [Introduction to TensorFlow Playground](https://bullettech.github.io/BulletTech/Main_Course/Deep_Learning/2022-05-07-TF-Playground/), the author introduced a product that uses visualization to understand neural networks (CNNs). This article will share a similar website - `CNN Explainer`, which focuses on explaining `Convolutional Neural Networks` in a visual way. The product shows convolutional neural networks and related knowledge points in a very intuitive way. The CNN Explainer website address is: https://poloclub.github.io/cnn-explainer/.
 
 ## 2 Product Features
 
