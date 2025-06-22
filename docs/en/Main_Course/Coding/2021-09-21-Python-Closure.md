@@ -105,6 +105,3 @@ A closure is a function that retains the binding of free variables that were pre
 
 I hope this article has been helpful to you, and feel free to discuss in the comments!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

@@ -91,6 +91,3 @@ Basic operations are shown in the figure below. Please note that sometimes there
 
 In summary, after mastering these basic knowledge and skills, you can use GitHub smoothly for file management, collaborative work, and create your own blog, and so far, without writing a single line of code. Of course, using code can also operate GitHub conveniently. Next time we will use command operations to explore GitHub. Stay tuned!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

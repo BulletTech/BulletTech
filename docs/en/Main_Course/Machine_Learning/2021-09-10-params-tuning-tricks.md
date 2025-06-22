@@ -57,6 +57,3 @@ The zero-mean also makes the input in the saturation region of the activation fu
 
 Tuning has scientific and artistic elements. In actual usage, you may want to try the tips above. Some tips may be suitable for your model and task, helping your model perform better.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

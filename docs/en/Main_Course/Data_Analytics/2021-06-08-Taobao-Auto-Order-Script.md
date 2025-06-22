@@ -197,6 +197,3 @@ buy(order_time, browser)
 
 Please refer to the WeChat public account article for a video demonstrating the tool's functionality: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s/du-t9DyeC2INQsXg1m1xOQ)
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

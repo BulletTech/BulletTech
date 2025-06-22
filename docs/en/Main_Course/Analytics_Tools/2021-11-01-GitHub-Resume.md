@@ -62,6 +62,3 @@ We have added another little trick to the use of GitHub. You are welcome to use 
 
 Hope this sharing is helpful to you. Welcome to leave a message in the comments area for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

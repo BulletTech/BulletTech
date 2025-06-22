@@ -59,6 +59,3 @@ Finally, the output layer uses a different degree of highlight to display the pr
 
 The CNN Explainer shows the important technical principles such as convolution operation, ReLU function, Softmax function, pooling, and flattening layer in a very vivid way. You can also upload your own images for the model to make predictions, so please try it out for yourself! I hope this share is helpful to you and welcome to leave a message in the comment section for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

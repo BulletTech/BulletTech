@@ -83,6 +83,3 @@ For cross-validation, it uses PurgedGroupTimeSeriesSplit, which is suitable for 
 
 It can be seen that this open-source solution is not complicated, and there is still a lot of room for improvement, such as analyzing the meaning of features, using neural network models, optimizing the evaluation metric given in the problem, and so on. However, in the financially noisy world, whether these methods are effective is still a question mark.  
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

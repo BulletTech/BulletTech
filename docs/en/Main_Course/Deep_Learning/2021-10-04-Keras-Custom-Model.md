@@ -169,6 +169,3 @@ The above examples introduce how to customize keras models, which can add flexib
 
 I hope this sharing will help you. Welcome to leave a message in the comment area for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

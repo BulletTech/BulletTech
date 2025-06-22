@@ -140,6 +140,3 @@ The above content not only covers the basic operations of tuples but also combin
 
 I hope this article is helpful to you, and next time, I will summarize the tips for using Python lists. 
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

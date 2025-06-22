@@ -41,6 +41,3 @@ Among them, `Dive into Deep Learning (D2L)` is led by Amazon's `Sr. Principal Sc
 
 If you are interested, you can go to the corresponding platform to learn and practice! I hope this sharing is helpful to you, and I welcome you to discuss it in the comments section!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

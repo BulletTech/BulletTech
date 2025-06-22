@@ -91,6 +91,3 @@ This efficient workflow saves a lot of time and avoids many errors that are pron
 
 I hope this sharing will help you, and welcome to leave a message in the comments to discuss!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

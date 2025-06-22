@@ -134,6 +134,3 @@ df.tail(2)
 
 We can see that we have successfully scraped job position information (with some text truncated). There is other information on the web page, and you can add more information according to your needs. If you have any questions, feel free to contact us via the BulletTech WeChat customer service! 
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

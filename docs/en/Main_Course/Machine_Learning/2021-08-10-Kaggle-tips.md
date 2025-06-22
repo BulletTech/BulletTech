@@ -50,6 +50,3 @@ Although some of these knowledge and experiences are targeted at competition tri
 
 Thanks to the spirit of these experts who are willing to share, it is truly fortunate to be able to absorb knowledge and nutrition from the Kaggle community. 
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

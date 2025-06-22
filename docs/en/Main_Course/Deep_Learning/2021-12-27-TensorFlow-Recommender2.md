@@ -202,6 +202,3 @@ In TensorFlow's movie recommendation system, the first step is to obtain movie e
 
 I hope this article can help you, welcome everyone to leave a message for discussion.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

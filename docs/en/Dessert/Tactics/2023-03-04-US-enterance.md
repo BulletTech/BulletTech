@@ -50,6 +50,3 @@ In addition to the required documents listed above, it is recommended to keep an
 
 We hope this sharing will be helpful to you. Please feel free to leave a comment in the comment section for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

@@ -91,6 +91,3 @@ Spark DataFrame has many other [APIs](https://spark.apache.org/docs/latest/api/p
 
 In the Hadoop ecosystem, Spark and PySpark provide us with a very powerful set of tools. We don't need to worry about how MapReduce is actually executed at the low level. We only need to use simple PySpark syntax or even common SQL language to flexibly and freely operate underlying data.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

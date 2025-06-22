@@ -66,6 +66,3 @@ As WeChat Official Account is the main battlefield, we mainly optimize articles'
 
 The above is a brief introduction to the BulletTech workflow. Such an efficient method can help us quickly turn ideas into articles and share them with everyone. I hope this article can help you, and welcome your feedback in the comments!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

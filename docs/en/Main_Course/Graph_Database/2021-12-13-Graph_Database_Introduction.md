@@ -79,6 +79,3 @@ When there is more data, the visualization results are like this...
 
 Of course, no one can get valuable information from such visualization results. So, how should graph databases be applied in business? Please stay tuned for the upcoming series of graph database tutorials, which will definitely give you a more specific understanding of this new and trendy technology! I hope this sharing has helped you, and please feel free to leave a message in the comments section for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

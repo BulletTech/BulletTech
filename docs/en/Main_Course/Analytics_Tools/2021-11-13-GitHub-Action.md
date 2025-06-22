@@ -96,6 +96,3 @@ Using GitHub Action automates many repetitive and mechanical labor tasks, saving
 
 I hope this sharing can help you. Feel free to leave a comment in the comment section for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

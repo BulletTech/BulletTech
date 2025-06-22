@@ -129,6 +129,3 @@ Different tasks have different backgrounds, so don't rely on a model that perfor
 These 15 rules mainly focus on specific steps before modeling, and provide a good general direction for building models. These rules are surely the result of many past pitfall experiences, and are valuable lessons to keep in mind.  
 The next part will cover more specific modeling content, discussing rules related to feature engineering and optimizing models, so stay tuned.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

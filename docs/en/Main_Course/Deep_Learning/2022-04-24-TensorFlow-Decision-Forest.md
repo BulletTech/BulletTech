@@ -164,6 +164,3 @@ plt.show()
 
 `TensorFlow Decision Forests` strengthens the TensorFlow ecosystem and provides new ideas for data scientists to model tabular data. It is still in its early stages (v0.2.3), but it already has many available high-quality APIs. More functionalities can be found in the [documentations](https://www.tensorflow.org/decision_forests/api_docs/python/tfdf 'TensorFlow Decision Forests'). Hope this sharing will help you in your work. Welcome to leave a comment for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

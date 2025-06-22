@@ -101,6 +101,3 @@ The purpose of this article is to summarize the machine learning reference mater
 
 This article will be continuously updated, and PRs are welcome to add resources.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

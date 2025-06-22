@@ -116,6 +116,3 @@ For some software to run successfully in the system, some prerequisites are inde
 
 I hope this sharing can help you. Welcome to leave a message for discussion.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

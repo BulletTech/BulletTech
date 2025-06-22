@@ -104,6 +104,3 @@ GitHub Insights provides repo-wide and individual commit, pull request, and othe
 
 GitHub can also be very interesting. In addition to the provided regular features, GitHub provides many interesting and useful features. They not only greatly improve productivity, but also enrich GitHub's content.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

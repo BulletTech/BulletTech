@@ -47,6 +47,3 @@ The benefits of multi-task learning may include the following:
 
 This article summarized the multi-family that often appears in machine learning tasks. Clarifying their concepts is beneficial to both physical and mental health, and can help you flexibly use different tasks to solve practical problems.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>

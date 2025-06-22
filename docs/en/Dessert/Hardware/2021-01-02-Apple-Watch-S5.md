@@ -121,6 +121,4 @@ If the features match your needs, it’s worth trying. If you're new to Apple Wa
 
 Overall, Apple Watch has changed how I use Apple devices and continues to improve, becoming an essential part of my daily life.
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>
+

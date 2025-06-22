@@ -37,6 +37,3 @@ These influencing factors do not cover all aspects of actual work, but they prov
 
 TensorFlow Playground is a very good experimental product for beginners. Try adjusting those parameters and check whether the model effect is the same as your expectations. If the result is not ideal, try to improve the performance of the model by adjusting those parameters. Actually, this is the workflow you need to face in actual work, and TensorFlow Playground is a very good start! I hope this sharing can help you, and feel free to leave a message in the comment section for discussion!
 
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-6-14/1623639526512-1080P%20(Full%20HD)%20-%20Tail%20Pic.png" width="500" />
-</figure>
