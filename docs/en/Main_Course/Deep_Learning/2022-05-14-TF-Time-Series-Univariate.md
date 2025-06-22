@@ -188,6 +188,3 @@ This article did a benchmark for univariate time series prediction tasks, in whi
 ## 5 Related Reading Materials
 
 - [Forecasting: Principles and Practice](https://otexts.com/fpp3/index.html)
-
-<figure>
-  <img src="https://cdn.jsdelivr.net/gh/BulletTech2021/Pics/2021-
