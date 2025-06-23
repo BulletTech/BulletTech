@@ -7,6 +7,7 @@ tags:
 # The Multi-Family in Algorithms
 
 !!! info
+   
    Author: Void, posted on 2021-10-10, Reading time: about 6 minutes, WeChat public account article link: [:fontawesome-solid-link:](https://mp.weixin.qq.com/s/t_QkSxjtcFpX9pdx_OcXtA)
 
 ## 1 Introduction
